@@ -1,8 +1,7 @@
 # pytudes
-pytudes
-=====
 
-This project lists some Python *etudes* -- exercises to practice or demonstrate skills.
+*Etudes* are exercises to practice or demonstrate skills, long used by piano players. This project lists some *pytudes*&mdash;Python programs to practice or demonstrate skills.
+ 
 
 Index of Python Files
 ====
