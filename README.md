@@ -10,7 +10,7 @@ Index of Python Files
 |:--------|:-------------------|----|
 |[SET.py](https://github.com/norvig/pytudes/blob/master/SET.py)|Analyze the card game [SET](http://www.setgame.com/set).|[SET.html](http://norvig.com/SET.html)|
 |[docex.py](https://github.com/norvig/pytudes/blob/master/docex.py)|A framework for running unit tests, similar to `doctest`.|
-|[ibol.py](https://github.com/norvig/pytudes/blob/master/ibol.py)||[ibol.html](http://norvig.com/ibol.html)
+|[ibol.py](https://github.com/norvig/pytudes/blob/master/ibol.py)|An Exercise in Species Barcoding|[ibol.html](http://norvig.com/ibol.html)
 |[lettercount.py](https://github.com/norvig/pytudes/blob/master/lettercount.py)|Convert Google Ngram Counts to Letter Counts|[mayzner.html](http://norvig.com/mayzner.html)
 |[lis.py](https://github.com/norvig/pytudes/blob/master/lis.py)|Lisp Interpreter written in Python|[lispy.html](http://norvig.com/lispy.html)
 |[lispy.py](https://github.com/norvig/pytudes/blob/master/lispy.py)|Even Better Lisp Interpreter written in Python|[lispy2.html](http://norvig.com/lispy2.html)
