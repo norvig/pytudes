@@ -2,7 +2,7 @@
 Read files in the Google Books ngram format, and convert them to a simpler format.
 The original format looks like this:
 
-    word \t year \t word_count \t book_count
+    word     \t year \t word_count \t book_count
     word_POS \t year \t word_count \t book_count
 
 for example,
@@ -73,15 +73,17 @@ def convert_files(filenames, mincount=1e5):
         write_dict(D, 'WORD-' + f[-1].upper())
         report(f, D, 'popular')
 
-def load():
+def load(filename='top-words.txt'):
+    "Load file of 'word \t count' lines into D (a dict), W (length of D) and M (total number of words)."
     global D, W, M
-    D = read_dict('top-words.txt')
+    D = read_dict(filename)
     W = len(D)
     M = sum(D.values())
     
 #### Compute letter counts and save as HTML files.
 
 def histogram(items):
+    "Return a Counter of the number of times each key occurs in (key, val) pairs."
     C = Counter()
     for (key, val) in items:
         C[key] += val
