@@ -9,6 +9,7 @@ Index of Python Files
 | **File** | **Description** | **Documentation**|
 |:--------|:-------------------|----|
 |[SET.py](https://github.com/norvig/pytudes/blob/master/SET.py)|Analyze the card game [SET](http://www.setgame.com/set).|[SET.html](http://norvig.com/SET.html)|
+|[beal.py](https://github.com/norvig/pytudes/blob/master/beal.py)|Search for counterexamples to Beal's Conjecture|[beal.html](http://norvig.com/beal.html)
 |[docex.py](https://github.com/norvig/pytudes/blob/master/docex.py)|A framework for running unit tests, similar to `doctest`.|
 |[ibol.py](https://github.com/norvig/pytudes/blob/master/ibol.py)|An Exercise in Species Barcoding|[ibol.html](http://norvig.com/ibol.html)
 |[lettercount.py](https://github.com/norvig/pytudes/blob/master/lettercount.py)|Convert Google Ngram Counts to Letter Counts|[mayzner.html](http://norvig.com/mayzner.html)
