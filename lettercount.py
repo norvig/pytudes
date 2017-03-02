@@ -1,4 +1,5 @@
 """
+Code to support http://norvig.com/mayzner.html
 Read files in the Google Books ngram format, and convert them to a simpler format.
 The original format looks like this:
 
