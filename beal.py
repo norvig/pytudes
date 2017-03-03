@@ -150,8 +150,9 @@ if __name__ == '__main__':
     print("Searching beal(500, 100)")
     print(beal(500, 100))
     print("Finding Simpson-esque near-solutions to Fermat's Equation")
-    print(simpsons(range(1000, 2000), [11, 12, 13]))
-    print(simpsons(range(3000, 5000), [12]))
+    def s(b, p):  print('{0}^{3} + {1}^{3} = {2}^{3}'.format(*simpsons(b, p)))
+    s(range(1000, 2000), [11, 12, 13])
+    s(range(3000, 5000), [12])
     print("Searching beal_modp(500, 100)")
     print(beal_modp(500, 100))
 
