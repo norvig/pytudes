@@ -3,7 +3,7 @@
 *Etudes* are exercises to practice or demonstrate skills, long used by piano players. This project contains **pytudes**&mdash;Python programs to practice or demonstrate skills.
  
 
-Index of Python Files
+pytudes: Index of Python Files
 ====
 
 | **File** | **Description** | **Documentation**|
