@@ -15,7 +15,7 @@ This project contains **pytudes**&mdash;Python programs to practice or demonstra
 |[Sicherman Dice](https://github.com/norvig/pytudes/blob/master/Sicherman%20Dice.ipynb)<br>*Find a pair of dice that is like a regular pair of dice, only different.*|
 |[Beal's Conjecture Revisited](https://github.com/norvig/pytudes/blob/master/Beal.ipynb)<br>*A search for counterexamples to Beal's Conjecture*|
 |[When is Cheryl's Birthday?](https://github.com/norvig/pytudes/blob/master/Cheryl.ipynb)<br>*Solving the "Cheryl's Birthday" logic puzzle.*|
-|[When Cheryl Met Eve: A Birthday Story](https://github.com/norvig/pytudes/blob/master/Cheryl-and-Eve.ipynb)<br>*Inventing new puzzles in the Style of "Cheryl's Birthday." *|
+|[When Cheryl Met Eve: A Birthday Story](https://github.com/norvig/pytudes/blob/master/Cheryl-and-Eve.ipynb)<br>*Inventing new puzzles in the Style of Cheryl's Birthday.*|
 |[Sol Golomb's Rectangle Puzzle](https://github.com/norvig/pytudes/blob/master/Golomb-Puzzle.ipynb)<br>*A Puzzle involving placing rectangles of different sizes inside a square. Bonus: cryptarithmetic.*|
 |[WWW: Will Warriors Win?](https://github.com/norvig/pytudes/blob/master/WWW.ipynb)<br>*Golden State Warriors probability of winning the 2016 NBA title.*|
 
