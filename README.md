@@ -8,7 +8,7 @@ This project contains **pytudes**&mdash;Python programs to practice or demonstra
 
 |Logic and Number Puzzles|
 |---|
-|[Advent of Code 2016](https://github.com/norvig/pytudes/blob/master/Advent%20of%20Code.ipynb)<br>*Puzzle site with a coding puzze each day for Advent 2016*|
+|[Advent of Code 2016](https://github.com/norvig/pytudes/blob/master/Advent%20of%20Code.ipynb)<br>*Puzzle site with a coding puzzle each day for Advent 2016*|
 |[Translating English Sentences into Propositional Logic Statements](https://github.com/norvig/pytudes/blob/master/PropositionalLogic.ipynb)<br>*Automatically converting informal English sentences into formal Propositional Logic.*|
 |[The Puzzle of the Misanthropic Neighbors](https://github.com/norvig/pytudes/blob/master/Mean%20Misanthrope%20Density.ipynb)<br>*How crowded will this neighborhood be, if nobody wants to live next door to anyone else?*|
 |[Countdown to 2016](https://github.com/norvig/pytudes/blob/master/Countdown.ipynb)<br>*Solving the equation 10 _ 9 _ 8 _ 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 2016. From an Alex Bellos puzzle.*|
