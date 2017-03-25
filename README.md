@@ -42,6 +42,8 @@ This project contains **pytudes**&mdash;Python programs to practice or demonstra
 
 # pytudes: Index of Python Files
 
+The following are not notebooks, but raw `.py` files, although some of them have separate `.html` files as documentation.
+
 
 | **File** | **Description** | **Documentation**|
 |:--------|:-------------------|----|
