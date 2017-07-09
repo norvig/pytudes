@@ -31,7 +31,7 @@ This project contains **pytudes**&mdash;Python programs to practice or demonstra
 
 |Computer Science Algorithms, Concepts, and Problems|
 |---|
-|[John D. Cook's chaos game](https://github.com/norvig/pytudes/blob/master/Sierpinski.ipynb)<br>*A surprising appearance of the Sierpinski triangle in a random walk between vertexes.*|
+|[A Chaos Game with Triangles](https://github.com/norvig/pytudes/blob/master/Sierpinski.ipynb)<br>*A surprising appearance of the Sierpinski triangle in a random walk between vertexes.*|
 |[BASIC Interpreter](https://github.com/norvig/pytudes/blob/master/BASIC.ipynb)<br>*How to write an interpreter for the BASIC programming language.*|
 |[Conway's Game of Life](https://github.com/norvig/pytudes/blob/master/Life.ipynb)<br>*The cellular automata zero-player game.*|
 |[A Concrete Introduction to Probability](https://github.com/norvig/pytudes/blob/master/Probability.ipynb)<br>*Code and examples of the basic principles of Probability Theory.*|
