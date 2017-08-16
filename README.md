@@ -21,6 +21,7 @@ This project contains **pytudes**&mdash;Python programs to practice or demonstra
 
 |Word Games|
 |---|
+|[Ghost](https://github.com/norvig/pytudes/blob/master/Ghost.ipynb)<br>*The word game Ghost (add letters, try to avoid making a word).*|
 |[World's Longest Palindrome](https://github.com/norvig/pytudes/blob/master/pal3.ipynb)<br>*Searching for a long Panama-style palindrome, this time letter-by-letter.*|
 |[Refactoring a Crossword Game Program](https://github.com/norvig/pytudes/blob/master/Scrabble.ipynb)<br>*Refactoring the Scrabble / Word with Friends game from Udacity 212.*|
 |[xkcd 1313: Regex Golf](https://github.com/norvig/pytudes/blob/master/xkcd1313.ipynb)<br>*Find the smallest regular expression; inspired by Randall Monroe.*|
