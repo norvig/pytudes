@@ -65,3 +65,9 @@ The following are not notebooks, but raw `.py` files, although some of them have
 |[sudoku.py](https://github.com/norvig/pytudes/blob/master/sudoku.py)|Program to solve sudoku puzzles|[sudoku.html](http://norvig.com/sudoku.html)
 |[testaccum.py](https://github.com/norvig/pytudes/blob/master/testaccum.py)|Tests for my failed Python `accumulation display` proposal|[pyacc.html](http://norvig.com/pyacc.html)
 |[yaptu.py](https://github.com/norvig/pytudes/blob/master/yaptu.py)|Yet Another Python Templating Utility|
+
+# Etudes for Programmers
+
+I got the idea for the "etudes" part of the name from this [1978 book by Charles Wetherell](https://books.google.com/books/about/Etudes_for_programmers.html?id=u89WAAAAMAAJ):
+
+![](https://images-na.ssl-images-amazon.com/images/I/51ZnZH29dvL._SX394_BO1,204,203,200_.jpg)
