@@ -34,7 +34,7 @@ This project contains **pytudes**&mdash;Python programs to practice or demonstra
 |---|
 |[A Chaos Game with Triangles](https://github.com/norvig/pytudes/blob/master/Sierpinski.ipynb)<br>*A surprising appearance of the Sierpinski triangle in a random walk between vertexes.*|
 |[BASIC Interpreter](https://github.com/norvig/pytudes/blob/master/BASIC.ipynb)<br>*How to write an interpreter for the BASIC programming language.*|
-|[Bad Grade, Good Experience](https://github.com/norvig/pytudes/blob/master/snobol.ipynb)<br>*As a student, did you ever get a bad grade on a programming assignment? (Snobol, Concordance)*|
+|[Bad Grade, Good Experience](https://github.com/norvig/pytudes/blob/master/Snobol.ipynb)<br>*As a student, did you ever get a bad grade on a programming assignment? (Snobol, Concordance)*|
 |[Conway's Game of Life](https://github.com/norvig/pytudes/blob/master/Life.ipynb)<br>*The cellular automata zero-player game.*|
 |[A Concrete Introduction to Probability](https://github.com/norvig/pytudes/blob/master/Probability.ipynb)<br>*Code and examples of the basic principles of Probability Theory.*|
 |[Probability, Paradox, and the Reasonable Person Principle](https://github.com/norvig/pytudes/blob/master/ProbabilityParadox.ipynb)<br>*Some classic paradoxes in Probability Theory, and how too think about disagreements.*|
