@@ -41,7 +41,7 @@ def test():
     assert peers['C2'] == set(['A2', 'B2', 'D2', 'E2', 'F2', 'G2', 'H2', 'I2',
                                'C1', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9',
                                'A1', 'A3', 'B1', 'B3'])
-    print 'All tests pass.'
+    print('All tests pass.')
 
 ################ Parse a Grid ################
 
@@ -58,6 +58,7 @@ def parse_grid(grid):
 def grid_values(grid):
     "Convert grid into a dict of {square: char} with '0' or '.' for empties."
     chars = [c for c in grid if c in digits or c in '0.']
+    if len(chars) != 81: print(grid, chars, len(chars))
     assert len(chars) == 81
     return dict(zip(squares, chars))
 
@@ -103,10 +104,10 @@ def display(values):
     width = 1+max(len(values[s]) for s in squares)
     line = '+'.join(['-'*(width*3)]*3)
     for r in rows:
-        print ''.join(values[r+c].center(width)+('|' if c in '36' else '')
-                      for c in cols)
-        if r in 'CF': print line
-    print
+        print(''.join(values[r+c].center(width) + ('|' if c in '36' else '')
+                      for c in cols))
+        if r in 'CF': print(line)
+    print()
 
 ################ Search ################
 
@@ -120,68 +121,33 @@ def search(values):
         return values ## Solved!
     ## Chose the unfilled square s with the fewest possibilities
     n,s = min((len(values[s]), s) for s in squares if len(values[s]) > 1)
-    return some(search(assign(values.copy(), s, d))
-                for d in values[s])
-
-################ Utilities ################
-
-def some(seq):
-    "Return some element of seq that is true."
-    for e in seq:
-        if e: return e
-    return False
-
-def from_file(filename, sep='\n'):
-    "Parse a file into a list of strings, separated by sep."
-    return file(filename).read().strip().split(sep)
-
-def shuffled(seq):
-    "Return a randomly shuffled copy of the input sequence."
-    seq = list(seq)
-    random.shuffle(seq)
-    return seq
+    for d in values[s]:
+        result = search(assign(values.copy(), s, d))
+        if result: return result
 
 ################ System test ################
 
-import time, random
+import time
 
-def solve_all(grids, name='', showif=0.0):
-    """Attempt to solve a sequence of grids. Report results.
-    When showif is a number of seconds, display puzzles that take longer.
-    When showif is None, don't display any puzzles."""
-    def time_solve(grid):
-        start = time.clock()
-        values = solve(grid)
-        t = time.clock()-start
-        ## Display puzzles that take long enough
-        if showif is not None and t > showif:
-            display(grid_values(grid))
-            if values: display(values)
-            print '(%.2f seconds)\n' % t
-        return (t, solved(values))
+def solve_all(grids, name=''):
+    """Attempt to solve a sequence of grids. Report results."""
     times, results = zip(*[time_solve(grid) for grid in grids])
-    N = len(grids)
+    N = len(results)
     if N > 1:
-        print "Solved %d of %d %s puzzles (avg %.2f secs (%d Hz), max %.2f secs)." % (
-            sum(results), N, name, sum(times)/N, N/sum(times), max(times))
+        print("Solved %d of %d %s puzzles (avg %.2f secs (%d Hz), max %.2f secs)." % (
+            sum(results), N, name, sum(times)/N, N/sum(times), max(times)))
+            
+def time_solve(grid):
+    start = time.clock()
+    values = solve(grid)
+    t = time.clock()-start
+    return (t, solved(values))
 
 def solved(values):
     "A puzzle is solved if each unit is a permutation of the digits 1 to 9."
     def unitsolved(unit): return set(values[s] for s in unit) == set(digits)
     return values is not False and all(unitsolved(unit) for unit in unitlist)
 
-def random_puzzle(N=17):
-    """Make a random puzzle with N or more assignments. Restart on contradictions.
-    Note the resulting puzzle is not guaranteed to be solvable, but empirically
-    about 99.8% of them are solvable. Some have multiple solutions."""
-    values = dict((s, digits) for s in squares)
-    for s in shuffled(squares):
-        if not assign(values, s, random.choice(values[s])):
-            break
-        ds = [values[s] for s in squares if len(values[s]) == 1]
-        if len(ds) >= N and len(set(ds)) >= 8:
-            return ''.join(values[s] if len(values[s])==1 else '.' for s in squares)
-    return random_puzzle(N) ## Give up and make a new puzzle
 
 grid1  = '003020600900305001001806400008102900700000008006708200002609500800203009005010300'
 grid2  = '4.....8.5.3..........7......2.....6.....8.4......1.......6.3.7.5..2.....1.4......'
@@ -189,13 +155,7 @@ hard1  = '.....6....59.....82....8....45........3........6..3.54...325..6.......
     
 if __name__ == '__main__':
     test()
-    solve_all(from_file("easy50.txt", '========'), "easy", None)
-    solve_all(from_file("top95.txt"), "hard", None)
-    solve_all(from_file("hardest.txt"), "hardest", None)
-    solve_all([random_puzzle() for _ in range(99)], "random", 100.0)
-
-## References used:
-## http://www.scanraid.com/BasicStrategies.htm
-## http://www.sudokudragon.com/sudokustrategy.htm
-## http://www.krazydad.com/blog/2005/09/29/an-index-of-sudoku-strategies/
-## http://www2.warwick.ac.uk/fac/sci/moac/currentstudents/peter_cock/python/sudoku/
+    solve_all(open("sudoku-easy50.txt"), "easy")
+    solve_all(open("sudoku-top95.txt"), "hard")
+    solve_all(open("sudoku-hardest.txt"), "hardest")
+    
