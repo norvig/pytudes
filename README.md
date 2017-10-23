@@ -47,9 +47,6 @@ Some are in Jupyter (IPython) notebooks, some in *.py files.
 
 # pytudes: Index of Python Files
 
-The following are not notebooks, but raw `.py` files, although some of them have separate `.html` files as documentation.
-
-
 | **File** | **Description** | **Documentation**|
 |:--------|:-------------------|----|
 |[SET.py](https://github.com/norvig/pytudes/blob/master/py/SET.py)|Analyze the card game [SET](http://www.setgame.com/set).|[SET.html](http://norvig.com/SET.html)|
