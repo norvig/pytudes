@@ -1,6 +1,6 @@
 # pytudes
 
-*Etudes* are exercises to practice or demonstrate skills, long used by piano players. 
+*Etudes* are musical exercises to practice or demonstrate skills, long used by piano players. 
 
 This project contains **pytudes**&mdash;Python programs to practice or demonstrate skills. 
 
