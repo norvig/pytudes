@@ -1,8 +1,9 @@
 # pytudes
 
-*Etudes* are exercises to practice or demonstrate skills, long used by piano players. 
+*Etudes* are musical exercises to practice or demonstrate skills, long used by piano players. 
 
 This project contains **pytudes**&mdash;Python programs to practice or demonstrate skills. 
+
 Some are in Jupyter (IPython) notebooks, some in *.py files.
  
 # pytudes: Index of Jupyter (IPython) Notebooks
@@ -45,9 +46,6 @@ Some are in Jupyter (IPython) notebooks, some in *.py files.
 |[Project Euler Utilities](https://github.com/norvig/pytudes/blob/master/ipynb/Project%20Euler%20Utils.ipynb)<br>*My utility functions for the Project Euler problems, including `Primes` and `Factors`.*|
 
 # pytudes: Index of Python Files
-
-The following are not notebooks, but raw `.py` files, although some of them have separate `.html` files as documentation.
-
 
 | **File** | **Description** | **Documentation**|
 |:--------|:-------------------|----|
