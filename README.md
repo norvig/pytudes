@@ -1,6 +1,6 @@
 # pytudes
 
-"An *étude* (a French word meaning study) is an instrumental musical composition, usually short, of considerable difficulty, and designed to provide practice material for perfecting a particular musical skill." &mdash; [Wikipedia](https://en.wikipedia.org/wiki/%C3%89tude)
+"An *étude* (a French word meaning *study*) is an instrumental musical composition, usually short, of considerable difficulty, and designed to provide practice material for perfecting a particular musical skill." &mdash; [Wikipedia](https://en.wikipedia.org/wiki/%C3%89tude)
 
 This project contains **pytudes**&mdash;Python programs for perfecting programming skills. 
 
@@ -69,6 +69,6 @@ Some are in Jupyter (IPython) notebooks, some in *.py files.
 # Etudes for Programmers
 
 I got the idea for the "etudes" part of the name from this [1978 book by Charles Wetherell](https://books.google.com/books/about/Etudes_for_programmers.html?id=u89WAAAAMAAJ)
-that was very influential to me when I was learning to program around 1980.
+that was very influential to me when I was learning to program.
 
 ![](https://images-na.ssl-images-amazon.com/images/I/51ZnZH29dvL._SX394_BO1,204,203,200_.jpg)
