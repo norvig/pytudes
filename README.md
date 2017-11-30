@@ -4,9 +4,7 @@
 
 This project contains **pytudes**&mdash;Python programs for perfecting programming skills. 
 
-Some are in Jupyter (IPython) notebooks, some in *.py files.
-
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/norvig/pytudes/master)
+Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the files here, or clone the project, or run the notebooks online by clicking this button: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/norvig/pytudes/master)
  
 # pytudes: Index of Jupyter (IPython) Notebooks
 
