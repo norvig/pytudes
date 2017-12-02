@@ -6,7 +6,7 @@ This project contains **pytudes**&mdash;Python programs for perfecting programmi
 
 Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the files here, or clone the project, or run the notebooks online by clicking this button: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/norvig/pytudes/master)
  
-# pytudes: Index of Jupyter (IPython) Notebooks
+# Index of Jupyter (IPython) Notebooks
 
 |Logic and Number Puzzles|
 |---|
@@ -46,7 +46,7 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 |[Economics Simulation](https://github.com/norvig/pytudes/blob/master/ipynb/Economics.ipynb)<br>*A simulation of a simple economic game.*|
 |[Project Euler Utilities](https://github.com/norvig/pytudes/blob/master/ipynb/Project%20Euler%20Utils.ipynb)<br>*My utility functions for the Project Euler problems, including `Primes` and `Factors`.*|
 
-# pytudes: Index of Python Files
+# Index of Python Files
 
 | **File** | **Description** | **Documentation**|
 |:--------|:-------------------|----|
