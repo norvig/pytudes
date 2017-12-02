@@ -58,20 +58,20 @@ def unit_tests():
     assert words('This is a TEST.') == ['this', 'is', 'a', 'test']
     assert Counter(words('This is a test. 123; A TEST this is.')) == (
            Counter({'123': 1, 'a': 2, 'is': 2, 'test': 2, 'this': 2}))
-    assert len(WORDS) == 32192
-    assert sum(WORDS.values()) == 1115504
+    assert len(WORDS) == 32198
+    assert sum(WORDS.values()) == 1115585
     assert WORDS.most_common(10) == [
-     ('the', 79808),
+     ('the', 79809),
      ('of', 40024),
-     ('and', 38311),
+     ('and', 38312),
      ('to', 28765),
-     ('in', 22020),
+     ('in', 22023),
      ('a', 21124),
      ('that', 12512),
      ('he', 12401),
      ('was', 11410),
      ('it', 10681)]
-    assert WORDS['the'] == 79808
+    assert WORDS['the'] == 79809
     assert P('quintessential') == 0
     assert 0.07 < P('the') < 0.08
     return 'unit_tests pass'
