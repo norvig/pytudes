@@ -40,7 +40,7 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 |[Bad Grade, Good Experience](https://github.com/norvig/pytudes/blob/master/ipynb/Snobol.ipynb)<br>*As a student, did you ever get a bad grade on a programming assignment? (Snobol, Concordance)*|
 |[Conway's Game of Life](https://github.com/norvig/pytudes/blob/master/ipynb/Life.ipynb)<br>*The cellular automata zero-player game.*|
 |[A Concrete Introduction to Probability](https://github.com/norvig/pytudes/blob/master/ipynb/Probability.ipynb)<br>*Code and examples of the basic principles of Probability Theory.*|
-|[Probability, Paradox, and the Reasonable Person Principle](https://github.com/norvig/pytudes/blob/master/ipynb/ProbabilityParadox.ipynb)<br>*Some classic paradoxes in Probability Theory, and how too think about disagreements.*|
+|[Probability, Paradox, and the Reasonable Person Principle](https://github.com/norvig/pytudes/blob/master/ipynb/ProbabilityParadox.ipynb)<br>*Some classic paradoxes in Probability Theory, and how to think about disagreements.*|
 |[The Convex Hull Problem](https://github.com/norvig/pytudes/blob/master/ipynb/Convex%20Hull.ipynb)<br>*A classic Computer Science Algorithm.*|
 |[The Traveling Salesperson Problem](https://github.com/norvig/pytudes/blob/master/ipynb/TSP.ipynb)<br>*Another of the classics.*|
 |[Economics Simulation](https://github.com/norvig/pytudes/blob/master/ipynb/Economics.ipynb)<br>*A simulation of a simple economic game.*|
