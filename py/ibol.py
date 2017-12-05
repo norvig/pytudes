@@ -157,7 +157,7 @@ def sreport(species):
             if d==glen: d = '>25'
             print 'diameter %s for %s (%d elements)' % (d, s, len(c))
         SS[d] += 1
-    print 'Diameters of %d labelled clusters: %s' % (len(set(species)), showh(SS))
+    print 'Diameters of %d labeled clusters: %s' % (len(set(species)), showh(SS))
     
 def compare(cl1, cl2):
     "Compare two lists of clusters"
