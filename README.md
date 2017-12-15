@@ -28,7 +28,7 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 |[World's Longest Palindrome](https://github.com/norvig/pytudes/blob/master/ipynb/pal3.ipynb)<br>*Searching for a long Panama-style palindrome, this time letter-by-letter.*|
 |[Refactoring a Crossword Game Program](https://github.com/norvig/pytudes/blob/master/ipynb/Scrabble.ipynb)<br>*Refactoring the Scrabble / Word with Friends game from Udacity 212.*|
 |[xkcd 1313: Regex Golf](https://github.com/norvig/pytudes/blob/master/ipynb/xkcd1313.ipynb)<br>*Find the smallest regular expression; inspired by Randall Monroe.*|
-|[xkcd 1313: Regex Golf (Part 2: Infinite Problems)](https://github.com/norvig/pytudes/blob/master/ipynb/xkcd1313-part2.ipynb)<br>*Regex Golf: better, faster, funer. With Stefan Pochmann.*|
+|[xkcd 1313: Regex Golf (Part 2: Infinite Problems)](https://github.com/norvig/pytudes/blob/master/ipynb/xkcd1313-part2.ipynb)<br>*Regex Golf: better, faster, funner. With Stefan Pochmann.*|
 |[Let's Code About Bike Locks](https://github.com/norvig/pytudes/blob/master/ipynb/Fred%20Buns.ipynb)<br>*A tale of a bicycle combination lock that uses letters instead of digits. Inspired by Bike Snob NYC.*|
 |[Gesture Typing](https://github.com/norvig/pytudes/blob/master/ipynb/Gesture%20Typing.ipynb)<br>*What word has the longest path on a gesture-typing smartphone keyboard? Inspired by Nicolas Schank and Shumin Zhai.*|
 |[How to Do Things with Words, or Statistical Natural Language Processing in Python](https://github.com/norvig/pytudes/blob/master/ipynb/How%20to%20Do%20Things%20with%20Words.ipynb)<br>*Spelling Correction, Secret Codes, Word Segmentation, and more: grab your bag of words.*|
