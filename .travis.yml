@@ -1,0 +1,11 @@
+language: python
+python:
+  - "3.5"
+ 
+# install jupyter
+install:
+    - pip install jupyter
+script:
+    - jupyter nbconvert --to notebook --execute ipynb/BASIC.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Cheryl.ipynb
+
