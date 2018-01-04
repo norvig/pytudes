@@ -1,0 +1,46 @@
+language: python
+python:
+  - "3.5"
+ 
+# install jupyter
+install:
+    - pip install jupyter
+script:
+    - jupyter nbconvert --to notebook --execute ipynb/Cheryl.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Advent 2017.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Advent of Code.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/BASIC.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Beal.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Bike Speed versus Grade.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Cheryl-and-Eve.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Coin Flip.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Convex Hull.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Countdown.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Differentiation.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Economics.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Fred Buns.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Gesture Typing.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Ghost.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Golomb-Puzzle.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/How To Count Things.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/How to Do Things with Words.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Life.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Mean Misanthrope Density.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/pal3.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Palindrome.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Probability.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/ProbabilityParadox.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Project Euler Utils.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/PropositionalLogic.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Riddler Battle Royale.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Scrabble.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/SET.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Sicherman Dice.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Sierpinski.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Snobol.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/Sudoku IPython Notebook.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/TSP.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/WWW.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/xkcd1313.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/xkcd1313-part2.ipynb
+    - jupyter nbconvert --to notebook --execute ipynb/xkxd-part3.ipynb
