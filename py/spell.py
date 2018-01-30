@@ -15,7 +15,7 @@ WORDS = Counter(words(open('big.txt').read()))
 
 def P(word, N=sum(WORDS.values())): 
     "Probability of `word`."
-    return WORDS[word] / N
+    return float(WORDS[word]) / N
 
 def correction(word): 
     "Most probable spelling correction for word."
