@@ -28,7 +28,7 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 |---|
 |[A Concrete Introduction to Probability](https://github.com/norvig/pytudes/blob/master/ipynb/Probability.ipynb)<br>*Code and examples of the basic principles of Probability Theory.*|
 |[Probability, Paradox, and the Reasonable Person Principle](https://github.com/norvig/pytudes/blob/master/ipynb/ProbabilityParadox.ipynb)<br>*Some classic paradoxes in Probability Theory, and how to think about disagreements.*|
-|[Symbolic Algebra, Simplification, and Differentiation](https://github.com/norvig/pytudes/blob/master/ipynb/Differentiation.ipynb)<br>*A computer algebra system to manipulate expressions. including symbolic differentiation.*|
+|[Symbolic Algebra, Simplification, and Differentiation](https://github.com/norvig/pytudes/blob/master/ipynb/Differentiation.ipynb)<br>*A computer algebra system that  manipulates expressions, including symbolic differentiation.*|
 |[Economics Simulation](https://github.com/norvig/pytudes/blob/master/ipynb/Economics.ipynb)<br>*A simulation of a simple economic game.*|
 |[How to Count Things](https://github.com/norvig/pytudes/blob/master/ipynb/How%20To%20Count%20Things.ipynb)<br>*Combinatorial math: how to count how many things there are, when there are a lot of them.*|
 
