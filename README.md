@@ -24,7 +24,7 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 |[WWW: Will Warriors Win?](https://github.com/norvig/pytudes/blob/master/ipynb/WWW.ipynb)<br>*Golden State Warriors probability of winning the 2016 NBA title.*|
 |[The Riddler: Battle Royale](https://github.com/norvig/pytudes/blob/master/ipynb/Riddler%20Battle%20Royale.ipynb)<br>*A puzzle involving allocating your troops and going up against an opponent.*|
 
-|More Serious Math Stuff|
+|Math Concepts|
 |---|
 |[A Concrete Introduction to Probability](https://github.com/norvig/pytudes/blob/master/ipynb/Probability.ipynb)<br>*Code and examples of the basic principles of Probability Theory.*|
 |[Probability, Paradox, and the Reasonable Person Principle](https://github.com/norvig/pytudes/blob/master/ipynb/ProbabilityParadox.ipynb)<br>*Some classic paradoxes in Probability Theory, and how to think about disagreements.*|
@@ -51,6 +51,7 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 |[A Chaos Game with Triangles](https://github.com/norvig/pytudes/blob/master/ipynb/Sierpinski.ipynb)<br>*A surprising appearance of the Sierpinski triangle in a random walk between vertexes.*|
 |[The Convex Hull Problem](https://github.com/norvig/pytudes/blob/master/ipynb/Convex%20Hull.ipynb)<br>*A classic Computer Science Algorithm.*|
 |[The Traveling Salesperson Problem](https://github.com/norvig/pytudes/blob/master/ipynb/TSP.ipynb)<br>*Another of the classics.*|
+|[Generating Mazes](https://github.com/norvig/pytudes/blob/master/ipynb/Maze.ipynb)<br>*Make a maze by generating a random tree superimposed on a grid.*|
 |[Project Euler Utilities](https://github.com/norvig/pytudes/blob/master/ipynb/Project%20Euler%20Utils.ipynb)<br>*My utility functions for the Project Euler problems, including `Primes` and `Factors`.*|
 
 # Index of Python Files
