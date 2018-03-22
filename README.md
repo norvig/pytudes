@@ -34,6 +34,7 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 
 |Word Games|
 |---|
+|[xkcd 1970: Name Dominoes](https://github.com/norvig/pytudes/blob/master/ipynb/xkcd-Name-Dominoes.ipynb)<br>*Lay out dominoes legally; the dominoes have people names, not numbers.*|
 |[Ghost](https://github.com/norvig/pytudes/blob/master/ipynb/Ghost.ipynb)<br>*The word game Ghost (add letters, try to avoid making a word).*|
 |[World's Longest Palindrome](https://github.com/norvig/pytudes/blob/master/ipynb/pal3.ipynb)<br>*Searching for a long Panama-style palindrome, this time letter-by-letter.*|
 |[Refactoring a Crossword Game Program](https://github.com/norvig/pytudes/blob/master/ipynb/Scrabble.ipynb)<br>*Refactoring the Scrabble / Word with Friends game from Udacity 212.*|
