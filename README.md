@@ -21,7 +21,7 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 |[When is Cheryl's Birthday?](https://github.com/norvig/pytudes/blob/master/ipynb/Cheryl.ipynb)<br>*Solving the "Cheryl's Birthday" logic puzzle.*|
 |[When Cheryl Met Eve: A Birthday Story](https://github.com/norvig/pytudes/blob/master/ipynb/Cheryl-and-Eve.ipynb)<br>*Inventing new puzzles in the Style of Cheryl's Birthday.*|
 |[Sol Golomb's Rectangle Puzzle](https://github.com/norvig/pytudes/blob/master/ipynb/Golomb-Puzzle.ipynb)<br>*A Puzzle involving placing rectangles of different sizes inside a square. Bonus: cryptarithmetic.*|
-|[WWW: Will Warriors Win?](https://github.com/norvig/pytudes/blob/master/ipynb/WWW.ipynb)<br>*Golden State Warriors probability of winning the 2016 NBA title.*|
+|[WWW: Who WIll Win (NBA Title)?](https://github.com/norvig/pytudes/blob/master/ipynb/WWW.ipynb)<br>*Golden State Warriors probability of winning the 2016 NBA title.*|
 |[The Riddler: Battle Royale](https://github.com/norvig/pytudes/blob/master/ipynb/Riddler%20Battle%20Royale.ipynb)<br>*A puzzle involving allocating your troops and going up against an opponent.*|
 
 |Math Concepts|
