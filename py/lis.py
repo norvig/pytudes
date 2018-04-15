@@ -57,7 +57,7 @@ def standard_env():
         '>':op.gt, '<':op.lt, '>=':op.ge, '<=':op.le, '=':op.eq, 
         'abs':     abs,
         'append':  op.add,  
-        'apply':   apply,
+        'apply':   lambda proc, args: proc(*args),
         'begin':   lambda *x: x[-1],
         'car':     lambda x: x[0],
         'cdr':     lambda x: x[1:], 
