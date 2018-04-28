@@ -1,0 +1,62 @@
+#This is a simple program for changing Celsius to Fahrenheit and Fahrenheit to Celsius.
+con = True
+while con:
+    input_1 = str(input("Type 'C' to convert Celsius to Fahrenheit and 'F'to convert Fahrenheit to Celsius:"))
+    if input_1 == "C" or input_1 == "c":
+        try:
+            num_1 = float(input("Enter Celsius:"))
+            changer_1 = num_1 * 1.8 + 32
+            print("Fahrenheit:",changer_1)
+            ask_3 = str(input("Do you want to continue(Y/n)?:"))
+            if ask_3 == "Y" or ask_3 =="y":
+                con = True
+            elif ask_3 == "N" or ask_3 == "n":
+                con = False
+                break
+            else:
+                print("Your input is out of bounds.")
+                break
+        except ValueError:
+            ask_2 = str(input("Your input is out of bounds. Do you want to try again(Y/n)?:"))
+            if ask_2 == "Y" or ask_2 == "y":
+                con = True
+            elif ask_2 == "N" or ask_2 == "n":
+                con = False
+                break
+            else:
+                print("Your input is out of bounds.")
+                break
+    elif input_1 == "F" or input_1 == "f":
+        try:
+            num_2 = float(input("Enter Fahrenheit:"))
+            changer_2 = (num_2-32) / 1.8
+            print("Celsius:",changer_2)
+            ask_5 = str(input("Do you want to continue(Y/n)?:"))
+            if ask_5 == "Y" or ask_5 =="y":
+                con = True
+            elif ask_5 == "N" or ask_5 == "n":
+                con = False
+                break
+            else:
+                print("Your input is out of bounds.")
+                break
+        except ValueError:
+            ask_4 = str(input("Your input is out of bounds. Do you want to try again(Y/n)?:"))
+            if ask_4 == "Y" or ask_4 == "y":
+                con = True
+            elif ask_4 == "N" or ask_4 == "n":
+                con = False
+                break
+            else:
+                print("Your input is out of bounds.")
+                break
+    else:
+        ask_1 = str(input("Your input is out of bounds. Do you want to try again(Y/n)?:"))
+        if ask_1 == "Y" or ask_1 == "y":
+            con = True
+        elif ask_1 == "n" or ask_1 == "N":
+            con = False
+            break
+        else:
+            print("Your input is out of bounds.")
+            break
