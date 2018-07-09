@@ -52,6 +52,7 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 |[Symbolic Algebra, Simplification, and Differentiation](https://github.com/norvig/pytudes/blob/master/ipynb/Differentiation.ipynb)<br>*A computer algebra system that  manipulates expressions, including symbolic differentiation.*|
 |[Economics Simulation](https://github.com/norvig/pytudes/blob/master/ipynb/Economics.ipynb)<br>*A simulation of a simple economic game.*|
 |[How to Count Things](https://github.com/norvig/pytudes/blob/master/ipynb/How%20To%20Count%20Things.ipynb)<br>*Combinatorial math: how to count how many things there are, when there are a lot of them.*|
+|[Euler's Sum of Powers Conjecture](https://github.com/norvig/pytudes/blob/master/ipynb/Euler's%20Conjecture.ipynb)<br>*Solving a 200-year-old puzzle by finding integers that satisfy a<sup>5</sup> + b<sup>5</sup> + c<sup>5</sup> + d<sup>5</sup> = e<sup>5</sup>.*|
 
 |Computer Science Algorithms and Concepts|
 |---|
