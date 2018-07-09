@@ -85,7 +85,9 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 
 # Etudes for Programmers
 
-I got the idea for the "etudes" part of the name from this [1978 book by Charles Wetherell](https://books.google.com/books/about/Etudes_for_programmers.html?id=u89WAAAAMAAJ)
+I got the idea for the "etudes" part of the name from 
+this [1978 book](https://books.google.com/books/about/Etudes_for_programmers.html?id=u89WAAAAMAAJ) 
+by [Charles Wetherell](http://demin.ws/blog/english/2012/08/25/interview-with-charles-wetherell/)
 that was very influential to me when I was first learning to program.
 
 ![](https://images-na.ssl-images-amazon.com/images/I/51ZnZH29dvL._SX394_BO1,204,203,200_.jpg)
