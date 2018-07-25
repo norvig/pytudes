@@ -157,7 +157,7 @@ P3l = Pdist(datafile('count_3l.txt'))
 P2l = Pdist(datafile('count_2l.txt')) ## We'll need it later 
 
 def hillclimb(x, f, neighbors, steps=10000): 
-    "Search for an x that miximizes f(x), considering neighbors(x)." 
+    "Search for an x that maximizes f(x), considering neighbors(x)." 
     fx = f(x) 
     neighborhood = iter(neighbors(x)) 
     for i in range(steps): 
