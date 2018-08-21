@@ -15,12 +15,12 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 |[Project Euler Utilities](https://github.com/norvig/pytudes/blob/master/ipynb/Project%20Euler%20Utils.ipynb)<br>*My utility functions for the Project Euler problems, including `Primes` and `Factors`.*|
 |[Translating English Sentences into Propositional Logic Statements](https://github.com/norvig/pytudes/blob/master/ipynb/PropositionalLogic.ipynb)<br>*Automatically converting informal English sentences into formal Propositional Logic.*|
 |[Beal's Conjecture Revisited](https://github.com/norvig/pytudes/blob/master/ipynb/Beal.ipynb)<br>*A search for counterexamples to Beal's Conjecture*|
-|[WWW: Who WIll Win (NBA Title)?](https://github.com/norvig/pytudes/blob/master/ipynb/WWW.ipynb)<br>*Computing the probability of winning the NBA title, for my home town Warriors, or any other team.*|
+|[WWW: Who Will Win (NBA Title)?](https://github.com/norvig/pytudes/blob/master/ipynb/WWW.ipynb)<br>*Computing the probability of winning the NBA title, for my home town Warriors, or any other team.*|
 |[Pickleball Tournament](https://github.com/norvig/pytudes/blob/master/ipynb/Pickleball.ipynb)<br>*Scheduling a doubles tournament fairly and efficiently.*|
 |[Conway's Game of Life](https://github.com/norvig/pytudes/blob/master/ipynb/Life.ipynb)<br>*The cellular automata zero-player game.*|
 |[A Chaos Game with Triangles](https://github.com/norvig/pytudes/blob/master/ipynb/Sierpinski.ipynb)<br>*A surprising appearance of the Sierpinski triangle in a random walk between vertexes.*|
 |[Generating Mazes](https://github.com/norvig/pytudes/blob/master/ipynb/Maze.ipynb)<br>*Make a maze by generating a random tree superimposed on a grid.*|
-
+|[Can't Stop](https://github.com/norvig/pytudes/blob/master/ipynb/cantstop.ipynb)<br>*Optimal play in a dice board game.*|
 
 |Logic and Number Puzzles|
 |---|
