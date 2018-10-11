@@ -21,6 +21,7 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 |[A Chaos Game with Triangles](https://github.com/norvig/pytudes/blob/master/ipynb/Sierpinski.ipynb)<br>*A surprising appearance of the Sierpinski triangle in a random walk between vertexes.*|
 |[Generating Mazes](https://github.com/norvig/pytudes/blob/master/ipynb/Maze.ipynb)<br>*Make a maze by generating a random tree superimposed on a grid.*|
 |[Can't Stop](https://github.com/norvig/pytudes/blob/master/ipynb/Cant-Stop.ipynb)<br>*Optimal play in a dice board game.*|
+|[Bike Speed Versus Grade](https://github.com/norvig/pytudes/blob/master/ipynb/Bike%20Speed%20versus%20Grade.ipynb)<br>*How fast can I bike as the route gets steeper?*|
 
 |Logic and Number Puzzles|
 |---|
