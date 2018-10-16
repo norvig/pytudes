@@ -7,6 +7,11 @@ From the shell, do:
 
 import re, string, time, os
 
+try:
+    cmp             # Python 2
+except NameError:
+    def cmp(x, y):  # Python 3
+        return (x > y) - (x < y)
 
 id = r'[a-zA-Z_][a-zA-Z_0-9]*' ## RE for a Python identifier
 g1, g2, g3, g4 = r'\1 \2 \3 \4'.split() ## groups for re.matches

@@ -23,6 +23,7 @@ an external file format that looks like this:
 """
 
 from __future__ import division
+from __future__ import print_function
 from collections import Counter, defaultdict
 
 #### Read files in Books-Ngram format; convert to a dict
@@ -31,7 +32,7 @@ def read_year_file(filename, dic=None):
     """Read a file of 'word year word_count book_count' lines and convert to a dict
     {WORD: totalcount}. Uppercase all words, and only include all-alphabetic words."""
     if dic is None: dic = {}
-    for line in file(filename):
+    for line in open(filename):
         word, year, c1, c2 = line.split('\t')
         if '_' in word:
             word = word[:word.index('_')]
@@ -44,14 +45,14 @@ def read_year_file(filename, dic=None):
 
 def write_dict(dic, filename):
     "Write a {word:count} dict as 'word \t count' lines in filename."
-    out = file(filename, 'w')
+    out = open(filename, 'w')
     for key in sorted(dic):
         out.write('%s\t%s\n' % (key, dic[key]))
     return out.close()
         
 def read_dict(filename, sep='\t'):
     "Read 'word \t count' lines from file and make them into a dict of {word:count}."
-    pairs = (line.split(sep) for line in file(filename))
+    pairs = (line.split(sep) for line in open(filename))
     return {word: int(count) for (word, count) in pairs}
 
 #### Convert a bunch of year files into dict file format.
@@ -61,9 +62,9 @@ def convert_files(filenames, mincount=1e5):
         import time
         N = len(D)
         W = sum(v for v in D.itervalues())
-        print '%s: %s %s words (%s tokens) at %s' % (
+        print('%s: %s %s words (%s tokens) at %s' % (
             filename, adj, format(W, ',d'), format(N, ',d'),
-            time.strftime("%H:%M:%S", time.gmtime()))
+            time.strftime("%H:%M:%S", time.gmtime())))
     for f in filenames:
         report(f, {}, 'starting')
         D = read_year_file(f)
@@ -155,10 +156,10 @@ def getcount(counts, s, pos, length):
         return counts[s, pos, length]
 
 
-print 'start'
+print('start')
 #wc = word_counts('count_100K.txt')
 #counts = letter_counts(wc)
-print 'end'
+print('end')
 
 
 
@@ -172,18 +173,18 @@ def num(ch):
 
 def stats(D, NS = (1, 2, 3, 4, 5, 6)):
     counts = {n: Counter() for n in NS}
-    print 'words ' + ' '.join('   %d-grams  ' % n for n in NS)
+    print('words ' + ' '.join('   %d-grams  ' % n for n in NS))
     for (i, word) in enumerate(sortedby(D), 1):
         for n in NS:
             for ng in ngrams(word, n):
                 counts[n][ng] += 1
         if i % 5000 == 0 or i == len(D):
-            print "%4dK" % (i/1000),
+            print("%4dK" % (i/1000), end=' ')
             for n in NS:
                 c = len(counts[n])
                 field = "%5d (%d%%)" % (c, int(round(c*100/(26**n))))
-                print '%12s' % field,
-            print
+                print('%12s' % field, end=' ')
+            print()
 
 letters = 'ETAOINSRHLDCUMFPGWYBVKXJQZ'
 alphabet = ''.join(sorted(letters))
@@ -224,7 +225,7 @@ def substr(word, pos, length):
 def lettercount(D, pos):
     LC = histogram((substr(w, pos, 1), D[w]) for w in D)
     del LC[None]
-    print LC
+    print(LC)
     pos_name = (str(pos)+'+' if isinstance(pos, tuple) else
                 pos if pos < 0 else
                 pos+1)
@@ -293,7 +294,7 @@ def csvline(first, rest):
     return '\t'.join([first] + map(str, rest))
 
 def makecsv(n, D=D):
-    out = file('ngrams%d.csv' % n, 'w')
+    out = open('ngrams%d.csv' % n, 'w')
     cols = columns(n)
     Dng = defaultdict(lambda: defaultdict(int))
     for w in D:
@@ -310,9 +311,9 @@ def makecsv(n, D=D):
             if from_end <= 9:
                 entry[ANY, -from_end, -from_end+n-1] += N
         # enumerate ngrams from word and increment counts for each one
-    print >> out, csvline('%d-gram' % n,  map(colname, cols))
+    print(csvline('%d-gram' % n,  map(colname, cols)), file=out)
     for ng in sorted(Dng, key=lambda ng: -Dng[ng][(ANY, ANY)]):
-        print >> out, csvline(ng, [Dng[ng].get(col, 0) for col in cols])
+        print(csvline(ng, [Dng[ng].get(col, 0) for col in cols]), file=out)
     out.close()
     return Dng
 

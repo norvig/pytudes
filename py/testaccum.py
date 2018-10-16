@@ -1,4 +1,5 @@
 from __future__ import division
+from __future__ import print_function
 import re
 from accum import *
 
@@ -18,10 +19,10 @@ def expand_accumulations(program_text):
 
 def test1(acc_display, expected):
     "Eval an accumulation display and see if it gets the expected answer."
-    print acc_display
+    print(acc_display)
     result = eval(expand_accumulations(acc_display))
     assert result == expected, ('Got %s; expected %s' % (result, expected))
-    print '    ==>  %s' % result
+    print('    ==>  %s' % result)
 
 #### Initialize some data
 temp = [70, 70, 71, 74, 76, 76, 72, 76, 77, 77, 77, 78,
@@ -33,11 +34,11 @@ candidates = votes.keys()
 
 def test():
 
-    print 'temp = ', temp
-    print 'data = temp'
-    print 'votes = ', votes
-    print 'candidates = ', candidates
-    print
+    print('temp = ', temp)
+    print('data = temp')
+    print('votes = ', votes)
+    print('candidates = ', candidates)
+    print()
     
     #### Test some accumulation displays
     test1("[Max: temp[hour] for hour in range(24)]",

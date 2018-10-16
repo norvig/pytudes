@@ -1,10 +1,11 @@
+from __future__ import print_function
 from collections import defaultdict
 
 def get_genomes(fname="byronbayseqs.fas.txt"):
     "Return a list of genomes, and a list of their corresponding names."
     import re
     names, species, genomes = [], [], []
-    for name, g in re.findall('>(.*?)\r([^\r]*)\r*', file(fname).read()):
+    for name, g in re.findall('>(.*?)\r([^\r]*)\r*', open(fname).read()):
         names.append(name)
         species.append(name.split('|')[-1])
         genomes.append(g)
@@ -14,7 +15,7 @@ def get_neighbors(fname="editdistances.txt"):
     "Return dict: neighbors[i][j] = neighbors[j][i] = d means i,j are d apart."
     ## Read the data pre-computed from the Java program
     neighbors = dict((i, {}) for i in range(n))
-    for line in file(fname):
+    for line in open(fname):
         i,j,d = map(int, line.split())
         neighbors[i][j] = neighbors[j][i] = d
     return neighbors
@@ -75,15 +76,15 @@ def showh(d):
     return ' '.join('%s:%s' % i for i in sorted(d.items()))
 
 def greport(genomes):
-    print "Number of genomes: %d (%d distinct)" % (len(genomes), len(set(genomes)))
+    print("Number of genomes: %d (%d distinct)" % (len(genomes), len(set(genomes))))
     G = dict((g, set()) for g in genomes)
     for i in range(n):
         G[genomes[i]].add(species[i])
-    print "Multi-named genomes:", (
-        len([s for s in G.values() if len(s) > 1]))
+    print("Multi-named genomes:", (
+        len([s for s in G.values() if len(s) > 1])))
     lens = map(len, genomes)
-    print "Genome lengths: min=%d, max=%d" % (min(lens), max(lens))
-    print "Character counts: ", showh(c for g in genomes for c in g)
+    print("Genome lengths: min=%d, max=%d" % (min(lens), max(lens)))
+    print("Character counts: ", showh(c for g in genomes for c in g))
     
 def nreport(neighbors):
     NN, NumN = defaultdict(int), defaultdict(int) ## Nearest, Number of neighbors
@@ -92,9 +93,9 @@ def nreport(neighbors):
         NN[nn] += 1
         for d2 in neighbors[n].values():
             NumN[d2] += 1 
-    print
-    print "Nearest neighbor counts:", showh(NN)
-    print "Number of neighbors at each distance:", showh(NumN)
+    print()
+    print("Nearest neighbor counts:", showh(NN))
+    print("Number of neighbors at each distance:", showh(NumN))
 
 def nspecies(c): return len(set(species[g] for g in c))
 
@@ -104,34 +105,34 @@ def showc(c):
 
 def creport(drange, dcrange):
     def table(what, fn):
-        print "\n" + what
-        print ' '*8, ' '.join([' '+pct(dc, glen) for dc in dcrange])
+        print("\n" + what)
+        print(' '*8, ' '.join([' '+pct(dc, glen) for dc in dcrange]))
         for d in drange:
-            print '%s (%2d)' % (pct(d, glen), d),
+            print('%s (%2d)' % (pct(d, glen), d), end=' ')
             for dc in dcrange:
-                print '%5s' % fn(cluster(neighbors, d, dc)),
-            print
-    print '\nNearest neighbor must be closer than this percentage (places). '
-    print 'Each column: all genomes in cluster within this percentage of each other.'
+                print('%5s' % fn(cluster(neighbors, d, dc)), end=' ')
+            print()
+    print('\nNearest neighbor must be closer than this percentage (places). ')
+    print('Each column: all genomes in cluster within this percentage of each other.')
     table("Number of clusters", len)
     cluster1 = cluster(neighbors, 8, 15) ## splits Cleora
-    print '\nNumber of clusters of different sizes:', showh(len(c) for c in cluster1)
+    print('\nNumber of clusters of different sizes:', showh(len(c) for c in cluster1))
     M, T = defaultdict(int), defaultdict(int)
     for c in cluster1:
         M[margin(c)] += 1; T[margin(c)] += len(c)
-    for x in M: print '%d\t%d\t%d'% (x,M[x],T[x])
-    print '\nMargins', showh(M)
+    for x in M: print('%d\t%d\t%d'% (x,M[x],T[x]))
+    print('\nMargins', showh(M))
     for c in cluster1:
         if margin(c) <= 16:
-            print showc(c)
-    print '\nScatter plot of cluster diameter vs. margin.'
+            print(showc(c))
+    print('\nScatter plot of cluster diameter vs. margin.')
     for c in cluster1:
         if diameter(c) > 0:
             pass
             #print '%d\t%d' % (diameter(c), margin(c))
-    print '\nDifference from cluster(neighbors, 11, 14):'
+    print('\nDifference from cluster(neighbors, 11, 14):')
     #table(lambda cl: pct(len(cluster1)-compare(cluster1, cl),max(len(cluster1),len(cl))))
-    print '\nNumber of clusters witth more than one species name:'
+    print('\nNumber of clusters witth more than one species name:')
     #table(lambda cl: sum(nspecies(c) > 1 for c in cl))
     def pct_near_another(clusters, P=1.25):
         total = 0
@@ -143,21 +144,21 @@ def creport(drange, dcrange):
                         total += 1
         return pct(total, n)
     def f(P):
-        print '\nPercent of individuals within %.2f*diameter of another cluster.'%P
+        print('\nPercent of individuals within %.2f*diameter of another cluster.'%P)
         table(lambda cl: pct_near_another(cl, P))
     #map(f, [1.2, 1.33, 1.5])
 
 def sreport(species):
     SS = defaultdict(int)
-    print
+    print()
     for s in set(species):
         c = [g for g in range(n) if species[g] == s]
         d = diameter(c)
         if d > 14:
             if d==glen: d = '>25'
-            print 'diameter %s for %s (%d elements)' % (d, s, len(c))
+            print('diameter %s for %s (%d elements)' % (d, s, len(c)))
         SS[d] += 1
-    print 'Diameters of %d labeled clusters: %s' % (len(set(species)), showh(SS))
+    print('Diameters of %d labeled clusters: %s' % (len(set(species)), showh(SS)))
     
 def compare(cl1, cl2):
     "Compare two lists of clusters"
@@ -174,7 +175,7 @@ def unit_tests():
     assert diameter(set()) == 0
     assert diameter([17, 42]) == dist(17, 42)
     assert pct(1, 2) == '50.0%'
-    print '\nAll tests pass.\n'
+    print('\nAll tests pass.\n')
 
     
 

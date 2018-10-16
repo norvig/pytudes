@@ -1,3 +1,4 @@
+from __future__ import print_function
 import string, random, os, re, bisect
 
 """Produce Panama-ish Palindromes. Copyright (C) 2002, Peter Norvig.
@@ -127,7 +128,7 @@ class Panama:
         "Write current state to log file."
         if len(self) > self.best + 200:
             self.best = len(self)
-            print self.best
+            print(self.best)
             self.bestphrase = str(self)
             assert is_panama(self.bestphrase)
             f = open('pallog%d.txt' % os.getpid(), 'w')

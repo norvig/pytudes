@@ -1,3 +1,4 @@
+from __future__ import print_function
 
 ################ Tests for lis.py and lispy.py
 
@@ -103,15 +104,15 @@ def test(tests, name=''):
     for (x, expected) in tests:
         try:
             result = eval(parse(x))
-            print x, '=>', to_string(result)
+            print(x, '=>', to_string(result))
             ok = (result == expected)
         except Exception as e:
-            print x, '=raises=>', type(e).__name__, e
+            print(x, '=raises=>', type(e).__name__, e)
             ok = issubclass(expected, Exception) and isinstance(e, expected)
         if not ok:
             fails += 1
-            print 'FAIL!!!  Expected', expected
-    print '%s %s: %d out of %d tests fail.' % ('*'*45, name, fails, len(tests))
+            print('FAIL!!!  Expected', expected)
+    print('%s %s: %d out of %d tests fail.' % ('*'*45, name, fails, len(tests)))
 
 if __name__ == '__main__':
     from lis import *

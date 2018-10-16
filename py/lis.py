@@ -6,6 +6,11 @@ from __future__ import division
 import math
 import operator as op
 
+try:
+    raw_input          # Python 2
+except NameError:
+    raw_input = input  # Python 3
+
 ################ Types
 
 Symbol = str          # A Lisp Symbol is implemented as a Python str
@@ -96,7 +101,7 @@ def repl(prompt='lis.py> '):
     "A prompt-read-eval-print loop."
     while True:
         val = eval(parse(raw_input(prompt)))
-        if val is not None: 
+        if val is not None:
             print(lispstr(val))
 
 def lispstr(exp):

@@ -61,6 +61,7 @@ lines
         Time for work.
         #]
 """
+from __future__ import print_function
 
 import sys, re, os, os.path
 
@@ -73,14 +74,14 @@ class Copier:
         def repl(match, self=self):
             "Replace the match with its value as a Python expression."
             expr = self.preproc(match.group(1), 'eval')
-            if self.verbose: print '=== eval{%s}' % expr,
+            if self.verbose: print('=== eval{%s}' % expr, end=' ')
             try:
                 val = eval(expr, self.globals)
             except:
                 self.oops('eval', expr)
             if callable(val): val = val()
             if val == None: val = ''
-            if self.verbose: print '========>', val
+            if self.verbose: print('========>', val)
             return str(val)
 
         block = self.globals['_bl']
@@ -127,16 +128,16 @@ class Copier:
     def execute(self, stmt):
         stmt = self.preproc(stmt, 'exec') + '\n'
         if self.verbose: 
-            print "******* executing {%s} in %s" % (stmt, self.globals.keys())
+            print("******* executing {%s} in %s" % (stmt, self.globals.keys()))
         try:
-            exec stmt in self.globals
+            exec(stmt, self.globals)
         except:
             self.oops('exec', stmt)
 
     def oops(self, why, what):
-        print 'Something went wrong in %sing {%s}' % (why, what)
-        print 'Globals:', self.globals.keys(), \
-            self.globals.get('SECTIONS', '???')
+        print('Something went wrong in %sing {%s}' % (why, what))
+        print('Globals:', self.globals.keys(), \
+            self.globals.get('SECTIONS', '???'))
         raise
 
     def preproc(self, string, why, reg=re.compile(r"\s([<>&])\s"), 
@@ -155,10 +156,10 @@ class Copier:
         "Convert filename.* to filename.ext, where ext defaults to html."
         global yaptu_filename
         outname = re.sub('[.][a-zA-Z0-9]+?$', '', filename) + '.'+ext
-        print 'Transforming', filename, 'to', outname
-        self.globals['_bl'] = file(filename).readlines()
+        print('Transforming', filename, 'to', outname)
+        self.globals['_bl'] = open(filename).readlines()
         yaptu_filename = filename
-        self.outf = file(outname, 'w')
+        self.outf = open(outname, 'w')
         self.copyblock()
 
 if __name__ == '__main__':

@@ -8,6 +8,7 @@ Code copyright (c) 2008-2009 by Peter Norvig
 You are free to use this code under the MIT licencse: 
 http://www.opensource.org/licenses/mit-license.php
 """
+from __future__ import print_function
 
 import re, string, random, glob, operator, heapq
 from collections import defaultdict
@@ -27,7 +28,7 @@ def test(verbose=None):
     """Run some tests, taken from the chapter.
     Since the hillclimbing algorithm is randomized, some tests may fail."""
     import doctest
-    print 'Running tests...'
+    print('Running tests...')
     doctest.testfile('ngrams-test.txt', verbose=verbose)
 
 ################ Word Segmentation (p. 223)
@@ -97,9 +98,10 @@ def segment2(text, prev='<S>'):
                   for first,rem in splits(text)] 
     return max(candidates) 
 
-def combine(Pfirst, first, (Prem, rem)): 
-    "Combine first and rem results into one (probability, words) pair." 
-    return Pfirst+Prem, [first]+rem 
+def combine(Pfirst, first, Prem__rem): 
+    "Combine first and rem results into one (probability, words) pair."
+    (Prem, rem) = Prem__rem
+    return Pfirst+Prem, [first]+rem
 
 ################ Secret Codes (p. 228-230)
 
@@ -166,7 +168,7 @@ def hillclimb(x, f, neighbors, steps=10000):
         if fx2 > fx: 
             x, fx = x2, fx2 
             neighborhood = iter(neighbors(x)) 
-    if debugging: print 'hillclimb:', x, int(fx) 
+    if debugging: print('hillclimb:', x, int(fx)) 
     return x 
 
 debugging = False 

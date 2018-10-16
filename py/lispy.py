@@ -5,6 +5,7 @@
 ################ Symbol, Procedure, classes
 
 from __future__ import division
+from __future__ import print_function
 import re, sys, StringIO
 
 class Symbol(str): pass
@@ -114,9 +115,9 @@ def repl(prompt='lispy> ', inport=InPort(sys.stdin), out=sys.stdout):
             x = parse(inport)
             if x is eof_object: return
             val = eval(x)
-            if val is not None and out: print >> out, to_string(val)
+            if val is not None and out: print(to_string(val), file=out)
         except Exception as e:
-            print '%s: %s' % (type(e).__name__, e)
+            print('%s: %s' % (type(e).__name__, e))
 
 ################ Environment class
 
@@ -315,4 +316,3 @@ eval(parse("""(begin
 
 if __name__ == '__main__':
     repl()
-
