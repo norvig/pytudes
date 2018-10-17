@@ -1,3 +1,4 @@
+from __future__ import print_function
 grammar = {
   'Noun': ['stench', 'wumpus'],
   'Verb': ['is', 'smell'],
@@ -9,16 +10,16 @@ grammar = {
   'Preposition': ['to', 'in'],
   'Conjunction': ['and', 'or'],
   'Digit': ['0', '1'],
-  
+
   'S': [['NP', 'VP'], ['S', 'Comjunction', 'S']],
-  'NP': ['Pronoun', 'Noun', ['Article', 'Noun'], ['Digit', 'Digit'], 
+  'NP': ['Pronoun', 'Noun', ['Article', 'Noun'], ['Digit', 'Digit'],
          ['NP', 'PP'], ['NP', 'RelClause']],
-  'VP': ['Verb', ['VP', 'NP'], ['VP', 'Adjective'], ['VP', 'PP'], 
+  'VP': ['Verb', ['VP', 'NP'], ['VP', 'Adjective'], ['VP', 'PP'],
          ['VP', 'Adverb']],
   'PP': [['Preposition', 'NP']],
   'RelClause': [['that', 'VP']]
   }
-  
+
 
 def parse(forest, grammar):
     if len(forest) == 1 and category(forest[0]) == 'S':
@@ -26,16 +27,16 @@ def parse(forest, grammar):
     for i in range(len(forest)):
         for lhs in grammar.keys():
             for rhs in grammar[lhs]:
-		rhs = mklist(rhs)
-		n = len(rhs)
-		subsequence = forest[i:i+n]
-		if match(subsequence, rhs):
-                    print subsequence, lhs, '=>', rhs
-		    forest2 = forest[:]
-		    forest2[i:i+n] = [(lhs, subsequence)]
-		    result = parse(forest2, grammar)
-		    if result != None:
-			return result
+                rhs = mklist(rhs)
+                n = len(rhs)
+                subsequence = forest[i:i+n]
+                if match(subsequence, rhs):
+                    print(subsequence, lhs, '=>', rhs)
+                    forest2 = forest[:]
+                    forest2[i:i+n] = [(lhs, subsequence)]
+                    result = parse(forest2, grammar)
+                    if result != None:
+                        return result
     return None
 
 def mklist(x):

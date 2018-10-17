@@ -1,4 +1,10 @@
+from __future__ import print_function
 import random, re, bisect, time
+
+try:
+    xrange          # Python 2
+except NameError:
+    xrange = range  # Python 3
 
 """Produce Panama-ish Palindromes. Copyright (C) 2002-2008, Peter Norvig."""
 
@@ -107,10 +113,10 @@ def anpdictshort():
     "Find the words that are valid when every phrase must start with 'a'"
     def segment(word):  return [s for s in word.split('a') if s]
     def valid(word): return all(reversestr(s) in segments for s in segment(word))
-    words = map(canonical, file('anpdict.txt'))
+    words = map(canonical, open('anpdict.txt'))
     segments = set(s for w in words for s in segment(canonical(w)))
     valid_words = [paldict.truename[w] for w in words if valid(w)]
-    file('anpdict-short.txt', 'w').write('\n'.join(valid_words))
+    open('anpdict-short.txt', 'w').write('\n'.join(valid_words))
 
 ################ Search for a palindrome
 
@@ -185,14 +191,14 @@ class Panama:
 
     def add_reversibles(self):
         "Add in reversible words."
-        print 'using reversibles ...'
+        print('using reversibles ...')
         for (word, rword) in self.dict.reversible_words().items():
             if word not in self.seen and rword not in self.seen:
                 self.add('left', word)
                 self.add('right', rword)
         self.used_reversibles = True
         self.stack = []
-        print '...done'
+        print('...done')
                 
     def report(self):
         "Report a new palindrome to log file (if it is sufficiently big)."
@@ -202,8 +208,8 @@ class Panama:
         if N > self.best and (N > 12500 or N > self.best+500):
             self.best = len(self)
             self.bestphrase = str(self)
-            print '%5d phrases (%5d words) in %3d seconds' % (
-                self.best, self.bestphrase.count(' ')+1, time.clock() - self.starttime)
+            print('%5d phrases (%5d words) in %3d seconds' % (
+                self.best, self.bestphrase.count(' ')+1, time.clock() - self.starttime))
             assert is_panama(self.bestphrase)
             f = open('pallog%d.txt' % (id(self) % 10000), 'w')
             f.write(self.bestphrase + '\n')
@@ -254,7 +260,7 @@ def tests(p=Panama()):
     d.tryharder = False
     assert d.startswith('oklahoma') == ['oklahoma']
     assert d.startswith('fsfdsfdsfds') == []
-    print 'all tests pass'
+    print('all tests pass')
 
 if __name__ == '__main__': 
     p = Panama();

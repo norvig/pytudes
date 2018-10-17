@@ -38,13 +38,13 @@ differences between docex and doctest are:
     writing "1+1==2 ==> True" and having it work in versions of Python
     where True prints as "1" rather than as "True", and so on,
     but doctest has the edge if you want to compare against something
-    that doesn't have an eval-able output, or if you want to test 
+    that doesn't have an eval-able output, or if you want to test
     printed output.
 
 (4) Doctest has many more features, and is better supported.
     I wrote docex before doctest was an official part of Python, but
     with the refactoring of doctest in Python 2.4, I decided to switch
-    my code over to doctest, even though I prefer the brevity of docex. 
+    my code over to doctest, even though I prefer the brevity of docex.
     I still offer docex for those who want it.
 
 From Python, when you want to test modules m1, m2, ... do:
@@ -70,8 +70,9 @@ one of the following formats:
             First y is evaled to yield an exception type, then x is execed.
             If x doesn't raise the right exception, an error msg is printed.
     (5) Of the form 'statement'. Statement is execed for side effect.
-    (6) Of the form 'expression'. Expression is evaled for side effect. 
+    (6) Of the form 'expression'. Expression is evaled for side effect.
 """
+from __future__ import print_function
 
 import re, sys, types
 
@@ -96,9 +97,9 @@ class Docex:
             if out:
                 sys.stdout = sys.__stdout__
                 out.close()
-                
+
     def __repr__(self):
-	if self.failed:
+        if self.failed:
             return ('<Test: #### failed %d, passed %d>'
                     % (self.failed, self.passed))
         else:
@@ -141,8 +142,8 @@ class Docex:
                 match = search(s)
                 if match: self.run_string(s[match.end():])
         if hasattr(object, '_docex'):
-                self.run_string(object._docex)
-        
+            self.run_string(object._docex)
+
     def run_string(self, teststr):
         """Run a test string, printing inputs and results."""
         if not teststr: return
@@ -163,7 +164,7 @@ class Docex:
             try:
                 self.evaluate(teststr)
             except SyntaxError:
-                exec teststr in self.dictionary
+                exec(teststr, self.dictionary)
 
     def evaluate(self, teststr, resultstr=None):
         "Eval teststr and check if resultstr (if given) evals to the same."
@@ -172,18 +173,18 @@ class Docex:
         self.dictionary['_'] = result
         self.writeln(repr(result))
         if resultstr == None:
-          return
+            return
         elif result == eval(resultstr, self.dictionary):
-          self.passed += 1
+            self.passed += 1
         else:
-          self.fail(teststr, resultstr)
-    
+            self.fail(teststr, resultstr)
+
     def raises(self, teststr, exceptionstr):
         teststr = teststr.strip()
         self.writeln('>>> ' + teststr)
         except_class = eval(exceptionstr, self.dictionary)
         try:
-            exec teststr in self.dictionary
+            exec(teststr, self.dictionary)
         except except_class:
             self.writeln('# raises %s as expected' % exceptionstr)
             self.passed += 1
@@ -191,7 +192,7 @@ class Docex:
         self.fail(teststr, exceptionstr)
 
     def fail(self, teststr, resultstr):
-        self.writeln('###### ERROR, TEST FAILED: expected %s for %s' 
+        self.writeln('###### ERROR, TEST FAILED: expected %s for %s'
                      % (resultstr, teststr),
                      '<font color=red><b>', '</b></font>')
         self.failed += 1
@@ -201,9 +202,9 @@ class Docex:
         s = str(s)
         if self.html:
             s = s.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;')
-            print '%s%s%s' % (before, s, after)
+            print('%s%s%s' % (before, s, after))
         else:
-            print s
+            print(s)
 
     def seen(self, object):
         """Return true if this object has been seen before.
@@ -213,7 +214,7 @@ class Docex:
         return result
 
 def main(args):
-    """Run Docex.  args should be a list of python filenames.  
+    """Run Docex.  args should be a list of python filenames.
     If the first arg is a non-python filename, it is taken as the
     name of a log file to which output is written.  If it ends in
     ".htm" or ".html", then the output is written as html.  If the
@@ -230,9 +231,7 @@ def main(args):
         for file in glob.glob(arg):
             if file.endswith('.py'):
                 modules.append(__import__(file[:-3]))
-    print Docex(modules, html=html, out=out)
+    print(Docex(modules, html=html, out=out))
 
 if __name__ == '__main__':
     main(sys.argv[1:])
-
-
