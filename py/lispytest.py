@@ -104,11 +104,11 @@ def test(tests, name=''):
     for (x, expected) in tests:
         try:
             result = eval(parse(x))
-            print(x, '=>', to_string(result))
+            print(x, '=>', lispstr(result))
             ok = (result == expected)
         except Exception as e:
             print(x, '=raises=>', type(e).__name__, e)
-            ok = issubclass(expected, Exception) and isinstance(e, expected)
+            ok = isinstance(expected, type) and issubclass(expected, Exception) and isinstance(e, expected)
         if not ok:
             fails += 1
             print('FAIL!!!  Expected', expected)
@@ -116,8 +116,7 @@ def test(tests, name=''):
 
 if __name__ == '__main__':
     from lis import *
-    to_string = str
     test(lis_tests, 'lis.py')
     from lispy import *
     test(lis_tests+lispy_tests, 'lispy.py')
-
+    
