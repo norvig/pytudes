@@ -116,6 +116,7 @@ def test(tests, name=''):
 
 if __name__ == '__main__':
     from lis import *
+    to_string = str
     test(lis_tests, 'lis.py')
     from lispy import *
     test(lis_tests+lispy_tests, 'lispy.py')
