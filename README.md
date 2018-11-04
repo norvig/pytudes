@@ -12,7 +12,7 @@ Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the f
 
 |Programming Examples|
 |---|
-|[Advent of Code 2017](https:/github.com/norvig/pytudes/blob/master/ipynb/Advent%202017.ipynb)&nbsp; &nbsp; **[NB]( http:/nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/Advent%202017.ipynb)**<br>*Puzzle site with a coding puzzle each day for Advent 2017.*|
+|[Advent of Code 2017](ipynb/Advent%202017.ipynb)&nbsp; &nbsp; **[NB]( http:/nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/Advent%202017.ipynb)**<br>*Puzzle site with a coding puzzle each day for Advent 2017.*|
 |[Advent of Code 2016](https:/github.com/norvig/pytudes/blob/master/ipynb/Advent%20of%20Code.ipynb)&nbsp; &nbsp; **[NB]( http:/nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/dvent%20of%20Code.ipynb)**<br>*Puzzle site with a coding puzzle each day for Advent 2016*.|
 |[Project Euler Utilities](https:/github.com/norvig/pytudes/blob/master/ipynb/Project%20Euler%20Utils.ipynb)&nbsp; &nbsp; **[NB]( http:/nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/Project%20Euler%20Utils.ipynb)**<br>*My utility functions for the Project Euler problems, including `Primes` and `Factors`.*|
 |[Translating English Sentences into Propositional Logic Statements](https:/github.com/norvig/pytudes/blob/master/ipynb/PropositionalLogic.ipynb)&nbsp; &nbsp; **[NB]( http:/nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/PropositionalLogic.ipynb)**<br>*Automatically converting informal English sentences into formal Propositional Logic.*|
