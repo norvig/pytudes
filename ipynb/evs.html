@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/morning-consult/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/wp-content/themes/morning-consult/img/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/wp-content/themes/morning-consult/img/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/wp-content/themes/morning-consult/img/favicon/manifest.json">
+	<link rel="mask-icon" href="/wp-content/themes/morning-consult/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/wp-content/themes/morning-consult/img/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="/wp-content/themes/morning-consult/img/favicon/mstile-144x144.png">
+	<meta name="msapplication-config" content="/wp-content/themes/morning-consult/img/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- site verification for google news -->
+	<meta name="google-site-verification" content="Cf9zflqpiA7uoMq5I4bCyyiqmbYUeOUBWW6fxxL1Krw" />
+
+			<link rel="stylesheet" href="https://morningconsult.com/wp-content/themes/morning-consult/style-v2.css?ver=201803550">
+	
+	<title>Tracking Trump: The President’s Standing Across America</title>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v7.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="On a daily basis, Morning Consult is surveying over 5,000 registered voters across the United States on President Trump. Each month, we’ll update this page with the latest survey data, providing a clear picture of Trump’s approval and re-election prospects."/>
+<link rel="canonical" href="https://morningconsult.com/tracking-trump/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Tracking Trump: The President’s Standing Across America" />
+<meta property="og:description" content="On a daily basis, Morning Consult is surveying over 5,000 registered voters across the United States on President Trump. Each month, we’ll update this page with the latest survey data, providing a clear picture of Trump’s approval and re-election prospects." />
+<meta property="og:url" content="https://morningconsult.com/tracking-trump/" />
+<meta property="og:site_name" content="Morning Consult" />
+<meta property="article:publisher" content="https://www.facebook.com/MorningConsult/" />
+<meta property="fb:app_id" content="126359554672660" />
+<meta property="og:image" content="https://morningconsult.com/wp-content/uploads/2019/03/190311_tracking-trump-featured.png" />
+<meta property="og:image:secure_url" content="https://morningconsult.com/wp-content/uploads/2019/03/190311_tracking-trump-featured.png" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1005" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="On a daily basis, Morning Consult is surveying over 5,000 registered voters across the United States on President Trump. Each month, we’ll update this page with the latest survey data, providing a clear picture of Trump’s approval and re-election prospects." />
+<meta name="twitter:title" content="Tracking Trump: The President’s Standing Across America" />
+<meta name="twitter:site" content="@morningconsult" />
+<meta name="twitter:image" content="https://morningconsult.com/wp-content/uploads/2019/03/190311_tracking-trump-featured.png" />
+<meta name="twitter:creator" content="@morningconsult" />
+<script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/morningconsult.com\/","sameAs":["https:\/\/www.facebook.com\/MorningConsult\/","https:\/\/twitter.com\/morningconsult"],"@id":"https:\/\/morningconsult.com\/#organization","name":"Morning Consult","logo":"https:\/\/morningconsult.com\/wp-content\/uploads\/2017\/09\/MorningConsult.png"}</script>
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='dns-prefetch' href='//morningconsult.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Morning Consult &raquo; Feed" href="https://morningconsult.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Morning Consult &raquo; Comments Feed" href="https://morningconsult.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/morningconsult.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://morningconsult.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-components-css'  href='https://morningconsult.com/wp-includes/css/dist/components/style.min.css?ver=5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-editor-font-css'  href='https://fonts.googleapis.com/css?family=Noto+Serif%3A400%2C400i%2C700%2C700i&#038;ver=5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-editor-css'  href='https://morningconsult.com/wp-includes/css/dist/block-editor/style.min.css?ver=5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-nux-css'  href='https://morningconsult.com/wp-includes/css/dist/nux/style.min.css?ver=5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-editor-css'  href='https://morningconsult.com/wp-includes/css/dist/editor/style.min.css?ver=5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='embedpress_blocks-cgb-style-css-css'  href='https://morningconsult.com/wp-content/plugins/embedpress/Gutenberg/dist/blocks.style.build.css?ver=5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='embedpress-css'  href='https://morningconsult.com/wp-content/plugins/embedpress/assets/css/embedpress.css?ver=5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='https://morningconsult.com/wp-content/plugins/tablepress/css/default.min.css?ver=1.9.1' type='text/css' media='all' />
+<style id='tablepress-default-inline-css' type='text/css'>
+.tablepress tfoot th,.tablepress thead th{background-color:red;font-weight:700;vertical-align:middle}
+</style>
+<script type='text/javascript' src='https://morningconsult.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://morningconsult.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://morningconsult.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://morningconsult.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://morningconsult.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2" />
+<link rel='shortlink' href='https://morningconsult.com/?p=104806' />
+<script type="text/javascript">
+		window.ajaxurl = "https://morningconsult.com/wp-admin/admin-ajax.php";
+	</script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-41360512-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+	<!-- linkedin retargeting script -->
+	<script type="text/javascript">
+		_linkedin_data_partner_id = "86320";
+	</script>
+	<script type="text/javascript">
+		(function(){var s = document.getElementsByTagName("script")[0];
+		var b = document.createElement("script");
+		b.type = "text/javascript";b.async = true;
+		b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+		s.parentNode.insertBefore(b, s);})();
+	</script>
+	<noscript>
+		<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=86320&fmt=gif" />
+	</noscript>
+
+	<!-- igodigital collect script, added 03-27-18 -->
+	<script type="text/javascript" src="https://7245018.collect.igodigital.com/collect.js"></script>
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WKBJZ3Q');</script>
+	<!-- End Google Tag Manager -->
+
+	<script type="text/javascript">
+		var ajaxurl = "https://morningconsult.com/wp-admin/admin-ajax.php";
+	</script>	<script></script>
+<!-- </head>
+
+<body class="page-template page-template-page_templates page-template-tracking-trump page-template-page_templatestracking-trump-php page page-id-104806"> -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://morningconsult.com/wp-content/themes/morning-consult/js/site-v2/lib/jquery.scrollstory.js"></script>
+<script>
+	$(function() {
+
+	  $('.primaries-container').scrollStory({
+	  	autoActivateFirstItem: true,
+	  	triggerOffset: 200,
+	  	itemblur: function(ev, item) {
+	  		$('#menu-item-' + item.index).removeClass('is-active');
+	  	},
+	  	itemfocus: function(ev, item) {
+	  		$('#menu-item-' + item.index).addClass('is-active');
+	  	}
+	  });
+
+		$('.subscribe .accordion-expand').on('click', function() {
+			$('.subscribe').toggleClass('subscribe__open');
+		});
+
+	  $('.menu li').on('click', function() {
+			var scrollStory = $('.primaries-container').scrollStory().data('plugin_scrollStory');
+			scrollStory.index($(this).data('index')); 
+	  });
+	});
+</script>
+
+</head>
+<body class="page-template page-template-page_templates page-template-tracking-trump page-template-page_templatestracking-trump-php page page-id-104806">
+
+
+<div class="promo-bar" style="background-color: #4241eb; --link: #f9f0a0">
+	<div class="promo-bar__content promo-bar__content-desktop weight__bold" style="color: #FFFFFF">
+		<p>Get Morning Consult&#8217;s Latest Gen Z Data &amp; Insights. <em><a href="https://morningconsult.com/form/gen-z-newletter/?utm_source=homepage&amp;utm_medium=banner">Sign Up</a></em></p>
+	</div>
+	<div class="promo-bar__content promo-bar__content-mobile weight__bold" style="color: #FFFFFF">
+		<p>Get Morning Consult&#8217;s Latest Gen Z Data &amp; Insights. <em><a href="https://morningconsult.com/form/gen-z-newletter/?utm_source=homepage&amp;utm_medium=banner">Sign Up</a></em></p>
+	</div>
+</div>
+<nav class="mc-nav" id="mc-nav">
+	<div class="container">
+
+		<div class="columns">
+			<div class="column">
+				<div class="mc-nav__contents">
+					<div class="mc-nav__contents--start">
+						<div class="mc-nav__logo">
+							<a href="/">
+								<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 396.2 31.1" style="enable-background:new 0 0 396.2 31.1;" xml:space="preserve">
+<style type="text/css">
+	.svg-header-logo-v2{fill:#2B2B2B;}
+</style>
+<g>
+	<path class="svg-header-logo-v2" d="M142.1,18.2l-9.6-13.1h-4.6v20.8h4.4V12.4l9.9,13.5h4.3V5.1h-4.4L142.1,18.2z M121,11.8c0-3.9-2.6-6.7-7-6.7
+		h-9.7v20.8h4.4v-7.4h3.2l4.1,7.4h5.1l-4.6-7.9C119.3,17.4,121.2,14.7,121,11.8z M113.4,14.7L113.4,14.7l-4.6,0V9h4.6h0.3
+		c1.6,0,2.8,1.3,2.8,2.8c0,0.1,0,0.2,0,0.3C116.3,13.7,114.9,14.8,113.4,14.7z M154.2,25.9h4.4V5.1h-4.4V25.9z M0,0v11.7l15.5,15.5
+		l15.5-15.5V0L15.5,15.5L0,0z M31.1,31.1V19.4L19.4,31.1H31.1z M57.9,17.7L52.8,5.1h-6.2v20.8H51V11.4l5.9,14.5h1.9l5.9-14.5v14.5
+		h4.4V5.1h-6.2L57.9,17.7z M86.8,4.7L86.8,4.7c-6,0-10.9,4.9-10.9,10.9c0,6,4.9,10.9,10.9,10.9c6,0,10.9-4.9,10.9-10.9
+		C97.6,9.5,92.8,4.7,86.8,4.7z M93,15.5c0,3.9-2.5,6.8-6.3,6.8s-6.3-2.9-6.3-6.8c0-3.9,2.5-6.8,6.3-6.8S93,11.6,93,15.5L93,15.5z
+		 M0,31.1h11.7L0,19.4V31.1z M309.6,10.8L309.6,10.8c0-1.3,1.1-2.1,3-2.1c2.2,0,4.3,0.8,6,2.3l2.5-3.2c-2.2-1.9-5.1-3-8-2.9
+		c-4.9,0-7.9,2.9-7.9,6.3c0,7.8,12,5.3,12,9c0,1.2-1.2,2.3-3.6,2.3c-2.5,0-4.9-1-6.6-2.8l-2.4,3.3c2.4,2.3,5.5,3.4,8.8,3.3
+		c5.6,0,8.3-2.9,8.3-6.7C321.5,11.8,309.6,14.1,309.6,10.8z M342.4,17.5c0,2.9-1.7,4.9-4.9,4.9c-0.3,0-0.5,0-0.8,0
+		c-2.5-0.2-4.3-2.4-4.1-4.9l0,0V5.1h-4.5v12.5c0,5.1,3,8.6,9.4,8.6s9.4-3.5,9.4-8.7V5.1h-4.5V17.5z M359,5.1h-4.4v20.8h13.2V22H359
+		V5.1z M180.5,18.2l-9.6-13.1h-4.5v20.8h4.4V12.4l9.9,13.5h4.2V5.1h-4.4V18.2z M370.1,9h6.1v16.9h4.4V9h6V5.1h-16.6V9z M201.6,18.3
+		h5.5v2.5c-1.2,1-2.8,1.6-4.4,1.6h-0.4c-3.6-0.2-6.3-3.2-6.1-6.8l0,0c0-0.1,0-0.3,0-0.4c0-3.6,2.9-6.4,6.5-6.4l0,0
+		c2,0,3.8,1,4.9,2.7l3.7-2c-1.8-3-5.1-4.8-8.6-4.6c-6.1,0-11.1,4.2-11.1,10.8c0,6.6,5,10.8,11.1,10.8c3.4,0.1,6.6-1.4,8.8-3.9v-8
+		h-9.9L201.6,18.3z M293.7,18.2l-9.6-13.1h-4.5v20.8h4.4V12.4l9.9,13.5h4.3V5.1h-4.4L293.7,18.2z M230.7,15.1c0-3.6,3-6.4,6.5-6.4
+		c2.1,0,3.9,1.2,4.9,3l3.8-1.9c-1.7-3.2-5.1-5.2-8.7-5.1c-6.2,0-11.1,4.4-11.1,10.8c0,6.4,4.9,10.8,11.1,10.8c3.6,0.1,7-1.9,8.7-5.1
+		l-3.8-1.8c-0.9,1.8-2.8,3-4.9,3h-0.4c-3.6-0.2-6.3-3.2-6.1-6.8C230.7,15.4,230.7,15.3,230.7,15.1z M262,4.7L262,4.7L262,4.7
+		c-6.1,0-10.9,4.9-10.9,10.9c0,6,4.9,10.9,10.9,10.9c6,0,10.9-4.9,10.9-10.9C272.9,9.6,268.1,4.7,262,4.7z M262,22.4L262,22.4
+		c-3.8,0-6.3-2.9-6.3-6.8c0-3.9,2.5-6.8,6.3-6.8s6.3,2.9,6.3,6.8C268.3,19.5,265.8,22.4,262,22.4z M393.6,0c-1.4,0-2.6,1.2-2.6,2.6
+		c0,1.4,1.2,2.6,2.6,2.6c1.4,0,2.6-1.2,2.6-2.6C396.2,1.1,395.1,0,393.6,0z M394.9,4.1l-0.8-1.2c0.3-0.1,0.7-0.4,0.7-0.9
+		c0-0.5-0.4-1-1-1h-1.3v3h0.6V3h0.4l0.7,1.1L394.9,4.1c-0.4,0.3-0.8,0.5-1.3,0.5c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2c1.1,0,2,0.9,2,2
+		C395.6,3.2,395.4,3.7,394.9,4.1z M393.8,2.4h-0.7V1.6h0.7c0.2,0,0.4,0.2,0.4,0.4C394.2,2.2,394,2.4,393.8,2.4z"/>
+</g>
+</svg>
+							</a>
+						</div>
+						<div class="mc-nav__logo__mobile">
+							<a href="/">
+								<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40.6 31.1" style="enable-background:new 0 0 40.6 31.1;" xml:space="preserve">
+<style type="text/css">
+	.svg-mc-logo-ticker-cls-1{fill:#2B2B2B;}
+</style>
+<g>
+	<path class="svg-mc-logo-ticker-cls-1" d="M0,0v11.7l15.5,15.5l15.5-15.5V0L15.5,15.5L0,0z M31.1,31.1V19.4L19.4,31.1H31.1z M0,31.1h11.7L0,19.4V31.1z
+		 M38.1,0c-1.4,0-2.6,1.2-2.6,2.6c0,1.4,1.2,2.6,2.6,2.6c1.4,0,2.6-1.2,2.6-2.6C40.6,1.1,39.5,0,38.1,0z M39.4,4.1l-0.8-1.2
+		c0.3-0.1,0.7-0.4,0.7-0.9c0-0.5-0.4-1-1-1H37v3h0.6V3H38l0.7,1.1L39.4,4.1c-0.4,0.3-0.8,0.5-1.3,0.5c-1.1,0-2-0.9-2-2
+		c0-1.1,0.9-2,2-2c1.1,0,2,0.9,2,2C40.1,3.2,39.8,3.7,39.4,4.1z M38.3,2.4h-0.7V1.6h0.7c0.2,0,0.4,0.2,0.4,0.4
+		C38.7,2.2,38.5,2.4,38.3,2.4z"/>
+</g>
+</svg>
+							</a>
+						</div>
+					</div>
+
+					<div class="mc-nav__contents--end">
+						<div class="mc-nav__icon mc-nav__icon--news is-hidden-mobile ">
+							<a href="/news">News</a>
+						</div>
+
+						<div class="mc-nav__icon mc-nav__icon--intel is-hidden-mobile">
+							<a href="/product/brand-intelligence/">Intelligence</a>
+						</div>
+						
+						<div class="mc-nav__icon mc-nav__icon--login is-hidden-mobile">
+							<a href="https://morningconsultintelligence.com/login">Login</a>
+						</div>
+
+						<div class="mc-nav__icon mc-nav__icon--menu" id="mc-nav-hamburger" data-target="#mc-nav-mobile" role="navigation">
+							<svg width="18px" height="12px" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g class="svg-header-logo-v2" id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="Mobile" transform="translate(-285.000000, -20.000000)" class="svg-header-logo-v2">
+            <g id="Material/Icons-black/menu" transform="translate(282.000000, 14.000000)">
+                <path d="M3,18 L21,18 L21,16 L3,16 L3,18 L3,18 Z M3,13 L21,13 L21,11 L3,11 L3,13 L3,13 Z M3,6 L3,8 L21,8 L21,6 L3,6 L3,6 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>						</div>
+						
+						<div class="mc-nav__icon mc-nav__icon--menu is-hidden" id="mc-nav-close">
+							<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Copy" transform="translate(-287.000000, -18.000000)" fill="#2B2B2B">
+            <g id="Material/Icons-black/close" transform="translate(282.000000, 13.000000)">
+                <polygon id="Shape" points="19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<modal class="mc-navbar-modal is-hidden" id="mc-navbar-modal">
+	<div class="mc-navbar-modal__content">
+		<div class="container">
+			<div class="columns">
+				<div class="column no-top-bottom-padding is-5 is-3-desktop">
+					<section class="mc-navbar-modal__content__section intel">
+						<p class="mc-navbar-modal__content__head intel">
+							<a href="/product/brand-intelligence/">Intelligence</a>
+						</p>
+					</section>		
+					<section class="mc-navbar-modal__content__section intel">
+						<p class="mc-navbar-modal__content__head intel">
+							<a href="/product/survey-research/">Survey Research</a>
+						</p>
+					</section>
+					<section class="mc-navbar-modal__content__section intel">
+						<p class="mc-navbar-modal__content__head intel">
+							<a href="/news/">News</a>
+						</p>
+					</section>
+					<section class="mc-navbar-modal__content__section">
+						<p class="mc-navbar-modal__content__head">
+							<a href="/about/">About</a>
+						</p>
+					</section>
+					<section class="mc-navbar-modal__content__section">
+						<p class="mc-navbar-modal__content__head">
+							<a href="/careers/">Careers</a>
+						</p>
+					</section>
+					<section class="mc-navbar-modal__content__section">
+						<p class="mc-navbar-modal__content__head" data-target="#mc-navbar-modal-follow">
+							Follow Us <span class="triangle-down is-hidden-tablet"></span>
+						</p>
+						<ul class="mc-navbar-modal__content__list" id="mc-navbar-modal-follow">
+							<a href="/subscribe">
+								<li>Subscribe</li>
+							</a>
+							<a href="https://www.facebook.com/MorningConsult/">
+								<li>Facebook</li>
+							</a>
+							<a href="https://twitter.com/MorningConsult">
+								<li>Twitter</li>
+							</a>
+							<a href="https://www.linkedin.com/company/the-morning-consult">
+								<li>LinkedIn</li>
+							</a>
+						</ul>
+					</section>
+				</div>
+			</div>
+			<section class="mc-navbar-modal__content__section__search">
+				<p class="mc-navbar-modal__content__head">Search</p>
+				<div class="mc-navbar-modal__content__form columns">
+					<div class="column is-7 is-5-desktop">
+						<form role="search" method="get" class="mc-search-form search-form" action="https://morningconsult.com/">
+	<div class="mc-search-form__field">
+		<input type="text" class="input" placeholder="Search for..." name="s" value="">
+	</div>
+	<button type="submit" class="mc-search-form__icon" value="">
+		<svg 
+	xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.23 21.23">
+	<defs>
+		<style>.svg-search-cls-1{fill:#2a2b2a;}</style>
+	</defs>
+	<title>Asset 6</title>
+	<g id="Layer_2" data-name="Layer 2">
+		<g id="Layer_1-2" data-name="Layer 1">
+			<path class="svg-search-cls-1" d="M19.1,2.12A7.26,7.26,0,0,0,7.35,10.23l-6.6,6.6A2.58,2.58,0,0,0,4.4,20.47l6.6-6.6a7.24,7.24,0,0,0,3,.64h0A7.26,7.26,0,0,0,19.1,2.12Zm-1.28,9a5.45,5.45,0,1,1,1.6-3.85A5.41,5.41,0,0,1,17.82,11.11ZM2,18.11l6.29-6.29a7.21,7.21,0,0,0,.51.57h0a7.36,7.36,0,0,0,.57.51L3.12,19.19A.77.77,0,1,1,2,18.11Z"/>
+		</g>
+	</g>
+</svg>	</button>
+</form>					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</modal>
+
+</nav>	<main class="container">
+		<div class="columns primaries">
+			<div class="column primaries-sidebar">
+				<div class="menu section">
+					<ul>
+						<li id="menu-item-0" data-index="0"><span>Approval by State</span></li>
+						<li id="menu-item-1" data-index="1"><span>State Trends</span></li>
+						<li id="menu-item-2" data-index="2"><span>Demographic Breakouts</span></li>
+						<li id="menu-item-3" data-index="3"><span>Methodology</span></li>
+					</ul>
+					<div class="primaries-sidebar__see-more">
+						<span class="primaries-sidebar__see-more_title">More political intelligence:</span>
+<ul>
+        
+    <li class='current-page' >
+        <img src="https://morningconsult.com/wp-content/themes/morning-consult/img/misc/trump-icon.png" alt="Tracking Trump Icon">
+        <div>
+            <a href="https://morningconsult.com/tracking-trump/" target="_blank">Tracking Trump</a>
+        </div>
+    </li>
+    <li  >
+        <img src="https://morningconsult.com/wp-content/themes/morning-consult/img/misc/donkey-icon.png" alt="Democratic Primary Icon">
+        <div>
+            <a href="https://morningconsult.com/2020-democratic-primary/" target="_blank">2020 Democratic Primary</a>
+        </div>
+    </li>
+    <li>
+        <img src="https://morningconsult.com/wp-content/themes/morning-consult/img/misc/senator-icon.png" alt="Democratic Primary Icon">
+        <a href="https://morningconsult.com/senator-rankings/" target="_blank">Senator Rankings</a>
+    </li>
+    <li>
+        <img src="https://morningconsult.com/wp-content/themes/morning-consult/img/misc/governor-icon.png" alt="Democratic Primary Icon">
+        <a href="https://morningconsult.com/governor-rankings/" target="_blank">Governor Rankings</a>
+    </li>
+</ul> 					</div>
+				</div>
+				<div class="subscribe subscribe__fixed">
+					<div class="accordion-expand" data-accordion="accordion-subscribe" data-text-expand="more" data-text-collapse="less">
+						<div>Want more data?</div>
+						<i class="accordion-toggle-carat"></i>
+					</div>
+					<div class="accordion" id="accordion-subscribe">
+						<div class="subscribe__form">
+							<div class="form-subtitle nav-sm weight__bold">
+								Go deeper							</div>
+							<div class="form-title body-copy__1">
+								Download the Latest 2020 Political Intelligence Report							</div>
+							<hr class="form-hr">
+							<div class="form-copy body-copy__6">
+								Featuring insights on Trump's standing as well as the state of the Democratic primary. Sign-up to always get this data first:							</div>
+							<div class="form-styled form-styled__black form-styled__background">
+								
+                <div class='gf_browser_unknown gform_wrapper' id='gform_wrapper_100' ><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_100' id='gform_100'  action='/tracking-trump/'>
+                        <div class='gform_body'><ul id='gform_fields_100' class='gform_fields top_label form_sublabel_below description_below'><li id='field_100_1'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible' ><label class='gfield_label' for='input_100_1' >First Name<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_text'><input name='input_1' id='input_100_1' type='text' value='' class='medium'   tabindex='1' placeholder='First Name' aria-required="true" aria-invalid="false" /></div></li><li id='field_100_2'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible' ><label class='gfield_label' for='input_100_2' >Last Name<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_text'><input name='input_2' id='input_100_2' type='text' value='' class='medium'   tabindex='2' placeholder='Last Name' aria-required="true" aria-invalid="false" /></div></li><li id='field_100_3'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible' ><label class='gfield_label' for='input_100_3' >Email<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_3' id='input_100_3' type='email' value='' class='medium' tabindex='3'  placeholder='Email' aria-required="true" aria-invalid="false" />
+                        </div></li><li id='field_100_5'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible' ><label class='gfield_label' for='input_100_5' >Job Title<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_text'><input name='input_5' id='input_100_5' type='text' value='' class='medium'   tabindex='4' placeholder='Job Title' aria-required="true" aria-invalid="false" /></div></li><li id='field_100_6'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible' ><label class='gfield_label' for='input_100_6' >Company<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_text'><input name='input_6' id='input_100_6' type='text' value='' class='medium'   tabindex='5' placeholder='Company/Organization' aria-required="true" aria-invalid="false" /></div></li>
+                            </ul></div>
+        <div class='gform_footer top_label'> <button type="submit" id="gform_submit_button_100" class="gform_button button" tabindex="6" onclick='if(window["gf_submitting_100"]){return false;}  if( !jQuery("#gform_100")[0].checkValidity || jQuery("#gform_100")[0].checkValidity()){window["gf_submitting_100"]=true;}  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_100"]){return false;} if( !jQuery("#gform_100")[0].checkValidity || jQuery("#gform_100")[0].checkValidity()){window["gf_submitting_100"]=true;}  jQuery("#gform_100").trigger("submit",[true]); }'>Submit<span></span></button> <input type='hidden' name='gform_ajax' value='form_id=100&amp;title=&amp;description=&amp;tabindex=1' />
+            <input type='hidden' class='gform_hidden' name='is_submit_100' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='100' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_100' value='WyJbXSIsImM5NDgwZWJlN2UxNDdhOTFiZTJiZjEwNzNjNmM3ZjQyIl0=' />
+            <input type='hidden' class='gform_hidden' name='gform_target_page_number_100' id='gform_target_page_number_100' value='0' />
+            <input type='hidden' class='gform_hidden' name='gform_source_page_number_100' id='gform_source_page_number_100' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_100' id='gform_ajax_frame_100' title='Ajax Frame'>This iframe contains the logic required to handle Ajax powered Gravity Forms.</iframe>
+                <script type='text/javascript'>jQuery(document).ready(function($){gformInitSpinner( 100, 'https://morningconsult.com/wp-content/themes/morning-consult/img/ajax-loader.png' );jQuery('#gform_ajax_frame_100').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_100');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_100').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;if(is_form){jQuery('#gform_wrapper_100').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_100').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_100').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_100').val();gformInitSpinner( 100, 'https://morningconsult.com/wp-content/themes/morning-consult/img/ajax-loader.png' );jQuery(document).trigger('gform_page_loaded', [100, current_page]);window['gf_submitting_100'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}setTimeout(function(){jQuery('#gform_wrapper_100').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [100]);window['gf_submitting_100'] = false;}, 50);}else{jQuery('#gform_100').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger('gform_post_render', [100, current_page]);} );} );</script>							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column primaries-container">
+				<section class="section section__headline">
+					<div class="headline">
+						<img class="headline__image" src="https://morningconsult.com/wp-content/themes/morning-consult/img/misc/trump.png">
+						<div class="headline__content">
+							<div class="headline__subtitle weight__bold">
+								Political Intelligence							</div>
+							<div class="headline__title h2-condensed weight__bold">
+								Tracking Trump: The President’s Standing Across America							</div>
+							<div class="headline__copy body-copy__4">
+								<p>On a daily basis, Morning Consult is surveying over 5,000 registered voters across the United States on President Trump. Each month, we’ll update this page with the latest survey data, providing a clear picture of Trump’s approval and re-election prospects.</p>
+<p>&nbsp;</p>
+<p>To receive more data on Trump and 2020, <a href="https://morningconsult.com/form/political-intel-briefing/">sign up here</a>.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section section__map story">
+					<a name="section-0"></a>
+					<div class="headline-title">
+						Approval by State					</div>
+					<div class="headline-copy body-copy__4">
+						<p>Use the slider to track how Trump&#8217;s net approval has shifted over time.</p>
+					</div>
+					<div class="map">
+						
+<div id="mc-highcharts-map-wrapper" class="mc-highcharts-map">
+	<div id="mc-highcharts-map-container"></div>
+		<div class="mc-highcharts-map__slider">
+		<span class="mc-highcharts-map__slider__value"></span>
+		<input type="range" class="mc-highcharts-map__slider__input">
+		<div class="mc-highcharts-map__slider__desc">Slide left and right to change months</div>
+	</div>
+	</div>						<div class="ranking__expand-container">
+							<div class="ranking__social">
+	<a href="" target="_blank">
+		<i class="mc-icon mc-icon__linkedin mc-icon__sm"></i>
+	</a>
+	<a href="https://www.facebook.com/dialog/share?app_id=135331423885334&display=popup&href=https://morningconsult.com/tracking-trump/#section-1" target="_blank">
+		<i class="mc-icon mc-icon__facebook mc-icon__sm"></i>
+	</a>
+	<a href="https://twitter.com/intent/tweet?text=Explore+this+interactive+report+tracking+Trump%27s+standing+across+America%2C+via+%40MorningConsult%3A&url=https://morningconsult.com/tracking-trump/#section-1" target="_blank">
+		<i class="mc-icon mc-icon__twitter mc-icon__sm"></i>
+	</a>
+</div>						</div>
+					</div>
+				</section>
+				<section class="section section__trend story">
+					<a name="section-1"></a>
+					<div class="headline-title">
+						State Trends					</div>
+					<div class="headline-copy body-copy__4">
+						<p>Select a state to view the trend data.</p>
+					</div>
+					<div class="trendline">
+						<div class="trendline__select select2-event">
+							<select name="trendline">
+						    <option value="1">Alabama</option>
+						    <option value="2">Alaska</option>
+						    <option value="3">Arizona</option>
+						    <option value="4">Arkansas</option>
+						    <option value="5">California</option>
+						    <option value="6">Colorado</option>
+						    <option value="7">Connecticut</option>
+						    <option value="8">Delaware</option>
+						    <option value="9">District of Columbia</option>
+						    <option value="10">Florida</option>
+						    <option value="11">Georgia</option>
+						    <option value="12">Hawaii</option>
+						    <option value="13">Idaho</option>
+						    <option value="14">Illinois</option>
+						    <option value="15">Indiana</option>
+						    <option value="16">Iowa</option>
+						    <option value="17">Kansas</option>
+						    <option value="18">Kentucky</option>
+						    <option value="19">Louisiana</option>
+						    <option value="20">Maine</option>
+						    <option value="21">Maryland</option>
+						    <option value="22">Massachusetts</option>
+						    <option value="23">Michigan</option>
+						    <option value="24">Minnesota</option>
+						    <option value="25">Mississippi</option>
+						    <option value="26">Missouri</option>
+						    <option value="27">Montana</option>
+						    <option value="28">Nebraska</option>
+						    <option value="29">Nevada</option>
+						    <option value="30">New Hampshire</option>
+						    <option value="31">New Jersey</option>
+						    <option value="32">New Mexico</option>
+						    <option value="33">New York</option>
+						    <option value="34">North Carolina</option>
+						    <option value="35">North Dakota</option>
+						    <option value="36">Ohio</option>
+						    <option value="37">Oklahoma</option>
+						    <option value="38">Oregon</option>
+						    <option value="39">Pennsylvania</option>
+						    <option value="40">Rhode Island</option>
+						    <option value="41">South Carolina</option>
+						    <option value="42">South Dakota</option>
+						    <option value="43">Tennessee</option>
+						    <option value="44">Texas</option>
+						    <option value="45">Utah</option>
+						    <option value="46">Vermont</option>
+						    <option value="47">Virginia</option>
+						    <option value="48">Washington</option>
+						    <option value="49">West Virginia</option>
+						    <option value="50">Wisconsin</option>
+						    <option value="51">Wyoming</option></select>
+						  </select>
+						</div>
+
+						
+						<div class="trendline trendline__options">
+							Since Trump took office, his net approval in&nbsp;<span class="weight__bold" id="explainer-state"></span>&nbsp;has&nbsp;<span class="weight__bold" id="explainer-change"></span>&nbsp;percentage points. 
+						</div>
+						<div class="trendline__legend">
+							<span class="trendline__legend_approval">Approval</span>
+							<span class="trendline__legend_disapproval">Disapproval</span>
+						</div>
+						<div id="trendline__highchart"></div>
+					</div>
+					<div class="ranking__expand-container">
+						<div class="ranking__social">
+	<a href="" target="_blank">
+		<i class="mc-icon mc-icon__linkedin mc-icon__sm"></i>
+	</a>
+	<a href="https://www.facebook.com/dialog/share?app_id=135331423885334&display=popup&href=https://morningconsult.com/tracking-trump/#section-1" target="_blank">
+		<i class="mc-icon mc-icon__facebook mc-icon__sm"></i>
+	</a>
+	<a href="https://twitter.com/intent/tweet?text=Explore+this+interactive+report+tracking+Trump%27s+standing+across+America%2C+via+%40MorningConsult%3A&url=https://morningconsult.com/tracking-trump/#section-1" target="_blank">
+		<i class="mc-icon mc-icon__twitter mc-icon__sm"></i>
+	</a>
+</div>					</div>
+				</section>
+				<section class="section section__bars story">
+					<a name="section-3"></a>
+					<div class="headline-title">
+						Trump's Approval With GOP Primary Voters					</div>
+					<div class="headline-copy body-copy__4">
+						<p>A breakdown of which demographic groups are more or less likely to approve of Trump. Each of the below groups are sub-demographics <strong>among potential GOP primary voters:</strong></p>
+					</div>
+					<div class="headline-key">
+						<div>
+							<span class="key__positive"></span>
+							Approve
+						</div>
+						<div>
+							<span class="key__neutral"></span>
+							Don't Know, No Opinion
+						</div>
+						<div>
+							<span class="key__negative"></span>
+							Disapprove
+						</div>
+					</div>
+					<div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                All GOP primary voters            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 85%;">
+				85%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 13%;">
+				13%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                18-29 years-old            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 76%;">
+				76%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 4%;">
+				4%
+			</span>
+			<span class="ranking__negative " style="--width: 21%;">
+				21%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                30-44 years-old            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 83%;">
+				83%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 2%;">
+				2%
+			</span>
+			<span class="ranking__negative " style="--width: 15%;">
+				15%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                45-54 years-old            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 87%;">
+				87%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 12%;">
+				12%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                55-64 years-old            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 88%;">
+				88%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 12%;">
+				12%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                65+ years-old            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 88%;">
+				88%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 0%;">
+				0%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 12%;">
+				12%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Urban            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 83%;">
+				83%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative " style="--width: 16%;">
+				16%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Suburban            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 84%;">
+				84%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative " style="--width: 15%;">
+				15%
+			</span>
+		</div>
+	</div>
+</div>							<div class="accordion" id="accordion-0">
+						<div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Rural            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 89%;">
+				89%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 10%;">
+				10%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Income: Under 50k            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 86%;">
+				86%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 2%;">
+				2%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 12%;">
+				12%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Income: 50k-100k            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 86%;">
+				86%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 13%;">
+				13%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Income: 100k+            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 83%;">
+				83%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative " style="--width: 17%;">
+				17%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Very conservative            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 96%;">
+				96%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 0%;">
+				0%
+			</span>
+			<span class="ranking__negative ranking__medium ranking__low" style="--width: 4%;">
+				4%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Conservative            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 91%;">
+				91%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 8%;">
+				8%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Slightly conservative            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 78%;">
+				78%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative " style="--width: 21%;">
+				21%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Moderate            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 71%;">
+				71%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 2%;">
+				2%
+			</span>
+			<span class="ranking__negative " style="--width: 28%;">
+				28%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                No college            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 88%;">
+				88%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 11%;">
+				11%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Bachelors degree            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 83%;">
+				83%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative " style="--width: 16%;">
+				16%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Post-grad            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 79%;">
+				79%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative " style="--width: 20%;">
+				20%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Male            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 86%;">
+				86%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 13%;">
+				13%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Female            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 85%;">
+				85%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 2%;">
+				2%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 14%;">
+				14%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Extremely interested in politics            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 91%;">
+				91%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 0%;">
+				0%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 9%;">
+				9%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Very interested in politics            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 88%;">
+				88%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 0%;">
+				0%
+			</span>
+			<span class="ranking__negative ranking__medium " style="--width: 12%;">
+				12%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Somewhat interested in politics            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 84%;">
+				84%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 1%;">
+				1%
+			</span>
+			<span class="ranking__negative " style="--width: 15%;">
+				15%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Not too interested in politics            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 78%;">
+				78%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 3%;">
+				3%
+			</span>
+			<span class="ranking__negative " style="--width: 19%;">
+				19%
+			</span>
+		</div>
+	</div>
+</div><div class="ranking ranking-favorability">
+	<div class="ranking__info">
+		<div class="ranking__name">
+            <span>
+                Not at all interested in politics            </span>
+		</div>
+		<div class="ranking__bar-group">
+			<span class="ranking__positive " style="--width: 74%;">
+				74%
+			</span>
+			<span class="ranking__neutral ranking__medium ranking__low" style="--width: 6%;">
+				6%
+			</span>
+			<span class="ranking__negative " style="--width: 21%;">
+				21%
+			</span>
+		</div>
+	</div>
+</div></div>
+					<div class="ranking__expand-container">
+						<div class="accordion-expand" data-accordion="accordion-0" data-text-expand="more" data-text-collapse="less">
+							<i class="accordion-toggle"></i> 
+							See&nbsp;<span>more</span> &nbsp;demographics
+						</div>
+						<div class="ranking__social">
+	<a href="" target="_blank">
+		<i class="mc-icon mc-icon__linkedin mc-icon__sm"></i>
+	</a>
+	<a href="https://www.facebook.com/dialog/share?app_id=135331423885334&display=popup&href=https://morningconsult.com/tracking-trump/#section-3" target="_blank">
+		<i class="mc-icon mc-icon__facebook mc-icon__sm"></i>
+	</a>
+	<a href="https://twitter.com/intent/tweet?text=Explore+this+interactive+report+tracking+Trump%27s+standing+across+America%2C+via+%40MorningConsult%3A&url=https://morningconsult.com/tracking-trump/#section-3" target="_blank">
+		<i class="mc-icon mc-icon__twitter mc-icon__sm"></i>
+	</a>
+</div>					</div>
+				</section>
+				<section class="section section__methodology story">
+					<div class="headline-title">
+						Methodology					</div>
+					<div class="headline-copy body-copy__4">
+						<p><em>This page was last updated on June 4, 2019. </em></p>
+<p><strong><span class="" data-color-group="turquoise">About Morning Consult Political Intelligence </span></strong></p>
+<p>On a daily basis, Morning Consult surveys over 5,000 registered voters across the United States. Along with 2020 presidential election data, Political Intelligence tracks the approval ratings for all <span class="" data-color-group="cornflower-blue">governors</span>, <span class="" data-color-group="cornflower-blue">senators</span>, House members, <span class="" data-color-group="cornflower-blue">the President</span>, and more at the national, state and congressional district level. Each week, we will release a report with the most important findings on the 2020 election. <span class="" data-color-group="cornflower-blue">Sign-up to receive that report in your inbox <a href="https://morningconsult.com/2020-democratic-primary/">here</a>. </span></p>
+<p><strong>About the state-level data:</strong></p>
+<p>Morning Consult conducted more than 2 million surveys with registered U.S. voters from Jan. 20, 2017 to May 31, 2019 to determine the approval ratings for President Donald Trump in each of the 50 states and Washington, D.C., for each month. These results use a statistical technique called multilevel regression with post-stratification (MRP) to estimate state-level public opinion from the national survey data for a specific month.</p>
+<p>In each poll, Americans indicated whether they approve or disapprove of the job performance of Trump. For each question, they could answer strongly approve, somewhat approve, somewhat disapprove, strongly disapprove, or don’t know/no opinion. The surveys also included about 30 demographic questions.</p>
+<p>Responses to the Trump approval question are modeled via multilevel regression as a function of both individual level and state-level variables. Our models use age, gender, education and race as individual-level predictor variables. For our state-level variables, we chose variables that may influence state-level vote choice such as the percent change in state gross domestic product (GDP), state unemployment rates, state median household income and state-level outcomes from the 2016 presidential election.</p>
+<p>Morning Consult obtained population parameters for registered voters from the November 2012 Current Population Survey. We applied post-stratification weights at the state level based on gender, age, educational attainment and race using the American Community Survey (ACS).</p>
+<p>Standard errors for our estimates for each state were calculated by taking 100 bootstrap samples with replacement from our full national dataset for each hypothetical matchup and then assessing this empirical distribution at the state level. The distribution of these predictions at the state level allows us to construct a predictive interval, which gives us a sense of the spread of MRP estimates. The 95 percent predictive intervals range from 1 percentage point in larger states such as California, Florida, New York, Pennsylvania and Texas, to 4 percentage points in the smaller population size of Alaska.</p>
+<p>The margin of error in each state for the last month is available <a href="https://morningconsult.com/wp-content/uploads/2019/03/Trump-MOE-2.19.csv">here</a>.</p>
+<p><strong>About the demographic approval data:</strong></p>
+<p>The &#8220;Trump&#8217;s Re-election Support With Key Groups&#8221; section has a different methodology than the above sections. This section is reported based on 60,528 interviews with registered voters who indicate they may vote in the Republican primary or caucus in their state. The interviews were collected from May 1, 2019 through May 31, 2019 and have a margin of error of +/- 1%. Each demographic group listed is based on at least 3,700 interviews over that same time frame. The margin of error for each group is either +/- 1% or +/- 2%.</p>
+					</div>
+				</section>
+			</div>
+	</main>
+<footer id="mc-footer" role="contentinfo">
+	<div class="container has-text-centered">
+		<div class="mc-footer__logo">
+			<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 396.2 31.1" style="enable-background:new 0 0 396.2 31.1;" xml:space="preserve">
+<style type="text/css">
+	.svg-header-logo-v2{fill:#2B2B2B;}
+</style>
+<g>
+	<path class="svg-header-logo-v2" d="M142.1,18.2l-9.6-13.1h-4.6v20.8h4.4V12.4l9.9,13.5h4.3V5.1h-4.4L142.1,18.2z M121,11.8c0-3.9-2.6-6.7-7-6.7
+		h-9.7v20.8h4.4v-7.4h3.2l4.1,7.4h5.1l-4.6-7.9C119.3,17.4,121.2,14.7,121,11.8z M113.4,14.7L113.4,14.7l-4.6,0V9h4.6h0.3
+		c1.6,0,2.8,1.3,2.8,2.8c0,0.1,0,0.2,0,0.3C116.3,13.7,114.9,14.8,113.4,14.7z M154.2,25.9h4.4V5.1h-4.4V25.9z M0,0v11.7l15.5,15.5
+		l15.5-15.5V0L15.5,15.5L0,0z M31.1,31.1V19.4L19.4,31.1H31.1z M57.9,17.7L52.8,5.1h-6.2v20.8H51V11.4l5.9,14.5h1.9l5.9-14.5v14.5
+		h4.4V5.1h-6.2L57.9,17.7z M86.8,4.7L86.8,4.7c-6,0-10.9,4.9-10.9,10.9c0,6,4.9,10.9,10.9,10.9c6,0,10.9-4.9,10.9-10.9
+		C97.6,9.5,92.8,4.7,86.8,4.7z M93,15.5c0,3.9-2.5,6.8-6.3,6.8s-6.3-2.9-6.3-6.8c0-3.9,2.5-6.8,6.3-6.8S93,11.6,93,15.5L93,15.5z
+		 M0,31.1h11.7L0,19.4V31.1z M309.6,10.8L309.6,10.8c0-1.3,1.1-2.1,3-2.1c2.2,0,4.3,0.8,6,2.3l2.5-3.2c-2.2-1.9-5.1-3-8-2.9
+		c-4.9,0-7.9,2.9-7.9,6.3c0,7.8,12,5.3,12,9c0,1.2-1.2,2.3-3.6,2.3c-2.5,0-4.9-1-6.6-2.8l-2.4,3.3c2.4,2.3,5.5,3.4,8.8,3.3
+		c5.6,0,8.3-2.9,8.3-6.7C321.5,11.8,309.6,14.1,309.6,10.8z M342.4,17.5c0,2.9-1.7,4.9-4.9,4.9c-0.3,0-0.5,0-0.8,0
+		c-2.5-0.2-4.3-2.4-4.1-4.9l0,0V5.1h-4.5v12.5c0,5.1,3,8.6,9.4,8.6s9.4-3.5,9.4-8.7V5.1h-4.5V17.5z M359,5.1h-4.4v20.8h13.2V22H359
+		V5.1z M180.5,18.2l-9.6-13.1h-4.5v20.8h4.4V12.4l9.9,13.5h4.2V5.1h-4.4V18.2z M370.1,9h6.1v16.9h4.4V9h6V5.1h-16.6V9z M201.6,18.3
+		h5.5v2.5c-1.2,1-2.8,1.6-4.4,1.6h-0.4c-3.6-0.2-6.3-3.2-6.1-6.8l0,0c0-0.1,0-0.3,0-0.4c0-3.6,2.9-6.4,6.5-6.4l0,0
+		c2,0,3.8,1,4.9,2.7l3.7-2c-1.8-3-5.1-4.8-8.6-4.6c-6.1,0-11.1,4.2-11.1,10.8c0,6.6,5,10.8,11.1,10.8c3.4,0.1,6.6-1.4,8.8-3.9v-8
+		h-9.9L201.6,18.3z M293.7,18.2l-9.6-13.1h-4.5v20.8h4.4V12.4l9.9,13.5h4.3V5.1h-4.4L293.7,18.2z M230.7,15.1c0-3.6,3-6.4,6.5-6.4
+		c2.1,0,3.9,1.2,4.9,3l3.8-1.9c-1.7-3.2-5.1-5.2-8.7-5.1c-6.2,0-11.1,4.4-11.1,10.8c0,6.4,4.9,10.8,11.1,10.8c3.6,0.1,7-1.9,8.7-5.1
+		l-3.8-1.8c-0.9,1.8-2.8,3-4.9,3h-0.4c-3.6-0.2-6.3-3.2-6.1-6.8C230.7,15.4,230.7,15.3,230.7,15.1z M262,4.7L262,4.7L262,4.7
+		c-6.1,0-10.9,4.9-10.9,10.9c0,6,4.9,10.9,10.9,10.9c6,0,10.9-4.9,10.9-10.9C272.9,9.6,268.1,4.7,262,4.7z M262,22.4L262,22.4
+		c-3.8,0-6.3-2.9-6.3-6.8c0-3.9,2.5-6.8,6.3-6.8s6.3,2.9,6.3,6.8C268.3,19.5,265.8,22.4,262,22.4z M393.6,0c-1.4,0-2.6,1.2-2.6,2.6
+		c0,1.4,1.2,2.6,2.6,2.6c1.4,0,2.6-1.2,2.6-2.6C396.2,1.1,395.1,0,393.6,0z M394.9,4.1l-0.8-1.2c0.3-0.1,0.7-0.4,0.7-0.9
+		c0-0.5-0.4-1-1-1h-1.3v3h0.6V3h0.4l0.7,1.1L394.9,4.1c-0.4,0.3-0.8,0.5-1.3,0.5c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2c1.1,0,2,0.9,2,2
+		C395.6,3.2,395.4,3.7,394.9,4.1z M393.8,2.4h-0.7V1.6h0.7c0.2,0,0.4,0.2,0.4,0.4C394.2,2.2,394,2.4,393.8,2.4z"/>
+</g>
+</svg>
+		</div>
+
+		<ul class="mc-footer__nav is-flex is-flex-centered">
+			<li><a href="/product/brand-intelligence" target="_blank">Intelligence</a></li>
+			<li><a href="/news" target="_blank">News</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/contact">Contact</a></li>
+			<li><a href="/careers">Careers</a></li>
+		</ul>
+
+		<div class="mc-footer__social">
+			<ul class="mc-social-icons is-flex is-flex-centered">
+	<li>
+		<a href="https://www.facebook.com/MorningConsult/">
+			<svg id="mc-svg-facebook" data-name="Layer 1" 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 107 107">
+	<defs>
+		<style>.mc-svg-facebook-cls1{fill:none;clip-rule:evenodd;}.mc-svg-facebook-cls2{fill:#fff;}.mc-svg-facebook-cls3{clip-path:url(#clip-path);}</style>
+		<clipPath id="clip-path">
+			<polygon class="mc-svg-facebook-cls1" points="598.77 41.98 597.37 43.38 602.97 48.98 590.77 48.98 590.77 50.98 602.97 50.98 597.37 56.58 598.77 57.98 606.77 49.98 598.77 41.98"/>
+		</clipPath>
+	</defs>
+	<title>Facebook1</title>
+	<path id="f" class="mc-svg-facebook-cls2" d="M61.78,107V58.19H78.16l2.45-19H61.78V27c0-5.51,1.53-9.26,9.42-9.26H81.27V.77A134.74,134.74,0,0,0,66.6,0C52.08,0,42.15,8.88,42.15,25.15v14H25.73v19H42.15V107Z"/>
+</svg>		</a>
+	</li>
+	<li>
+		<a href="https://twitter.com/MorningConsult"><svg id="mc-svg-twitter" data-name="Layer 1" 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 107 107">
+	<defs>
+		<style>.mc-svg-twitter-cls1{fill:none;clip-rule:evenodd;}.mc-svg-twitter-cls2{fill:#fff;}.mc-svg-twitter-cls3{clip-path:url(#clip-path);}</style>
+		<clipPath id="clip-path">
+			<polygon class="mc-svg-twitter-cls1" points="313.57 42.51 312.17 43.91 317.77 49.51 305.57 49.51 305.57 51.51 317.77 51.51 312.17 57.11 313.57 58.51 321.57 50.51 313.57 42.51"/>
+		</clipPath>
+	</defs>
+	<title>twitter1</title>
+	<path class="mc-svg-twitter-cls2" d="M33.2,98c41.3,0,63.88-34.21,63.88-63.88,0-1,0-1.94-.07-2.9a45.68,45.68,0,0,0,11.2-11.62,44.82,44.82,0,0,1-12.9,3.53,22.53,22.53,0,0,0,9.87-12.42,45,45,0,0,1-14.26,5.45A22.47,22.47,0,0,0,52.67,36.59,63.74,63.74,0,0,1,6.4,13.14a22.47,22.47,0,0,0,7,30A22.29,22.29,0,0,1,3.16,40.3v.28a22.46,22.46,0,0,0,18,22A22.42,22.42,0,0,1,11,63,22.48,22.48,0,0,0,32,78.57,45.05,45.05,0,0,1,4.13,88.2a45.7,45.7,0,0,1-5.34-.32A63.56,63.56,0,0,0,33.2,97.94"/>
+</svg></a>
+	</li>
+	<li>
+		<a href="http://www.linkedin.com/company/1818696"><svg id="mc-svg-linkedin" data-name="Layer 1" 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 107 107">
+	<defs>
+		<style>.mc-svg-linkedin-cls1{fill:none;clip-rule:evenodd;}.mc-svg-linkedin-cls2{fill:#fff;}.mc-svg-linkedin-cls3{clip-path:url(#clip-path);}</style>
+		<clipPath id="clip-path">
+			<polygon class="mc-svg-linkedin-cls1" points="183.38 43.4 181.97 44.8 187.57 50.4 175.38 50.4 175.38 52.4 187.57 52.4 181.97 58 183.38 59.4 191.38 51.4 183.38 43.4"/>
+		</clipPath>
+	</defs>
+	<title>linkedin1</title>
+	<path id="path28" class="mc-svg-linkedin-cls2" d="M27.15,99.63V37.38H6.46V99.63ZM16.81,28.88c7.22,0,11.71-4.78,11.71-10.75S24,7.37,16.94,7.37,5.24,12,5.24,18.12,9.73,28.88,16.67,28.88h.13Z"/>
+	<path id="path30" class="mc-svg-linkedin-cls2" d="M38.6,99.63H59.29V64.87a14.18,14.18,0,0,1,.68-5c1.5-3.72,4.9-7.57,10.62-7.57,7.49,0,10.48,5.71,10.48,14.08v33.3h20.69V63.94c0-19.12-10.21-28-23.82-28-11.16,0-16.06,6.24-18.79,10.49h.14v-9H38.6c.27,5.84,0,62.25,0,62.25Z"/>
+</svg></a>
+	</li>
+	<li>
+		<a href="/subscribe"><svg id="mc-svg-email" data-name="Layer 1" 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 107 107">
+	<defs>
+		<style>.mc-svg-email-cls1,.mc-svg-email-cls2{fill:none;}.mc-svg-email-cls1{clip-rule:evenodd;}.mc-svg-email-cls3{clip-path:url(#mc-svg-twitter-cp);}.mc-svg-email-cls4{clip-path:url(#mc-svg-twitter-cp-2);}.mc-svg-email-cls5{isolation:isolate;}.mc-svg-email-cls6{clip-path:url(#mc-svg-twitter-cp-3);}.mc-svg-email-cls7{fill:#fff;}.mc-svg-email-cls8{clip-path:url(#mc-svg-twitter-cp-5);}</style>
+		<clipPath id="mc-svg-twitter-cp">
+			<path class="mc-svg-email-cls1" d="M94.91,32.92,53.5,59.76,12.09,32.92V22.18L53.5,49,94.91,22.18ZM10.31,9.65C4.78,9.65.25,14.58.25,20.61V86.39c0,6,4.53,11,10.06,11H96.69c5.53,0,10.06-4.93,10.06-11V20.61c0-6-4.53-11-10.06-11Z"/>
+		</clipPath>
+		<clipPath id="mc-svg-twitter-cp-2">
+			<rect class="mc-svg-email-cls2" x="0.25" y="-2.88" width="112.75" height="106.49"/>
+		</clipPath>
+		<clipPath id="mc-svg-twitter-cp-3">
+			<rect class="mc-svg-email-cls2" x="0.25" y="9.65" width="106.49" height="87.7"/>
+		</clipPath>
+		<clipPath id="mc-svg-twitter-cp-5">
+			<polygon class="mc-svg-email-cls1" points="453.93 42.47 452.53 43.87 458.13 49.47 445.93 49.47 445.93 51.47 458.13 51.47 452.53 57.06 453.93 58.47 461.93 50.47 453.93 42.47"/>
+		</clipPath>
+	</defs>
+	<title>Email SVG Share Icon</title>
+	<g class="mc-svg-email-cls3">
+		<g class="mc-svg-email-cls4">
+			<g class="mc-svg-email-cls5">
+				<g class="mc-svg-email-cls6">
+					<g class="mc-svg-email-cls6">
+						<rect class="mc-svg-email-cls7" x="-31.07" y="-21.67" width="169.13" height="150.34"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></a>
+	</li>
+</ul>		</div>
+
+		<div class="mc-footer__copyright">
+			© 2019 Morning Consult, <br class="is-hidden-tablet">All Rights Reserved. The M Logo and MORNING CONSULT are registered trademarks of Morning Consult Holdings, Inc.
+			<ul class="mc-footer__terms is-flex is-flex-centered">
+				<li><a href="/terms-and-conditions-of-use">Terms & Conditions</a></li>
+				<li><a href="/privacy-policy">Privacy</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript">
+  var _sf_async_config = { uid: 62308, domain: 'morningconsult.com', useCanonical: true };
+  (function() {
+    function loadChartbeat() {
+      window._sf_endpt = (new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+      document.body.appendChild(e);
+    };
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+      loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKBJZ3Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mc_state_trend = [["Demographic","1-Jan-17","","1-Feb-17","","1-Mar-17","","1-Apr-17","","1-May-17","","1-Jun-17","","1-Jul-17","","1-Aug-17","","1-Sep-17","","1-Oct-17","","1-Nov-17","","1-Dec-17","","1-Jan-18","","1-Feb-18","","1-Mar-18","","1-Apr-18","","1-May-18","","1-Jun-18","","1-Jul-18","","1-Aug-18","","1-Sep-18","","1-Oct-18","","1-Nov-18","","1-Dec-18","","1-Jan-19","","1-Feb-19","","1-Mar-19","","1-Apr-19","","1-May-19",""],["Alabama","62","26","65","29","62","32","63","33","56","38","54","41","58","38","56","38","59","36","60","35","60","35","60","35","63","33","61","35","63","33","62","34","63","33","63","33","63","33","63","33","62","34","62","34","62","34","58","37","58","38","61","35","61","35","61","35","61","34"],["Alaska","55","31","60","35","65","29","64","32","60","35","54","38","54","41","48","46","52","43","54","42","49","46","51","43","48","47","55","42","52","43","52","44","51","44","53","43","55","40","52","43","48","44","54","41","53","41","49","45","48","47","49","46","47","47","48","47","47","47"],["Arizona","55","35","54","40","53","43","54","41","51","45","48","47","47","48","46","49","44","51","47","49","44","50","47","48","46","49","50","47","48","49","48","48","49","47","48","48","48","48","47","49","47","50","49","47","47","49","44","51","44","52","45","51","45","51","44","52","45","51"],["Arkansas","59","29","59","34","60","35","56","39","54","41","53","41","55","39","54","40","54","40","54","41","51","43","53","42","53","40","52","40","55","40","54","42","54","41","55","41","55","41","56","40","54","42","55","40","55","41","53","42","53","43","51","44","52","44","53","43","52","44"],["California","42","48","43","51","45","50","44","52","41","54","40","54","38","55","33","56","36","58","34","61","35","60","35","60","36","59","34","61","34","62","35","61","37","58","37","59","36","59","35","61","35","61","36","60","35","61","33","62","33","63","33","63","34","62","34","63","34","62"],["Colorado","45","44","46","47","52","43","47","49","45","50","42","52","41","53","40","55","41","54","40","55","40","56","42","54","41","55","40","56","41","56","40","56","40","56","42","55","43","53","42","54","42","55","42","54","43","53","40","56","39","57","42","54","42","55","42","55","41","55"],["Connecticut","47","42","43","52","46","48","46","50","40","55","38","58","38","57","34","62","36","59","38","58","39","58","37","58","39","58","40","58","38","59","38","58","40","56","42","54","40","56","40","56","39","56","40","56","38","58","38","58","36","60","37","59","37","60","37","60","36","60"],["Delaware","49","41","48","46","53","42","49","47","45","51","41","54","45","51","40","54","38","57","40","56","38","57","40","56","41","55","43","54","39","57","41","55","40","57","42","54","41","56","39","57","39","57","41","55","42","55","40","56","41","56","42","55","42","55","41","56","41","56"],["District of Columbia","30","61","32","63","32","64","30","67","27","70","21","74","23","73","16","78","17","78","16","81","16","80","19","77","16","80","16","82","17","80","19","78","19","77","22","75","20","77","17","79","17","79","17","77","18","78","17","79","16","81","18","79","17","80","18","78","17","79"],["Florida","56","34","56","38","56","39","56","40","51","44","48","47","47","49","47","48","48","47","49","47","47","48","49","47","50","45","49","47","48","48","48","48","50","45","51","45","50","46","49","47","49","47","49","47","49","47","46","49","46","50","47","49","47","49","47","49","48","48"],["Georgia","53","35","54","39","55","40","51","45","50","45","48","47","49","47","46","48","47","47","50","46","48","47","47","47","51","44","50","46","50","45","49","46","51","44","50","45","50","46","50","45","50","45","49","46","49","46","46","49","47","49","47","48","50","45","49","46","48","47"],["Hawaii","38","51","40","54","43","52","39","57","34","61","32","63","31","65","30","63","31","64","31","65","32","64","33","63","30","66","32","65","33","64","33","64","35","61","37","60","37","60","37","60","32","64","33","63","38","58","34","62","34","63","36","61","34","63","31","65","32","65"],["Idaho","59","30","61","33","60","35","64","31","58","38","56","38","54","41","56","39","55","41","51","44","51","44","51","44","53","42","54","40","52","44","53","43","56","40","55","41","56","40","55","41","56","40","56","40","56","40","53","42","56","41","57","39","55","41","57","40","58","38"],["Illinois","49","40","47","46","46","47","53","42","45","51","39","56","38","57","31","54","37","58","38","58","35","59","36","59","37","58","38","59","36","60","37","59","37","59","38","58","38","58","38","58","37","59","38","57","38","58","37","58","37","60","38","58","37","58","37","59","38","58"],["Indiana","55","33","54","39","57","38","59","36","49","46","50","45","47","49","47","47","50","45","48","47","48","47","49","46","48","47","49","46","48","47","51","45","52","44","51","45","51","45","51","45","50","46","52","43","52","45","52","44","50","46","50","46","50","47","50","46","49","46"],["Iowa","49","40","49","45","49","45","49","47","44","51","43","51","43","52","42","53","42","53","42","52","43","53","42","54","43","53","47","49","43","53","45","51","44","51","46","50","45","51","44","52","44","52","43","53","44","52","43","53","41","55","43","54","43","53","44","52","42","54"],["Kansas","56","32","56","38","59","35","57","38","54","41","54","41","51","44","47","47","50","45","50","45","48","47","47","48","50","45","51","45","48","47","52","44","52","44","51","45","53","43","52","45","50","46","52","44","50","46","49","47","49","48","51","45","52","44","49","47","48","47"],["Kentucky","61","27","61","33","61","34","58","36","54","41","54","40","53","42","53","41","54","41","51","43","54","40","53","41","55","40","55","40","55","40","55","41","55","40","55","41","55","40","55","41","56","40","56","39","56","40","55","40","55","41","56","39","56","40","56","40","55","41"],["Louisiana","59","28","62","32","61","33","65","31","57","37","54","40","56","39","53","40","57","37","55","39","52","41","53","40","57","38","59","36","58","37","59","36","60","35","59","36","59","35","60","36","58","37","57","37","58","37","54","41","55","40","57","39","56","38","58","38","56","39"],["Maine","48","40","50","44","52","43","47","49","47","49","42","54","44","52","42","52","42","52","42","54","38","58","42","53","40","56","46","51","42","54","43","53","45","51","48","49","45","52","45","52","42","55","45","51","44","53","45","51","43","54","42","55","43","54","41","56","44","53"],["Maryland","38","51","38","56","41","54","41","56","41","55","35","58","35","61","34","61","33","62","33","63","36","60","35","61","36","59","37","60","36","60","36","60","38","58","37","59","38","58","37","59","35","61","36","60","36","60","34","62","33","63","35","61","35","62","33","63","33","64"],["Massachusetts","43","47","42","52","42","54","40","56","37","59","35","60","33","63","31","64","32","63","32","64","32","64","32","64","32","64","34","63","33","64","32","65","35","61","36","61","35","62","36","61","35","62","35","61","36","60","33","62","33","64","33","63","34","63","34","62","35","62"],["Michigan","48","40","49","44","50","44","46","49","45","50","40","55","43","53","39","55","40","55","40","55","40","54","41","53","42","52","43","53","41","55","42","54","43","52","44","52","42","53","42","53","41","54","42","53","43","52","41","53","40","55","40","55","42","53","43","53","42","54"],["Minnesota","46","43","48","46","48","46","43","52","43","52","42","53","39","56","38","57","39","56","40","55","37","58","38","57","41","55","42","54","40","57","39","57","41","56","41","56","41","55","40","56","40","56","41","55","43","53","41","55","39","57","39","57","41","55","42","55","40","56"],["Mississippi","61","27","61","33","62","32","58","37","54","40","52","41","55","40","50","42","54","41","55","39","51","42","55","39","56","39","58","37","59","36","61","35","59","36","60","35","60","36","61","35","58","37","59","36","57","39","56","39","54","41","57","39","58","37","58","38","56","39"],["Missouri","53","34","58","35","54","40","52","43","51","44","48","47","48","46","47","46","49","45","49","45","50","45","49","46","49","47","50","45","50","45","50","46","50","45","50","45","52","44","51","45","51","45","52","44","53","43","49","46","47","49","50","45","52","45","50","46","51","45"],["Montana","56","32","54","39","57","38","62","34","55","41","52","44","52","43","50","44","50","45","50","46","50","46","49","47","48","48","53","44","50","46","50","46","50","47","52","44","51","46","50","47","51","45","53","43","54","43","50","46","49","48","48","48","51","46","50","47","50","47"],["Nebraska","56","33","55","38","56","39","57","39","55","41","51","45","50","46","49","46","50","45","51","45","49","47","49","46","51","45","53","43","52","44","50","46","51","45","51","46","51","46","49","48","50","47","53","43","51","45","52","44","48","48","50","46","51","46","50","46","49","47"],["Nevada","49","39","55","38","52","43","51","45","51","44","47","48","48","48","44","50","44","51","42","54","44","51","44","51","47","48","44","52","45","51","45","50","47","49","44","52","45","51","46","50","44","52","44","51","45","50","42","53","42","55","43","53","43","53","45","51","42","53"],["New Hampshire","45","44","45","49","46","49","47","49","46","50","42","53","41","55","39","57","38","57","42","54","42","54","40","55","43","53","40","57","43","54","43","53","41","56","43","54","42","55","42","55","40","57","43","53","42","55","44","52","39","58","39","57","42","55","39","58","39","58"],["New Jersey","46","44","47","47","47","48","45","51","43","54","40","54","39","57","38","57","38","57","39","57","38","58","39","57","40","56","41","55","38","58","41","55","40","56","42","54","42","54","41","55","39","57","41","55","42","55","39","57","39","58","40","56","40","56","40","57","39","57"],["New Mexico","52","35","50","44","51","44","59","38","52","43","43","52","45","50","45","49","43","52","39","56","37","58","40","55","38","58","42","55","42","54","41","55","41","55","42","54","42","55","40","56","41","55","39","55","40","56","38","57","39","57","43","53","43","53","42","54","41","56"],["New York","49","41","49","45","50","45","51","45","45","51","42","54","42","53","35","59","37","58","36","60","38","58","38","58","39","57","37","59","36","60","37","59","37","58","38","58","38","58","39","57","37","59","38","58","37","59","36","59","36","60","37","59","37","59","36","60","37","59"],["North Carolina","53","35","54","40","53","42","52","43","52","44","49","46","49","46","47","47","47","48","45","50","46","49","46","49","47","48","49","47","48","48","49","46","49","47","49","47","48","48","49","47","47","49","49","47","49","47","46","49","46","50","48","48","49","48","47","49","46","50"],["North Dakota","56","33","55","39","60","35","54","40","50","46","51","44","49","46","50","44","51","44","51","44","52","44","51","45","53","42","52","44","53","43","49","47","51","45","51","46","50","46","51","45","52","44","55","41","50","46","52","43","50","46","52","44","52","45","51","45","48","47"],["Ohio","51","37","51","42","53","42","53","43","46","48","47","48","48","48","43","51","46","49","44","51","44","51","44","52","46","50","49","47","46","50","45","51","46","50","47","49","48","48","45","50","46","49","48","47","48","48","46","49","45","51","45","50","45","51","46","50","46","50"],["Oklahoma","61","27","61","33","64","31","61","32","58","37","58","37","55","40","54","40","56","39","55","39","55","40","54","41","55","40","55","40","53","43","53","43","53","42","56","40","55","41","53","44","57","39","56","40","56","39","54","41","53","43","52","44","53","43","54","43","52","43"],["Oregon","45","43","46","47","46","49","46","49","42","53","40","54","39","56","37","57","39","56","37","58","37","58","37","58","37","57","39","56","37","59","37","59","39","58","39","57","38","58","36","60","38","58","39","57","38","58","37","59","37","59","37","59","39","57","37","59","37","59"],["Pennsylvania","49","39","51","43","51","43","51","44","48","48","45","49","46","50","42","52","45","51","44","51","43","52","45","51","46","49","46","50","44","52","45","51","46","50","46","51","45","51","45","51","44","52","45","51","46","51","45","51","43","53","45","52","45","52","45","52","45","52"],["Rhode Island","42","46","44","50","44","51","47","50","43","53","38","57","42","54","32","62","35","60","35","61","35","60","36","59","37","59","36","61","36","59","37","59","36","60","39","57","38","59","37","59","35","61","39","57","40","56","38","57","39","58","39","58","38","58","37","59","38","58"],["South Carolina","56","31","59","34","59","36","58","37","50","45","50","45","53","43","51","44","51","44","52","43","51","44","50","45","51","44","55","40","53","42","53","42","55","41","54","41","54","42","54","42","54","41","56","40","54","42","52","43","52","44","54","42","54","42","53","43","53","43"],["South Dakota","54","33","56","38","62","33","62","33","58","38","52","43","51","44","51","44","51","43","52","43","52","44","53","42","53","43","52","43","54","42","54","42","55","41","55","41","56","41","56","41","51","45","55","41","57","40","55","40","51","45","50","46","54","42","53","43","51","45"],["Tennessee","61","28","59","35","61","34","61","35","55","41","55","40","54","42","53","41","53","42","53","42","53","42","53","42","56","39","57","39","55","41","56","40","58","38","55","40","56","40","58","39","58","38","58","38","60","36","56","40","54","42","56","40","56","40","57","39","56","40"],["Texas","54","34","56","37","59","36","56","40","54","41","51","44","52","44","49","45","51","44","48","46","48","47","49","46","51","44","51","44","50","46","51","45","50","45","53","43","52","44","50","45","51","45","51","44","51","44","49","45","48","48","49","46","50","46","50","46","49","46"],["Utah","58","31","58","36","56","38","56","39","52","43","55","40","49","46","50","44","52","43","48","47","45","50","43","52","46","49","47","49","45","51","46","50","48","48","48","48","47","49","50","46","45","50","47","49","50","46","49","46","45","51","49","47","49","48","51","46","49","47"],["Vermont","43","45","39","55","43","52","44","52","36","59","36","59","34","62","32","62","33","62","32","64","31","65","33","63","30","66","30","66","32","64","35","61","34","61","38","59","37","61","33","64","33","63","35","61","36","61","33","64","31","66","32","65","32","65","30","67","32","66"],["Virginia","49","41","52","42","51","44","50","46","53","43","50","45","47","49","43","53","42","53","45","51","44","51","44","50","45","49","46","49","43","52","45","51","45","51","46","50","45","51","45","51","45","50","46","50","46","50","46","49","43","53","46","51","46","50","45","51","45","51"],["Washington","45","44","45","48","46","50","46","50","45","51","42","53","40","55","36","60","37","58","34","62","35","60","36","60","36","59","36","60","36","60","35","62","36","59","37","59","37","60","35","60","35","61","36","59","37","59","36","59","35","61","34","62","35","62","35","61","33","63"],["West Virginia","62","25","62","32","61","34","62","32","59","36","53","41","55","41","54","41","59","36","61","35","58","37","59","36","59","37","59","37","61","35","62","34","62","35","60","36","63","33","64","32","62","33","61","35","63","33","61","35","60","36","59","37","60","36","58","38","57","39"],["Wisconsin","47","41","47","46","47","48","48","47","44","52","42","53","42","54","40","55","41","53","40","56","41","55","40","55","42","54","44","53","42","54","41","55","42","54","41","55","41","56","42","54","40","56","44","52","43","53","42","54","40","56","41","55","42","54","42","55","42","55"],["Wyoming","63","23","66","28","71","23","68","27","66","29","62","32","65","31","58","36","60","35","65","31","59","36","61","33","60","35","64","32","63","32","61","35","62","34","60","36","63","32","65","31","61","34","64","32","66","30","64","32","63","33","61","35","61","34","62","34","59","37"]];
+var mc_double_trend = [[["19-Jan","19-Feb","19-Mar"],["84","85","85"],["16","14","13"]],[["Jan-19","Feb-19","19-Mar"],["74","77","77"],["22","20","20"]]];
+var mc_highmaps = {"map_data_source":"527","legend_title":"Net Approval (approval minus disapproval)","color_stops":[{"color":"#711f20","from":"","to":"0"},{"color":"#f22600","from":"","to":"0.3"},{"color":"#ff7b69","from":"","to":"0.4"},{"color":"#ededed","from":"","to":"0.5"},{"color":"#bbedec","from":"","to":"0.6"},{"color":"#00c2c2","from":"","to":"0.7"},{"color":"#00394d","from":"","to":"1"}],"data_multiplier":"100","data_name":"Net Approval","trailing_decimals":"3","scale_min":"-100","scale_max":"100","end_on_tick":"1","show_slider":"1","slider_description":"Slide left and right to change months","hover_data_label_suffix":"","search_subhead":"","headline":{"subtitle":"Political Intelligence","title":"Tracking Trump: The President\u2019s Standing Across America","copy":"<p>On a daily basis, Morning Consult is surveying over 5,000 registered voters across the United States on President Trump. Each month, we\u2019ll update this page with the latest survey data, providing a clear picture of Trump\u2019s approval and re-election prospects.<\/p>\n<p>&nbsp;<\/p>\n<p>To receive more data on Trump and 2020, <a href=\"https:\/\/morningconsult.com\/form\/political-intel-briefing\/\">sign up here<\/a>.<\/p>\n"},"map":{"menu_label":"Approval by State","title":"Approval by State","copy":"<p>Use the slider to track how Trump&#8217;s net approval has shifted over time.<\/p>\n","data":"75","social_copy":{"linkedin":"Explore this interactive report tracking Trump's standing across America, via Morning Consult:","facebook":"Explore this interactive report tracking Trump's standing across America, via Morning Consult:","twitter":"Explore this interactive report tracking Trump's standing across America, via @MorningConsult:"}},"state_trend":{"menu_label":"State Trends","title":"State Trends","copy":"<p>Select a state to view the trend data.<\/p>\n","data":"528","social_copy":{"linkedin":"Explore this interactive report tracking Trump's standing across America, via Morning Consult:","facebook":"Explore this interactive report tracking Trump's standing across America, via Morning Consult:","twitter":"Explore this interactive report tracking Trump's standing across America, via @MorningConsult:"}},"double_trend":{"menu_label":"Primary Challenge","title":"Gauging the Prospects of a Primary Challenge","copy":"<p>Below is a high-level look at Trump&#8217;s support among potential GOP primary voters.<\/p>\n","data":[{"data":"418"},{"data":"419"}],"social_copy":{"linkedin":"Explore this interactive report tracking Trump's standing across America, via Morning Consult:","facebook":"Explore this interactive report tracking Trump's standing across America, via Morning Consult:","twitter":"Explore this interactive report tracking Trump's standing across America, via @MorningConsult:"}},"bar_graph":{"menu_label":"Demographic Breakouts","title":"Trump's Approval With GOP Primary Voters","copy":"<p>A breakdown of which demographic groups are more or less likely to approve of Trump. Each of the below groups are sub-demographics <strong>among potential GOP primary voters:<\/strong><\/p>\n","data":"526","social_copy":{"linkedin":"Explore this interactive report tracking Trump's standing across America, via Morning Consult:","facebook":"Explore this interactive report tracking Trump's standing across America, via Morning Consult:","twitter":"Explore this interactive report tracking Trump's standing across America, via @MorningConsult:"}},"methodology":{"menu_label":"Methodology","title":"Methodology","copy":"<p><em>This page was last updated on June 4, 2019.\u00a0<\/em><\/p>\n<p><strong><span class=\"\" data-color-group=\"turquoise\">About Morning Consult Political Intelligence <\/span><\/strong><\/p>\n<p>On a daily basis, Morning Consult surveys over 5,000 registered voters across the United States. Along with 2020 presidential election data, Political Intelligence tracks the approval ratings for all <span class=\"\" data-color-group=\"cornflower-blue\">governors<\/span>, <span class=\"\" data-color-group=\"cornflower-blue\">senators<\/span>, House members, <span class=\"\" data-color-group=\"cornflower-blue\">the President<\/span>, and more at the national, state and congressional district level. Each week, we will release a report with the most important findings on the 2020 election. <span class=\"\" data-color-group=\"cornflower-blue\">Sign-up to receive that report in your inbox <a href=\"https:\/\/morningconsult.com\/2020-democratic-primary\/\">here<\/a>.\u00a0<\/span><\/p>\n<p><strong>About the state-level data:<\/strong><\/p>\n<p>Morning Consult conducted more than 2 million surveys with registered U.S. voters from Jan. 20, 2017 to May 31, 2019 to determine the approval ratings for President Donald Trump in each of the 50 states and Washington, D.C., for each month. These results use a statistical technique called multilevel regression with post-stratification (MRP) to estimate state-level public opinion from the national survey data for a specific month.<\/p>\n<p>In each poll, Americans indicated whether they approve or disapprove of the job performance of Trump. For each question, they could answer strongly approve, somewhat approve, somewhat disapprove, strongly disapprove, or don\u2019t know\/no opinion. The surveys also included about 30 demographic questions.<\/p>\n<p>Responses to the Trump approval question are modeled via multilevel regression as a function of both individual level and state-level variables. Our models use age, gender, education and race as individual-level predictor variables. For our state-level variables, we chose variables that may influence state-level vote choice such as the percent change in state gross domestic product (GDP), state unemployment rates, state median household income and state-level outcomes from the 2016 presidential election.<\/p>\n<p>Morning Consult obtained population parameters for registered voters from the November 2012 Current Population Survey. We applied post-stratification weights at the state level based on gender, age, educational attainment and race using the American Community Survey (ACS).<\/p>\n<p>Standard errors for our estimates for each state were calculated by taking 100 bootstrap samples with replacement from our full national dataset for each hypothetical matchup and then assessing this empirical distribution at the state level. The distribution of these predictions at the state level allows us to construct a predictive interval, which gives us a sense of the spread of MRP estimates. The 95 percent predictive intervals range from 1 percentage point in larger states such as California, Florida, New York, Pennsylvania and Texas, to 4 percentage points in the smaller population size of Alaska.<\/p>\n<p>The margin of error in each state for the last month is available <a href=\"https:\/\/morningconsult.com\/wp-content\/uploads\/2019\/03\/Trump-MOE-2.19.csv\">here<\/a>.<\/p>\n<p><strong>About the demographic approval data:<\/strong><\/p>\n<p>The &#8220;Trump&#8217;s Re-election Support With Key Groups&#8221; section has a different methodology than the above sections. This section is reported based on 60,528 interviews with registered voters who indicate they may vote in the Republican primary or caucus in their state. The interviews were collected from May 1, 2019 through May 31, 2019 and have a margin of error of +\/- 1%. Each demographic group listed is based on at least 3,700 interviews over that same time frame. The margin of error for each group is either +\/- 1% or +\/- 2%.<\/p>\n"},"form":{"subtitle":"Go deeper","title":"Download the Latest 2020 Political Intelligence Report","copy":"Featuring insights on Trump's standing as well as the state of the Democratic primary. Sign-up to always get this data first:","form":{"title":"Political Intelligence Tracking Trump","description":"This will be used ONLY on product pages.","labelPlacement":"top_label","descriptionPlacement":"below","button":{"type":"text","text":"Submit","imageUrl":""},"fields":[{"type":"text","id":1,"label":"First Name","adminLabel":"","isRequired":true,"size":"medium","errorMessage":"","inputs":null,"formId":100,"description":"","allowsPrepopulate":false,"inputMask":false,"inputMaskValue":"","inputType":"","labelPlacement":"","descriptionPlacement":"","subLabelPlacement":"","placeholder":"First Name","cssClass":"","inputName":"","visibility":"visible","noDuplicates":false,"defaultValue":"","choices":"","conditionalLogic":"","productField":"","enablePasswordInput":"","maxLength":"","multipleFiles":false,"maxFiles":"","calculationFormula":"","calculationRounding":"","enableCalculation":"","disableQuantity":false,"displayAllCategories":false,"useRichTextEditor":false,"pageNumber":1,"displayOnly":"","fields":"","inputMaskIsCustom":"","conditionalLogicFields":[],"failed_validation":"","enableCopyValuesOption":""},{"type":"text","id":2,"label":"Last Name","adminLabel":"","isRequired":true,"size":"medium","errorMessage":"","inputs":null,"formId":100,"description":"","allowsPrepopulate":false,"inputMask":false,"inputMaskValue":"","inputType":"","labelPlacement":"","descriptionPlacement":"","subLabelPlacement":"","placeholder":"Last Name","cssClass":"","inputName":"","visibility":"visible","noDuplicates":false,"defaultValue":"","choices":"","conditionalLogic":"","productField":"","enablePasswordInput":"","maxLength":"","multipleFiles":false,"maxFiles":"","calculationFormula":"","calculationRounding":"","enableCalculation":"","disableQuantity":false,"displayAllCategories":false,"useRichTextEditor":false,"pageNumber":1,"displayOnly":"","fields":"","inputMaskIsCustom":"","conditionalLogicFields":[],"failed_validation":"","enableCopyValuesOption":""},{"type":"email","id":3,"label":"Email","adminLabel":"","isRequired":true,"size":"medium","errorMessage":"","inputs":null,"formId":100,"description":"","allowsPrepopulate":false,"inputMask":false,"inputMaskValue":"","inputType":"","labelPlacement":"","descriptionPlacement":"","subLabelPlacement":"","placeholder":"Email","cssClass":"","inputName":"","visibility":"visible","noDuplicates":false,"defaultValue":"","choices":"","conditionalLogic":"","productField":"","emailConfirmEnabled":"","multipleFiles":false,"maxFiles":"","calculationFormula":"","calculationRounding":"","enableCalculation":"","disableQuantity":false,"displayAllCategories":false,"useRichTextEditor":false,"pageNumber":1,"displayOnly":"","fields":"","maxLength":"","inputMaskIsCustom":"","conditionalLogicFields":[],"failed_validation":"","enableCopyValuesOption":""},{"type":"text","id":5,"label":"Job Title","adminLabel":"","isRequired":true,"size":"medium","errorMessage":"","inputs":null,"formId":100,"description":"","allowsPrepopulate":false,"inputMask":false,"inputMaskValue":"","inputType":"","labelPlacement":"","descriptionPlacement":"","subLabelPlacement":"","placeholder":"Job Title","cssClass":"","inputName":"","visibility":"visible","noDuplicates":false,"defaultValue":"","choices":"","conditionalLogic":"","productField":"","enablePasswordInput":"","maxLength":"","multipleFiles":false,"maxFiles":"","calculationFormula":"","calculationRounding":"","enableCalculation":"","disableQuantity":false,"displayAllCategories":false,"useRichTextEditor":false,"pageNumber":1,"displayOnly":"","fields":"","inputMaskIsCustom":"","conditionalLogicFields":[],"failed_validation":"","enableCopyValuesOption":""},{"type":"text","id":6,"label":"Company","adminLabel":"","isRequired":true,"size":"medium","errorMessage":"","inputs":null,"formId":100,"description":"","allowsPrepopulate":false,"inputMask":false,"inputMaskValue":"","inputType":"","labelPlacement":"","descriptionPlacement":"","subLabelPlacement":"","placeholder":"Company\/Organization","cssClass":"","inputName":"","visibility":"visible","noDuplicates":false,"defaultValue":"","choices":"","conditionalLogic":"","productField":"","enablePasswordInput":"","maxLength":"","multipleFiles":false,"maxFiles":"","calculationFormula":"","calculationRounding":"","enableCalculation":"","disableQuantity":false,"displayAllCategories":false,"useRichTextEditor":false,"pageNumber":1,"displayOnly":"","fields":"","inputMaskIsCustom":"","conditionalLogicFields":[],"failed_validation":"","enableCopyValuesOption":""}],"version":"2.4.6","id":100,"useCurrentUserAsAuthor":true,"postContentTemplateEnabled":false,"postTitleTemplateEnabled":false,"postTitleTemplate":"","postContentTemplate":"","lastPageButton":null,"pagination":null,"firstPageCssClass":null,"notifications":{"5b2a99ad42429":{"id":"5b2a99ad42429","to":"{admin_email}","name":"Admin Notification","event":"form_submission","toType":"email","subject":"New submission from {form_title}","message":"{all_fields}","isActive":false}},"confirmations":{"5b2a99ad4306d":{"id":"5b2a99ad4306d","name":"Default Confirmation","isDefault":true,"type":"redirect","message":"","url":"https:\/\/morningconsult.com\/wp-content\/uploads\/2019\/06\/Political-Intelligence-6.3.19.pdf","pageId":0,"queryString":"","disableAutoformat":false,"conditionalLogic":[]}},"nextFieldId":7,"is_active":"1","date_created":"2019-03-12 01:19:05","is_trash":"0"}},"map_data":"[[\"Demographic\",\"NEW May '19\",\"April '19\",\"Mar '19\",\"Feb '19\",\"Jan '19\",\"Dec '18\",\"Nov '18\",\"Oct '18\",\"Sep '18\",\"Aug '18\",\"Jul '18\",\"Jun '18\",\"May '18\",\"Apr '18\",\"Mar '18\",\"Feb '18\",\"Jan '18\",\"Dec '17\",\"Nov '17\",\"Oct '17\",\"Sep '17\",\"Aug '17\",\"Jul '17\",\"Jun '17\",\"May '17\",\"Apr '17\",\"Mar '17\",\"Feb '17\",\"Jan '17\"],[\"AK\",\"0\",\"0.01\",\"0.01\",\"0.03\",\"0.01\",\"0.03\",\"0.13\",\"0.14\",\"0.04\",\"0.09\",\"0.15\",\"0.1\",\"0.07\",\"0.08\",\"0.09\",\"0.13\",\"0.01\",\"0.08\",\"0.03\",\"0.12\",\"0.1\",\"0.02\",\"0.12\",\"0.16\",\"0.25\",\"0.32\",\"0.37\",\"0.24\",\"0.25\"],[\"AL\",\"0.27\",\"0.27\",\"0.27\",\"0.26\",\"0.2\",\"0.22\",\"0.29\",\"0.27\",\"0.28\",\"0.3\",\"0.3\",\"0.3\",\"0.3\",\"0.28\",\"0.29\",\"0.27\",\"0.29\",\"0.25\",\"0.25\",\"0.25\",\"0.23\",\"0.18\",\"0.2\",\"0.14\",\"0.17\",\"0.29\",\"0.3\",\"0.35\",\"0.36\"],[\"AR\",\"0.08\",\"0.09\",\"0.07\",\"0.07\",\"0.1\",\"0.12\",\"0.13\",\"0.15\",\"0.12\",\"0.17\",\"0.14\",\"0.15\",\"0.13\",\"0.12\",\"0.15\",\"0.12\",\"0.13\",\"0.11\",\"0.08\",\"0.13\",\"0.14\",\"0.14\",\"0.16\",\"0.12\",\"0.13\",\"0.17\",\"0.25\",\"0.25\",\"0.3\"],[\"AZ\",\"-0.06\",\"-0.07\",\"-0.06\",\"-0.06\",\"-0.07\",\"-0.07\",\"-0.02\",\"0.02\",\"-0.03\",\"-0.02\",\"0\",\"0\",\"0.02\",\"-0.01\",\"-0.01\",\"0.03\",\"-0.04\",\"-0.01\",\"-0.07\",\"-0.02\",\"-0.07\",\"-0.03\",\"-0.01\",\"0.01\",\"0.06\",\"0.13\",\"0.11\",\"0.15\",\"0.19\"],[\"CA\",\"-0.28\",\"-0.29\",\"-0.28\",\"-0.3\",\"-0.3\",\"-0.29\",\"-0.26\",\"-0.24\",\"-0.26\",\"-0.26\",\"-0.23\",\"-0.22\",\"-0.21\",\"-0.27\",\"-0.29\",\"-0.27\",\"-0.23\",\"-0.25\",\"-0.25\",\"-0.27\",\"-0.22\",\"-0.23\",\"-0.18\",\"-0.14\",\"-0.13\",\"-0.08\",\"-0.05\",\"-0.08\",\"-0.06\"],[\"CO\",\"-0.14\",\"-0.13\",\"-0.13\",\"-0.12\",\"-0.18\",\"-0.16\",\"-0.1\",\"-0.12\",\"-0.13\",\"-0.12\",\"-0.1\",\"-0.13\",\"-0.15\",\"-0.16\",\"-0.15\",\"-0.16\",\"-0.14\",\"-0.12\",\"-0.15\",\"-0.15\",\"-0.13\",\"-0.15\",\"-0.11\",\"-0.1\",\"-0.05\",\"-0.02\",\"0.08\",\"-0.01\",\"0.01\"],[\"CT\",\"-0.24\",\"-0.23\",\"-0.23\",\"-0.22\",\"-0.24\",\"-0.2\",\"-0.2\",\"-0.15\",\"-0.17\",\"-0.16\",\"-0.16\",\"-0.13\",\"-0.15\",\"-0.2\",\"-0.22\",\"-0.18\",\"-0.19\",\"-0.21\",\"-0.19\",\"-0.2\",\"-0.23\",\"-0.28\",\"-0.19\",\"-0.2\",\"-0.15\",\"-0.04\",\"-0.02\",\"-0.09\",\"0.05\"],[\"DC\",\"-0.62\",\"-0.6\",\"-0.63\",\"-0.61\",\"-0.64\",\"-0.61\",\"-0.6\",\"-0.6\",\"-0.62\",\"-0.62\",\"-0.57\",\"-0.53\",\"-0.59\",\"-0.58\",\"-0.64\",\"-0.66\",\"-0.63\",\"-0.58\",\"-0.64\",\"-0.65\",\"-0.6\",\"-0.62\",\"-0.5\",\"-0.53\",\"-0.43\",\"-0.37\",\"-0.32\",\"-0.32\",\"-0.31\"],[\"DE\",\"-0.15\",\"-0.15\",\"-0.14\",\"-0.13\",\"-0.15\",\"-0.15\",\"-0.13\",\"-0.14\",\"-0.18\",\"-0.18\",\"-0.15\",\"-0.12\",\"-0.17\",\"-0.13\",\"-0.18\",\"-0.11\",\"-0.15\",\"-0.16\",\"-0.19\",\"-0.16\",\"-0.2\",\"-0.15\",\"-0.05\",\"-0.13\",\"-0.06\",\"0.02\",\"0.11\",\"0.02\",\"0.08\"],[\"FL\",\"0\",\"-0.02\",\"-0.02\",\"-0.02\",\"-0.04\",\"-0.03\",\"0.02\",\"0.03\",\"0.01\",\"0.01\",\"0.04\",\"0.05\",\"0.05\",\"0\",\"0\",\"0.02\",\"0.05\",\"0.02\",\"-0.01\",\"0.02\",\"0.01\",\"-0.01\",\"-0.01\",\"0.02\",\"0.08\",\"0.16\",\"0.17\",\"0.17\",\"0.22\"],[\"GA\",\"0.01\",\"0.03\",\"0.05\",\"-0.01\",\"-0.02\",\"-0.03\",\"0.03\",\"0.03\",\"0.06\",\"0.05\",\"0.04\",\"0.05\",\"0.07\",\"0.03\",\"0.05\",\"0.04\",\"0.07\",\"0\",\"0.01\",\"0.04\",\"0\",\"-0.02\",\"0.02\",\"0.01\",\"0.05\",\"0.06\",\"0.16\",\"0.15\",\"0.18\"],[\"HI\",\"-0.33\",\"-0.34\",\"-0.29\",\"-0.25\",\"-0.29\",\"-0.28\",\"-0.21\",\"-0.3\",\"-0.32\",\"-0.23\",\"-0.23\",\"-0.23\",\"-0.25\",\"-0.31\",\"-0.31\",\"-0.33\",\"-0.35\",\"-0.29\",\"-0.32\",\"-0.34\",\"-0.33\",\"-0.34\",\"-0.34\",\"-0.3\",\"-0.27\",\"-0.17\",\"-0.1\",\"-0.14\",\"-0.14\"],[\"IA\",\"-0.12\",\"-0.08\",\"-0.09\",\"-0.1\",\"-0.14\",\"-0.1\",\"-0.07\",\"-0.1\",\"-0.08\",\"-0.08\",\"-0.06\",\"-0.04\",\"-0.07\",\"-0.07\",\"-0.11\",\"-0.02\",\"-0.1\",\"-0.12\",\"-0.1\",\"-0.1\",\"-0.11\",\"-0.1\",\"-0.09\",\"-0.08\",\"-0.06\",\"0.02\",\"0.04\",\"0.04\",\"0.09\"],[\"ID\",\"0.2\",\"0.17\",\"0.14\",\"0.18\",\"0.15\",\"0.12\",\"0.15\",\"0.16\",\"0.15\",\"0.14\",\"0.17\",\"0.14\",\"0.16\",\"0.11\",\"0.08\",\"0.14\",\"0.11\",\"0.07\",\"0.07\",\"0.07\",\"0.14\",\"0.17\",\"0.13\",\"0.18\",\"0.2\",\"0.33\",\"0.24\",\"0.27\",\"0.29\"],[\"IL\",\"-0.2\",\"-0.22\",\"-0.21\",\"-0.2\",\"-0.23\",\"-0.22\",\"-0.2\",\"-0.2\",\"-0.22\",\"-0.2\",\"-0.21\",\"-0.2\",\"-0.22\",\"-0.22\",\"-0.24\",\"-0.21\",\"-0.21\",\"-0.23\",\"-0.24\",\"-0.2\",\"-0.21\",\"-0.23\",\"-0.18\",\"-0.18\",\"-0.06\",\"0.11\",\"-0.01\",\"0.01\",\"0.09\"],[\"IN\",\"0.03\",\"0.03\",\"0.03\",\"0.05\",\"0.04\",\"0.08\",\"0.07\",\"0.09\",\"0.04\",\"0.06\",\"0.06\",\"0.07\",\"0.07\",\"0.06\",\"0.01\",\"0.03\",\"0.01\",\"0.02\",\"0.01\",\"0.01\",\"0.05\",\"0\",\"-0.02\",\"0.05\",\"0.03\",\"0.23\",\"0.2\",\"0.15\",\"0.22\"],[\"KS\",\"0.01\",\"0.02\",\"0.08\",\"0.06\",\"0.01\",\"0.02\",\"0.04\",\"0.08\",\"0.03\",\"0.07\",\"0.1\",\"0.06\",\"0.08\",\"0.09\",\"0.02\",\"0.06\",\"0.04\",\"0\",\"0\",\"0.05\",\"0.05\",\"0\",\"0.08\",\"0.12\",\"0.13\",\"0.18\",\"0.24\",\"0.18\",\"0.24\"],[\"KY\",\"0.14\",\"0.16\",\"0.15\",\"0.17\",\"0.14\",\"0.15\",\"0.16\",\"0.17\",\"0.16\",\"0.14\",\"0.15\",\"0.14\",\"0.15\",\"0.14\",\"0.15\",\"0.15\",\"0.16\",\"0.12\",\"0.14\",\"0.07\",\"0.14\",\"0.12\",\"0.12\",\"0.14\",\"0.12\",\"0.22\",\"0.27\",\"0.28\",\"0.34\"],[\"LA\",\"0.17\",\"0.2\",\"0.18\",\"0.18\",\"0.16\",\"0.13\",\"0.21\",\"0.2\",\"0.21\",\"0.24\",\"0.24\",\"0.23\",\"0.25\",\"0.23\",\"0.21\",\"0.23\",\"0.19\",\"0.13\",\"0.11\",\"0.16\",\"0.2\",\"0.13\",\"0.17\",\"0.15\",\"0.21\",\"0.34\",\"0.28\",\"0.3\",\"0.31\"],[\"MA\",\"-0.27\",\"-0.28\",\"-0.29\",\"-0.3\",\"-0.31\",\"-0.29\",\"-0.23\",\"-0.26\",\"-0.27\",\"-0.25\",\"-0.27\",\"-0.25\",\"-0.26\",\"-0.32\",\"-0.31\",\"-0.29\",\"-0.32\",\"-0.31\",\"-0.31\",\"-0.32\",\"-0.31\",\"-0.33\",\"-0.3\",\"-0.25\",\"-0.22\",\"-0.17\",\"-0.12\",\"-0.1\",\"-0.04\"],[\"MD\",\"-0.31\",\"-0.3\",\"-0.27\",\"-0.26\",\"-0.3\",\"-0.28\",\"-0.23\",\"-0.25\",\"-0.26\",\"-0.23\",\"-0.21\",\"-0.22\",\"-0.2\",\"-0.24\",\"-0.24\",\"-0.23\",\"-0.23\",\"-0.26\",\"-0.24\",\"-0.3\",\"-0.29\",\"-0.27\",\"-0.25\",\"-0.23\",\"-0.14\",\"-0.15\",\"-0.12\",\"-0.18\",\"-0.12\"],[\"ME\",\"-0.09\",\"-0.15\",\"-0.11\",\"-0.13\",\"-0.11\",\"-0.06\",\"-0.09\",\"-0.07\",\"-0.13\",\"-0.07\",\"-0.08\",\"-0.01\",\"-0.06\",\"-0.11\",\"-0.12\",\"-0.05\",\"-0.16\",\"-0.1\",\"-0.2\",\"-0.12\",\"-0.1\",\"-0.1\",\"-0.08\",\"-0.12\",\"-0.02\",\"-0.02\",\"0.09\",\"0.07\",\"0.08\"],[\"MI\",\"-0.12\",\"-0.1\",\"-0.12\",\"-0.15\",\"-0.15\",\"-0.12\",\"-0.09\",\"-0.1\",\"-0.13\",\"-0.11\",\"-0.11\",\"-0.08\",\"-0.09\",\"-0.12\",\"-0.13\",\"-0.1\",\"-0.1\",\"-0.13\",\"-0.14\",\"-0.15\",\"-0.15\",\"-0.16\",\"-0.1\",\"-0.15\",\"-0.05\",\"-0.03\",\"0.07\",\"0.05\",\"0.07\"],[\"MN\",\"-0.16\",\"-0.13\",\"-0.14\",\"-0.18\",\"-0.19\",\"-0.14\",\"-0.1\",\"-0.15\",\"-0.16\",\"-0.17\",\"-0.14\",\"-0.15\",\"-0.15\",\"-0.18\",\"-0.16\",\"-0.12\",\"-0.14\",\"-0.2\",\"-0.21\",\"-0.15\",\"-0.17\",\"-0.19\",\"-0.17\",\"-0.11\",\"-0.1\",\"-0.09\",\"0.02\",\"0.01\",\"0.03\"],[\"MO\",\"0.06\",\"0.04\",\"0.07\",\"0.05\",\"-0.02\",\"0.03\",\"0.1\",\"0.08\",\"0.06\",\"0.07\",\"0.08\",\"0.05\",\"0.06\",\"0.04\",\"0.05\",\"0.05\",\"0.02\",\"0.03\",\"0.05\",\"0.04\",\"0.05\",\"0\",\"0.02\",\"0.01\",\"0.07\",\"0.1\",\"0.13\",\"0.22\",\"0.19\"],[\"MS\",\"0.17\",\"0.19\",\"0.21\",\"0.18\",\"0.13\",\"0.17\",\"0.17\",\"0.23\",\"0.21\",\"0.26\",\"0.24\",\"0.25\",\"0.23\",\"0.25\",\"0.23\",\"0.21\",\"0.17\",\"0.15\",\"0.09\",\"0.16\",\"0.13\",\"0.07\",\"0.16\",\"0.11\",\"0.14\",\"0.21\",\"0.29\",\"0.28\",\"0.34\"],[\"MT\",\"0.03\",\"0.03\",\"0.05\",\"0\",\"0.01\",\"0.03\",\"0.11\",\"0.1\",\"0.06\",\"0.03\",\"0.04\",\"0.08\",\"0.03\",\"0.04\",\"0.04\",\"0.09\",\"0.01\",\"0.03\",\"0.04\",\"0.03\",\"0.05\",\"0.07\",\"0.09\",\"0.08\",\"0.14\",\"0.28\",\"0.19\",\"0.15\",\"0.25\"],[\"NC\",\"-0.04\",\"-0.02\",\"0\",\"0\",\"-0.04\",\"-0.03\",\"0.02\",\"0.03\",\"-0.03\",\"0.02\",\"0\",\"0.03\",\"0.02\",\"0.03\",\"0\",\"0.01\",\"-0.01\",\"-0.04\",\"-0.03\",\"-0.05\",\"-0.01\",\"0\",\"0.03\",\"0.03\",\"0.07\",\"0.1\",\"0.12\",\"0.14\",\"0.17\"],[\"ND\",\"0.01\",\"0.06\",\"0.07\",\"0.08\",\"0.04\",\"0.09\",\"0.04\",\"0.15\",\"0.08\",\"0.06\",\"0.04\",\"0.05\",\"0.05\",\"0.02\",\"0.1\",\"0.08\",\"0.11\",\"0.06\",\"0.08\",\"0.08\",\"0.07\",\"0.05\",\"0.03\",\"0.07\",\"0.04\",\"0.14\",\"0.25\",\"0.16\",\"0.23\"],[\"NE\",\"0.02\",\"0.04\",\"0.05\",\"0.04\",\"0\",\"0.07\",\"0.06\",\"0.1\",\"0.04\",\"0.01\",\"0.05\",\"0.05\",\"0.05\",\"0.04\",\"0.07\",\"0.09\",\"0.06\",\"0.03\",\"0.02\",\"0.06\",\"0.04\",\"0.02\",\"0.04\",\"0.06\",\"0.13\",\"0.18\",\"0.18\",\"0.17\",\"0.23\"],[\"NH\",\"-0.19\",\"-0.19\",\"-0.13\",\"-0.18\",\"-0.18\",\"-0.08\",\"-0.12\",\"-0.1\",\"-0.17\",\"-0.13\",\"-0.14\",\"-0.11\",\"-0.15\",\"-0.11\",\"-0.11\",\"-0.17\",\"-0.1\",\"-0.15\",\"-0.13\",\"-0.13\",\"-0.19\",\"-0.18\",\"-0.14\",\"-0.1\",\"-0.04\",\"-0.02\",\"-0.02\",\"-0.03\",\"0.01\"],[\"NJ\",\"-0.18\",\"-0.17\",\"-0.16\",\"-0.16\",\"-0.2\",\"-0.17\",\"-0.13\",\"-0.14\",\"-0.18\",\"-0.14\",\"-0.12\",\"-0.13\",\"-0.15\",\"-0.14\",\"-0.19\",\"-0.14\",\"-0.16\",\"-0.19\",\"-0.19\",\"-0.17\",\"-0.19\",\"-0.2\",\"-0.18\",\"-0.14\",\"-0.11\",\"-0.06\",\"-0.01\",\"0\",\"0.01\"],[\"NM\",\"-0.15\",\"-0.12\",\"-0.11\",\"-0.1\",\"-0.18\",\"-0.19\",\"-0.16\",\"-0.16\",\"-0.14\",\"-0.16\",\"-0.12\",\"-0.12\",\"-0.14\",\"-0.14\",\"-0.12\",\"-0.13\",\"-0.2\",\"-0.15\",\"-0.22\",\"-0.17\",\"-0.1\",\"-0.04\",\"-0.05\",\"-0.08\",\"0.09\",\"0.21\",\"0.07\",\"0.06\",\"0.17\"],[\"NV\",\"-0.11\",\"-0.07\",\"-0.1\",\"-0.1\",\"-0.13\",\"-0.1\",\"-0.05\",\"-0.07\",\"-0.07\",\"-0.04\",\"-0.07\",\"-0.08\",\"-0.02\",\"-0.05\",\"-0.06\",\"-0.08\",\"-0.01\",\"-0.06\",\"-0.07\",\"-0.12\",\"-0.08\",\"-0.06\",\"0\",\"-0.01\",\"0.06\",\"0.06\",\"0.09\",\"0.17\",\"0.1\"],[\"NY\",\"-0.22\",\"-0.24\",\"-0.22\",\"-0.22\",\"-0.24\",\"-0.23\",\"-0.22\",\"-0.19\",\"-0.22\",\"-0.18\",\"-0.19\",\"-0.21\",\"-0.21\",\"-0.21\",\"-0.24\",\"-0.22\",\"-0.18\",\"-0.2\",\"-0.2\",\"-0.24\",\"-0.22\",\"-0.24\",\"-0.1\",\"-0.12\",\"-0.06\",\"0.06\",\"0.05\",\"0.04\",\"0.08\"],[\"OH\",\"-0.04\",\"-0.04\",\"-0.05\",\"-0.05\",\"-0.06\",\"-0.03\",\"0\",\"0.01\",\"-0.03\",\"-0.05\",\"-0.01\",\"-0.03\",\"-0.04\",\"-0.06\",\"-0.04\",\"0.01\",\"-0.04\",\"-0.08\",\"-0.07\",\"-0.06\",\"-0.03\",\"-0.08\",\"0\",\"-0.02\",\"-0.02\",\"0.1\",\"0.11\",\"0.09\",\"0.14\"],[\"OK\",\"0.09\",\"0.11\",\"0.1\",\"0.07\",\"0.1\",\"0.13\",\"0.17\",\"0.16\",\"0.18\",\"0.09\",\"0.15\",\"0.16\",\"0.11\",\"0.1\",\"0.1\",\"0.15\",\"0.16\",\"0.14\",\"0.15\",\"0.16\",\"0.17\",\"0.14\",\"0.15\",\"0.21\",\"0.22\",\"0.29\",\"0.33\",\"0.28\",\"0.34\"],[\"OR\",\"-0.22\",\"-0.22\",\"-0.18\",\"-0.23\",\"-0.23\",\"-0.22\",\"-0.2\",\"-0.18\",\"-0.2\",\"-0.24\",\"-0.2\",\"-0.18\",\"-0.19\",\"-0.23\",\"-0.23\",\"-0.17\",\"-0.2\",\"-0.2\",\"-0.22\",\"-0.22\",\"-0.18\",\"-0.2\",\"-0.17\",\"-0.14\",\"-0.12\",\"-0.03\",\"-0.02\",\"-0.01\",\"0.02\"],[\"PA\",\"-0.07\",\"-0.07\",\"-0.07\",\"-0.07\",\"-0.1\",\"-0.06\",\"-0.05\",\"-0.06\",\"-0.08\",\"-0.07\",\"-0.07\",\"-0.05\",\"-0.05\",\"-0.06\",\"-0.08\",\"-0.05\",\"-0.04\",\"-0.06\",\"-0.09\",\"-0.07\",\"-0.06\",\"-0.1\",\"-0.04\",\"-0.04\",\"0\",\"0.07\",\"0.08\",\"0.08\",\"0.1\"],[\"RI\",\"-0.2\",\"-0.22\",\"-0.2\",\"-0.19\",\"-0.19\",\"-0.19\",\"-0.16\",\"-0.18\",\"-0.26\",\"-0.22\",\"-0.21\",\"-0.18\",\"-0.24\",\"-0.22\",\"-0.23\",\"-0.25\",\"-0.22\",\"-0.23\",\"-0.25\",\"-0.25\",\"-0.26\",\"-0.3\",\"-0.13\",\"-0.19\",\"-0.1\",\"-0.03\",\"-0.06\",\"-0.06\",\"-0.04\"],[\"SC\",\"0.1\",\"0.1\",\"0.12\",\"0.12\",\"0.09\",\"0.09\",\"0.12\",\"0.16\",\"0.13\",\"0.12\",\"0.13\",\"0.13\",\"0.14\",\"0.11\",\"0.11\",\"0.15\",\"0.07\",\"0.05\",\"0.07\",\"0.09\",\"0.07\",\"0.07\",\"0.1\",\"0.05\",\"0.05\",\"0.2\",\"0.22\",\"0.25\",\"0.25\"],[\"SD\",\"0.06\",\"0.1\",\"0.12\",\"0.05\",\"0.06\",\"0.15\",\"0.17\",\"0.14\",\"0.07\",\"0.15\",\"0.15\",\"0.14\",\"0.14\",\"0.12\",\"0.12\",\"0.09\",\"0.1\",\"0.11\",\"0.08\",\"0.1\",\"0.07\",\"0.06\",\"0.07\",\"0.09\",\"0.2\",\"0.29\",\"0.28\",\"0.18\",\"0.21\"],[\"TN\",\"0.16\",\"0.18\",\"0.16\",\"0.16\",\"0.12\",\"0.16\",\"0.23\",\"0.2\",\"0.19\",\"0.19\",\"0.17\",\"0.15\",\"0.19\",\"0.15\",\"0.13\",\"0.19\",\"0.16\",\"0.11\",\"0.11\",\"0.1\",\"0.11\",\"0.11\",\"0.12\",\"0.15\",\"0.14\",\"0.26\",\"0.27\",\"0.23\",\"0.34\"],[\"TX\",\"0.03\",\"0.03\",\"0.04\",\"0.03\",\"-0.01\",\"0.04\",\"0.07\",\"0.07\",\"0.06\",\"0.05\",\"0.08\",\"0.1\",\"0.05\",\"0.06\",\"0.04\",\"0.07\",\"0.07\",\"0.03\",\"0.01\",\"0.02\",\"0.07\",\"0.04\",\"0.08\",\"0.08\",\"0.12\",\"0.16\",\"0.24\",\"0.19\",\"0.21\"],[\"UT\",\"0.02\",\"0.05\",\"0.01\",\"0.02\",\"-0.06\",\"0.03\",\"0.05\",\"-0.02\",\"-0.05\",\"0.04\",\"-0.01\",\"0\",\"0.01\",\"-0.05\",\"-0.06\",\"-0.01\",\"-0.04\",\"-0.09\",\"-0.05\",\"0.01\",\"0.1\",\"0.06\",\"0.03\",\"0.15\",\"0.09\",\"0.17\",\"0.18\",\"0.22\",\"0.27\"],[\"VA\",\"-0.06\",\"-0.06\",\"-0.04\",\"-0.05\",\"-0.1\",\"-0.03\",\"-0.04\",\"-0.04\",\"-0.06\",\"-0.05\",\"-0.06\",\"-0.04\",\"-0.06\",\"-0.07\",\"-0.09\",\"-0.03\",\"-0.04\",\"-0.06\",\"-0.07\",\"-0.05\",\"-0.11\",\"-0.1\",\"-0.03\",\"0.05\",\"0.1\",\"0.03\",\"0.08\",\"0.1\",\"0.08\"],[\"VT\",\"-0.34\",\"-0.37\",\"-0.32\",\"-0.33\",\"-0.35\",\"-0.31\",\"-0.25\",\"-0.27\",\"-0.3\",\"-0.31\",\"-0.24\",\"-0.21\",\"-0.27\",\"-0.26\",\"-0.32\",\"-0.36\",\"-0.36\",\"-0.31\",\"-0.34\",\"-0.32\",\"-0.29\",\"-0.3\",\"-0.28\",\"-0.22\",\"-0.23\",\"-0.08\",\"-0.09\",\"-0.17\",\"-0.02\"],[\"WA\",\"-0.3\",\"-0.27\",\"-0.27\",\"-0.28\",\"-0.27\",\"-0.23\",\"-0.23\",\"-0.23\",\"-0.26\",\"-0.25\",\"-0.23\",\"-0.22\",\"-0.24\",\"-0.27\",\"-0.24\",\"-0.24\",\"-0.23\",\"-0.24\",\"-0.25\",\"-0.28\",\"-0.22\",\"-0.24\",\"-0.15\",\"-0.11\",\"-0.07\",\"-0.04\",\"-0.04\",\"-0.03\",\"0.01\"],[\"WI\",\"-0.13\",\"-0.13\",\"-0.12\",\"-0.14\",\"-0.16\",\"-0.12\",\"-0.1\",\"-0.09\",\"-0.15\",\"-0.11\",\"-0.15\",\"-0.13\",\"-0.11\",\"-0.14\",\"-0.12\",\"-0.09\",\"-0.12\",\"-0.15\",\"-0.14\",\"-0.16\",\"-0.12\",\"-0.15\",\"-0.12\",\"-0.11\",\"-0.08\",\"0.01\",\"-0.01\",\"0.01\",\"0.06\"],[\"WV\",\"0.18\",\"0.2\",\"0.24\",\"0.22\",\"0.24\",\"0.26\",\"0.31\",\"0.27\",\"0.29\",\"0.31\",\"0.3\",\"0.24\",\"0.27\",\"0.28\",\"0.26\",\"0.22\",\"0.22\",\"0.23\",\"0.21\",\"0.26\",\"0.24\",\"0.13\",\"0.14\",\"0.12\",\"0.24\",\"0.3\",\"0.27\",\"0.3\",\"0.37\"],[\"WY\",\"0.22\",\"0.28\",\"0.27\",\"0.26\",\"0.31\",\"0.32\",\"0.35\",\"0.32\",\"0.27\",\"0.33\",\"0.31\",\"0.24\",\"0.28\",\"0.26\",\"0.31\",\"0.32\",\"0.25\",\"0.28\",\"0.23\",\"0.34\",\"0.26\",\"0.22\",\"0.34\",\"0.3\",\"0.37\",\"0.42\",\"0.48\",\"0.38\",\"0.4\"]]"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://morningconsult.com/wp-content/themes/morning-consult/js/build/scripts.v2.min.js?ver=201803550'></script>
+<script type='text/javascript' src='https://morningconsult.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.4.9'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2},"base_url":"https:\/\/morningconsult.com\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/morningconsult.com\/wp-content\/plugins\/gravityforms\/images\/spinner.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://morningconsult.com/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.4.9'></script>
+<script type='text/javascript' src='https://morningconsult.com/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.4.9'></script>
+<script type='text/javascript'> jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 100) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [100, 1]) } ); </script><script type="text/javascript">
+	_etmc.push(["setOrgId", "7245018"]);
+	_etmc.push(["trackPageView"]);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"86459759b9","applicationID":"85124163","transactionName":"bwdSNktRDxUCAUZZXVZNcQFNWQ4ITBZAUVFTC14FFEQTEw4S","queueTime":0,"applicationTime":212,"atts":"Q0BRQANLHBs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
