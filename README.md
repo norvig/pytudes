@@ -2,7 +2,7 @@
 
 "An *étude* (a French word meaning *study*) is an instrumental musical composition, usually short, of considerable difficulty, and designed to provide practice material for perfecting a particular musical skill." &mdash; [Wikipedia](https://en.wikipedia.org/wiki/%C3%89tude)
 
-This project contains **pytudes**&mdash;Python programs for perfecting programming skills.
+This project contains **pytudes**&mdash;Python programs, usually short, for perfecting programming skills.
 
 Some are in Jupyter (IPython) notebooks, some in `.py` files. You can view the files here on github, or click the **NB** link to view them on [nbviewer](http://nbviewer.jupyter.org/) (which sometimes works better). If you want to *run* the notebooks, not just view them, you can clone the project, or run all the notebooks online by clicking this button: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/norvig/pytudes/master), or click the **DN** link to run each individual notebook on   [deepnote](https://beta.deepnote.org/).
 
