@@ -230,7 +230,7 @@ def expand(x, toplevel=False):
     elif x[0] is _if:                    
         if len(x)==3: x = x + [None]     # (if t c) => (if t c None)
         require(x, len(x)==4)
-        return map(expand, x)
+        return list(map(expand, x))
     elif x[0] is _set:                   
         require(x, len(x)==3); 
         var = x[1]                       # (set! non-var exp) => Error
@@ -269,7 +269,7 @@ def expand(x, toplevel=False):
     elif isa(x[0], Symbol) and x[0] in macro_table:
         return expand(macro_table[x[0]](*x[1:]), toplevel) # (m arg...) 
     else:                                #        => macroexpand if m isa macro
-        return map(expand, x)            # (f arg...) => expand each
+        return list(map(expand, x))            # (f arg...) => expand each
 
 def require(x, predicate, msg="wrong length"):
     "Signal a syntax error if predicate is false."
@@ -299,7 +299,7 @@ def let(*args):
     require(x, all(isa(b, list) and len(b)==2 and isa(b[0], Symbol)
                    for b in bindings), "illegal binding list")
     vars, vals = zip(*bindings)
-    return [[_lambda, list(vars)]+map(expand, body)] + map(expand, vals)
+    return [[_lambda, list(vars)]+list(map(expand, body))] + list(map(expand, vals))
 
 macro_table = {_let:let} ## More macros can go here
 
