@@ -5,6 +5,10 @@
 - Jupyter Notebook
 - Colab
 - Deepnote
+- [Epiphany](https://epiphany.pub/) "a new blogging experience"
+- [Iodide](https://github.com/iodide-project/iodide) Run notebook in the browser
+- {Pyodide](https://github.com/iodide-project/pyodide) Run Python in the browser
+- [Klipse](https://github.com/viebel/klipse) Run interactive code in tech blogs
 - Matlab / R
 - Mathematica
 
