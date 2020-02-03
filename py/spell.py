@@ -51,8 +51,8 @@ def unit_tests():
     assert correction('bycycle') == 'bicycle'               # replace
     assert correction('inconvient') == 'inconvenient'       # insert 2
     assert correction('arrainged') == 'arranged'            # delete
-    assert correction('peotry') =='poetry'                  # transpose
-    assert correction('peotryy') =='poetry'                 # transpose + delete
+    assert correction('peotry') == 'poetry'                  # transpose
+    assert correction('peotryy') == 'poetry'                 # transpose + delete
     assert correction('word') == 'word'                     # known
     assert correction('quintessential') == 'quintessential' # unknown
     assert words('This is a TEST.') == ['this', 'is', 'a', 'test']
