@@ -1,5 +1,5 @@
 
-<div "text-align: right"><i>Peter Norvig<br><a href="https://github.com/norvig/pytudes/blob/master/LICENSE">MIT License<br>2015-2020</i></div>
+<div "text-align: right"><i>Peter Norvig<br><a href="https://github.com/norvig/pytudes/blob/master/LICENSE">MIT License</a><br>2015-2020</i></div>
 
 # pytudes
 
