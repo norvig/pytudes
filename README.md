@@ -12,7 +12,8 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 - Click on [dn](https://deepnote.com) to **run** the notebook on DeepNote
 - Click on [my](https://mybinder.org) to **run** the notebook on MyBinder
 - Click on [nb](https://nbviewer.jupyter.org/) to **view** the notebook on NBViewer
-- Click on **the title** to **view** the notebook on github, or **download** or **fork** it. **Hover** over the title to see a description.
+- Click on the title to **view** the notebook on github.
+- Hover over the title to **view** a description.
 
 # Index of Jupyter (IPython) Notebooks
 
@@ -108,6 +109,6 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 I got the idea for the *"etudes"* part of the name from
 this [1978 book](https://books.google.com/books/about/Etudes_for_programmers.html?id=u89WAAAAMAAJ)
 by [Charles Wetherell](http://demin.ws/blog/english/2012/08/25/interview-with-charles-wetherell)
-that was very influential to me when I was first learning to program.
+that was very influential to me when I was first learning to program. I still have my copy.
 
 ![](https://images-na.ssl-images-amazon.com/images/I/51ZnZH29dvL._SX394_BO1,204,203,200_.jpg)
