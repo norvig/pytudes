@@ -2,7 +2,7 @@
 
 
 def nb(title, url, comment=''):
-    """Make a table entry for a ipython notebook."""
+    """Make a markdown table entry for a jupyter/ipython notebook."""
     urlb = f'/blob/master/ipynb/{url}'
     co = f'[co](https://colab.research.google.com/github/norvig/pytudes{urlb})'
     dn = f'[dn](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2F{url}) '
@@ -13,7 +13,7 @@ def nb(title, url, comment=''):
 
 
 def py(url, description, doc=''):
-    """Make a table entry for a .py file."""
+    """Make a markdown table entry for a .py file."""
     if doc: doc = f'[documentation]({doc})'
     return f'|[{url}](/blob/master/py/{url})|*{description}*|{doc}|'
 
@@ -26,7 +26,6 @@ body = f'''
 "An *étude* (a French word meaning *study*) is an instrumental musical composition, usually short, of considerable difficulty, and designed to provide practice material for perfecting a particular musical skill." &mdash; [Wikipedia](https://en.wikipedia.org/wiki/%C3%89tude)
 
 This project contains **pytudes**&mdash;Python programs, usually short, for perfecting particular programming skills.
-
 Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each notebook you can:
 - Click on [co](https://colab.research.google.com) to **run** the file on Colab
 - Click on [dn](https://deepnote.com) to **run** the notebook on DeepNote
@@ -35,7 +34,9 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 - Click on the title to **view** the notebook on github.
 - Hover over the title to **view** a description.
 
+
 # Index of Jupyter (IPython) Notebooks
+
 
 |Run|Programming Examples|
 |---|--|
@@ -49,6 +50,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 {nb("Conway's Game of Life", 'Life.ipynb', 'The cellular automata zero-player game')}
 {nb('Dice Baseball', 'Dice%20Baseball.ipynb', 'Simulating baseball games')}
 {nb('Generating Mazes', 'Maze.ipynb', 'Make a maze by generating a random tree superimposed on a grid')}
+{nb('Photo Focal Lengths', 'PhotoFocalLengths.ipynb', 'Generate charts of what focal lengths were used on a photo trip.')}
 {nb('Pickleball Tournament', 'Pickleball.ipynb', 'Scheduling a doubles tournament fairly and efficiently')}
 {nb('Project Euler Utilities', 'Project%20Euler%20Utils.ipynb', 'My utility functions for the Project Euler problems, including `Primes` and `Factors`')}
 {nb('Properly Ordered Card Hands', 'Orderable%20Cards.ipynb', 'Can you get your hand of cards into a nice order with just one move?')}
@@ -63,20 +65,21 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 {nb('Chemical Element Spelling', 'ElementSpelling.ipynb', 'Spelling words using the chemical element symbols, like CoIn')}
 {nb('Cryptarithmetic', 'Cryptarithmetic.ipynb', 'Substitute digits for letters and make NUM + BER = PLAY')}
 {nb('Four 4s, Five 5s, and Countdown to 2016', 'Countdown.ipynb', 'Solving the equation 10 _ 9 _ 8 _ 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 2016. From an Alex Bellos puzzle')}
+{nb('The Devil and the Coin Flip Game', 'Coin%20Flip.ipynb', 'How to beat the Devil at his own game')}
 {nb('Gesture Typing', 'Gesture%20Typing.ipynb', 'What word has the longest path on a gesture-typing smartphone keyboard?')}
 {nb('Ghost', 'Ghost.ipynb', 'The word game Ghost (add letters, try to avoid making a word)')}
 {nb('How Many Soldiers Do You Need to Beat the Night King?', 'NightKing.ipynb',  'Investigasting a battle between the army of the dead and the army of the living')}
 {nb("Let's Code About Bike Locks", 'Fred%20Buns.ipynb', 'A tale of a bicycle combination lock that uses letters instead of digits. Inspired by Bike Snob NYC')}
 {nb('Pairing Socks', 'Socks.ipynb', 'What is the probability that you will be able to pair up socks as you randomly pull them out of the dryer?')}
 {nb('Portmantout Words', 'Portmantout.ipynb',  'Find a long word that squishes together a bunch of words')}
+{nb('The Puzzle of the Misanthropic Neighbors', 'Mean%20Misanthrope%20Density.ipynb', 'How crowded will this neighborhood be, if nobody wants to live next door to anyone else?')}
 {nb('Refactoring a Crossword Game Program', 'Scrabble.ipynb', 'Refactoring the Scrabble / Word with Friends game from Udacity 212')}
+{nb('Riddler: Battle Royale', 'Riddler%20Battle%20Royale.ipynb', 'A puzzle involving allocating your troops and going up against an opponent')}
 {nb('Riddler Lottery', 'RiddlerLottery.ipynb',  'Can you find what lottery number tickets these five friends picked?')}
+{nb('Riddler: Tour de 538', 'TourDe538.ipynb', 'Solve a puzzle involving the best pace for a bicycle race.')}
 {nb('Sicherman Dice', 'Sicherman%20Dice.ipynb', 'Find a pair of dice that is like a regular pair of dice, only different')}
 {nb("Sol Golomb's Rectangle Puzzle", 'Golomb-Puzzle.ipynb', 'A Puzzle involving placing rectangles of different sizes inside a square')}
 {nb('Spelling Bee', 'SpellingBee.ipynb', 'Find the highest-scoring board for the NY Times Spelling Bee puzzle')}
-{nb('The Devil and the Coin Flip Game', 'Coin%20Flip.ipynb', 'How to beat the Devil at his own game')}
-{nb('The Puzzle of the Misanthropic Neighbors', 'Mean%20Misanthrope%20Density.ipynb', 'How crowded will this neighborhood be, if nobody wants to live next door to anyone else?')}
-{nb('The Riddler: Battle Royale', 'Riddler%20Battle%20Royale.ipynb', 'A puzzle involving allocating your troops and going up against an opponent')}
 {nb('Translating English Sentences into Propositional Logic Statements', 'PropositionalLogic.ipynb', 'Automatically convert informal English sentences into formal Propositional Logic')}
 {nb('How to Do Things with Words: NLP in Python', 'How%20to%20Do%20Things%20with%20Words.ipynb', 'Spelling Correction, Secret Codes, Word Segmentation, and more')}
 {nb('When Cheryl Met Eve: A Birthday Story', 'Cheryl-and-Eve.ipynb', "Inventing new puzzles in the Style of Cheryl's Birthday")}
@@ -85,6 +88,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 {nb('xkcd 1313: Regex Golf (Part 2: Infinite Problems)', 'xkcd1313-part2.ipynb', 'Regex Golf: better, faster, funner. With Stefan Pochmann')}
 {nb('xkcd 1313: Regex Golf', 'xkcd1313.ipynb', 'Find the smallest regular expression; inspired by Randall Monroe')}
 {nb('xkcd 1970: Name Dominoes', 'xkcd-Name-Dominoes.ipynb', 'Lay out dominoes legally; the dominoes have people names, not numbers')}
+
 
 |Run|Math Concepts|
 |--|--|
@@ -96,6 +100,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 {nb('How to Count Things', 'How%20To%20Count%20Things.ipynb', 'Combinatorial math: how to count how many things there are, when there are a lot of them')}
 {nb('Symbolic Algebra, Simplification, and Differentiation', 'Differentiation.ipynb', 'A computer algebra system that  manipulates expressions, including symbolic differentiation')}
 
+
 |Run|Computer Science Algorithms and Concepts|
 |--|--|
 {nb('Bad Grade, Good Experience', 'Snobol.ipynb', 'As a student, did you ever get a bad grade on a programming assignment? (Snobol, Concordance)')}
@@ -104,7 +109,9 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 {nb('The Stable Matching Problem', 'StableMatching.ipynb', 'What is the best way to pair up two grpups with each other, obeying preferences?')}
 {nb('The Traveling Salesperson Problem', 'TSP.ipynb', 'Another of the classics')}
 
+
 # Index of Python Files
+
 
 | File | Description | Documentation |
 |:--------|:-------------------|----|
@@ -125,9 +132,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 {py('sudoku.py',  'Program to solve sudoku puzzles', 'http://norvig.com/sudoku.html')}
 {py('testaccum.py', 'Tests for my failed Python `accumulation display` proposal', 'http://norvig.com/pyacc.html')}
 {py('yaptu.py',   'Yet Another Python Templating Utility')}
-
 # Etudes for Programmers
-
 I got the idea for the *"etudes"* part of the name from
 this [1978 book](https://books.google.com/books/about/Etudes_for_programmers.html?id=u89WAAAAMAAJ)
 by [Charles Wetherell](http://demin.ws/blog/english/2012/08/25/interview-with-charles-wetherell)
@@ -138,10 +143,4 @@ that was very influential to me when I was first learning to program. I still ha
 
 output = 'README.md'
 with open(output, 'w') as out:
-    out.write(body)
-    print(f'Wrote {output}; {len(body)} characters')
-
-    
-
-
-
+    print(f'Wrote {output}; {out.write(body)} characters')
