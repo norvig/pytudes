@@ -66,6 +66,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 {nb('Cryptarithmetic', 'Cryptarithmetic.ipynb', 'Substitute digits for letters and make NUM + BER = PLAY')}
 {nb('Four 4s, Five 5s, and Countdown to 2016', 'Countdown.ipynb', 'Solving the equation 10 _ 9 _ 8 _ 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 2016. From an Alex Bellos puzzle')}
 {nb('The Devil and the Coin Flip Game', 'Coin%20Flip.ipynb', 'How to beat the Devil at his own game')}
+{nb('Flipping Cards: A Guessing Game', 'flipping.ipynb', 'Can you go through a deck of cards, guessing higher or lower correctly for each card?')}
 {nb('Gesture Typing', 'Gesture%20Typing.ipynb', 'What word has the longest path on a gesture-typing smartphone keyboard?')}
 {nb('Ghost', 'Ghost.ipynb', 'The word game Ghost (add letters, try to avoid making a word)')}
 {nb('How Many Soldiers Do You Need to Beat the Night King?', 'NightKing.ipynb',  'Investigasting a battle between the army of the dead and the army of the living')}
