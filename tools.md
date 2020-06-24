@@ -23,10 +23,9 @@
 
 ## Publishing Platforms
 
-- distill.pub
-- https://paperswithcode.com/
-- https://atlasml.io/
+- [distill.pub](https://distill.pub/)
+- [Papers with Code](https://paperswithcode.com/)
 
 ## Debugging Aids
 
-- Python Tutor
+- [Python Tutor](http://www.pythontutor.com/) (Philip Guo)
