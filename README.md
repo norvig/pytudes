@@ -101,22 +101,22 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 
 | File | Description | Documentation |
 |:--|:----|----|
-|[beal.py](/blob/master/py/beal.py)|*Search for counterexamples to Beal's Conjecture*|[documentation](http://norvig.com/beal.html)|
-|[docex.py](/blob/master/py/docex.py)|*An obsolete framework for running unit tests, similar to `doctest`*||
-|[ibol.py](/blob/master/py/ibol.py)|*An Exercise in Species Barcoding*|[documentation](http://norvig.com/ibol.html)|
-|[lettercount.py](/blob/master/py/lettercount.py)|*Convert Google Ngram Counts to Letter Counts*|[documentation](http://norvig.com/mayzner.html)|
-|[lis.py](/blob/master/py/lis.py)|*Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy.html)|
-|[lispy.py](/blob/master/py/lispy.py)|*Even Better Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy2.html)|
-|[lispytest.py](/blob/master/py/lispytest.py)|*Tests for Lisp Interpreters*||
-|[pal.py](/blob/master/py/pal.py)|*Find long palindromes*|[documentation](http://norvig.com/palindrome.html)|
-|[pal2.py](/blob/master/py/pal2.py)|*Find longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
-|[pal3.py](/blob/master/py/pal3.py)|*Find even longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
-|[pytudes.py](/blob/master/py/pytudes.py)|*Pre-process text to generate this README.md file.*||
-|[py2html.py](/blob/master/py/py2html.py)|*Pretty-printer to format Python files as html*||
-|[SET.py](/blob/master/py/SET.py)|*Analyze the card game SET*|[documentation](http://norvig.com/SET.html)|
-|[spell.py](/blob/master/py/spell.py)|*Spelling corrector*|[documentation](http://norvig.com/spell-correct.html)|
-|[sudoku.py](/blob/master/py/sudoku.py)|*Program to solve sudoku puzzles*|[documentation](http://norvig.com/sudoku.html)|
-|[testaccum.py](/blob/master/py/testaccum.py)|*Tests for my failed Python `accumulation display` proposal*|[documentation](http://norvig.com/pyacc.html)|
+|[beal.py](https://github.com/norvig/pytudes/blob/master/py/beal.py)|*Search for counterexamples to Beal's Conjecture*|[documentation](http://norvig.com/beal.html)|
+|[docex.py](https://github.com/norvig/pytudes/blob/master/py/docex.py)|*An obsolete framework for running unit tests, similar to `doctest`*||
+|[ibol.py](https://github.com/norvig/pytudes/blob/master/py/ibol.py)|*An Exercise in Species Barcoding*|[documentation](http://norvig.com/ibol.html)|
+|[lettercount.py](https://github.com/norvig/pytudes/blob/master/py/lettercount.py)|*Convert Google Ngram Counts to Letter Counts*|[documentation](http://norvig.com/mayzner.html)|
+|[lis.py](https://github.com/norvig/pytudes/blob/master/py/lis.py)|*Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy.html)|
+|[lispy.py](https://github.com/norvig/pytudes/blob/master/py/lispy.py)|*Even Better Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy2.html)|
+|[lispytest.py](https://github.com/norvig/pytudes/blob/master/py/lispytest.py)|*Tests for Lisp Interpreters*||
+|[pal.py](https://github.com/norvig/pytudes/blob/master/py/pal.py)|*Find long palindromes*|[documentation](http://norvig.com/palindrome.html)|
+|[pal2.py](https://github.com/norvig/pytudes/blob/master/py/pal2.py)|*Find longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
+|[pal3.py](https://github.com/norvig/pytudes/blob/master/py/pal3.py)|*Find even longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
+|[pytudes.py](https://github.com/norvig/pytudes/blob/master/py/pytudes.py)|*Pre-process text to generate this README.md file.*||
+|[py2html.py](https://github.com/norvig/pytudes/blob/master/py/py2html.py)|*Pretty-printer to format Python files as html*||
+|[SET.py](https://github.com/norvig/pytudes/blob/master/py/SET.py)|*Analyze the card game SET*|[documentation](http://norvig.com/SET.html)|
+|[spell.py](https://github.com/norvig/pytudes/blob/master/py/spell.py)|*Spelling corrector*|[documentation](http://norvig.com/spell-correct.html)|
+|[sudoku.py](https://github.com/norvig/pytudes/blob/master/py/sudoku.py)|*Program to solve sudoku puzzles*|[documentation](http://norvig.com/sudoku.html)|
+|[testaccum.py](https://github.com/norvig/pytudes/blob/master/py/testaccum.py)|*Tests for my failed Python `accumulation display` proposal*|[documentation](http://norvig.com/pyacc.html)|
 |[yaptu.py](/blob/master/py/yaptu.py)|*Yet Another Python Templating Utility*||
 
 # Etudes for Programmers
