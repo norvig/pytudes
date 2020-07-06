@@ -14,7 +14,7 @@ def nb(title, year, url, comment=''):
     my = f'[my](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2F{url})'
     nb = f'[nb](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
     ti = f'<b><a href="ipynb/{url}" title="{comment}">{title}</a></b>'
-    if year == 2020: year = f'<b><u>{year}</b></u>'
+    if year == 2020: year = f'<u>{year}</u>'
     return f'| {co} {dn} {my} {nb} | {year} | {ti} |'
 
 def pys(*pyfiles):
@@ -86,12 +86,13 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 
 {nbs('Word Puzzles',
 ('Boggle / Inverse Boggle', 2020, 'Boggle.ipynb', 'Find all the words on a Boggle board; then find a board with a lot of words'),
-('Crossword Game: Refactoring a Scrabble Program', 2017, 'Scrabble.ipynb', 'Refactoring the Scrabble / Word with Friends game from Udacity 212'),
 ('Chemical Element Spelling', 2020, 'ElementSpelling.ipynb', 'Spelling words using the chemical element symbols, like CoIn'),
 ('Gesture Typing', 2017, 'Gesture%20Typing.ipynb', 'What word has the longest path on a gesture-typing smartphone keyboard?'),
 ('Ghost: A Word game', 2017, 'Ghost.ipynb', 'The word game Ghost (add letters, try to avoid making a word)'),
 ('How to Do Things with Words: NLP in Python', 2018, 'How%20to%20Do%20Things%20with%20Words.ipynb', 'Spelling Correction, Secret Codes, Word Segmentation, and more'),
+('Jotto: A Word Guessing Game', 2020, 'jotto.ipynb', 'The word guessing game Jotto'),
 ("Let's Code About Bike Locks", 2015, 'Fred%20Buns.ipynb', 'A tale of a bicycle combination lock that uses letters instead of digits. Inspired by Bike Snob NYC'),
+('Scrabble: Refactoring a Crossword Game Program', 2017, 'Scrabble.ipynb', 'Refactoring the Scrabble / Word with Friends game from Udacity 212'),
 ('Spelling Bee', 2020, 'SpellingBee.ipynb', 'Find the highest-scoring board for the NY Times Spelling Bee puzzle'),
 ('Translating English into Propositional Logic', 2017, 'PropositionalLogic.ipynb', 'Automatically convert informal English sentences into formal Propositional Logic'),
 ("World's Longest Palindrome", 2017, 'pal3.ipynb', 'Searching for a long Panama-style palindrome, this time letter-by-letter'),
