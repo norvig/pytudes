@@ -38,8 +38,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 |Run|Year|Logic and Number Puzzles|
 |---|----|---|
 | [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/Cryptarithmetic.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2FCryptarithmetic.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2FCryptarithmetic.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/Cryptarithmetic.ipynb) | 2014 | <b><a href="ipynb/Cryptarithmetic.ipynb" title="Substitute digits for letters and make NUM + BER = PLAY">Cryptarithmetic</a></b> |
-| [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/equilength-numbers.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2Fequilength-numbers.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2Fequilength-numbers.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/equilength-numbers.ipynb) | 2020 | <b><a href="ipynb/equilength-numbers.ipynb" title="'Four' has 4 letters, and 'two plus nine' has 11. What other expressions are like this?">Equilength Number Expressions</a></b> |
-| [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/Countdown.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2FCountdown.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2FCountdown.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/Countdown.ipynb) | 2020 | <b><a href="ipynb/Countdown.ipynb" title="Solving the equation 10 _ 9 _ 8 _ 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 2016 and other similar puzzles.">Making Numbers: Four 4s, Five 5s, and Countdowns</a></b> |
+| [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/Countdown.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2FCountdown.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2FCountdown.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/Countdown.ipynb) | 2020 | <b><a href="ipynb/Countdown.ipynb" title="Solving the equation 10 _ 9 _ 8 _ 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 2016. From an Alex Bellos puzzle">Four 4s, Five 5s, Equilength Numbers, and Countdown to 2016</a></b> |
 | [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/Socks.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2FSocks.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2FSocks.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/Socks.ipynb) | 2019 | <b><a href="ipynb/Socks.ipynb" title="What is the probability that you will be able to pair up socks as you randomly pull them out of the dryer?">Pairing Socks</a></b> |
 | [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/Sicherman%20Dice.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2FSicherman%20Dice.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2FSicherman%20Dice.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/Sicherman%20Dice.ipynb) | 2018 | <b><a href="ipynb/Sicherman%20Dice.ipynb" title="Find a pair of dice that is like a regular pair of dice, only different">Sicherman Dice</a></b> |
 | [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/Golomb-Puzzle.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2FGolomb-Puzzle.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2FGolomb-Puzzle.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/Golomb-Puzzle.ipynb) | 2014 | <b><a href="ipynb/Golomb-Puzzle.ipynb" title="A Puzzle involving placing rectangles of different sizes inside a square">Sol Golomb's Rectangle Puzzle</a></b> |
@@ -103,23 +102,23 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 
 | File | Description | Documentation |
 |:--|:----|----|
-|[beal.py](/blob/master/py/beal.py)|*Search for counterexamples to Beal's Conjecture*|[documentation](http://norvig.com/beal.html)|
-|[docex.py](/blob/master/py/docex.py)|*An obsolete framework for running unit tests, similar to `doctest`*||
-|[ibol.py](/blob/master/py/ibol.py)|*An Exercise in Species Barcoding*|[documentation](http://norvig.com/ibol.html)|
-|[lettercount.py](/blob/master/py/lettercount.py)|*Convert Google Ngram Counts to Letter Counts*|[documentation](http://norvig.com/mayzner.html)|
-|[lis.py](/blob/master/py/lis.py)|*Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy.html)|
-|[lispy.py](/blob/master/py/lispy.py)|*Even Better Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy2.html)|
-|[lispytest.py](/blob/master/py/lispytest.py)|*Tests for Lisp Interpreters*||
-|[pal.py](/blob/master/py/pal.py)|*Find long palindromes*|[documentation](http://norvig.com/palindrome.html)|
-|[pal2.py](/blob/master/py/pal2.py)|*Find longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
-|[pal3.py](/blob/master/py/pal3.py)|*Find even longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
-|[pytudes.py](/blob/master/py/pytudes.py)|*Pre-process text to generate this README.md file.*||
-|[py2html.py](/blob/master/py/py2html.py)|*Pretty-printer to format Python files as html*||
-|[SET.py](/blob/master/py/SET.py)|*Analyze the card game SET*|[documentation](http://norvig.com/SET.html)|
-|[spell.py](/blob/master/py/spell.py)|*Spelling corrector*|[documentation](http://norvig.com/spell-correct.html)|
-|[sudoku.py](/blob/master/py/sudoku.py)|*Program to solve sudoku puzzles*|[documentation](http://norvig.com/sudoku.html)|
-|[testaccum.py](/blob/master/py/testaccum.py)|*Tests for my failed Python `accumulation display` proposal*|[documentation](http://norvig.com/pyacc.html)|
-|[yaptu.py](/blob/master/py/yaptu.py)|*Yet Another Python Templating Utility*||
+|[beal.py](/py/beal.py)|*Search for counterexamples to Beal's Conjecture*|[documentation](http://norvig.com/beal.html)|
+|[docex.py](/py/docex.py)|*An obsolete framework for running unit tests, similar to `doctest`*||
+|[ibol.py](/py/ibol.py)|*An Exercise in Species Barcoding*|[documentation](http://norvig.com/ibol.html)|
+|[lettercount.py](/py/lettercount.py)|*Convert Google Ngram Counts to Letter Counts*|[documentation](http://norvig.com/mayzner.html)|
+|[lis.py](/py/lis.py)|*Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy.html)|
+|[lispy.py](/py/lispy.py)|*Even Better Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy2.html)|
+|[lispytest.py](/py/lispytest.py)|*Tests for Lisp Interpreters*||
+|[pal.py](/py/pal.py)|*Find long palindromes*|[documentation](http://norvig.com/palindrome.html)|
+|[pal2.py](/py/pal2.py)|*Find longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
+|[pal3.py](/py/pal3.py)|*Find even longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
+|[pytudes.py](/py/pytudes.py)|*Pre-process text to generate this README.md file.*||
+|[py2html.py](/py/py2html.py)|*Pretty-printer to format Python files as html*||
+|[SET.py](/py/SET.py)|*Analyze the card game SET*|[documentation](http://norvig.com/SET.html)|
+|[spell.py](/py/spell.py)|*Spelling corrector*|[documentation](http://norvig.com/spell-correct.html)|
+|[sudoku.py](/py/sudoku.py)|*Program to solve sudoku puzzles*|[documentation](http://norvig.com/sudoku.html)|
+|[testaccum.py](/py/testaccum.py)|*Tests for my failed Python `accumulation display` proposal*|[documentation](http://norvig.com/pyacc.html)|
+|[yaptu.py](/py/yaptu.py)|*Yet Another Python Templating Utility*||
 
 # Etudes for Programmers
 I got the idea for the *"etudes"* part of the name from
