@@ -75,14 +75,15 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 ('xkcd 1313: Regex Golf (Part 2: Infinite Problems)', 2015, 'xkcd1313-part2.ipynb', 'Regex Golf: better, faster, funner. With Stefan Pochmann.'))}
 
 {nbs('The Riddler (from 538)',
-('Riddler: Battle Royale', 2017, 'Riddler%20Battle%20Royale.ipynb', 'A puzzle involving allocating your troops and going up against an opponent'),
-('Riddler: Flipping Cards; A Guessing Game', 2020, 'flipping.ipynb', 'Can you go through a deck of cards, guessing higher or lower correctly for each card?'),
-('Riddler: Lottery', 2019, 'RiddlerLottery.ipynb',  'Can you find what lottery number tickets these five friends picked?'),
-('Riddler: How Many Soldiers to Beat the Night King?', 2019, 'NightKing.ipynb',  'A battle between the army of the dead and the army of the living'),
-('Riddler: Properly Ordered Card Hands', 2018, 'Orderable%20Cards.ipynb', 'Can you get your hand of cards into a nice order with just one move?'),
-('Riddler: The Puzzle of the Misanthropic Neighbors', 2017, 'Mean%20Misanthrope%20Density.ipynb', 'How crowded will this neighborhood be, if nobody wants to live next door to anyone else?'),
-('Riddler: Tour de 538', 2020, 'TourDe538.ipynb', 'Solve a puzzle involving the best pace for a bicycle race.'),
-('Riddler: Weighing Twelve Balls', 2020, 'TwelveBalls.ipynb', 'A puzzle where you are given some billiard balls and a balance scale, and asked to find the one ball that is heavier or lighter, in a limited number of weighings'))}
+('Battle Royale', 2017, 'Riddler%20Battle%20Royale.ipynb', 'A puzzle involving allocating your troops and going up against an opponent'),
+('Flipping Cards; A Guessing Game', 2020, 'flipping.ipynb', 'Can you go through a deck of cards, guessing higher or lower correctly for each card?'),
+('Lottery', 2019, 'RiddlerLottery.ipynb',  'Can you find what lottery number tickets these five friends picked?'),
+('How Many Soldiers to Beat the Night King?', 2019, 'NightKing.ipynb',  'A battle between the army of the dead and the army of the living'),
+('Properly Ordered Card Hands', 2018, 'Orderable%20Cards.ipynb', 'Can you get your hand of cards into a nice order with just one move?'),
+('The Puzzle of the Misanthropic Neighbors', 2017, 'Mean%20Misanthrope%20Density.ipynb', 'How crowded will this neighborhood be, if nobody wants to live next door to anyone else?'),
+('Tour de 538', 2020, 'TourDe538.ipynb', 'Solve a puzzle involving the best pace for a bicycle race.'),
+('Weighing Twelve Balls', 2020, 'TwelveBalls.ipynb', 'A puzzle where you are given some billiard balls and a balance scale, and asked to find the one ball that is heavier or lighter, in a limited number of weighings'),
+('War. Waht is it Good For?', 2020, 'war.ipynb', 'How likely is it to win a game of war in 26 turns?'))}
 
 {nbs('Word Puzzles',
 ('Boggle / Inverse Boggle', 2020, 'Boggle.ipynb', 'Find all the words on a Boggle board; then find a board with a lot of words'),
