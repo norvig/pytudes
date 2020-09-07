@@ -1,8 +1,19 @@
 #Ride	Date	Title	mi	ft
-#				2020 Eddington rides only
+#2020: Eddington rides only; most recent first
+Ride	Thu, 7/23/2020	Bay / Tomas Aquino Trail	5:44:49	76.35 mi	1749 ft
+Ride	Sun, 7/19/2020	Saratoga / Mt Eden	5:49:45	70.43 mi	1,954 ft
+Ride	Sun, 7/12/2020	Calvares Rd / Niles / Dumbarton	5:30:10	68.23 mi	2,008 ft	
+Ride	Sun, 7/5/2020	Afternoon Ride	5:16:20	66.07 mi	1,286 ft	
+Ride	Fri, 7/3/2020	Sawyer Camp Trail	5:18:23	72.12 mi	1,890 ft
+Ride	Sun, 6/28/2020	Saratoga	5:31:44	71.01 mi	1,063 ft
+Ride	Sun, 6/21/2020	Sawyer Camp Trail	6:35:20	79.78 mi	1,738 ft
+Ride	Sun, 6/13/2020	Canada Rd	5:39:40	70.73 mi	1,841 ft
+Ride	Fri, 2/28/2020	Sawyer Camp Trail	6:24:49	84.43 mi	3,448 ft
+Ride	Wed, 2/12/2020	Bay Trail	5:25:09	66.02 mi	572 ft
+Ride	Fri, 2/7/2020	Bay Trail / Cargill	6:07:23	74.04 mi	1,814 ft
 Ride	Sun, 1/26/2020	Los Gatos / Bay	5:18:15	67.98 mi	1,286 ft
 Ride	Fri, 1/31/2020	Bay Trail / Guadalupe / Geocaching	5:21:39	69.39 mi	1,125 ft
-#				2019 Eddington rides only
+#2019: Mostly Eddington; some 25+ mile rides
 Ride	Sun, 6/2/2019	The Sequoia	6:40:43	77.51 mi	6,467 ft
 Ride	Sat, 6/8/2019	Morning Ride	2:53:08	34.42 mi	1,824 ft
 Ride	Sat, 6/15/2019	Morning Ride	2:29:38	29.98 mi	1,785 ft
@@ -12,7 +23,7 @@ Ride	Sat, 8/24/2019	Tour de Fox	4:43:39	68.66 mi	2,097 ft
 Ride	Sat, 8/31/2019	San Gregorio via OLH	5:13:21	65.31 mi	4,026 ft
 Ride	Fri, 9/6/2019	San Mateo / Bay Trail	4:59:29	68.01 mi	1,158 ft
 Ride	Sat, 11/16/2019	Canada / Crystal Dam / Sawyer Camp / Bay Trail	5:18:46	66.08 mi	1,972 ft
-#				2012 to 2018 rides over 25 miles
+#2012 to 2018: rides over 25 miles
 Ride	Fri, 1/9/2012	Otago Rail Trail	8:00:00	101.00 mi	2,200 ft
 Ride	Thu, 6/14/2012	Coyote Creek Century with Juliet	8:08:15	100.07 mi	1,513 ft
 Ride	Sat, 5/13/2017	Morgan Hill iCare Classic	7:27:21	100.05 mi	4,596 ft
@@ -44,15 +55,15 @@ Ride	Sat, 4/18/2015	Tunitas + Lobitos Creeks	5:14:38	61.27 mi	6,611 ft
 Ride	Sat, 11/11/2017	Los Gatos / Bay Trail	4:26:24	60.74 mi	1,316 ft
 Ride	Sun, 4/17/2016	La Honda / Skyline	5:10:41	60.35 mi	4,551 ft
 Ride	Mon, 7/3/2017	Los Gatos / Bay Trail	4:25:41	60.28 mi	1,329 ft
-Ride	Sat, 4/16/2016	OLH - San Gregorio - Tunitas	4:57:40	60.12 mi	4,744 ft
+Ride	Sat, 4/16/2016	OLH / San Gregorio / Tunitas	4:57:40	60.12 mi	4,744 ft
 Ride	Sun, 1/29/2017	Los Gatos / Guadalupe / San Tomas / Bay Trails	4:33:38	60.11 mi	1,447 ft
 Ride	Mon, 11/26/2018	Lunch Ride Los Gatos	4:21:35	60.03 mi	1,070 ft
-Ride	Sat, 10/31/2015	Saratoga Ramble	5:01:57	59.10 mi	3,528 ft
+Ride	Sat, 10/31/2015	Saratoga Ramble	5:01:57	59.11 mi	3,528 ft
 Ride	Sat, 8/18/2018	Tour de Menlo	4:03:48	58.81 mi	2,467 ft
-Ride	Sat, 4/26/2014	OLH - Tunitas Creek	5:15:26	58.69 mi	6,742 ft
+Ride	Sat, 4/26/2014	OLH / Tunitas Creek	5:15:26	58.69 mi	6,742 ft
 Ride	Sat, 6/15/2013	Palo Alto to Santa Cruz	4:27:54	58.42 mi	4,431 ft
-Ride	Sat, 10/11/2014	OLH / La Honda / Tunitas	5:05:23	58.29 mi	6,044 ft
-Ride	Sat, 7/9/2016	Lunch Ride	3:50:23	58.23 mi	4,042 ft
+Ride	Sat, 10/11/2014	OLH / Tunitas	5:05:23	58.29 mi	6,044 ft
+Ride	Sat, 7/9/2016	Santa Cruz	3:50:23	58.23 mi	4,042 ft
 Ride	Wed, 6/18/2014	Sierra to the Sea Day 4	4:57:53	57.64 mi	5,561 ft
 Ride	Tue, 7/7/2015	07/07/2015 Palo Alto, CA	4:13:20	57.60 mi	1,280 ft
 Ride	Mon, 8/6/2018	Bike Ride Northwest Day 2	4:35:48	57.58 mi	4,514 ft
@@ -60,7 +71,7 @@ Ride	Fri, 6/20/2014	Sierra to the Sea Day 6	4:33:39	56.91 mi	4,453 ft
 Ride	Sat, 6/10/2017	Los Gatos / Creek Trails	3:50:24	56.28 mi	1,365 ft
 Ride	Sat, 3/4/2017	Lunch Ride	3:58:25	56.26 mi	1,378 ft
 Ride	Sun, 8/5/2018	Bike Ride Northwest Day 1	3:34:42	55.77 mi	1,824 ft
-Ride	Sat, 8/13/2016	Petaluma - Point Reyes	4:30:12	54.75 mi	5,286 ft
+Ride	Sat, 8/13/2016	Petaluma / Point Reyes	4:30:12	54.75 mi	5,286 ft
 Ride	Sun, 6/7/2015	Tour de Cure	3:59:47	54.65 mi	2,748 ft
 Ride	Wed, 12/16/2015	Los Gatos	4:00:41	53.86 mi	2,595 ft
 Ride	Fri, 6/2/2017	Morning Ride	3:57:45	53.49 mi	1,375 ft
@@ -147,13 +158,11 @@ Ride	Mon, 11/6/2017	Morning Ride	2:48:12	40.13 mi	509 ft
 Ride	Sat, 12/17/2016	Morning Ride	3:11:31	40.10 mi	2,133 ft
 Ride	Fri, 1/12/2018	Morning Ride	2:58:30	40.09 mi	427 ft
 Ride	Sun, 12/18/2016	Morning Ride	3:04:01	40.03 mi	1,886 ft
-Ride	Sat, 6/11/2016	Ring of Fire (Partial; Garmin troubles)	3:00:00	40.00 mi	0 ft
 Ride	Sun, 1/25/2015	Canada Rd	2:45:51	39.99 mi	1,772 ft
 Ride	Sat, 6/21/2014	Sierra to the Sea Day 7	3:36:53	39.77 mi	3,325 ft
 Ride	Sat, 9/23/2017	Canada / Crestview	3:25:13	39.77 mi	2,444 ft
 Ride	Fri, 12/27/2013	OLH to Page Mill	3:24:14	39.73 mi	3,365 ft
-Ride	Sat, 4/30/2016	Ridge to Bridge MTB	5:40:57	39.67 mi	5,377 ft
-Ride	Fri, 10/30/2015	OLH - West Alpine	3:28:46	39.51 mi	4,505 ft
+Ride	Fri, 10/30/2015	OLH / West Alpine	3:28:46	39.51 mi	4,505 ft
 Ride	Sat, 9/5/2015	Ring of Fire	3:31:55	39.18 mi	3,553 ft
 Ride	Wed, 8/28/2013	Train Track Crash	2:50:55	39.16 mi	928 ft
 Ride	Sun, 2/22/2015	Canada Rd Plus	2:57:25	39.14 mi	1,834 ft
@@ -204,7 +213,6 @@ Ride	Sun, 9/30/2018	Canada	2:48:41	36.12 mi	1,480 ft
 Ride	Fri, 3/30/2018	Morning Ride	2:38:07	36.11 mi	285 ft
 Ride	Sun, 11/5/2017	Lunch Ride	3:24:01	35.91 mi	2,231 ft
 Ride	Sun, 2/8/2015	Commute	2:28:46	35.85 mi	1,142 ft
-Ride	Tue, 6/26/2018	Return from Chabot Lake with Juliet MTB	3:21:30	35.81 mi	817 ft
 Ride	Sat, 3/30/2019	Morning Ride	3:23:55	35.78 mi	2,861 ft
 Ride	Sun, 11/22/2015	Pigeon Point	3:14:41	35.73 mi	3,230 ft
 Ride	Mon, 9/19/2016	Sunnyvale	2:37:04	35.68 mi	745 ft
@@ -259,7 +267,7 @@ Ride	Mon, 5/18/2015	05/18/2015 Palo Alto, CA	2:24:45	32.22 mi	807 ft
 Ride	Sun, 4/8/2018	Lunch Ride	2:21:54	32.18 mi	1,296 ft
 Ride	Sun, 5/3/2015	Canada Rd	2:12:24	32.02 mi	1,384 ft
 Ride	Wed, 6/17/2015	06/17/2015 Mountain View, California	2:13:42	32.01 mi	650 ft
-Ride	Sat, 11/7/2015	Crystal Springs Part 1	2:15:00	32.00 mi	0 ft
+Ride	Sat, 11/7/2015	Crystal Springs Part 1	2:15:00	32.00 mi	1000 ft
 Ride	Sun, 8/23/2015	Afternoon Ride	2:24:29	31.90 mi	2,444 ft
 Ride	Sun, 4/12/2015	Palo Alto Cycling	2:01:49	31.76 mi	1,210 ft
 Ride	Sun, 11/13/2016	Afternoon Ride	2:23:46	31.71 mi	1,273 ft
@@ -293,7 +301,6 @@ Ride	Thu, 12/28/2017	Morning Ride	2:17:38	30.54 mi	430 ft
 Ride	Mon, 1/30/2017	Morning Ride	2:19:47	30.49 mi	696 ft
 Ride	Sun, 8/27/2017	Lunch Ride	2:16:36	30.47 mi	774 ft
 Ride	Fri, 10/12/2018	Lunch Ride	2:16:25	30.44 mi	348 ft
-Ride	Mon, 6/25/2018	Chabot Lake Overnight Bike packing with Juliet MTB	3:02:49	30.41 mi	1,250 ft
 Ride	Sat, 2/28/2015	Palo Alto Cycling	2:40:24	30.37 mi	2,535 ft
 Ride	Sat, 6/24/2017	Afternoon Ride	2:06:05	30.31 mi	338 ft
 Ride	Tue, 6/2/2015	06/02/2015 Mountain View, California	2:09:58	30.30 mi	784 ft
@@ -311,7 +318,6 @@ Ride	Sun, 7/8/2018	Lunch Ride	2:12:19	30.04 mi	768 ft
 Ride	Tue, 11/22/2016	Morning Ride	2:18:57	30.04 mi	518 ft
 Ride	Wed, 3/4/2015	Commute	2:15:56	30.02 mi	1,125 ft
 Ride	Sun, 3/25/2018	Dumbarton / Coyote Hills / Middle of the Bay	2:31:51	30.01 mi	709 ft
-Ride	Tue, 5/31/2016	Google Bike around campus	2:30:00	30.00 mi	0 ft
 Ride	Tue, 2/14/2017	Morning Ride	2:22:16	29.92 mi	463 ft
 Ride	Sun, 5/31/2015	05/31/2015 Palo Alto, California	2:35:24	29.85 mi	2,568 ft
 Ride	Tue, 11/1/2016	Morning Ride	2:15:55	29.78 mi	515 ft
@@ -364,7 +370,7 @@ Ride	Sun, 8/13/2017	Woodside Loop (Battery ran down)	2:00:00	27.00 mi	1,000 ft
 Ride	Sat, 1/31/2015	Alpine Rd	2:29:26	26.98 mi	2,362 ft
 Ride	Sun, 2/28/2016	Woodside Loop	1:43:34	26.93 mi	843 ft
 Ride	Sun, 4/1/2018	Lunch Ride	2:30:35	26.92 mi	1,831 ft
-Workout	Wed, 5/3/2017	Palo Alto Road Cycling	2:06:05	26.86 mi	1,411 ft
+Ride	Wed, 5/3/2017	Palo Alto Road Cycling	2:06:05	26.86 mi	1,411 ft
 Ride	Fri, 9/9/2016	Morning Ride	1:56:44	26.85 mi	1,086 ft
 Ride	Sun, 9/23/2018	Morning Ride	1:57:48	26.83 mi	512 ft
 Ride	Sat, 10/4/2014	Woodside Loop	1:52:09	26.71 mi	1,213 ft
@@ -448,9 +454,12 @@ Ride	Thu, 6/8/2017	Morning Ride	1:56:19	25.02 mi	285 ft
 Ride	Thu, 10/13/2016	Morning Ride	1:47:30	25.02 mi	253 ft
 Ride	Sun, 1/19/2014	01/19/2014 Palo Alto, CA	1:36:55	25.01 mi	1,201 ft
 Ride	Mon, 9/5/2016	Afternoon Ride	1:42:56	25.00 mi	902 ft
-Ride	Sat, 11/8/2014	Atherton - Woodside	1:40:51	25.00 mi	972 ft
-Ride	Sun, 12/10/2017	Exercise Bike	1:30:00	25.00 mi	0 ft
-Ride	Sun, 6/2/2019	The Sequoia	6:40:43	77.51 mi	6,467 ft
-Ride	Sat, 6/8/2019	Morning Ride	2:53:08	34.42 mi	1,824 ft
-Ride	Sat, 6/15/2019	Morning Ride	2:29:38	29.98 mi	1,785 ft
-Ride	Fri, 7/5/2019	Morning Ride	4:30:55	64.05 mi	1,965 ft
+Ride	Sat, 11/8/2014	Atherton / Woodside	1:40:51	25.00 mi	972 ft
+# 2013: Rides in the 20 to 25 mile range
+Ride	Sat, 6/1/2013	Woodside Loop	1:41:20	24.45 mi	1,125 ft
+Ride	Sun, 6/16/2013	Woodside Loop	1:38:19	24.52 mi	1,137 ft	
+Ride	Sun, 6/23/2013	Climb	2:16:29	24.30 mi	2,001 ft
+Ride	Sat, 7/13/2013	Doug's Event	1:51:55	21.35 mi	1,677 ft
+Ride	Sun, 8/4/2013	Kris's first trike ride	1:51:21	20.96 mi	988 ft	
+Ride	Sun, 11/24/2013	Alpine Rd	1:42:36	21.02 mi	1,289 ft	
+Ride	Fri, 11/29/2013	Woodside Loop	1:33:36	22.75 mi	1,011 ft	
