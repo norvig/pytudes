@@ -76,6 +76,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 
 {nbs('The Riddler (from 538)',
 ('Battle Royale', 2017, 'Riddler%20Battle%20Royale.ipynb', 'A puzzle involving allocating your troops and going up against an opponent'),
+('CrossProduct', 2020, 'CrossProduct.ipynb', 'A puzzle where digits fill a table, subject to constraints on their products'),
 ('Flipping Cards; A Guessing Game', 2020, 'flipping.ipynb', 'Can you go through a deck of cards, guessing higher or lower correctly for each card?'),
 ('Lottery', 2019, 'RiddlerLottery.ipynb',  'Can you find what lottery number tickets these five friends picked?'),
 ('How Many Soldiers to Beat the Night King?', 2019, 'NightKing.ipynb',  'A battle between the army of the dead and the army of the living'),
@@ -88,6 +89,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 {nbs('Word Puzzles',
 ('Boggle / Inverse Boggle', 2020, 'Boggle.ipynb', 'Find all the words on a Boggle board; then find a board with a lot of words'),
 ('Chemical Element Spelling', 2020, 'ElementSpelling.ipynb', 'Spelling words using the chemical element symbols, like CoIn'),
+('Equilength Numbers', 2020, 'equilength-numbers.ipynb', 'What number names have the same letter count as the number they name (such as "four")?'),
 ('Gesture Typing', 2017, 'Gesture%20Typing.ipynb', 'What word has the longest path on a gesture-typing smartphone keyboard?'),
 ('Ghost: A Word game', 2017, 'Ghost.ipynb', 'The word game Ghost (add letters, try to avoid making a word)'),
 ('How to Do Things with Words: NLP in Python', 2018, 'How%20to%20Do%20Things%20with%20Words.ipynb', 'Spelling Correction, Secret Codes, Word Segmentation, and more'),
@@ -109,6 +111,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 ('Economics Simulation', 2018, 'Economics.ipynb', 'A simulation of a simple economic game'),
 ("Euler's Sum of Powers Conjecture", 2018, "Euler's%20Conjecture.ipynb", 'Solving a 200-year-old puzzle by finding integers that satisfy a<sup>5</sup> + b<sup>5</sup> + c<sup>5</sup> + d<sup>5</sup> = e<sup>5</sup>'),
 ('How to Count Things', 2020, 'How%20To%20Count%20Things.ipynb', 'Combinatorial math: how to count how many things there are, when there are a lot of them'),
+('Poker Hand Ranking', 2012, "poker.ipynb", 'How do we decide which poker hand wins? Several variants of poker are considered.'),
 ('The Unfinished Game .... of Risk', 2020, "risk.ipynb", "Determining who is likely to win an interminably long game of Risk"),
 ('WWW: Who Will Win (NBA Title)?', 2019, 'WWW.ipynb', 'Computing the probability of winning the NBA title, for my home town Warriors, or any other team'))}
 
