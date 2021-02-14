@@ -64,7 +64,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 |---|----|---|
 | [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/Boggle.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2FBoggle.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2FBoggle.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/Boggle.ipynb) | <u>2020</u> | <b><a href="ipynb/Boggle.ipynb" title="Find all the words on a Boggle board; then find a board with a lot of words">Boggle / Inverse Boggle</a></b> |
 | [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/ElementSpelling.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2FElementSpelling.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2FElementSpelling.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/ElementSpelling.ipynb) | <u>2020</u> | <b><a href="ipynb/ElementSpelling.ipynb" title="Spelling words using the chemical element symbols, like CoIn">Chemical Element Spelling</a></b> |
-| [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/equilength-numbers.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2Fequilength-numbers.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2Fequilength-numbers.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/equilength-numbers.ipynb) | <u>2020</u> | <b><a href="ipynb/equilength-numbers.ipynb" title="What number names have the same letter count as the number they name (such as FOUR)?">Equilength Numbers</a></b> |
+| [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/equilength-numbers.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2Fequilength-numbers.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2Fequilength-numbers.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/equilength-numbers.ipynb) | <u>2020</u> | <b><a href="ipynb/equilength-numbers.ipynb" title="What number names have the same letter count as the number they name (such as FOUR)?">Equilength Numbers: four = 4</a></b> |
 | [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/Gesture%20Typing.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2FGesture%20Typing.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2FGesture%20Typing.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/Gesture%20Typing.ipynb) | 2017 | <b><a href="ipynb/Gesture%20Typing.ipynb" title="What word has the longest path on a gesture-typing smartphone keyboard?">Gesture Typing</a></b> |
 | [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/Ghost.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2FGhost.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2FGhost.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/Ghost.ipynb) | 2017 | <b><a href="ipynb/Ghost.ipynb" title="The word game Ghost (add letters, try to avoid making a word)">Ghost: A Word game</a></b> |
 | [c](https://colab.research.google.com/github/norvig/pytudes/blob/master/ipynb/How%20to%20Do%20Things%20with%20Words.ipynb) [d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2FHow%20to%20Do%20Things%20with%20Words.ipynb)  [m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2FHow%20to%20Do%20Things%20with%20Words.ipynb) [n](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/master/ipynb/How%20to%20Do%20Things%20with%20Words.ipynb) | 2018 | <b><a href="ipynb/How%20to%20Do%20Things%20with%20Words.ipynb" title="Spelling Correction, Secret Codes, Word Segmentation, and more">How to Do Things with Words: NLP in Python</a></b> |
@@ -106,23 +106,23 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 
 | File | Description | Documentation |
 |:--|:----|----|
-|[beal.py](/blob/master/py/beal.py)|*Search for counterexamples to Beal's Conjecture*|[documentation](http://norvig.com/beal.html)|
-|[docex.py](/blob/master/py/docex.py)|*An obsolete framework for running unit tests, similar to `doctest`*||
-|[ibol.py](/blob/master/py/ibol.py)|*An Exercise in Species Barcoding*|[documentation](http://norvig.com/ibol.html)|
-|[lettercount.py](/blob/master/py/lettercount.py)|*Convert Google Ngram Counts to Letter Counts*|[documentation](http://norvig.com/mayzner.html)|
-|[lis.py](/blob/master/py/lis.py)|*Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy.html)|
-|[lispy.py](/blob/master/py/lispy.py)|*Even Better Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy2.html)|
-|[lispytest.py](/blob/master/py/lispytest.py)|*Tests for Lisp Interpreters*||
-|[pal.py](/blob/master/py/pal.py)|*Find long palindromes*|[documentation](http://norvig.com/palindrome.html)|
-|[pal2.py](/blob/master/py/pal2.py)|*Find longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
-|[pal3.py](/blob/master/py/pal3.py)|*Find even longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
-|[pytudes.py](/blob/master/py/pytudes.py)|*Pre-process text to generate this README.md file.*||
-|[py2html.py](/blob/master/py/py2html.py)|*Pretty-printer to format Python files as html*||
-|[SET.py](/blob/master/py/SET.py)|*Analyze the card game SET*|[documentation](http://norvig.com/SET.html)|
-|[spell.py](/blob/master/py/spell.py)|*Spelling corrector*|[documentation](http://norvig.com/spell-correct.html)|
-|[sudoku.py](/blob/master/py/sudoku.py)|*Program to solve sudoku puzzles*|[documentation](http://norvig.com/sudoku.html)|
-|[testaccum.py](/blob/master/py/testaccum.py)|*Tests for my failed Python `accumulation display` proposal*|[documentation](http://norvig.com/pyacc.html)|
-|[yaptu.py](/blob/master/py/yaptu.py)|*Yet Another Python Templating Utility*||
+|[beal.py](/blob/master/py/beal.py)|Search for counterexamples to Beal's Conjecture|[documentation](http://norvig.com/beal.html)|
+|[docex.py](/blob/master/py/docex.py)|An obsolete framework for running unit tests, similar to `doctest`||
+|[ibol.py](/blob/master/py/ibol.py)|An Exercise in Species Barcoding|[documentation](http://norvig.com/ibol.html)|
+|[lettercount.py](/blob/master/py/lettercount.py)|Convert Google Ngram Counts to Letter Counts|[documentation](http://norvig.com/mayzner.html)|
+|[lis.py](/blob/master/py/lis.py)|Lisp Interpreter written in Python|[documentation](http://norvig.com/lispy.html)|
+|[lispy.py](/blob/master/py/lispy.py)|Even Better Lisp Interpreter written in Python|[documentation](http://norvig.com/lispy2.html)|
+|[lispytest.py](/blob/master/py/lispytest.py)|Tests for Lisp Interpreters||
+|[pal.py](/blob/master/py/pal.py)|Find long palindromes|[documentation](http://norvig.com/palindrome.html)|
+|[pal2.py](/blob/master/py/pal2.py)|Find longer palindromes|[documentation](http://norvig.com/palindrome.html)|
+|[pal3.py](/blob/master/py/pal3.py)|Find even longer palindromes|[documentation](http://norvig.com/palindrome.html)|
+|[pytudes.py](/blob/master/py/pytudes.py)|Pre-process text to generate this README.md file.||
+|[py2html.py](/blob/master/py/py2html.py)|Pretty-printer to format Python files as html||
+|[SET.py](/blob/master/py/SET.py)|Analyze the card game SET|[documentation](http://norvig.com/SET.html)|
+|[spell.py](/blob/master/py/spell.py)|Spelling corrector|[documentation](http://norvig.com/spell-correct.html)|
+|[sudoku.py](/blob/master/py/sudoku.py)|Program to solve sudoku puzzles|[documentation](http://norvig.com/sudoku.html)|
+|[testaccum.py](/blob/master/py/testaccum.py)|Tests for my failed Python `accumulation display` proposal|[documentation](http://norvig.com/pyacc.html)|
+|[yaptu.py](/blob/master/py/yaptu.py)|Yet Another Python Templating Utility||
 
 # Etudes for Programmers
 I got the idea for the *"etudes"* part of the name from
