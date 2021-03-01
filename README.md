@@ -8,7 +8,7 @@
 
 This project contains **pytudes**&mdash;Python programs, usually short, for perfecting particular programming skills.
 Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each notebook you can:
-- Click on [c](https://colab.research.google.com) to **run** the file on Colab
+- Click on [c](https://colab.research.google.com) to **run** the notebook on Colab
 - Click on [d](https://deepnote.com) to **run** the notebook on DeepNote
 - Click on [m](https://mybinder.org) to **run** the notebook on MyBinder
 - Click on [n](https://nbviewer.jupyter.org/) to **view** the notebook on NBViewer
