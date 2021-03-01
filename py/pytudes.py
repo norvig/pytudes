@@ -4,21 +4,23 @@
 def nbs(category, *notebooks):
     """Make a table entry for jupyter/ipython notebooks."""
     header = f'|Run|Year|{category}|\n|---|----|---|\n'
+    print(f'{len(notebooks)} notebooks in {category}')
     return header + '\n'.join(nb(*line) for line in notebooks)
     
 def nb(title, year, url, comment=''):
     """Make a markdown table entry for a jupyter/ipython notebook."""
     urlb = f'/blob/master/ipynb/{url}'
-    co = f'[co](https://colab.research.google.com/github/norvig/pytudes{urlb})'
-    dn = f'[dn](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2F{url}) '
-    my = f'[my](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2F{url})'
-    nb = f'[nb](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
+    co = f'[c](https://colab.research.google.com/github/norvig/pytudes{urlb})'
+    dn = f'[d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2F{url}) '
+    my = f'[m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2F{url})'
+    nb = f'[n](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
     ti = f'<b><a href="ipynb/{url}" title="{comment}">{title}</a></b>'
     if year == 2020: year = f'<u>{year}</u>'
     return f'| {co} {dn} {my} {nb} | {year} | {ti} |'
 
 def pys(*pyfiles):
     header = '| File | Description | Documentation |\n|:--|:----|----|\n'
+    print(f'{len(pyfiles)} pyfiles')
     return header +  '\n'.join(py(*line) for line in pyfiles)
     
 def py(url, description, doc=''):
@@ -37,10 +39,10 @@ body = f"""
 
 This project contains **pytudes**&mdash;Python programs, usually short, for perfecting particular programming skills.
 Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each notebook you can:
-- Click on [co](https://colab.research.google.com) to **run** the file on Colab
-- Click on [dn](https://deepnote.com) to **run** the notebook on DeepNote
-- Click on [my](https://mybinder.org) to **run** the notebook on MyBinder
-- Click on [nb](https://nbviewer.jupyter.org/) to **view** the notebook on NBViewer
+- Click on [c](https://colab.research.google.com) to **run** the notebook on Colab
+- Click on [d](https://deepnote.com) to **run** the notebook on DeepNote
+- Click on [m](https://mybinder.org) to **run** the notebook on MyBinder
+- Click on [n](https://nbviewer.jupyter.org/) to **view** the notebook on NBViewer
 - Click on the title to **view** the notebook on github.
 - Hover over the title to **view** a description.
 
@@ -49,6 +51,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 
 
 {nbs('Programming Examples',
+('Advent of Code 2020', 2020, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2018 '),
 ('Advent of Code 2018', 2018, 'Advent-2018.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2018 '),
 ('Advent of Code 2017', 2017, 'Advent%202017.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2017'),
 ('Advent of Code 2016', 2016, 'Advent%20of%20Code.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2016*'),
@@ -65,7 +68,8 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 
 {nbs('Logic and Number Puzzles',
 ('Cryptarithmetic', 2014, 'Cryptarithmetic.ipynb', 'Substitute digits for letters and make NUM + BER = PLAY'),
-('Four 4s, Five 5s, Equilength Numbers, and Countdown to 2016', 2020, 'Countdown.ipynb', 'Solving the equation 10 _ 9 _ 8 _ 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 2016. From an Alex Bellos puzzle'),
+("Euler's Sum of Powers Conjecture", 2018, "Euler's%20Conjecture.ipynb", 'Solving a 200-year-old puzzle by finding integers that satisfy a<sup>5</sup> + b<sup>5</sup> + c<sup>5</sup> + d<sup>5</sup> = e<sup>5</sup>'),
+('Four 4s, Five 5s, and Countdowns', 2020, 'Countdown.ipynb', 'Solving the equation 10 _ 9 _ 8 _ 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 2016. From an Alex Bellos puzzle'),
 ('Pairing Socks', 2019, 'Socks.ipynb', 'What is the probability that you will be able to pair up socks as you randomly pull them out of the dryer?'),
 ('Sicherman Dice', 2018, 'Sicherman%20Dice.ipynb', 'Find a pair of dice that is like a regular pair of dice, only different'),
 ("Sol Golomb's Rectangle Puzzle", 2014, 'Golomb-Puzzle.ipynb', 'A Puzzle involving placing rectangles of different sizes inside a square'),
@@ -76,20 +80,20 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 
 {nbs('The Riddler (from 538)',
 ('Battle Royale', 2017, 'Riddler%20Battle%20Royale.ipynb', 'A puzzle involving allocating your troops and going up against an opponent'),
-('CrossProduct', 2020, 'CrossProduct.ipynb', 'A puzzle where digits fill a table, subject to constraints on their products'),
+('CrossProduct', 2021, 'CrossProduct.ipynb', 'A puzzle where digits fill a table, subject to constraints on their products'),
 ('Flipping Cards; A Guessing Game', 2020, 'flipping.ipynb', 'Can you go through a deck of cards, guessing higher or lower correctly for each card?'),
 ('Lottery', 2019, 'RiddlerLottery.ipynb',  'Can you find what lottery number tickets these five friends picked?'),
 ('How Many Soldiers to Beat the Night King?', 2019, 'NightKing.ipynb',  'A battle between the army of the dead and the army of the living'),
+('Misanthropic Neighbors', 2017, 'Mean%20Misanthrope%20Density.ipynb', 'How crowded will this neighborhood be, if nobody wants to live next door to anyone else?'),
 ('Properly Ordered Card Hands', 2018, 'Orderable%20Cards.ipynb', 'Can you get your hand of cards into a nice order with just one move?'),
-('The Puzzle of the Misanthropic Neighbors', 2017, 'Mean%20Misanthrope%20Density.ipynb', 'How crowded will this neighborhood be, if nobody wants to live next door to anyone else?'),
 ('Tour de 538', 2020, 'TourDe538.ipynb', 'Solve a puzzle involving the best pace for a bicycle race.'),
 ('Weighing Twelve Balls', 2020, 'TwelveBalls.ipynb', 'A puzzle where you are given some billiard balls and a balance scale, and asked to find the one ball that is heavier or lighter, in a limited number of weighings'),
-('War. Waht is it Good For?', 2020, 'war.ipynb', 'How likely is it to win a game of war in 26 turns?'))}
+('War. What is it Good For?', 2020, 'war.ipynb', 'How likely is it to win a game of war in 26 turns?'))}
 
 {nbs('Word Puzzles',
 ('Boggle / Inverse Boggle', 2020, 'Boggle.ipynb', 'Find all the words on a Boggle board; then find a board with a lot of words'),
 ('Chemical Element Spelling', 2020, 'ElementSpelling.ipynb', 'Spelling words using the chemical element symbols, like CoIn'),
-('Equilength Numbers', 2020, 'equilength-numbers.ipynb', 'What number names have the same letter count as the number they name (such as "four")?'),
+('Equilength Numbers: FOUR = 4', 2020, 'equilength-numbers.ipynb', 'What number names have the same letter count as the number they name (such as FOUR)?'),
 ('Gesture Typing', 2017, 'Gesture%20Typing.ipynb', 'What word has the longest path on a gesture-typing smartphone keyboard?'),
 ('Ghost: A Word game', 2017, 'Ghost.ipynb', 'The word game Ghost (add letters, try to avoid making a word)'),
 ('How to Do Things with Words: NLP in Python', 2018, 'How%20to%20Do%20Things%20with%20Words.ipynb', 'Spelling Correction, Secret Codes, Word Segmentation, and more'),
@@ -102,15 +106,13 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 ("World's Shortest Portmantout Word", 2020, 'Portmantout.ipynb',  'Find a word that squishes together a bunch of words'),
 ('xkcd 1970: Name Dominoes', 2018, 'xkcd-Name-Dominoes.ipynb', 'Lay out dominoes legally; the dominoes have people names, not numbers'))}
 
-{nbs('Probability, Uncertainty, and Counting',
+{nbs('Probability and Uncertainty',
 ('A Concrete Introduction to Probability', 2018, 'Probability.ipynb', 'Code and examples of the basic principles of Probability Theory'),
 ('Probability, Paradox, and the Reasonable Person Principle', 2016, 'ProbabilityParadox.ipynb', 'Some classic paradoxes in Probability Theory, and how to think about disagreements'),
 ('Estimating Probabilities with Simulations', 2020, 'ProbabilitySimulation.ipynb', 'When the sample space is too complex, simulations can estimate probabilities'),
 ('The Devil and the Coin Flip Game', 2019, 'Coin%20Flip.ipynb', 'How to beat the Devil at his own game'),
 ('Dice Baseball', 2020, 'Dice%20Baseball.ipynb', 'Simulating baseball games'),
 ('Economics Simulation', 2018, 'Economics.ipynb', 'A simulation of a simple economic game'),
-("Euler's Sum of Powers Conjecture", 2018, "Euler's%20Conjecture.ipynb", 'Solving a 200-year-old puzzle by finding integers that satisfy a<sup>5</sup> + b<sup>5</sup> + c<sup>5</sup> + d<sup>5</sup> = e<sup>5</sup>'),
-('How to Count Things', 2020, 'How%20To%20Count%20Things.ipynb', 'Combinatorial math: how to count how many things there are, when there are a lot of them'),
 ('Poker Hand Ranking', 2012, "poker.ipynb", 'How do we decide which poker hand wins? Several variants of poker are considered.'),
 ('The Unfinished Game .... of Risk', 2020, "risk.ipynb", "Determining who is likely to win an interminably long game of Risk"),
 ('WWW: Who Will Win (NBA Title)?', 2019, 'WWW.ipynb', 'Computing the probability of winning the NBA title, for my home town Warriors, or any other team'))}
@@ -119,10 +121,11 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 {nbs('Computer Science Algorithms and Concepts',
 ('Bad Grade, Good Experience', 2017, 'Snobol.ipynb', 'As a student, did you ever get a bad grade on a programming assignment? (Snobol, Concordance)'),
 ('BASIC Interpreter', 2017, 'BASIC.ipynb', 'How to write an interpreter for the BASIC programming language'),
-('The Convex Hull Problem', 2017, 'Convex%20Hull.ipynb', 'A classic Computer Science Algorithm'),
-('The Stable Matching Problem', 2020, 'StableMatching.ipynb', 'What is the best way to pair up two groups with each other, obeying preferences?'),
+('Convex Hull Problem', 2017, 'Convex%20Hull.ipynb', 'A classic Computer Science Algorithm'),
+('How to Count Things', 2020, 'How%20To%20Count%20Things.ipynb', 'Combinatorial math: how to count how many things there are, when there are a lot of them'),
+('Stable Matching Problem', 2020, 'StableMatching.ipynb', 'What is the best way to pair up two groups with each other, obeying preferences?'),
 ('Symbolic Algebra, Simplification, and Differentiation', 2017, 'Differentiation.ipynb', 'A computer algebra system that  manipulates expressions, including symbolic differentiation'),
-('The Traveling Salesperson Problem', 2018, 'TSP.ipynb', 'Another of the classics'))}
+('Traveling Salesperson Problem', 2018, 'TSP.ipynb', 'Another of the classics'))}
 
 
 # Index of Python Files
