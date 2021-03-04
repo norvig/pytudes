@@ -1,63 +1,94 @@
 :Around 90%:
-Los Altos: 138: 40.2 43.7 72.4 77.2 84.5 90.8      | 91.0
-Atherton: 56.8: 0*4 91.2 94.0                      | 95.2
-East Palo Alto: 46.5: 74.4 91.2 91.9*2 92.2 93.3   | 93.4
-Menlo Park: 131.5: 67.7 76.8 87.7 90.7 91.2 90.1   | 92.5
-North Fair Oaks: 27: 48.1 90.4 93.1 93.8 94.8 96.1 | 96.9
-Mountain View: 205: 53.0 59.9 63.0 63.6 72.9 77.1  | 91.1
-Palo Alto: 292: 63.0 73.6 85.4 85.7 87.1 87.6      | 88.1
+Los Altos: 138: 40.2 43.7 72.4 77.2 84.5 90.8      | 91.0*2
+Atherton: 56.8: 0*4 91.2 94.0                      | 95.2*2
+East Palo Alto: 46.5: 74.4 91.2 91.9*2 92.2 93.3   | 93.4*2
+Emerald Lake Hills: 24.8: 0.0 94.3*3 44.7 51.0     | 80.0 85.8
+Menlo Park: 131.5: 67.7 76.8 87.7 90.7 91.2 90.1   | 92.5*2
+North Fair Oaks: 27: 48.1 90.4 93.1 93.8 94.8 96.1 | 96.9*2
+Mountain View: 205: 53.0 59.9 63.0 63.6 72.9 77.1  | 91.1*2
+Palo Alto: 292: 63.0 73.6 85.4 85.7 87.1 87.6      | 88.1*2
+
+:Around 50%:
+Burlingame: 88.4: 9.4*6                          | 9.4 31.5
+Los Altos Hills: 91: 48.4*2 49.0 55.1*2 55.4     | 55.8*2
+Monte Sereno: 20.4: 20.5*6                       | 20.5 39.8
+Portola Valley: 59: 0*4 57.3 59.8                | 59.8*2
+Redwood City: 241: 34.0 39.1 46.0 51.6 56.9 60.8 | 62.9*2
+San Carlos: 99: 22.2 26.0 32.9 32.9 37.2 39.0    | 40.5*2
+Woodside: 77: 51.9*2 52.3*3 54.0                 | 54*2
 
 :Around 25%:
-Cupertino: 172: 22.1 23.9 26.2*3 26.3      | 26.4
-Saratoga: 180: 14.5 15.7 17.4*4            | 17.4
-Sunnyvale: 357: 19.4 19.9 22.2*4           | 25.1
-Belmont: 98: 15.5 17.3 18.6 18.6 20.6 20.6 | 27.4
-Newark: 145: 15*3 17*3                     | 18.7
-
-:In Between 25% and 90%:
-Los Altos Hills: 91: 48.4*2 49.0 55.1*2 55.4     | 55.8
-Portola Valley: 59: 0*4 57.3 59.8                | 59.8
-Redwood City: 241: 34.0 39.1 46.0 51.6 56.9 60.8 | 62.9
-San Carlos: 99: 22.2 26.0 32.9 32.9 37.2 39.0    | 40.5
-Woodside: 77: 51.9*2 52.3*3 54.0                 | 54
+Belmont: 98: 15.5 17.3 18.6 18.6 20.6*2 | 27.4*2
+Bodega Bay: 28.9: 18*6                  | 18*2
+Campbell: 119: 8.9 10.1 12.4*4          | 12.4 25.2
+Cupertino: 172: 22.1 23.9 26.2*3 26.3   | 26.4*2
+Guerniville: 22.7: 23.4*6               | 23.4*2
+Healdsburg: 53.7: 18.5*6                | 18.5*2
+Foster City: 150: 9.1*6                 | 9.1 27.4
+Hillsborough: 85.3: 3.3*6               | 3.6 24.5
+Los Gatos: 148: 7.5 8.6 8.8*4           | 8.8 26.1
+Millbrae: 65: 0*6                       | 0 18.4
+Newark: 145: 15*3 17*3                  | 18.7 26.8
+San Mateo: 256: 11.1*6                  | 11.3 25.5
+Saratoga: 180: 14.5 15.7 17.4*4         | 17.4 26.9
+Sunnyvale: 357: 19.4 19.9 22.2*4        | 25.1*2
+Union City: 207: 7*3 8*3                | 8.8 14.51
 
 :Just Getting Started:
-Campbell: 119: 8.9 10.1 12.4*4 | 12.4
-Los Gatos: 148: 7.5 8.6 8.8*4  | 8.8
-Milpitas: 224: 2.2*4 4.4*2     | 4.4
-San Jose: 2543: 1.3 1.36 5.3*4 | 5.3
-Santa Clara: 348: 6.4*2 9.6*4  | 9.6
-Foster City: 150: 9.1*6        | 9.1
-San Mateo: 412: 11.1*6         | 11.3
-Berkeley: 260: 5.0*3 7.0*3     |  7.0
-Fremont: 771: 9*3 10*3         | 11.7
-Union City: 207: 7*3 8*3       |  8.8
+Milpitas: 224: 2.2*4 4.4*2     | 4.4*2
+San Jose: 2543: 1.3 1.36 5.3*4 | 5.4*2
+Santa Clara: 348: 6.4*2 9.6*4  | 9.6*2
+Berkeley: 260: 5.0*3 7.0*3     | 7.0*2
+Fremont: 771: 9*3 10*3         | 11.7*2
+Cambridge: 180.8: 6.4*6        | 6.4*2
 
-:Small Neighborhoods (under 25 road miles):
-Emerald Lake Hills: 24.8: 0.0 94.3*3 44.7 51.0 | 80.0
-Kensington Square: 0.6: 86.9 99.4 100*4 | 100
-Ladera: 8.0: 0*4 30.5 29.8         | 29.8
-Loyola: 18.3: 0*4 60.8 62.1        | 62.1
-Los Trancos Woods: 5.4: 0*4 71.4*2 | 71.4
-Menlo Oaks: 3.6: 0*4 98.4 99.7     | 99.7
-Monte Sereno: 20.4: 20.5*6         | 20.5
-Palomar Park: 3.9: 0*6             | 91.1
-San Mateo Highlands: 18: 0*6       | 18.0
-Sequoia Tract: 11.9: 0*4 72.8 82.3 | 92.5
-Sky Londa: 11.8: 0*4 72.1*2        | 73.2
-West Menlo Park: 11: 0*4 97.5 98.1 | 98.1
+:Small Neighborhoods (under 20 road miles):
+Burlingame Hills: 6: 0*6           | 0.8 34.5
+Kensington Square: 0.6: 86.9 100*5 | 100*2
+Ladera: 8.0: 0*4 30.5 29.8         | 29.8*2
+Loyola: 18.3: 0*4 60.8 62.1        | 62.1*2
+Los Trancos Woods: 5.4: 0*4 71.4*2 | 71.4*2
+Menlo Oaks: 3.6: 0*4 98.4 99.7     | 99.7*2
+Muir Beach: 4.6: 0*6               | 35.8*2
+Palomar Park: 3.9: 0*6             | 91.1*2
+San Mateo Highlands: 18: 0*6       | 18.0 29.2
+Sequoia Tract: 11.9: 0*4 72.8 82.3 | 92.5*2
+Stinson Beach: 11.2: 0*6           | 9.2*2
+Sky Londa: 11.8: 0*4 72.1*2        | 73.2*2
+West Menlo Park: 11: 0*4 97.5 98.1 | 98.1*2
+Mokelumne Hill: 14.7: 28.9*6       | 28.9*2
+MIT, Cambridge: 9.6: 37.2*6        | 37.2*2
 
-:Large Places (over 300,000 road miles):
-California: 365188: .712 .811  .846  .867   .8875   .8873  | .9054
-USA:       6317607: .048 .052  .055  .05589 .0571   .05749 | .05853
-Earth:    38609276: .008 .0089 .0091 .00936 .009535 .009426| .009597
+:San Francisco Neighborhoods:
+Balboa Terrace: 3.4: 0*6    | 18.2*2
+Cole Valley: 1.7: 0*6       | 19.6*2
+Forest Hill: 6.1: 0*6       | 15.7*2
+Golden Gate Park: 40.5: 0*6 | 25.8*2
+Lincoln Park: 3.8: 0*6      | 42.4*2
+Pacific Heights: 18: 0*6    | 10.8*2
+Ashbury Heights: 3.7: 0*6   | 12.9*2
+Clarendon Heights: 6: 0*6   | 14.3*2
+Cow Hollow: 12: 0*6         |5*2
+Financial District: 9.4: 0*6 |5.8*2
+Golden Gate Heights: 17.8: 0*6 | 10.7*2
+Polk Gulch: 4: 0*6          | 18.2*2
+Presidio Heights: 6.5: 0*6  | 15.1*2
+Presidio Park: 43.1: 0*6    | 21.1*2
+Presidio Terrace: 2.7: 0*6  | 37.7*2
+Seacliff: 4.1: 0*6          | 23.1*2
+South Beach: 4.8: 0*6       | 28.2*2
 
 :California Counties:
-San Mateo: 3248: 20.1 21.2 22.9 23.4 24.57 25.53   | 26.43
-Santa Clara: 7396: 12.7 13.6 15.4 15.6 16.04 16.29 | 16.78
-Alameda: 5704: 3.3*3 3.94*3 | 3.97
-Marin: 2322: 6.7*6          | 6.7
-Napa: 1524: 5.1*6           | 5.1
-Sonoma: 4556: 5.1*6         | 5.1
-San Francisco: 1183: 4.5*6  | 4.5
-Santa Cruz: 2767: 2.3*6     | 2.3
+San Mateo: 3248: 20.1 21.2 22.9 23.4 24.57 25.53   | 26.43 30.0
+Santa Clara: 7396: 12.7 13.6 15.4 15.6 16.04 16.29 | 16.78 17.73
+Alameda: 5704: 3.3*3 3.94*3 | 3.97*2
+Marin: 2322: 6.7*6          | 6.7*2
+Napa: 1524: 5.1*6           | 5.1*2
+Sonoma: 4556: 5.1*6         | 5.1*2
+San Francisco: 1183: 4.5*6  | 4.5*2
+Santa Cruz: 2767: 2.3*6     | 2.3*2
+
+:Large Places (over 300,000 road miles):
+California: 365188: .712 .811  .846  .867   .8875   .8873  | .9054   .9624
+USA:       6317607: .048 .052  .055  .05589 .0571   .05749 | .05853  .06183
+Earth:    38609276: .008 .0089 .0091 .00936 .009535 .009426| .009597 .010136
