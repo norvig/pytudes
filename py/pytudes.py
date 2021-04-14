@@ -56,7 +56,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 ('Advent of Code 2017', 2017, 'Advent%202017.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2017'),
 ('Advent of Code 2016', 2016, 'Advent%20of%20Code.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2016*'),
 ("Beal's Conjecture Revisited", 2018, 'Beal.ipynb', "A search for counterexamples to Beal's Conjecture"),
-('Bike Speed Versus Grade', 2020, 'Bike%20Speed%20versus%20Grade.ipynb', 'How fast can I bike as the route gets steeper?'),
+('Bicycling Statistics', 2020, 'Bike%20Speed%20versus%20Grade.ipynb', 'Visualizing statistics about bike routes.'),
 ("Can't Stop", 2018, 'Cant-Stop.ipynb', 'Optimal play in a dice board game'),
 ('Chaos with Triangles', 2019, 'Sierpinski.ipynb', 'A surprising appearance of the Sierpinski triangle in a random walk between vertexes'),
 ("Conway's Game of Life", 2017, 'Life.ipynb', 'The cellular automata zero-player game'),
