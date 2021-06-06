@@ -29,3 +29,7 @@
 ## Debugging Aids
 
 - [Python Tutor](http://www.pythontutor.com/) (Philip Guo)
+
+## Project-Based Learning
+
+- [tuvtran repository](https://github.com/tuvtran/project-based-learning#python)
