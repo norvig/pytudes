@@ -19,7 +19,7 @@ _quote, _if, _set, _define, _lambda, _begin, _definemacro, = map(Sym,
 _quasiquote, _unquote, _unquotesplicing = map(Sym,
 "quasiquote   unquote   unquote-splicing".split())
 
-class Procedure(object):
+class Procedure:
     "A user-defined Scheme procedure."
     def __init__(self, parms, exp, env):
         self.parms, self.exp, self.env = parms, exp, env
@@ -36,7 +36,7 @@ def parse(inport):
 
 eof_object = Symbol('#<eof-object>') # Note: uninterned; can't be read
 
-class InPort(object):
+class InPort:
     "An input port. Retains a line of chars."
     tokenizer = r"""\s*(,@|[('`,)]|"(?:[\\].|[^\\"])*"|;.*|[^\s('"`,;)]*)(.*)"""
     def __init__(self, file):
