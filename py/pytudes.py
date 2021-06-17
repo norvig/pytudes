@@ -1,8 +1,8 @@
 # Run "python pytudes.py" to create README.md for pytudes
 
-def bars(items): return '|' + '|'.join(items) + '|'
+def cols(items): "Make columns"; return '|' + '|'.join(items) + '|'
 
-def table_head(*columns): return f'{bars(columns)}\n{bars(["---"]*len(columns))}\n'
+def table_head(*columns): return f'{cols(columns)}\n{cols(["---"]*len(columns))}\n'
 
 def nbs(category, *notebooks):
     """Make a table of multiple jupyter/ipython notebooks, under a header."""
@@ -11,10 +11,10 @@ def nbs(category, *notebooks):
     
 def nb(title, year, url, comment=''):
     """Make a markdown table entry for a jupyter/ipython notebook."""
-    urlb = f'/blob/master/ipynb/{url}'
+    urlb = f'/blob/main/ipynb/{url}'
     co = f'[c](https://colab.research.google.com/github/norvig/pytudes{urlb})'
-    dn = f'[d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2F{url}) '
-    my = f'[m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2F{url})'
+    dn = f'[d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmain%2Fipynb%2F{url}) '
+    my = f'[m](https://mybinder.org/v2/gh/norvig/pytudes/main?filepath=ipynb%2F{url})'
     nb = f'[n](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
     ti = f'<b><a href="ipynb/{url}" title="{comment}">{title}</a></b>'
     if year == 2020: year = f'<u>{year}</u>'
@@ -28,13 +28,13 @@ def pys(*pyfiles):
 def py(url, description, doc=''):
     """Make a markdown table entry for a .py file."""
     if doc: doc = f'[documentation]({doc})'
-    return f'|[{url}](/blob/master/py/{url})|*{description}*|{doc}|'
+    return f'|[{url}](/blob/main/py/{url})|*{description}*|{doc}|'
 
 
 body = f"""
 
 <div align="right" style="text-align:right"><i>Peter Norvig
-<br><a href="https://github.com/norvig/pytudes/blob/master/LICENSE">MIT License</a><br>2015-2020</i></div>
+<br><a href="https://github.com/norvig/pytudes/blob/main/LICENSE">MIT License</a><br>2015-2020</i></div>
 
 # pytudes
 
@@ -96,6 +96,7 @@ For each notebook you can:
 ('How Many Soldiers to Beat the Night King?', 2019, 'NightKing.ipynb',  'A battle between the army of the dead and the army of the living'),
 ('Misanthropic Neighbors', 2017, 'Mean%20Misanthrope%20Density.ipynb', 'How crowded will this neighborhood be, if nobody wants to live next door to anyone else?'),
 ('Properly Ordered Card Hands', 2018, 'Orderable%20Cards.ipynb', 'Can you get your hand of cards into a nice order with just one move?'),
+('Split the States', 2021, 'SplitStates.ipynb', 'Split the US states into two near-halves by area.'),
 ('Tour de 538', 2020, 'TourDe538.ipynb', 'Solve a puzzle involving the best pace for a bicycle race.'),
 ('Weighing Twelve Balls', 2020, 'TwelveBalls.ipynb', 'A puzzle where you are given some billiard balls and a balance scale, and asked to find the one ball that is heavier or lighter, in a limited number of weighings'),
 ('War. What is it Good For?', 2020, 'war.ipynb', 'How likely is it to win a game of war in 26 turns?'))}
