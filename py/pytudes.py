@@ -28,7 +28,7 @@ def pys(*pyfiles):
 def py(url, description, doc=''):
     """Make a markdown table entry for a .py file."""
     if doc: doc = f'[documentation]({doc})'
-    return f'|[{url}](/blob/main/py/{url})|*{description}*|{doc}|'
+    return f'|[{url}](/py/{url})|*{description}*|{doc}|'
 
 
 body = f"""
