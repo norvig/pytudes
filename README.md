@@ -116,23 +116,23 @@ For each notebook you can:
 
 |File|Description|Documentation|
 |---|---|---|
-|[beal.py](/blob/main/py/beal.py)|*Search for counterexamples to Beal's Conjecture*|[documentation](http://norvig.com/beal.html)|
-|[docex.py](/blob/main/py/docex.py)|*An obsolete framework for running unit tests, similar to `doctest`*||
-|[ibol.py](/blob/main/py/ibol.py)|*An Exercise in Species Barcoding*|[documentation](http://norvig.com/ibol.html)|
-|[lettercount.py](/blob/main/py/lettercount.py)|*Convert Google Ngram Counts to Letter Counts*|[documentation](http://norvig.com/mayzner.html)|
-|[lis.py](/blob/main/py/lis.py)|*Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy.html)|
-|[lispy.py](/blob/main/py/lispy.py)|*Even Better Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy2.html)|
-|[lispytest.py](/blob/main/py/lispytest.py)|*Tests for Lisp Interpreters*||
-|[pal.py](/blob/main/py/pal.py)|*Find long palindromes*|[documentation](http://norvig.com/palindrome.html)|
-|[pal2.py](/blob/main/py/pal2.py)|*Find longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
-|[pal3.py](/blob/main/py/pal3.py)|*Find even longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
-|[pytudes.py](/blob/main/py/pytudes.py)|*Pre-process text to generate this README.md file.*||
-|[py2html.py](/blob/main/py/py2html.py)|*Pretty-printer to format Python files as html*||
-|[SET.py](/blob/main/py/SET.py)|*Analyze the card game SET*|[documentation](http://norvig.com/SET.html)|
-|[spell.py](/blob/main/py/spell.py)|*Spelling corrector*|[documentation](http://norvig.com/spell-correct.html)|
-|[sudoku.py](/blob/main/py/sudoku.py)|*Program to solve sudoku puzzles*|[documentation](http://norvig.com/sudoku.html)|
-|[testaccum.py](/blob/main/py/testaccum.py)|*Tests for my failed Python `accumulation display` proposal*|[documentation](http://norvig.com/pyacc.html)|
-|[yaptu.py](/blob/main/py/yaptu.py)|*Yet Another Python Templating Utility*||
+|[beal.py](py/beal.py)|*Search for counterexamples to Beal's Conjecture*|[documentation](http://norvig.com/beal.html)|
+|[docex.py](py/docex.py)|*An obsolete framework for running unit tests, similar to `doctest`*||
+|[ibol.py](py/ibol.py)|*An Exercise in Species Barcoding*|[documentation](http://norvig.com/ibol.html)|
+|[lettercount.py](py/lettercount.py)|*Convert Google Ngram Counts to Letter Counts*|[documentation](http://norvig.com/mayzner.html)|
+|[lis.py](py/lis.py)|*Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy.html)|
+|[lispy.py](py/lispy.py)|*Even Better Lisp Interpreter written in Python*|[documentation](http://norvig.com/lispy2.html)|
+|[lispytest.py](py/lispytest.py)|*Tests for Lisp Interpreters*||
+|[pal.py](py/pal.py)|*Find long palindromes*|[documentation](http://norvig.com/palindrome.html)|
+|[pal2.py](py/pal2.py)|*Find longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
+|[pal3.py](py/pal3.py)|*Find even longer palindromes*|[documentation](http://norvig.com/palindrome.html)|
+|[pytudes.py](py/pytudes.py)|*Pre-process text to generate this README.md file.*||
+|[py2html.py](py/py2html.py)|*Pretty-printer to format Python files as html*||
+|[SET.py](py/SET.py)|*Analyze the card game SET*|[documentation](http://norvig.com/SET.html)|
+|[spell.py](py/spell.py)|*Spelling corrector*|[documentation](http://norvig.com/spell-correct.html)|
+|[sudoku.py](py/sudoku.py)|*Program to solve sudoku puzzles*|[documentation](http://norvig.com/sudoku.html)|
+|[testaccum.py](py/testaccum.py)|*Tests for my failed Python `accumulation display` proposal*|[documentation](http://norvig.com/pyacc.html)|
+|[yaptu.py](py/yaptu.py)|*Yet Another Python Templating Utility*||
 
 # Etudes for Programmers
 I got the idea for the *"etudes"* part of the name from
