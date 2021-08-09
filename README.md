@@ -18,12 +18,9 @@ To continue the musical analogy, some people think of programming like [Spotify]
 # Index of Jupyter (IPython) Notebooks
 
 For each notebook you can:
-- Click on [c](https://colab.research.google.com) to **run** the notebook on Colab.
-- Click on [d](https://deepnote.com) to **run** the notebook on DeepNote.
-- Click on [m](https://mybinder.org) to **run** the notebook on MyBinder.
-- Click on [n](https://nbviewer.jupyter.org/) or the title to **view** the notebook on NBViewer.
-- Click on [g](https://github.com/norvig/pytudes) to **view** the notebook on github.
-- Hover over the title to **view** a description.
+- Run the notebook by clicking on [c](https://colab.research.google.com) (Colab), [d](https://deepnote.com) (DeepNote), or [m](https://mybinder.org) (MyBinder).
+- View the notebook by clicking on [n](https://nbviewer.jupyter.org/) (NBViewer) or [g](https://github.com/norvig/pytudes) (github).
+- Read a short description by hovering over the title.
 
 
 |Run|Year|Programming Examples|
