@@ -76,14 +76,17 @@ For each notebook you can:
 ('Tracking Trump: Electoral Votes', 2020, 'Electoral%20Votes.ipynb', 'How many electoral votes would Trump get if he wins the state where he has positive net approval?'))}
 
 {nbs('Logic and Number Puzzles',
+('Star Battle', 2021, 'StarBattle.ipynb', 'Fill-in-the-grid puzzle similar to Sudoku'),
 ('Cryptarithmetic', 2014, 'Cryptarithmetic.ipynb', 'Substitute digits for letters and make NUM + BER = PLAY'),
 ("Euler's Sum of Powers Conjecture", 2018, "Euler's%20Conjecture.ipynb", 'Solving a 200-year-old puzzle by finding integers that satisfy a<sup>5</sup> + b<sup>5</sup> + c<sup>5</sup> + d<sup>5</sup> = e<sup>5</sup>'),
 ('Four 4s, Five 5s, and Countdowns', 2020, 'Countdown.ipynb', 'Solving the equation 10 _ 9 _ 8 _ 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 2016. From an Alex Bellos puzzle'),
 ('Pairing Socks', 2019, 'Socks.ipynb', 'What is the probability that you will be able to pair up socks as you randomly pull them out of the dryer?'),
 ('Sicherman Dice', 2018, 'Sicherman%20Dice.ipynb', 'Find a pair of dice that is like a regular pair of dice, only different'),
 ("Sol Golomb's Rectangle Puzzle", 2014, 'Golomb-Puzzle.ipynb', 'A Puzzle involving placing rectangles of different sizes inside a square'),
-("Square Sum Puzzle", 2020, 'SquareSum.ipynb', 'Place the numbers from 1 to n in a chain such that adjacent pairs sum to a perfect square'),
-("When is Cheryl's Birthday? (new: Mad Cheryl)", 2020, 'Cheryl.ipynb', "Solving the *Cheryl's Birthday* logic puzzle"),
+('Sudoku', 2006, 'Sudoku.ipynb', 'Classic fill-in-the-grid puzzle'),
+('Sudoku: 100,000 puzzles/second in Java', 2021, 'SudokuJava.ipynb', 'A version of the Sudoku solver using parallel threads and other optimizations'),
+('Square Sum Puzzle', 2020, 'SquareSum.ipynb', 'Place the numbers from 1 to n in a chain (or a circle) such that adjacent pairs sum to a perfect square'),
+("When is Cheryl's Birthday?", 2020, 'Cheryl.ipynb', "Solving the *Cheryl's Birthday* logic puzzle"),
 ('When Cheryl Met Eve: A Birthday Story', 2015, 'Cheryl-and-Eve.ipynb', "Inventing new puzzles in the Style of Cheryl's Birthday"),
 ('xkcd 1313: Regex Golf', 2015, 'xkcd1313.ipynb', 'Find the smallest regular expression; inspired by Randall Munroe'),
 ('xkcd 1313: Regex Golf (Part 2: Infinite Problems)', 2015, 'xkcd1313-part2.ipynb', 'Regex Golf: better, faster, funner (with Stefan Pochmann)'))}
