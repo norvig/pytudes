@@ -1,0 +1,8 @@
+# Reviews of pytudes
+
+Here's what some people are saying about `pytudes`:
+- "Everything I see from Peter Norvig is just always so incredibly well written and coded." — [Jonathan](https://news.ycombinator.com/user?id=jypepin), [Hacker News](https://news.ycombinator.com/item?id=27379366)
+- "Peter Norvig is my go to recommendation when someone is interested in becoming better at solving day to day problems ... I feel his skill of dividing a problem into small pieces and expressing them in code in a natural way is unparalleled." — [mikevin](https://news.ycombinator.com/user?id=mikevin), [Hacker News](https://news.ycombinator.com/item?id=27379366)
+- "I've never seen Peter Norvig choose anything but the most elegant and perfect data model for the problem at hand." — [spoonjim](https://news.ycombinator.com/user?id=spoonjim), [Hacker News](https://news.ycombinator.com/item?id=27379366)
+- "I just find Norvig's style of "functional Python" lovely in its own way (with noted disregard of Pep8 and other "best practices")" —[raverbashing](https://news.ycombinator.com/user?id=raverbashing), [Hacker News](https://news.ycombinator.com/item?id=25654955)
+- "You should check out Norvig's design of computer programs [course on Udacity](https://imp.i115008.net/c/2331964/788805/11298?u=https://www.udacity.com/course/design-of-computer-programs--cs212) where he uses these kinds of puzzle programs to teach programming design concepts. It is a hard but really rewarding course. — [nafizh](https://news.ycombinator.com/user?id=nafizh), [HN ACademy](https://yahnd.com/academy/r/udacity.com/course/design-of-computer-programs--cs212/)

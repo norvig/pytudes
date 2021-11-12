@@ -1,44 +1,56 @@
 # Run "python pytudes.py" to create README.md for pytudes
 
+def cols(items): "Make columns"; return '|' + '|'.join(items) + '|'
+
+def table_head(*columns): return f'{cols(columns)}\n{cols(["---"]*len(columns))}\n'
 
 def nbs(category, *notebooks):
-    """Make a table entry for jupyter/ipython notebooks."""
-    header = f'|Run|Year|{category}|\n|---|----|---|\n'
+    """Make a table of multiple jupyter/ipython notebooks, under a header."""
     print(f'{len(notebooks)} notebooks in {category}')
-    return header + '\n'.join(nb(*line) for line in notebooks)
+    return table_head('Run', 'Year', category) + '\n'.join(nb(*line) for line in notebooks)
     
 def nb(title, year, url, comment=''):
     """Make a markdown table entry for a jupyter/ipython notebook."""
-    urlb = f'/blob/master/ipynb/{url}'
+    urlb = f'/blob/main/ipynb/{url}'
     co = f'[c](https://colab.research.google.com/github/norvig/pytudes{urlb})'
-    dn = f'[d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmaster%2Fipynb%2F{url}) '
-    my = f'[m](https://mybinder.org/v2/gh/norvig/pytudes/master?filepath=ipynb%2F{url})'
+    dn = f'[d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmain%2Fipynb%2F{url}) '
+    my = f'[m](https://mybinder.org/v2/gh/norvig/pytudes/main?filepath=ipynb%2F{url})'
     nb = f'[n](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
     ti = f'<b><a href="ipynb/{url}" title="{comment}">{title}</a></b>'
     if year == 2020: year = f'<u>{year}</u>'
     return f'| {co} {dn} {my} {nb} | {year} | {ti} |'
 
 def pys(*pyfiles):
-    header = '| File | Description | Documentation |\n|:--|:----|----|\n'
+    """Make a table of multiple python programs."""
     print(f'{len(pyfiles)} pyfiles')
-    return header +  '\n'.join(py(*line) for line in pyfiles)
+    return table_head('File', 'Description', 'Documentation') +  '\n'.join(py(*line) for line in pyfiles)
     
 def py(url, description, doc=''):
     """Make a markdown table entry for a .py file."""
     if doc: doc = f'[documentation]({doc})'
-    return f'|[{url}](/blob/master/py/{url})|*{description}*|{doc}|'
+    return f'|[{url}](/py/{url})|*{description}*|{doc}|'
 
 
 body = f"""
 
-<div align="right" style="text-align:right"><i>Peter Norvig<br><a href="https://github.com/norvig/pytudes/blob/master/LICENSE">MIT License</a><br>2015-2020</i></div>
+<div align="right" style="text-align:right"><i>Peter Norvig
+<br><a href="https://github.com/norvig/pytudes/blob/main/LICENSE">MIT License</a><br>2015-2020</i></div>
 
 # pytudes
 
-"An *étude* (a French word meaning *study*) is an instrumental musical composition, usually short, of considerable difficulty, and designed to provide practice material for perfecting a particular musical skill." &mdash; [Wikipedia](https://en.wikipedia.org/wiki/%C3%89tude)
+"An *étude* (a French word meaning *study*) is an instrumental musical composition, usually short, of considerable difficulty, 
+and designed to provide practice material for perfecting a particular musical skill." — [*Wikipedia*](https://en.wikipedia.org/wiki/%C3%89tude)
 
-This project contains **pytudes**&mdash;Python programs, usually short, for perfecting particular programming skills.
-Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each notebook you can:
+This project contains **pytudes**—Python programs, usually short, for perfecting particular programming skills.
+
+# Who is this for?
+
+To continue the musical analogy, some people think of programming like [Spotify](http://spotify.com): they want to know how to install the app, find a good playlist, and hit the "play" button; after that they don't want to think about it. There are plenty of other tutorials that will tell you how to do the equivalent of that for various programming tasks—this one won't help. But if you think of programming like playing the piano—a craft that can take [years](https://norvig.com/21-days.html) to perfect—then I hope this collection can help.
+
+
+# Index of Jupyter (IPython) Notebooks
+
+For each notebook you can:
 - Click on [c](https://colab.research.google.com) to **run** the notebook on Colab
 - Click on [d](https://deepnote.com) to **run** the notebook on DeepNote
 - Click on [m](https://mybinder.org) to **run** the notebook on MyBinder
@@ -47,21 +59,18 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 - Hover over the title to **view** a description.
 
 
-# Index of Jupyter (IPython) Notebooks
-
-
 {nbs('Programming Examples',
-('Advent of Code 2020', 2020, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2018 '),
+('Advent of Code 2020', 2020, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2020 '),
 ('Advent of Code 2018', 2018, 'Advent-2018.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2018 '),
 ('Advent of Code 2017', 2017, 'Advent%202017.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2017'),
 ('Advent of Code 2016', 2016, 'Advent%20of%20Code.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2016*'),
 ("Beal's Conjecture Revisited", 2018, 'Beal.ipynb', "A search for counterexamples to Beal's Conjecture"),
-('Bicycling Statistics', 2020, 'Bike%20Speed%20versus%20Grade.ipynb', 'Visualizing statistics about bike routes.'),
+('Bicycling Statistics', 2020, 'Bike%20Speed%20versus%20Grade.ipynb', 'Visualizing statistics about bike routes'),
 ("Can't Stop", 2018, 'Cant-Stop.ipynb', 'Optimal play in a dice board game'),
-('Chaos with Triangles', 2019, 'Sierpinski.ipynb', 'A surprising appearance of the Sierpinski triangle in a random walk between vertexes'),
+('Chaos with Triangles', 2019, 'Sierpinski.ipynb', 'A surprising appearance of the Sierpinski triangle in a random walk'),
 ("Conway's Game of Life", 2017, 'Life.ipynb', 'The cellular automata zero-player game'),
-('Generating and Solving Mazes', 2020, 'Maze.ipynb', 'Make a maze by generating a random tree superimposed on a grid and solve it.'),
-('Photo Focal Lengths', 2020, 'PhotoFocalLengths.ipynb', 'Generate charts of what focal lengths were used on a photo trip.'),
+('Generating and Solving Mazes', 2020, 'Maze.ipynb', 'Make a maze by generating a random tree superimposed on a grid and solve it'),
+('Photo Focal Lengths', 2020, 'PhotoFocalLengths.ipynb', 'Generate charts of what focal lengths were used on a photo trip'),
 ('Pickleball Tournament', 2018, 'Pickleball.ipynb', 'Scheduling a doubles tournament fairly and efficiently'),
 ('Project Euler Utilities', 2017, 'Project%20Euler%20Utils.ipynb', 'My utility functions for the Project Euler problems, including `Primes` and `Factors`'),
 ('Tracking Trump: Electoral Votes', 2020, 'Electoral%20Votes.ipynb', 'How many electoral votes would Trump get if he wins the state where he has positive net approval?'))}
@@ -70,14 +79,18 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 ('Cryptarithmetic', 2014, 'Cryptarithmetic.ipynb', 'Substitute digits for letters and make NUM + BER = PLAY'),
 ("Euler's Sum of Powers Conjecture", 2018, "Euler's%20Conjecture.ipynb", 'Solving a 200-year-old puzzle by finding integers that satisfy a<sup>5</sup> + b<sup>5</sup> + c<sup>5</sup> + d<sup>5</sup> = e<sup>5</sup>'),
 ('Four 4s, Five 5s, and Countdowns', 2020, 'Countdown.ipynb', 'Solving the equation 10 _ 9 _ 8 _ 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 2016. From an Alex Bellos puzzle'),
+('KenKen (Sudoku-like Puzzle)', 2021, 'KenKen.ipynb', 'A Sudoku-like puzzle, but with arithmetic.'),
 ('Pairing Socks', 2019, 'Socks.ipynb', 'What is the probability that you will be able to pair up socks as you randomly pull them out of the dryer?'),
 ('Sicherman Dice', 2018, 'Sicherman%20Dice.ipynb', 'Find a pair of dice that is like a regular pair of dice, only different'),
 ("Sol Golomb's Rectangle Puzzle", 2014, 'Golomb-Puzzle.ipynb', 'A Puzzle involving placing rectangles of different sizes inside a square'),
-("Square Sum Puzzle", 2020, 'SquareSum.ipynb', 'Place the numbers from 1 to n in a chain such that adjacent pairs sum to a perfect square.'),
-("When is Cheryl's Birthday? (new: Mad Cheryl)", 2020, 'Cheryl.ipynb', "Solving the *Cheryl's Birthday* logic puzzle"),
+('Star Battle (Sudoku-like Puzzle)', 2021, 'StarBattle.ipynb', 'Fill-in-the-grid puzzle similar to Sudoku'),
+('Sudoku', 2006, 'Sudoku.ipynb', 'Classic fill-in-the-grid puzzle'),
+('Sudoku: 100,000 puzzles/second in Java', 2021, 'SudokuJava.ipynb', 'A version of the Sudoku solver using parallel threads and other optimizations'),
+('Square Sum Puzzle', 2020, 'SquareSum.ipynb', 'Place the numbers from 1 to n in a chain (or a circle) such that adjacent pairs sum to a perfect square'),
+("When is Cheryl's Birthday?", 2020, 'Cheryl.ipynb', "Solving the *Cheryl's Birthday* logic puzzle"),
 ('When Cheryl Met Eve: A Birthday Story', 2015, 'Cheryl-and-Eve.ipynb', "Inventing new puzzles in the Style of Cheryl's Birthday"),
 ('xkcd 1313: Regex Golf', 2015, 'xkcd1313.ipynb', 'Find the smallest regular expression; inspired by Randall Munroe'),
-('xkcd 1313: Regex Golf (Part 2: Infinite Problems)', 2015, 'xkcd1313-part2.ipynb', 'Regex Golf: better, faster, funner. With Stefan Pochmann.'))}
+('xkcd 1313: Regex Golf (Part 2: Infinite Problems)', 2015, 'xkcd1313-part2.ipynb', 'Regex Golf: better, faster, funner (with Stefan Pochmann)'))}
 
 {nbs('The Riddler (from 538)',
 ('Battle Royale', 2017, 'Riddler%20Battle%20Royale.ipynb', 'A puzzle involving allocating your troops and going up against an opponent'),
@@ -87,6 +100,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 ('How Many Soldiers to Beat the Night King?', 2019, 'NightKing.ipynb',  'A battle between the army of the dead and the army of the living'),
 ('Misanthropic Neighbors', 2017, 'Mean%20Misanthrope%20Density.ipynb', 'How crowded will this neighborhood be, if nobody wants to live next door to anyone else?'),
 ('Properly Ordered Card Hands', 2018, 'Orderable%20Cards.ipynb', 'Can you get your hand of cards into a nice order with just one move?'),
+('Split the States', 2021, 'SplitStates.ipynb', 'Split the US states into two near-halves by area.'),
 ('Tour de 538', 2020, 'TourDe538.ipynb', 'Solve a puzzle involving the best pace for a bicycle race.'),
 ('Weighing Twelve Balls', 2020, 'TwelveBalls.ipynb', 'A puzzle where you are given some billiard balls and a balance scale, and asked to find the one ball that is heavier or lighter, in a limited number of weighings'),
 ('War. What is it Good For?', 2020, 'war.ipynb', 'How likely is it to win a game of war in 26 turns?'))}
@@ -114,7 +128,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 ('The Devil and the Coin Flip Game', 2019, 'Coin%20Flip.ipynb', 'How to beat the Devil at his own game'),
 ('Dice Baseball', 2020, 'Dice%20Baseball.ipynb', 'Simulating baseball games'),
 ('Economics Simulation', 2018, 'Economics.ipynb', 'A simulation of a simple economic game'),
-('Poker Hand Ranking', 2012, "poker.ipynb", 'How do we decide which poker hand wins? Several variants of poker are considered.'),
+('Poker Hand Ranking', 2012, "poker.ipynb", 'How do we decide which poker hand wins? Several variants of poker are considered'),
 ('The Unfinished Game .... of Risk', 2020, "risk.ipynb", "Determining who is likely to win an interminably long game of Risk"),
 ('WWW: Who Will Win (NBA Title)?', 2019, 'WWW.ipynb', 'Computing the probability of winning the NBA title, for my home town Warriors, or any other team'))}
 
@@ -125,7 +139,7 @@ Some programs are in Jupyter (`.ipynb`) notebooks, some in `.py` files. For each
 ('Convex Hull Problem', 2017, 'Convex%20Hull.ipynb', 'A classic Computer Science Algorithm'),
 ('How to Count Things', 2020, 'How%20To%20Count%20Things.ipynb', 'Combinatorial math: how to count how many things there are, when there are a lot of them'),
 ('Stable Matching Problem', 2020, 'StableMatching.ipynb', 'What is the best way to pair up two groups with each other, obeying preferences?'),
-('Symbolic Algebra, Simplification, and Differentiation', 2017, 'Differentiation.ipynb', 'A computer algebra system that  manipulates expressions, including symbolic differentiation'),
+('Symbolic Algebra, Simplification, and Differentiation', 2017, 'Differentiation.ipynb', 'A computer algebra system that, including symbolic differentiation'),
 ('Traveling Salesperson Problem', 2018, 'TSP.ipynb', 'Another of the classics'))}
 
 
@@ -160,5 +174,4 @@ that was very influential to me when I was first learning to program. I still ha
 """
 
 output = 'README.md'
-with open(output, 'w') as out:
-    print(f'Wrote {output}; {out.write(body)}, characters')
+print(f'Wrote {open(output, "w").write(body)} characters to {output}')
