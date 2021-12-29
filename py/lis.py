@@ -24,10 +24,14 @@ class Procedure(object):
 
 def standard_env():
     "An environment with some Scheme standard procedures."
+    import functools
     env = {}
     env.update(vars(math)) # sin, cos, sqrt, pi, ...
     env.update({
-        '+':op.add, '-':op.sub, '*':op.mul, '/':op.truediv, 
+        '+': lambda *args: functools.reduce(op.add, args, 0),
+        '-': lambda *args: -args[0] if len(args) == 1 else functools.reduce(op.sub, args),
+        '*': lambda *args: functools.reduce(op.mul, args, 1),
+        '/': lambda *args: 1 / args[0] if len(args) == 1 else functools.reduce(op.truediv, args),
         '>':op.gt, '<':op.lt, '>=':op.ge, '<=':op.le, '=':op.eq, 
         'abs':     abs,
         'append':  op.add,  
