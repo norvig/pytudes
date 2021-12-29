@@ -153,10 +153,15 @@ def callcc(proc):
 def add_globals(self):
     "Add some Scheme standard procedures."
     import math, cmath, operator as op
+    import functools
     self.update(vars(math))
     self.update(vars(cmath))
     self.update({
-     '+':op.add, '-':op.sub, '*':op.mul, '/':op.truediv, 'not':op.not_,
+     '+': lambda *args: functools.reduce(op.add, args, 0),
+     '-': lambda *args: -args[0] if len(args) == 1 else functools.reduce(op.sub, args),
+     '*': lambda *args: functools.reduce(op.mul, args, 1),
+     '/': lambda *args: 1 / args[0] if len(args) == 1 else functools.reduce(op.truediv, args),
+     'not':op.not_,
      '>':op.gt, '<':op.lt, '>=':op.ge, '<=':op.le, '=':op.eq,
      'equal?':op.eq, 'eq?':op.is_, 'length':len, 'cons':cons,
      'car':lambda x:x[0], 'cdr':lambda x:x[1:], 'append':op.add,
