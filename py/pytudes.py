@@ -142,9 +142,10 @@ def format_notebook(title, year, url, comment=''):
     dn = f'[d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmain%2Fipynb%2F{url}) '
     my = f'[m](https://mybinder.org/v2/gh/norvig/pytudes/main?filepath=ipynb%2F{url})'
     nb = f'[n](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
+    sm = f'[s](https://studiolab.sagemaker.aws/import/github/norvig/pytudes{urlb})'
     ti = f'<b><a href="ipynb/{url}" title="{comment}">{title}</a></b>'
     if year == 2020: year = f'<u>{year}</u>'
-    return f'| {co} {dn} {my} {nb} | {year} | {ti} |'
+    return f'| {co} {dn} {my} {nb} {sm} | {year} | {ti} |'
 
 def format_pythons() -> str:
     """Make a table of multiple python programs."""
@@ -181,6 +182,7 @@ For each notebook you can:
 - Click on [d](https://deepnote.com) to **run** the notebook on DeepNote
 - Click on [m](https://mybinder.org) to **run** the notebook on MyBinder
 - Click on [n](https://nbviewer.jupyter.org/) to **view** the notebook on NBViewer
+- Click on [s](https://studiolab.sagemaker.aws/) to **run** the notebook on SageMaker Studio Lab
 - Click on the title to **view** the notebook on github.
 - Hover over the title to **view** a description.
 
