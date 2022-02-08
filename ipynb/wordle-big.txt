@@ -1,3 +1,4 @@
+aahed
 aalii
 aargh
 aarti
@@ -9870,7 +9871,7 @@ sharn
 sharp
 shash
 shaul
-shaveaahed
+shave
 shawl
 shawm
 shawn
