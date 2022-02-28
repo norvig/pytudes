@@ -1,7 +1,7 @@
 # Run "python pytudes.py" to create README.md for pytudes
 
 notebooks = {
-'Recent (2021)': [],
+'Recent (2021-2022)': [],
 'Programming Examples': [
 ('Advent of Code 2021', 2021, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2021'),
 ('Advent of Code 2020', 2020, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2020'),
@@ -46,11 +46,12 @@ notebooks = {
 ('Gesture Typing', 2017, 'Gesture%20Typing.ipynb', 'What word has the longest path on a gesture-typing smartphone keyboard?'),
 ('Ghost: A Word game', 2017, 'Ghost.ipynb', 'The word game Ghost (add letters, try to avoid making a word)'),
 ('How to Do Things with Words: NLP in Python', 2018, 'How%20to%20Do%20Things%20with%20Words.ipynb', 'Spelling Correction, Secret Codes, Word Segmentation, and more'),
-('Jotto: A Word Guessing Game', 2020, 'jotto.ipynb', 'The word guessing game Jotto'),
+('Jotto and Wordle: Word Guessing Games', 2020, 'jotto.ipynb', 'The word guessing game Jotto, and the popular variant Wordle'),
 ("Let's Code About Bike Locks", 2015, 'Fred%20Buns.ipynb', 'A tale of a bicycle combination lock that uses letters instead of digits. Inspired by Bike Snob NYC'),
 ('Scrabble: Refactoring a Crossword Game Program', 2017, 'Scrabble.ipynb', 'Refactoring the Scrabble / Word with Friends game from Udacity 212'),
 ('Spelling Bee', 2020, 'SpellingBee.ipynb', 'Find the highest-scoring board for the NY Times Spelling Bee puzzle'),
 ('Translating English into Propositional Logic', 2017, 'PropositionalLogic.ipynb', 'Automatically convert informal English sentences into formal Propositional Logic'),
+('Winning Wordle', 2022, 'Wordle.ipynb', 'A simple human-usable strategy to always win at Wordle. And an analysis of 2-guess wins'),
 ("World's Longest Palindrome", 2017, 'pal3.ipynb', 'Searching for a long Panama-style palindrome, this time letter-by-letter'),
 ("World's Shortest Portmantout Word", 2020, 'Portmantout.ipynb',  'Find a word that squishes together a bunch of words'),
 ('xkcd 1970: Name Dominoes', 2018, 'xkcd-Name-Dominoes.ipynb', 'Lay out dominoes legally; the dominoes have people names, not numbers')],
@@ -123,10 +124,10 @@ def format_notebooks() -> str:
 
 def find_recent(notebooks) -> None:
     """Mutate `notebooks` to have a collection of recent notebooks."""
-    recent = list(notebooks)[0]
+    recent = next(key for key in notebooks if key.startswith('Recent'))
     for category in notebooks:
         for line in notebooks[category]:
-            if line[1] == 2021:
+            if line[1] in (2021, 2022):
                 notebooks[recent].append(line)
     
 def format_category(category) -> str:
@@ -141,11 +142,11 @@ def format_notebook(title, year, url, comment=''):
     co = f'[c](https://colab.research.google.com/github/norvig/pytudes{urlb})'
     dn = f'[d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmain%2Fipynb%2F{url}) '
     my = f'[m](https://mybinder.org/v2/gh/norvig/pytudes/main?filepath=ipynb%2F{url})'
-    nb = f'[n](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
     sm = f'[s](https://studiolab.sagemaker.aws/import/github/norvig/pytudes{urlb})'
+    nb = f'[n](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
     ti = f'<b><a href="ipynb/{url}" title="{comment}">{title}</a></b>'
     if year == 2020: year = f'<u>{year}</u>'
-    return f'| {co} {dn} {my} {nb} {sm} | {year} | {ti} |'
+    return f'| {co} {dn} {my} {sm} {nb} | {year} | {ti} |'
 
 def format_pythons() -> str:
     """Make a table of multiple python programs."""
@@ -181,8 +182,8 @@ For each notebook you can:
 - Click on [c](https://colab.research.google.com) to **run** the notebook on Colab
 - Click on [d](https://deepnote.com) to **run** the notebook on DeepNote
 - Click on [m](https://mybinder.org) to **run** the notebook on MyBinder
-- Click on [n](https://nbviewer.jupyter.org/) to **view** the notebook on NBViewer
 - Click on [s](https://studiolab.sagemaker.aws/) to **run** the notebook on SageMaker Studio Lab
+- Click on [n](https://nbviewer.jupyter.org/) to **view** the notebook on NBViewer
 - Click on the title to **view** the notebook on github.
 - Hover over the title to **view** a description.
 
