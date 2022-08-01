@@ -1,135 +1,177 @@
-:Complete!:
-Atherton: 56.0: 0*4 91.2 94.0 | 95.2*2 94.2 94.9 96.2*2 98.7 99.5 99.19 99.3*2
-Kensington Square: 0.6: 86.9 100*5 | 100*4 99.9*4 99.99*3
-Menlo Oaks: 3.5: 0*4 98.4 99.7 | 99.7*4 100*4 99.99*3
-West Menlo Park: 11.2: 0*4 97.5 98.1 | 98.1*3 99.3 99.7*2 100*2 99.99*3
-North Fair Oaks: 26.7: 78.1 90.4 93.1 93.8 94.8 96.1 | 96.9*2 99.1*6 99.17*3
-Sequoia Tract: 11.5: 0*4 72.8 82.3 | 92.5*4 96.4*2 97.5 98.2 99.4*3
-East Palo Alto: 47.6: 74.4 91.2 91.9*2 92.2 93.3 | 93.4*2 92.4*2 92.5*4 95.0 99.2*2
+#  San Mateo County
+ath |  56.3 | Atherton |  
+bel |  98.1 | Belmont |  
+bri |  40.9 | Brisbane | 
+brm |   8.8 | Broadmoor |  
+buh |   6.0 | Burlingame Hills |  
+bur |  88.4 | Burlingame |
+ccp |   3.9 | Coal Creek Preserve |
+clm |  13.7 | Colma |  
+dal | 148.1 | Daly City |  
+epa |  48.3 | East Palo Alto |  
+elg |  49.2 | El Granada |
+elh |  24.6 | Emerald Lake Hills |
+foc | 150.0 | Foster City |  
+hmb |  68.0 | Half Moon Bay |  
+hsb |   4.4 | Half Moon Bay State Beach |  
+hil |  85.3 | Hillsborough |
+ken |   0.6 | Kensington Square |  
+lad |   8.1 | Ladera |  
+ltw |   5.3 | Los Trancos Woods |  
+mno |   3.5 | Menlo Oaks |  
+mpk | 139.5 | Menlo Park |
+mlb |  65.0 | Millbrae |
+mtr |  27.8 | Montara |  
+mbe |  19.7 | Moss Beach |  
+nfo |  26.7 | North Fair Oaks |  
+pac | 150.9 | Pacifica |  
+plp |   4.0 | Palomar Park |  
+por |  48.2 | Portola Valley |  
+prc |  16.5 | Purisima Creek Preserve |  
+rwc | 240.5 | Redwood City |  
+rrp |  12.2 | Russian Ridge Preserve |  
+sbr | 114.0 | San Bruno |
+sca |  99.0 | San Carlos |  
+sma | 256.0 | San Mateo |  
+smh |  18.0 | San Mateo Highlands |  
+seq |  11.5 | Sequoia Tract |  
+sky |  11.8 | Sky Londa |  
+sro |   0.8 | Skyline Ridge OSP |  
+ssf | 185.3 | South San Francisco |  
+wme |  11.2 | West Menlo Park |  
+whp |   4.1 | Windy Hill Preserve |  
+woo |  75.2 | Woodside |
 
-:Over 90%:
-Los Altos: 139.6: 40.2 43.7 72.4 77.2 84.5 90.8 | 91.0*2 91.1*2 91.2 90.4*3 90.63 90.9*2
-Emerald Lake Hills: 24.6: 0.0 94.3*3 44.7 51.0 | 80.0 85.8 91.3*6 92.2*3
-Menlo Park: 141.1: 67.7 76.8 87.7 90.7 91.2 90.1 | 92.5*2 91.4 91.6*3 91.8*2 93.5 94.7*2
-Mountain View: 211.8: 53.0 59.9 63.0 63.6 72.9 77.1 | 91.1*4 92.3*4 91.12 93.5*2
-Palo Alto: 298.8: 63.0 73.6 85.4 85.7 87.1 87.6 | 88.1*2 90.3 90.4 90.5 90.6*2 90.7 89.8 91.3 91.5
-Loyola: 18.3: 0*4 60.8 62.1 | 62.1*4 91.5 90.6 91.3*2
-Palomar Park: 4.1: 0*6 | 91.1*2 94.9*6 98.1*3
-Syline Ridge OSP: 0.8: 0*6 | 0*9 91.5*2
-Ladera: 8.0: 0*4 30.5 29.8 | 29.8*2 47.6*2 44.5*2 50.6*3 82.1 92.0
+#  Santa Clara County
+bra |  44.0 | Branham |  
+cmb | 119.0 | Campbell |  
+cmh |  27.8 | Communications Hill |  
+cup | 172.0 | Cupertino |  
+ede |  30.0 | Edenvale |
+foo |   1.1 | Foothills Preserve |
+gar |  23.4 | Gardner |
+gil | 188.9 | Gilroy |
+hcp | 265.9 | Henry Coe State Park | HIDDEN
+lal | 138.2 | Los Altos |  
+lah |  91.3 | Los Altos Hills |   
+lga | 148.0 | Los Gatos |  
+loy |  18.3 | Loyola |  
+mlp | 224.0 | Milpitas |  
+mos |  20.4 | Monte Sereno | 
+mtv | 208.1 | Mountain View | 
+pal | 297.2 | Palo Alto |  
+par |  42.5 | Parkview |  
+sjo |2618.7 | San Jose |  
+scl | 348.0 | Santa Clara |
+smr |  35.3 | San Martin |
+sar | 180.0 | Saratoga |  
+svt |  40.9 | Seven Trees |  
+spk |  64.3 | Spartan Keyes |  
+sun | 357.0 | Sunnyvale |
+wlg |  81.6 | Willow Glen |  
+wgs |  63.3 | Willow Glen South |  
 
-:Between 33% and 90%:
-Monte Sereno: 20.4: 20.5*6 | 20.5 39.8*3 44.1*7
-Burlingame: 88.4: 9.4*6 | 9.4 31.5*3 35.5*7
-Los Altos Hills: 91: 48.4*2 49.0 55.1*2 55.4 | 55.8*4 54.0*2 56.4 59.0*2 62.1 62.5
-Portola Valley: 59: 0*4 57.3 59.8 | 59.8*2 61.0*2 66.2 66.4 67.4 70.3 72.0*2
-Redwood City: 242.2: 34.0 39.1 46.0 51.6 56.9 60.8 | 62.9*2 65.1*2 66.3 66.7 67.0*2 75.0 77.9*2
-San Carlos: 99: 22.2 26.0 32.9 32.9 37.2 39.0 | 40.5*2 41.4*2 41.0 41.7*6
-Woodside: 75.2: 51.9*2 52.3*3 54.0 | 56.1*4 62.2 65.8 81.8 84.3 85.5*3
-Los Trancos Woods: 5.3: 0*4 71.4*2 | 71.4*4 74.9 75.0*6
-Sky Londa: 11.8: 0*4 72.1*2 | 73.2*4 75.4 75.5*4 83.4*2
-Foster City: 150: 9.1*6 | 9.1 27.4 37.2*2 38.7*5 34.3*2
-Burlingame Hills: 6: 0*6 | 0.8 34.5*3 35.5*7
-San Lorenzo: 55.5: 0*6 | 0*10 34.56
-Newark: 147: 15*3 17*3 | 18.7 26.8 30.8*8 42.5
-Millbrae: 65: 0*6 | 0 18.4 31.6*2 32.8*7
+# Alameda County
+che |  20.9 | Cherryland |  
+fre | 780.2 | Fremont |  
+hay | 444.5 | Hayward | 
+new | 147.0 | Newark |  
+sle | 230.6 | San Leandro |  
+slo |  55.5 | San Lorenzo | 
+unc | 208.8 | Union City |
 
-:Between 25% and 33%:
-Cherryland: 20.9: 0*6 | 0*10 26.8
-Cupertino: 172: 22.1 23.9 26.2*3 26.3 | 26.4*4 26.5*4 29.5 29.7*2
-Belmont: 98.1: 15.5 17.3 18.6 18.6 20.6*2 | 27.4*2 27.5*2 27.3 27.4*4 27.5*2
-Campbell: 119: 8.9 10.1 12.4*4 | 12.4 25.2 26.5*4 26.8 28.3*2
-Hillsborough: 85.3: 3.3*6 | 3.6 24.5 25.3*6 25.5*3
-Los Gatos: 148: 7.5 8.6 8.8*4 | 8.8 26.1*3 28.2*5 28.6*2
-San Mateo: 256: 11.1*6 | 11.3 25.5 27.8*9
-Saratoga: 180: 14.5 15.7 17.4*4 | 17.4 26.9*3 27.2*7
-Sunnyvale: 357: 19.4 19.9 22.2*4 | 25.1*3 25.8 25.9*5 31.0*2
-Union City: 208.8: 7*3 8*3 | 8.8*2 25.7*2 26.7*7
-Fremont: 780.2: 9*3 10*3 | 11.7*2 27.5 28.1*7 28.8
-San Mateo Highlands: 18: 0*6 | 18.0 29.2*3 28.0*7
-Santa Clara: 348: 6.4*2 9.6*4 | 9.6*3 26.6*5 28.8 29.4*2
-San Bruno: 114: 0*6 | 0*3 25.4*5 25.5*3
-Milpitas: 224: 2.2*4 4.4*2 | 4.4*3 26.6 27.2*5 29.5*2
-Hayward: 444.5: 0*6 | 4.6*4 5.1*6 26.3
-Rosie the Riveter Park: 5.5: 0*6 | 0*4 29.3*7
+# SF
+prt |   2.8 | Presidio Terrace |  sf
+sob |   4.8 | South Beach |  sf
+ggp |  40.8 | Golden Gate Park |  sf
+lks |   3.9 | Lake Street |  sf
+lin |   4.5 | Lincoln Park |  sf
+sec |   4.1 | Seacliff |  sf
+pnp |  43.5 | Presidio National Park |  sf
+col |   1.7 | Cole Valley |  sf
+pol |   4.0 | Polk Gulch |  sf
+bal |   3.4 | Balboa Terrace |  sf
+nwa |   5.6 | Northern Waterfront |  sf
+foh |   6.1 | Forest Hill |  sf
+lho |   3.7 | Little Hollywood |  sf
+prh |   6.5 | Presidio Heights |  sf
+aqp |   6.4 | Aquatic Park Fort Mason |  sf
+clh |   6.0 | Clarendon Heights |  sf
+fis |   6.2 | Fisherman's Wharf |  sf
+sut |   7.1 | Sutro Heights |  sf
+ash |   3.7 | Ashbury Heights |  sf
+dog |   5.1 | Dogpatch |  sf
+cow |  12.0 | Cow Hollow |  sf
+pch |  18.0 | Pacific Heights |  sf
+ggh |  17.8 | Golden Gate Heights |  sf
+fin |   9.4 | Financial District |  sf
+msb |  13.8 | Mission Bay |  sf
+cwa |  10.2 | Central Waterfront |  sf
 
-:San Jose Neighborhoods:
-San Jose: 2618.7: 1.3 1.36 5.3*4 | 5.4*3 6.7 11.9 13.1 18.2 19.8 23.1 25.6*2
-Spartan Keyes: 64.3: 0*6 | 22.1*6 38.9 39.0 35.74 35.8*2
-Willow Glen: 81.6: 0*6 | 13.9*6 29.67 32.6 31.95 34.9*2
-Gardner: 23.4: 0*6 | 0*6 22.6 40.5 39.69 43.9*2
-Seven Trees: 40.9: 0*6 | 0*6 27.96 28.0 25.9*3
-Edenvale: 30: 0*6 | 0*6 47.35*2 46.81 47.0*2
-Parkview: 42.5: 0*6 | 0*6 30.32*2 27.8 32.1*2
-Branham: 44.0: 0*6 | 0*6 26.5 27.9 27.75 32.1*2
-Willow Glen South: 63.3: 0*6 | 0*6 22.3 30.6 29.23 30.2*2
-Communications Hill: 27.8: 0*6 | 0*6 34.1*2 33.96 37.2*2
 
-:San Francisco Neighborhoods Over 25%:
-Golden Gate Park: 40.8: 0*6 | 25.6*8 37.8*3
-Lincoln Park: 4.5: 0*6 | 43*8 35.4*3
-Presidio National Park: 43.5: 0*6 | 21.1*4 24.4*4 27.7*3
-Presidio Terrace: 2.8: 0*6 | 37.0*8 43.7*3
-Seacliff: 4.1: 0*6 | 23.1*8 30.7*3
-South Beach: 4.8: 0*6 | 28.2*4 39.6*7
-Lake Street: 3.9: 0*6 | 0*8 36.8*3
+# Far Away
+bar |   1.7 | Barangaroo, NSW |  far
+mpt |   3.2 | Millers Point, NSW |  far
+cam | 180.8 | Cambridge, MA |  far
+mit |   9.6 | MIT, MA |  far
+mui |   4.6 | Muir Beach, Marin |  far
+mhl |  65.7 | Marin Headlands GGNRA | far
+mtt |  31.7 | Mt Tamalpais State Park | far
+daw |   1.8 | Dawes Point, NSW |  far
+mok |  14.7 | Mokelumne Hill, Calaveras |  far
+gue |  22.7 | Guerneville, Sonoma |  far
+hld |  53.7 | Healdsburg, Sonoma |  far
+bod |  28.9 | Bodega Bay, Sonoma |  far
+sau |  32.7 | Sausalito, Marin |  far
+cmd |  51.0 | Corte Madera, Marin |  far
+sti |  11.2 | Stinson Beach, Marin |  far
+mlv |  92.2 | Mill Valley, Marin |  far
+srf | 260.0 | San Rafael, Marin |  far
+eme |  28.1 | Emeryville |  far
+ber | 260.3 | Berkeley |  far
+alb |  42.7 | Albany |  far
+ros |   5.5 | Rosie Riveter Park |  
 
-:San Francisco Neighborhoods Under 25%:
-Little Hollywood: 3.7: 0*6 | 0*4 15.4*7
-Mission Bay: 13.8: 0*6 | 0*4 9.3*7
-Sutro Heights: 7.1: 0*6 | 0*4 14.0*7
-Pacific Heights: 18: 0*6 | 10.8*11
-Ashbury Heights: 3.7: 0*6 | 12.9*11
-Clarendon Heights: 6: 0*6 | 14.3*11
-Cow Hollow: 12: 0*6 |5*4 12.0*7
-Financial District: 9.4: 0*6 |5.8*4 9.7*7
-Golden Gate Heights: 17.8: 0*6 | 10.7*11
-Polk Gulch: 4: 0*6 | 18.2*11
-Presidio Heights: 6.5: 0*6 | 15.1*11
-Aquatic Park / Fort Mason: 6.4: 0*6 | 0*4 14.9*7
-Central Waterfront: 10.2: 0*6 | 0*4 6.7*7
-Northern Waterfront: 5.6: 0*6 | 0*4 16.4*7
-Dogpatch: 5.1: 0*6 | 0*4 12.4*7
-Fisherman's Wharf: 6.2: 0*6 | 0*4 14.2*7
-Balboa Terrace: 3.4: 0*6 | 18.2*11
-Cole Valley: 1.7: 0*6 | 19.6*11
-Forest Hill: 6.1: 0*6 | 15.7*11
+#  Counties
+smC |2951.0 | San Mateo |  county
+scC |7564.0 | Santa Clara |  county
+alC |5704.0 | Alameda |  county
+maC |2322.0 | Marin |  county
+sfC |1197.0 | San Francisco |  county
+npC |1524.0 | Napa |  county
+soC |4556.0 | Sonoma |  county
+szC |2767.0 | Santa Cruz |  county
+ccC |6034.0 | Contra Costa |  county
 
-:Farther Away:
-Mokelumne Hill, Calaveras: 14.7: 28.9*6| 28.9*11
-MIT, Cambridge, MA: 9.6: 37.2*6 | 37.2*11
-Barangaroo, NSW: 1.7: 49.9*6 | 49.9*11
-Dawes Point, NSW: 1.8: 29.2*6 | 29.2*11
-Millers Point, NSW: 3.2: 38.2*6 | 38.2*11
-Stinson Beach, Marin: 11.2: 9.2*6 | 9.2*11
-Muir Beach, Marin: 4.6: 35.8*6 | 35.8*11
-Corte Madera, Marin: 51: 0*6 | 0*4 13*7
-Mill Valley, Marin: 92.2: 0*6 | 0*4 5.1*7
-San Rafael, Marin: 260: 0*6 | 0*4 3.7*7
-Sausalito, Marin: 32.7: 0*6 | 0*4 13.1*7
-Cambridge, MA: 180.8: 6.4*6 | 6.4*11
-Bodega Bay, Sonoma: 28.9: 18*6 | 18*11
-Guerneville, Sonoma: 22.7: 23.4*6 | 23.4*11
-Healdsburg, Sonoma: 53.7: 18.5*6 | 18.5*11
-Half Moon Bay: 68: 0*6 | 8.9*11
-Emeryville: 28.1: 0*6 | 5.5*4 7.0*7
-Berkeley: 260.3: 5.0*3 7.0*3 | 7.0*11
-Albany: 42.7: 0*6 | 0*4 6.6*7
+# Big Places
+cal |  375216.0 | California |  big
+usa | 6406754.0 | USA | big
+ear |40818989.0 | Earth | big
 
-:California Bay Area Counties:
-Contra Costa: 6052: 1.0*6 | 1.0*3 1.41*8
-San Mateo: 3171: 20.1 21.2 22.9 23.4 24.57 25.53 | 26.43 30.0 31.27 32.24 32.54 32.98 33.48 33.56 34.51 34.7 35.05
-Santa Clara: 7445: 12.7 13.6 15.4 15.6 16.04 16.29 | 16.78 17.73 18.15 20.0 21.1 22.53 24.45 25.05 25.96 27.76 28.03
-Alameda: 5704: 3.3*3 3.94*3 | 4.73*2 7.06 7.14 7.34*6 9.86
-Marin: 2322: 6.7*6 | 6.7*4 7.98*7
-Napa: 1524: 5.1*6 | 5.1*11
-Sonoma: 4556: 5.1*6 | 5.1*11
-San Francisco: 1197: 4.5*6 | 4.5*4 5.47*4 6.4 6.51*2
-Santa Cruz: 2767: 2.3*6 | 2.3*11
 
-:California:
-California: 372710: .712 .811 .846 .867 .8875 .8873 | .9054 .9624 1.0289 1.0758 1.1278 1.1386 1.1812 1.1939 1.2007 1.2524 1.2987
-
-:USA and Earth
-USA: 6400536: .048 .052 .055 .05589 .0571 .05749 | .05853 .06183 .06553 .06824 0.07138 0.07200 0.07446 0.0752 0.07665 0.07904 0.08173
-Earth: 40818989: .008 .0089 .0091 .00936 .009535 .009536| .009597 .010136 .010561 .010997 .011349 0.011448 0.011839 0.011955 0.012024 0.0124113 0.012835
+--------------------------------------------------------------------------------
+2020-07 ken 86.9 epa 74.4 nfo 78.1 woo 51.9 mpk 67.7 mtv 53.0 pal 63.0 lal 40.2 lah 48.4 rwc 34.0 mos 20.5 new 15.0 sca 22.2 bur 9.4 foc 9.1 sun 19.4 cup 22.1 mlp 2.2 scl 6.4 lga 7.5 fre 9.0 cmb 8.9 sma 11.1 bel 15.5 sar 14.5 unc 7.0 hil 3.3 sjo 1.3 gil 7.9 bar 49.9 smr 15.7  mpt 38.2 mit 37.2 mui 35.8 daw 29.2 mok 28.9 gue 23.4 hld 18.5 bod 18.0 sti 9.2 ber 5.0 cam 6.4 smC 20.1 scC 12.7 alC 3.3 maC 6.7 sfC 4.5 npC 5.1 soC 5.1 szC 2.3 ccC 1.0 cal 0.712 usa 0.048 ear 0.008
+2020-08 ken 100 epa 91.2 nfo 90.4 elh 94.3 mpk 76.8 mtv 59.9 pal 73.6 lal 43.7 rwc 39.1 sca 26.0 sun 19.9 cup 23.9 lga 8.6 cmb 10.1 bel 17.3 sar 15.7 sjo 1.36 smC 21.2 scC 13.6 cal 0.811 usa 0.052 ear 0.0089
+2020-09 epa 91.9 nfo 93.1 woo 52.3 mpk 87.7 mtv 63.0 pal 85.4 lal 72.4 lah 49.0 rwc 46.0 sca 32.9 sun 22.2 cup 26.2 scl 9.6 lga 8.8 cmb 12.4 bel 18.6 sar 17.4 sjo 5.3 smC 22.9 scC 15.4 cal 0.846 usa 0.055 ear 0.0091
+2020-10 nfo 93.8 mpk 90.7 mtv 63.6 pal 85.7 lal 77.2 lah 55.1 rwc 51.6 new 17.0 fre 10.0 unc 8.0 ber 7.0 smC 23.4 scC 15.6 alC 3.94 cal 0.867 usa 0.05589 ear 0.00936
+2020-11 mno 98.4 wme 97.5 epa 92.2 lad 30.5 ath 91.2 por 57.3 seq 72.8 sky 72.1 nfo 94.8 ltw 71.4 mpk 91.2 mtv 72.9 pal 87.1 loy 60.8 lal 84.5 rwc 56.9 sca 37.2 mlp 4.4 bel 20.6 smC 24.57 scC 16.04 cal 0.8875 usa 0.0571 ear 0.009535
+2020-12 mno 99.7 wme 98.1 epa 93.3 ath 94.0 por 59.8 seq 82.3 nfo 96.1 woo 54.0 elh 51.0 mtv 77.1 pal 87.6 loy 62.1 lal 90.8 lah 55.4 rwc 60.8 sca 39.0 cup 26.3 smC 25.53 scC 16.29 usa 0.05749 ear 0.009536
+2021-01 plp 91.1 epa 93.4 ath 95.2 seq 92.5 sky 73.2 nfo 96.9 woo 56.1 elh 80.0 mpk 92.5 mtv 91.1 pal 88.1 lal 91.0 lah 55.8 rwc 62.9 new 18.7 sca 40.5 buh 0.8 sun 25.1 cup 26.4 fre 11.7 smh 18.0 sma 11.3 bel 27.4 unc 8.8 hay 4.6 hil 3.6 spk 22.1 wlg 13.9 sjo 5.4 prt 37.0 sob 28.2 ggp 25.6 lin 43.0 sec 23.1 pnp 21.1 col 19.6 pol 18.2 bal 18.2 foh 15.7 prh 15.1 clh 14.3 ash 12.9 cow 5.0 pch 10.8 ggh 10.7 fin 5.8 hmb 8.9 eme 5.5 smC 26.43 scC 16.78 alC 4.73 cal 0.9054 usa 0.05853 ear 0.009597
+2021-02 elh 85.8 mos 39.8 new 26.8 buh 34.5 bur 31.5 foc 27.4 mlb 18.4 lga 26.1 cmb 25.2 smh 29.2 sma 25.5 sar 26.9 hil 24.5 smC 30.0 scC 17.73 cal 0.9624 usa 0.06183 ear 0.010136
+2021-03 plp 94.9 lad 47.6 por 61.0 nfo 99.1 elh 91.3 pal 90.3 lal 91.1 rwc 65.1 new 30.8 sca 41.4 foc 37.2 mlb 31.6 fre 27.5 cmb 26.5 sma 27.8 bel 27.5 unc 25.7 hil 25.3 smC 31.27 scC 18.15 alC 7.06 cal 1.0289 usa 0.06553 ear 0.010561
+2021-04 wme 99.3 ath 94.9 mpk 91.6 pal 90.4 sun 25.8 mlp 26.6 scl 26.6 fre 28.1 sbr 25.4 sjo 6.7 smC 32.24 scC 20.0 alC 7.14 ccC 1.41 cal 1.0758 usa 0.06824 ear 0.010997
+2021-05 mno 100 wme 99.7 epa 92.5 ath 96.2 por 66.2 seq 96.4 sky 75.4 woo 62.2 ltw 74.9 mtv 92.3 pal 90.5 loy 91.5 lal 91.2 rwc 66.3 mos 44.1 buh 35.5 bur 35.5 foc 38.7 mlb 32.8 sun 25.9 cup 26.5 mlp 27.2 ros 29.3 lga 28.2 sar 27.2 unc 26.7 hay 5.1 sjo 11.9 sob 39.6 pnp 24.4 nwa 16.4 lho 15.4 aqp 14.9 fis 14.2 sut 14.0 dog 12.4 cow 12.0 fin 9.7 msb 9.3 cwa 6.7 sau 13.1 cmd 13.0 eme 7.0 alb 6.6 mlv 5.1 srf 3.7 smC 32.54 scC 21.1 alC 7.34 maC 7.98 sfC 5.47 cal 1.1278 usa 0.07138 ear 0.011349
+2021-06 por 66.4 sky 75.5 woo 65.8 ltw 75.0 pal 90.6 rwc 66.7 sca 41.7 bel 27.4 sjo 13.1 smC 32.98 scC 22.53 cal 1.1386 usa 0.072 ear 0.011448
+2021-07 wme 100 lad 50.6 ath 98.7 por 67.4 seq 97.5 woo 81.8 mpk 91.8 loy 91.3 lah 56.4 rwc 67.0 cmb 26.8 ede 47.35 gar 22.6 cmh 34.1 spk 38.9 wlg 29.67 par 30.32 bra 26.5 wgs 22.3 svt 27.96 sjo 18.2 smC 33.48 scC 24.45 cal 1.1812 usa 0.07446 ear 0.011839
+2021-08 ath 99.5 por 70.3 seq 98.2 woo 84.3 pal 90.7 lah 59.0 cmb 28.3 gar 40.5 spk 39.0 wlg 32.6 bra 27.9 wgs 30.6 svt 28.0 sjo 19.8 smC 33.56 scC 25.05 cal 1.1939 usa 0.0752 ear 0.011955
+2021-09 plp 98.1 ken 99.99 epa 95.0 por 72.0 seq 99.4 nfo 99.17 woo 85.5 elh 92.2 mpk 93.5 lal 90.63 rwc 75.0 cup 29.5 scl 28.8 sbr 25.5 hil 25.5 sjo 23.1 prt 43.7 ggp 37.8 lks 36.8 sec 30.7 pnp 27.7 smC 34.51 scC 25.96 sfC 6.4 cal 1.2007 usa 0.07665 ear 0.012024
+2021-10 epa 99.2 lad 82.1 ath 99.3 sky 83.4 mpk 94.7 sro 91.5 mtv 93.5 pal 91.3 lal 90.9 lah 62.1 rwc 77.9 sun 31.0 cup 29.7 mlp 29.5 scl 29.4 lga 28.6 bel 27.5 ede 47.0 gar 43.9 cmh 37.2 spk 35.8 wlg 34.9 par 32.1 bra 32.1 wgs 30.2 sjo 25.6 smC 34.7 scC 27.76 sfC 6.51 cal 1.2524 usa 0.07904 ear 0.0124113
+2021-11 lad 92.0 pal 91.5 lah 62.5 new 42.5 slo 34.56 fre 28.8 che 26.8 hay 26.3 smC 35.05 scC 28.03 alC 9.86 cal 1.2987 usa 0.08173 ear 0.012835
+2021-12 smC 36.08 scC 28.24 alC 9.87 ccC 1.42 usa 0.08199 ear 0.012886
+2022-01 plp 100 epa 99.7 lad 99.7 ath 99.6 por 90.7 sky 87.0 woo 91.1 elh 93.4 ltw 95.8 mpk 94.8 mtv 93.7 pal 93.0 lal 91.3 lah 65.9 rwc 83.1 sun 31.3 smC 36.41 scC 28.39 cal 1.3048 usa 0.08252 ear 0.013799
+2022-02 por 94.0 elh 96.1 lal 91.4 lah 71.0 smC 37.3 scC 28.5 cal 1.3106 usa 0.083 ear 0.013855
+2022-03 por 99.5 sky 99.2 woo 94.1 mpk 95.7 sro 93.5 lal 91.5 lah 76.3 rwc 90.2 smC 38.06 scC 28.56 cal 1.3136 usa 0.08314 ear 0.013895
+2022-04 woo 96.6 loy 92.1 lah 91.0 bri 45.3 slo 34.7 lga 29.1 bel 27.6 sbr 27.1 ssf 26.1 sle 25.9 smC 40.33 scC 29.04 alC 10.96 cal 1.3565 usa 0.08565 ear 0.01429
+2022-05 loy 98.7 mtv 92.9 pal 92.8 sjo 26.9 rrp 21.8 whp 99.1 mui 37.2 sti 37.4 mhl 30.8 mtt 40.3 usa 0.087
+2022-06 scl 33.9 elh 98.1 foc 51.8 ltw 99.9 mpk 95.1 mlb 31.9 rwc 90.3 sma 46.5 smh 76.7 hcp 0.2 foo 80.7 ccp 36.7 ssf 26.4 usa 0.089
+2022-07 sun 46.6 bel 37.1 brm 38.2 dal 12.3 hmb 30.5 hsb 50.7 mtr 26.8 mbe 38.5 pac 27.5 prc 35.7 sca 59.5 clm 24.8 elg 35.2 smC  50.06 scC 30.31 cal 1.4656  usa 0.09215  ear 0.014891
