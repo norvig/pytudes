@@ -3,7 +3,7 @@
 notebooks = {
 'Recent (2021-2022)': [],
 'Programming Examples': [
-('Advent of Code 2021', 2021, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2021'),
+('Advent of Code 2021', 2021, 'Advent-2021.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2021'),
 ('Advent of Code 2020', 2020, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2020'),
 ('Advent of Code 2018', 2018, 'Advent-2018.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2018'),
 ('Advent of Code 2017', 2017, 'Advent%202017.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2017'),
