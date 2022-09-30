@@ -1,7 +1,7 @@
 # Run "python pytudes.py" to create README.md for pytudes
 
 notebooks = {
-'Recent (2021-2022)': [],
+'Recent (2022)': [], # Gets updated automatically
 'Programming Examples': [
 ('Advent of Code 2021', 2021, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2021'),
 ('Advent of Code 2020', 2020, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2020'),
@@ -69,6 +69,7 @@ notebooks = {
 ('WWW: Who Will Win (NBA Title)?', 2019, 'WWW.ipynb', 'Computing the probability of winning the NBA title, for my home town Warriors, or any other team')],
 
 'The Riddler (from 538)': [
+('Anigrams', 2022, 'Anigrams.ipynb', 'Finding the longest chain of anagrams that each add one letter'),
 ('Battle Royale', 2017, 'Riddler%20Battle%20Royale.ipynb', 'A puzzle involving allocating your troops and going up against an opponent'),
 ('CrossProduct', 2021, 'CrossProduct.ipynb', 'A puzzle where digits fill a table, subject to constraints on their products'),
 ('Flipping Cards; A Guessing Game', 2020, 'flipping.ipynb', 'Can you go through a deck of cards, guessing higher or lower correctly for each card?'),
@@ -127,7 +128,7 @@ def find_recent(notebooks) -> None:
     recent = next(key for key in notebooks if key.startswith('Recent'))
     for category in notebooks:
         for line in notebooks[category]:
-            if line[1] in (2021, 2022):
+            if line[1] in {2022}:
                 notebooks[recent].append(line)
     
 def format_category(category) -> str:
