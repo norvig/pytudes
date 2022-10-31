@@ -1,6 +1,6 @@
 
 <div align="right" style="text-align:right"><i>Peter Norvig
-<br><a href="https://github.com/norvig/pytudes/blob/main/LICENSE">MIT License</a><br>2015-2020</i></div>
+<br><a href="https://github.com/norvig/pytudes/blob/main/LICENSE">MIT License</a><br>2015-2022</i></div>
 
 # pytudes
 
