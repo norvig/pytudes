@@ -17,12 +17,12 @@ To continue the musical analogy, some people think of programming like [Spotify]
 # Index of Jupyter (IPython) Notebooks
 
 For each notebook you can hover or click on the title, or click one of the letters in the left column to launch the notebook on 
-[*C*olab](https://colab.research.google.com),
-[*D*eepnote](https://deepnote.com),
-[*G*ithub](https://github.com/norvig/pytudes),
-[*M*ybinder](https://mybinder.org),
-[*S*agemaker](https://studiolab.sagemaker.aws/), or
-[*N*BViewer](https://nbviewer.jupyter.org/).
+[**C**olab](https://colab.research.google.com),
+[**D**eepnote](https://deepnote.com),
+[**G**ithub](https://github.com/norvig/pytudes),
+[**M**ybinder](https://mybinder.org),
+[**S**agemaker](https://studiolab.sagemaker.aws/), or
+[**N**BViewer](https://nbviewer.jupyter.org/).
 
 
 
