@@ -1,13 +1,11 @@
 # Run "python pytudes.py" to create README.md for pytudes
 
 notebooks = {
+ 
 'Recent (2022)': [], # Gets updated automatically
+ 
 'Programming Examples': [
-('Advent of Code 2021', 2021, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2021'),
-('Advent of Code 2020', 2020, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2020'),
-('Advent of Code 2018', 2018, 'Advent-2018.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2018'),
-('Advent of Code 2017', 2017, 'Advent%202017.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2017'),
-('Advent of Code 2016', 2016, 'Advent%20of%20Code.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2016*'),
+("AlphaCode Automated Programming", 2022, 'AlphaCode.ipynb', "Analysis of AlphaCode's automated solution to a coding problem"),
 ("Beal's Conjecture Revisited", 2018, 'Beal.ipynb', "A search for counterexamples to Beal's Conjecture"),
 ('Bicycling Statistics', 2020, 'Bike-Stats.ipynb', 'Visualizing statistics about bike routes'),
 ("Can't Stop", 2018, 'Cant-Stop.ipynb', 'Optimal play in a dice board game'),
@@ -15,11 +13,21 @@ notebooks = {
 ("Conway's Game of Life", 2017, 'Life.ipynb', 'The cellular automata zero-player game'),
 ('Generating and Solving Mazes', 2020, 'Maze.ipynb', 'Make a maze by generating a random tree superimposed on a grid and solve it'),
 ("Mel's Konane Board", 2021, 'Konane.ipynb', 'Solving the game of Konane (Hawaiian checkers).'),
+("Selecting Names from a Menu", 2022, 'Menu.ipynb', 'Efficiently Selecting Names from a Menu, by typing characters and arrows'),
 ('Photo Focal Lengths', 2020, 'PhotoFocalLengths.ipynb', 'Generate charts of what focal lengths were used on a photo trip'),
 ('Pickleball Tournament', 2018, 'Pickleball.ipynb', 'Scheduling a doubles tournament fairly and efficiently'),
 ('Project Euler Utilities', 2017, 'Project%20Euler%20Utils.ipynb', 'My utility functions for the Project Euler problems, including `Primes` and `Factors`'),
 ('Tracking Trump: Electoral Votes', 2020, 'Electoral%20Votes.ipynb', 
  'How many electoral votes would Trump get if he wins the state where he has positive net approval?')],
+ 
+'Advent of Code': [
+('Advent of Code 2022', 2022, 'Advent-2022.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2022'),
+('Advent of Code 2021', 2021, 'Advent-2021.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2021'),
+('Advent of Code 2020', 2020, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2020'),
+('Advent of Code 2018', 2018, 'Advent-2018.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2018'),
+('Advent of Code 2017', 2017, 'Advent%202017.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2017'),
+('Advent of Code 2016', 2016, 'Advent%20of%20Code.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2016'),
+('Advent of Code Utilities', 2022, 'AdventUtils.ipynb', 'Utility functions for Advent of Code puzzles')],
 
 'Logic and Number Puzzles': [
 ('Cryptarithmetic', 2014, 'Cryptarithmetic.ipynb', 'Substitute digits for letters and make NUM + BER = PLAY'),
@@ -57,6 +65,8 @@ notebooks = {
 ('xkcd 1970: Name Dominoes', 2018, 'xkcd-Name-Dominoes.ipynb', 'Lay out dominoes legally; the dominoes have people names, not numbers')],
 
 'Probability and Uncertainty': [
+("Goldberg's Character-level Language Model", 2022, 'Goldberg.ipynb', 
+ "A re-implementation in Python 3 of Yoav Goldberg's unreasonably effective character-level n-gram language model."),
 ('A Concrete Introduction to Probability', 2018, 'Probability.ipynb', 'Code and examples of the basic principles of Probability Theory'),
 ('Probability, Paradox, and the Reasonable Person Principle', 2016, 'ProbabilityParadox.ipynb', 
  'Some classic paradoxes in Probability Theory, and how to think about disagreements'),
@@ -69,7 +79,7 @@ notebooks = {
 ('WWW: Who Will Win (NBA Title)?', 2019, 'WWW.ipynb', 'Computing the probability of winning the NBA title, for my home town Warriors, or any other team')],
 
 'The Riddler (from 538)': [
-('Anigrams', 2022, 'Anigrams.ipynb', 'Finding the longest chain of anagrams that each add one letter'),
+('Anigrams: Word Chains', 2022, 'Anigrams.ipynb', 'Finding the longest chain of anagrams that each add one letter'),
 ('Battle Royale', 2017, 'Riddler%20Battle%20Royale.ipynb', 'A puzzle involving allocating your troops and going up against an opponent'),
 ('CrossProduct', 2021, 'CrossProduct.ipynb', 'A puzzle where digits fill a table, subject to constraints on their products'),
 ('Flipping Cards; A Guessing Game', 2020, 'flipping.ipynb', 'Can you go through a deck of cards, guessing higher or lower correctly for each card?'),
@@ -140,14 +150,15 @@ def format_category(category) -> str:
 def format_notebook(title, year, url, comment=''):
     """Make a markdown table entry for a jupyter/ipython notebook."""
     urlb = f'/blob/main/ipynb/{url}'
-    co = f'[c](https://colab.research.google.com/github/norvig/pytudes{urlb})'
-    dn = f'[d](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmain%2Fipynb%2F{url}) '
-    my = f'[m](https://mybinder.org/v2/gh/norvig/pytudes/main?filepath=ipynb%2F{url})'
-    sm = f'[s](https://studiolab.sagemaker.aws/import/github/norvig/pytudes{urlb})'
-    nb = f'[n](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
-    ti = f'<b><a href="ipynb/{url}" title="{comment}">{title}</a></b>'
-    if year == 2020: year = f'<u>{year}</u>'
-    return f'| {co} {dn} {my} {sm} {nb} | {year} | {ti} |'
+    co = f'[C](https://colab.research.google.com/github/norvig/pytudes{urlb})'
+    gh = f'[G](ipynb/{url})'
+    dn = f'[D](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmain%2Fipynb%2F{url})'
+    my = f'[M](https://mybinder.org/v2/gh/norvig/pytudes/main?filepath=ipynb%2F{url})'
+    nb = f'[N](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
+    sm = f'[S](https://studiolab.sagemaker.aws/import/github/norvig/pytudes{urlb})'
+    ti = f'<a href="{dn[4:-1]}" title="{comment}">{title}</a>'
+    if year == 2022: year = f'<u>{year}</u>'
+    return f'| {co}{dn}{gh}{my}{nb}{sm} | {year} | {ti} |'
 
 def format_pythons() -> str:
     """Make a table of multiple python programs."""
@@ -163,14 +174,14 @@ def format_python(url, description, doc='') -> str:
 
 body = f"""
 <div align="right" style="text-align:right"><i>Peter Norvig
-<br><a href="https://github.com/norvig/pytudes/blob/main/LICENSE">MIT License</a><br>2015-2020</i></div>
+<br><a href="https://github.com/norvig/pytudes/blob/main/LICENSE">MIT License</a><br>2015-2022</i></div>
 
 # pytudes
 
-"An *étude* (a French word meaning *study*) is an instrumental musical composition, usually short, of considerable difficulty, 
+"An ***étude*** (a French word meaning *study*) is an instrumental musical composition, usually short, of considerable difficulty, 
 and designed to provide practice material for perfecting a particular musical skill." — [*Wikipedia*](https://en.wikipedia.org/wiki/%C3%89tude)
 
-This project contains **pytudes**—Python programs, usually short, for perfecting particular programming skills.
+This project contains ***pytudes***—Python programs, usually short, for perfecting particular programming skills.
 
 # Who is this for?
 
@@ -179,14 +190,13 @@ To continue the musical analogy, some people think of programming like [Spotify]
 
 # Index of Jupyter (IPython) Notebooks
 
-For each notebook you can:
-- Click on [c](https://colab.research.google.com) to **run** the notebook on Colab
-- Click on [d](https://deepnote.com) to **run** the notebook on DeepNote
-- Click on [m](https://mybinder.org) to **run** the notebook on MyBinder
-- Click on [s](https://studiolab.sagemaker.aws/) to **run** the notebook on SageMaker Studio Lab
-- Click on [n](https://nbviewer.jupyter.org/) to **view** the notebook on NBViewer
-- Click on the title to **view** the notebook on github.
-- Hover over the title to **view** a description.
+For each notebook you can hover or click on the title, or click one of the letters in the left column to launch the notebook on 
+[**C**olab](https://colab.research.google.com),
+[**D**eepnote](https://deepnote.com),
+[**G**ithub](https://github.com/norvig/pytudes),
+[**M**ybinder](https://mybinder.org),
+[**S**agemaker](https://studiolab.sagemaker.aws/), or
+[**N**BViewer](https://nbviewer.jupyter.org/).
 
 {format_notebooks()}
 
