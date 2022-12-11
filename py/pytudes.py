@@ -143,7 +143,7 @@ def find_recent(notebooks) -> None:
     
 def format_category(category) -> str:
     """Make a table of multiple jupyter/ipython notebooks, under a header."""
-    print(f'{len(notebooks[category])} notebooks in {category}')
+    print(f'{len(notebooks[category]):2d} notebooks in {category}')
     return table(('Run', 'Year', category),
                  [format_notebook(*line) for line in notebooks[category]])
     
@@ -156,13 +156,13 @@ def format_notebook(title, year, url, comment=''):
     my = f'[M](https://mybinder.org/v2/gh/norvig/pytudes/main?filepath=ipynb%2F{url})'
     nb = f'[N](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
     sm = f'[S](https://studiolab.sagemaker.aws/import/github/norvig/pytudes{urlb})'
-    ti = f'<a href="{dn[4:-1]}" title="{comment}">{title}</a>'
+    ti = f'<a href="{co[4:-1]}" title="{comment}">{title}</a>'
     if year == 2022: year = f'<u>{year}</u>'
     return f'| {co}{dn}{gh}{my}{nb}{sm} | {year} | {ti} |'
 
 def format_pythons() -> str:
     """Make a table of multiple python programs."""
-    print(f'{len(python_files)} pyfiles')
+    print(f'{len(python_files):2d} pyfiles')
     return table(('File', 'Description', 'Documentation'),
                  [format_python(*line) for line in python_files])
     
