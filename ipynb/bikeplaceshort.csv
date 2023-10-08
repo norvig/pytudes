@@ -1,0 +1,165 @@
+name,miles,county,pct
+#,,,
+# San Mateo County,,SMC,
+#,,,
+Atherton,56.3,SMC,99.8
+Bay Area Ridge Trail,395.6,SMC,21.4
+Belmont,98.1,SMC,54.2
+Brisbane,40.9,SMC,46.7
+Broadmoor,8.8,SMC,38.2
+Burlingame Hills,6,SMC,71.4
+Burlingame,88.4,SMC,54.3
+Burleigh Murray Park,2.1,SMC,91.6
+Coal Creek Preserve,3.9,SMC,66.7
+Colma,13.7,SMC,38.3
+Daly City,148.1,SMC,27.2
+East Palo Alto,48.3,SMC,99.6
+El Granada,49.2,SMC,38.4
+Emerald Lake Hills,24.6,SMC,99.8
+Foster City,150,SMC,80.7
+Half Moon Bay,68,SMC,32.2
+Half Moon Bay State Beach,4.4,SMC,51.5
+Hillsborough,85.3,SMC,52.3
+Kensington Square,0.6,SMC,99.9
+Ladera,8.1,SMC,99.9
+Long Ridge Preserve,11.0,SMC,51.2
+Los Trancos OSP,0.3,SMC,100
+Los Trancos Woods,5.3,SMC,99.9
+Menlo Oaks,3.5,SMC,99.9
+Menlo Park,139.5,SMC,99.5
+Millbrae,65,SMC,40.8
+Montara,27.8,SMC,32.7
+Moss Beach,19.7,SMC,44.3
+North Fair Oaks,26.7,SMC,99.8
+Pacifica,150.9,SMC,32.7
+Palomar Park,4,SMC,99.9
+Portola Valley,48.2,SMC,99.5
+Purisima Creek Preserve,16.5,SMC,38.7
+Redwood City,240.5,SMC,99.3
+Russian Ridge Preserve,12.2,SMC,51.2
+San Bruno,114,SMC,29.5
+San Carlos,99,SMC,99.0
+San Mateo,256,SMC,51.8
+San Mateo Highlands,18,SMC,77.9
+Sequoia Tract,11,SMC,99.7
+Sky Londa,11.8,SMC,99.4
+Skyline Ridge OSP,0.8,SMC,74.9
+South San Francisco,185.3,SMC,27.2
+West Menlo Park,11.2,SMC,99.8
+Windy Hill Preserve,4.1,SMC,99.1
+Woodside,75.2,SMC,99.5
+#,,,
+# Santa Clara County,,SCC,
+#,,,
+Branham,44,SCC,32.7
+Campbell,119,SCC,28.8
+Communications Hill,27.8,SCC,39.5
+Cupertino,172,SCC,33.2
+Edenvale,30,SCC,47
+Foothills Preserve,1.1,SCC,86.8
+Gardner,23.4,SCC,47.2
+Gilroy,188.9,SCC,12.1
+Los Altos,138.2,SCC,99.6
+Los Altos Hills,91.3,SCC,99.4
+Los Gatos,148,SCC,33.2
+Loyola,18.3,SCC,99.6
+Milpitas,224,SCC,37.3
+Monte Sereno,20.4,SCC,44.7
+Mountain View,208.1,SCC,99.2
+Palo Alto,297.2,SCC,99.0
+Parkview,42.5,SCC,33.4
+San Francisco Bay Trail,260.8,SCC,62.7
+San Jose,2618.7,SCC,27.7
+Santa Clara,348,SCC,34
+San Martin,35.3,SCC,31.1
+Saratoga,180,SCC,29.7
+Seven Trees,40.9,SCC,33.6
+Spartan Keyes,64.3,SCC,35.7
+Sunnyvale,357,SCC,52.4
+Willow Glen,81.6,SCC,34.9
+Willow Glen South,63.3,SCC,30.5
+#,,,
+# Alameda County,,,
+#,,,
+Alameda,206.7,ALA,12.2
+Albany,42.7,ALA,6.8
+Ashland,35.1,ALA,35.7
+Berkeley,260.3,ALA,7.4
+Cherryland,20.9,ALA,27.1
+Emeryville,28.1,ALA,8
+Fremont,780.2,ALA,32.2
+Hayward,444.5,ALA,30.0
+Hayward Acres,3.5,ALA,43.3
+Newark,147,ALA,45.9
+San Leandro,230.6,ALA,27.5
+San Lorenzo,55.5,ALA,40.8
+Union City,208.8,ALA,30.7
+#,,,
+# SF County,,SFC,
+#,,,
+Aquatic Park Fort Mason,6.4,SFC,15.4
+Ashbury Heights,3.7,SFC,13
+Balboa Terrace,3.4,SFC,18.2
+Central Waterfront,10.2,SFC,6
+Clarendon Heights,6,SFC,14.2
+Cole Valley,1.7,SFC,18
+Cow Hollow,12,SFC,11.9
+Dogpatch,5.1,SFC,12.3
+Financial District,9.4,SFC,10.2
+Fisherman's Wharf,6.2,SFC,13.8
+Forest Hill,6.1,SFC,15.9
+Golden Gate Heights,17.8,SFC,10.7
+Golden Gate Park,40.8,SFC,29.4
+Lake Street,3.9,SFC,36.8
+Lincoln Park,4.5,SFC,39.6
+Little Hollywood,3.7,SFC,15.2
+Mission Bay,13.8,SFC,8.6
+Northern Waterfront,5.6,SFC,15.5
+Pacific Heights,18,SFC,10.7
+Panhandle,7.3,SFC,20.6
+Polk Gulch,4,SFC,18.2
+Presidio Heights,6.5,SFC,21.6
+Presidio National Park,43.5,SFC,26.7
+Presidio Terrace,2.8,SFC,43.9
+Seacliff,4.1,SFC,29.3
+South Beach,4.8,SFC,37.4
+Sutro Heights,7.1,SFC,13.2
+#,,,
+# Far Away Places,,,
+#,,,
+Barangaroo,1.7,NSW,47.3
+Bodega Bay,28.9,SON,17
+Cambridge,180.8,MAS,6.2
+Castle Rock State Park,11.2,SCC,51.2
+Corte Madera,51,MAR,12.9
+Dawes Point,1.8,NSW,29.2
+Forest of Nisene Marks SP,44.0,SCC,30.7
+Guerneville,22.7,SON,23.6
+Healdsburg,53.7,SON,17.8
+Marin Headlands GGNRA,65.7,MAR,31.9
+Mill Valley,92.2,MAR,9.1
+Millers Point,3.2,NSW,34.3
+MIT,9.6,MAS,34.7
+Mokelumne Hill,14.7,CAL,26.8
+Mt Tamalpais State Park,31.7,MAR,38.7
+Muir Beach,4.6,MAR,37.1
+Rosie Riveter Park,5.5,CCC,29.3
+San Rafael,260,MAR,3.7
+Sausalito,32.7,MAR,12.9
+Stinson Beach,11.2,MAR,32.9
+#,,,
+# Counties and Bigger,,,
+#,,,
+San Mateo County,2814,---,61.56
+Santa Clara County,7569,---,32.8
+Alameda County,5818,---,15.38
+Marin County,2333,---,10.75
+San Francisco County,1217,---,7.21
+Napa County,1609,---,4.85
+Sonoma County,4895,---,5.12
+Santa Cruz County,2718,---,7.12
+Contra Costa County,5945,---,2.05
+#,,,
+California,377037,---,1.7108
+USA,6406754,---,0.10677
+Earth,41974536,---,0.017159
