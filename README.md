@@ -26,7 +26,7 @@ For each notebook you can hover or click on the title, or click one of the lette
 
 
 
-|Run|Year|Recent (2022–2023)|
+|Run|Year|Recent (2022–2024)|
 |---|---|---|
 | [C](https://colab.research.google.com/github/norvig/pytudes/blob/main/ipynb/AlphaCode.ipynb)[D](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmain%2Fipynb%2FAlphaCode.ipynb)[G](ipynb/AlphaCode.ipynb)[M](https://mybinder.org/v2/gh/norvig/pytudes/main?filepath=ipynb%2FAlphaCode.ipynb)[N](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/main/ipynb/AlphaCode.ipynb)[S](https://studiolab.sagemaker.aws/import/github/norvig/pytudes/blob/main/ipynb/AlphaCode.ipynb) | <u>2022</u> | <a href="https://colab.research.google.com/github/norvig/pytudes/blob/main/ipynb/AlphaCode.ipynb" title="Analysis of AlphaCode's automated solution to a coding problem">AlphaCode Automated Programming</a> |
 | [C](https://colab.research.google.com/github/norvig/pytudes/blob/main/ipynb/OneLetterOff.ipynb)[D](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmain%2Fipynb%2FOneLetterOff.ipynb)[G](ipynb/OneLetterOff.ipynb)[M](https://mybinder.org/v2/gh/norvig/pytudes/main?filepath=ipynb%2FOneLetterOff.ipynb)[N](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/main/ipynb/OneLetterOff.ipynb)[S](https://studiolab.sagemaker.aws/import/github/norvig/pytudes/blob/main/ipynb/OneLetterOff.ipynb) | 2023 | <a href="https://colab.research.google.com/github/norvig/pytudes/blob/main/ipynb/OneLetterOff.ipynb" title="Word game; use of a large language model to generate clues.">One Letter Off</a> |
