@@ -2,7 +2,7 @@
 
 notebooks = {
  
-'Recent (2022)': [], # Gets updated automatically
+'Recent (2022–2024)': [], # Gets updated automatically
  
 'Programming Examples': [
 ("AlphaCode Automated Programming", 2022, 'AlphaCode.ipynb', "Analysis of AlphaCode's automated solution to a coding problem"),
@@ -138,7 +138,7 @@ def find_recent(notebooks) -> None:
     recent = next(key for key in notebooks if key.startswith('Recent'))
     for category in notebooks:
         for line in notebooks[category]:
-            if line[1] in {2022}:
+            if line[1] in {2022, 2023, 2024}:
                 notebooks[recent].append(line)
     
 def format_category(category) -> str:
