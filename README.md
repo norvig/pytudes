@@ -21,8 +21,8 @@ For each notebook you can hover on the link to see a description, click on the l
 [**D**eepnote](https://deepnote.com),
 [**G**ithub](https://github.com/norvig/pytudes),
 [**M**ybinder](https://mybinder.org),
-[**S**agemaker](https://studiolab.sagemaker.aws/), or
-[**N**BViewer](https://nbviewer.jupyter.org/).
+[**N**BViewer](https://nbviewer.jupyter.org/), or
+[**S**agemaker](https://studiolab.sagemaker.aws/).
 
 
 
