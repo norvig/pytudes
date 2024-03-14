@@ -2,7 +2,7 @@
 
 notebooks = {
  
-'Recent (2022–2024)': [], # Gets updated automatically
+'Newest': [], # Gets updated automatically
  
 'Programming Examples': [
 ("AlphaCode Automated Programming", 2022, 'AlphaCode.ipynb', "Analysis of AlphaCode's automated solution to a coding problem"),
@@ -18,7 +18,7 @@ notebooks = {
 ('Pickleball Tournament', 2018, 'Pickleball.ipynb', 'Scheduling a doubles tournament fairly and efficiently'),
 ('Project Euler Utilities', 2017, 'Project%20Euler%20Utils.ipynb', 'My utility functions for the Project Euler problems, including `Primes` and `Factors`'),
 ("Selecting Names from a Menu", 2022, 'Menu.ipynb', 'Efficiently Selecting Names from a Menu, by typing characters and arrows'),
-('Tracking Trump: Electoral Votes', 2020, 'Electoral%20Votes.ipynb', 
+('Tracking Polls: Electoral Votes', 2020, 'Electoral%20Votes.ipynb', 
  'How many electoral votes would Trump get if he wins the state where he has positive net approval?')],
  
 'Advent of Code': [
@@ -32,15 +32,16 @@ notebooks = {
 ('Advent of Code Utilities', 2022, 'AdventUtils.ipynb', 'Utility functions for Advent of Code puzzles')],
 
 'Probability and Uncertainty': [
-("Overtime in American Football", 2024, 'Overtime.ipynb', "In American Football, which team has the advantage in overtime?"),
 ("Effectiveness of Language Models", 2019, 'Goldberg.ipynb', "A re-implementation in Python 3 of Yoav Goldberg's unreasonably effective character-level n-gram language model."),
 ('A Concrete Introduction to Probability', 2018, 'Probability.ipynb', 'Code and examples of the basic principles of Probability Theory'),
 ('Probability, Paradox, and the Reasonable Person Principle', 2016, 'ProbabilityParadox.ipynb', 
  'Some classic paradoxes in Probability Theory, and how to think about disagreements'),
 ('Estimating Probabilities with Simulations', 2020, 'ProbabilitySimulation.ipynb', 'When the sample space is too complex, simulations can estimate probabilities'),
+('The Diamond Game: A Probability Puzzle', 2023, 'Diamonds.ipynb', "Finding an optimal strategy for buying bags with unknown numbers of diamonds."),
 ('The Devil and the Coin Flip Game', 2019, 'Coin%20Flip.ipynb', 'How to beat the Devil at his own game'),
 ('Dice Baseball', 2020, 'Dice%20Baseball.ipynb', 'Simulating baseball games'),
 ('Economics Simulation', 2018, 'Economics.ipynb', 'A simulation of a simple economic game'),
+("Overtime in American Football", 2024, 'Overtime.ipynb', "In American Football, which team has the advantage in overtime?"),
 ('Poker Hand Ranking', 2012, "poker.ipynb", 'How do we decide which poker hand wins? Several variants of poker are considered'),
 ('The Unfinished Game .... of Risk', 2020, "risk.ipynb", "Determining who is likely to win an interminably long game of Risk"),
 ('WWW: Who Will Win (NBA Title)?', 2019, 'WWW.ipynb', 'Computing the probability of winning the NBA title, for my home town Warriors, or any other team')],
@@ -125,24 +126,26 @@ python_files = [
 ('yaptu.py',   'Yet Another Python Templating Utility'),
 ]    
 
-def cols(items) -> str: "Make columns"; return '|' + '|'.join(items) + '|'
+def cols(items) -> str: 
+    """Make columns"""
+    return '|' + '|'.join(items) + '|'
 
 def table(headers, lines) -> str: 
+    """Create markdown for a table."""
     return f'\n\n{cols(headers)}\n{cols(["---"]*len(headers))}\n' + '\n'.join(lines)
 
 def format_notebooks() -> str:
     """Tables for all the notebook categories."""
-    find_recent(notebooks)
+    find_newest(notebooks)
     return '\n'.join(format_category(name) for name in notebooks)
 
-def find_recent(notebooks) -> None:
-    """Mutate `notebooks` to have a collection of recent notebooks."""
-    recent = next(key for key in notebooks if key.startswith('Recent'))
+def find_newest(notebooks, year=2022) -> None:
+    """Mutate `notebooks['Newest']` to have a collection of newest notebooks."""
     for category in notebooks:
         for line in notebooks[category]:
-            if line[1] >= 2022:
-                notebooks[recent].append(line)
-    notebooks[recent].sort(key=lambda line: (-line[1], line[0]))
+            if line[1] >= year:
+                notebooks['Newest'].append(line)
+    notebooks['Newest'].sort(key=lambda line: (-line[1], line[0]))
     
 def format_category(category) -> str:
     """Make a table of multiple jupyter/ipython notebooks, under a header."""
@@ -159,9 +162,9 @@ def format_notebook(title, year, url, comment=''):
     my = f'[M](https://mybinder.org/v2/gh/norvig/pytudes/main?filepath=ipynb%2F{url})'
     nb = f'[N](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
     sm = f'[S](https://studiolab.sagemaker.aws/import/github/norvig/pytudes{urlb})'
-    ti = f'<a href="{co[4:-1]}" title="{comment}">{title}</a>'
+    ti = f'<a href="{gh[4:-1]}" title="{comment}">{title}</a>'
     if year == 2022: year = f'<u>{year}</u>'
-    return f'| {co}{dn}{gh}{my}{nb}{sm} | {year} | {ti} |'
+    return f'| {co}{dn}{my}{nb}{sm} | {year} | {ti} |'
 
 def format_pythons() -> str:
     """Make a table of multiple python programs."""
@@ -193,10 +196,9 @@ To continue the musical analogy, some people think of programming like [Spotify]
 
 # Index of Jupyter (IPython) Notebooks
 
-For each notebook you can hover or click on the title, or click one of the letters in the left column to launch the notebook on 
+For each notebook you can hover on the title to see a description, or click the title to view on github, or click one of the letters in the left column to launch the notebook on 
 [**C**olab](https://colab.research.google.com),
 [**D**eepnote](https://deepnote.com),
-[**G**ithub](https://github.com/norvig/pytudes),
 [**M**ybinder](https://mybinder.org),
 [**S**agemaker](https://studiolab.sagemaker.aws/), or
 [**N**BViewer](https://nbviewer.jupyter.org/).
