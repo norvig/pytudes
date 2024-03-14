@@ -164,7 +164,7 @@ def format_notebook(title, year, url, comment=''):
     sm = f'[S](https://studiolab.sagemaker.aws/import/github/norvig/pytudes{urlb})'
     ti = f'<a href="{gh[4:-1]}" title="{comment}">{title}</a>'
     if year == 2022: year = f'<u>{year}</u>'
-    return f'| {co}{dn}{my}{nb}{sm} | {year} | {ti} |'
+    return f'| {co} {dn} {my} {nb} {sm} | {year} | {ti} |'
 
 def format_pythons() -> str:
     """Make a table of multiple python programs."""
