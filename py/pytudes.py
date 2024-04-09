@@ -129,7 +129,9 @@ python_files = [
 ('sudoku.py',  'Program to solve sudoku puzzles', 'http://norvig.com/sudoku.html'),
 ('testaccum.py', 'Tests for my failed Python `accumulation display` proposal', 'http://norvig.com/pyacc.html'),
 ('yaptu.py',   'Yet Another Python Templating Utility'),
-]    
+]   
+
+###############################################################################################################
 
 import re
 import urllib.request
@@ -148,8 +150,8 @@ def check():
     """Check that the listing of *.ipynb files matches the README.md file"""
     readme  = ipynbs(read_url("https://raw.githubusercontent.com/norvig/pytudes/main/README.md"))
     listing = ipynbs(read_url("https://github.com/norvig/pytudes/tree/main/ipynb"))
-    unfinished = 'Palindrome.ipynb', 'SET.ipynb', 'Sudoku IPython Notebook.ipynb'
-    subbooks = 'BikeCode.ipynb', 'ElectoralVotesCode.ipynb',
+    unfinished = {'Palindrome.ipynb', 'SET.ipynb', 'Sudoku IPython Notebook.ipynb'}
+    subbooks = {'BikeCode.ipynb', 'ElectoralVotesCode.ipynb'}
     def show(msg, nbs): print(msg+':', *nbs) if nbs else None 
     show('Unfinished', unfinished)
     show('Missing files', readme - listing)
@@ -206,6 +208,7 @@ def format_python(url, description, doc='') -> str:
     if doc: doc = f'[documentation]({doc})'
     return f'|[{url}](/py/{url})|*{description}*|{doc}|'
 
+###############################################################################################################
 
 body = f"""
 <div align="right" style="text-align:right"><i>Peter Norvig
