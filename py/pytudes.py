@@ -13,7 +13,6 @@ notebooks = {
 ("Conway's Game of Life", 2017, 'Life.ipynb', 'The cellular automata zero-player game'),
 ('Generating and Solving Mazes', 2020, 'Maze.ipynb', 'Make a maze by generating a random tree superimposed on a grid and solve it'),
 ("Mel's Konane Board", 2021, 'Konane.ipynb', 'Solving the game of Konane (Hawaiian checkers).'),
-("One Letter Off", 2023, 'OneLetterOff.ipynb', "Word game; use of a large language model to generate clues."),
 ('Photo Focal Lengths', 2020, 'PhotoFocalLengths.ipynb', 'Generate charts of what focal lengths were used on a photo trip'),
 ('Pickleball Tournament', 2018, 'Pickleball.ipynb', 'Scheduling a doubles tournament fairly and efficiently'),
 ('Project Euler Utilities', 2017, 'Project%20Euler%20Utils.ipynb', 'My utility functions for the Project Euler problems, including `Primes` and `Factors`'),
@@ -46,7 +45,8 @@ notebooks = {
 ('The Unfinished Game .... of Risk', 2020, "risk.ipynb", "Determining who is likely to win an interminably long game of Risk"),
 ('WWW: Who Will Win (NBA Title)?', 2019, 'WWW.ipynb', 'Computing the probability of winning the NBA title, for my home town Warriors, or any other team')],
 
-'Logic and Number Puzzles': [
+'Logic and Number/Counting Puzzles': [
+('Counting Cluster Sizes in Paint by Numbers', 2024, 'Paint.ipynb', 'What is the average cluster size of a random grid of colored squares?'),
 ('Cryptarithmetic', 2014, 'Cryptarithmetic.ipynb', 'Substitute digits for letters and make NUM + BER = PLAY'),
 ("Euler's Sum of Powers Conjecture", 2018, "Euler's%20Conjecture.ipynb", 
  'Solving a 200-year-old puzzle by finding integers that satisfy a<sup>5</sup> + b<sup>5</sup> + c<sup>5</sup> + d<sup>5</sup> = e<sup>5</sup>'),
@@ -55,6 +55,7 @@ notebooks = {
 ('Pairing Socks', 2019, 'Socks.ipynb', 'What is the probability that you will be able to pair up socks as you randomly pull them out of the dryer?'),
 ('Sicherman Dice', 2018, 'Sicherman%20Dice.ipynb', 'Find a pair of dice that is like a regular pair of dice, only different'),
 ("Sol Golomb's Rectangle Puzzle", 2014, 'Golomb-Puzzle.ipynb', 'A Puzzle involving placing rectangles of different sizes inside a square'),
+("Stubborn number endings", 2024, 'Stubborn.ipynb', 'Any number ending in 5 has a square that also ends in 5. What other endings are like this?'), 
 ('Star Battle (Sudoku-like Puzzle)', 2021, 'StarBattle.ipynb', 'Fill-in-the-grid puzzle similar to Sudoku'),
 ('Sudoku', 2006, 'Sudoku.ipynb', 'Classic fill-in-the-grid puzzle'),
 ('Sudoku: 100,000 puzzles/second in Java', 2021, 'SudokuJava.ipynb', 'A version of the Sudoku solver using parallel threads and other optimizations'),
@@ -71,11 +72,12 @@ notebooks = {
 ('Gesture Typing', 2017, 'Gesture%20Typing.ipynb', 'What word has the longest path on a gesture-typing smartphone keyboard?'),
 ('Ghost: A Word game', 2017, 'Ghost.ipynb', 'The word game Ghost (add letters, try to avoid making a word)'),
 ('How to Do Things with Words: NLP in Python', 2018, 'How%20to%20Do%20Things%20with%20Words.ipynb', 'Spelling Correction, Secret Codes, Word Segmentation, and more'),
-('Jotto and Wordle: Word Guessing Games', 2020, 'jotto.ipynb', 'The word guessing game Jotto, and the popular variant Wordle'),
 ("Let's Code About Bike Locks", 2015, 'Fred%20Buns.ipynb', 'A tale of a bicycle combination lock that uses letters instead of digits. Inspired by Bike Snob NYC'),
+("One Letter Off", 2023, 'OneLetterOff.ipynb', "Word game; use of a large language model to generate clues."),
 ('Scrabble: Refactoring a Crossword Game Program', 2017, 'Scrabble.ipynb', 'Refactoring the Scrabble / Word with Friends game from Udacity 212'),
 ('Spelling Bee', 2020, 'SpellingBee.ipynb', 'Find the highest-scoring board for the NY Times Spelling Bee puzzle'),
 ('Translating English into Propositional Logic', 2017, 'PropositionalLogic.ipynb', 'Automatically convert informal English sentences into formal Propositional Logic'),
+('Wordle, Evil Wordle, Antiwordle, and Jotto', 2020, 'Jotto.ipynb', 'The word guessing games Wordle, Evil Wordle, Antiwordle, and Jotto'),
 ('Winning Wordle', 2022, 'Wordle.ipynb', 'A simple human-usable strategy to always win at Wordle. And an analysis of 2-guess wins'),
 ("World's Longest Palindrome", 2017, 'pal3.ipynb', 'Searching for a long Panama-style palindrome, this time letter-by-letter'),
 ("World's Shortest Portmantout Word", 2020, 'Portmantout.ipynb',  'Find a word that squishes together a bunch of words'),
@@ -84,12 +86,14 @@ notebooks = {
 'The Riddler (from 538)': [
 ('Anigrams: Word Chains', 2022, 'Anigrams.ipynb', 'Finding the longest chain of anagrams that each add one letter'),
 ('Battle Royale', 2017, 'Riddler%20Battle%20Royale.ipynb', 'A puzzle involving allocating your troops and going up against an opponent'),
+('Climbing Wall', 2021, 'ClimbingWall.ipynb', 'How many holds have to be placed to make a path in each climbing event'),
 ('CrossProduct', 2021, 'CrossProduct.ipynb', 'A puzzle where digits fill a table, subject to constraints on their products'),
 ('Flipping Cards; A Guessing Game', 2020, 'flipping.ipynb', 'Can you go through a deck of cards, guessing higher or lower correctly for each card?'),
 ('Lottery', 2019, 'RiddlerLottery.ipynb',  'Can you find what lottery number tickets these five friends picked?'),
 ('How Many Soldiers to Beat the Night King?', 2019, 'NightKing.ipynb',  'A battle between the army of the dead and the army of the living'),
 ('Misanthropic Neighbors', 2017, 'Mean%20Misanthrope%20Density.ipynb', 'How crowded will this neighborhood be, if nobody wants to live next door to anyone else?'),
 ('Properly Ordered Card Hands', 2018, 'Orderable%20Cards.ipynb', 'Can you get your hand of cards into a nice order with just one move?'),
+('Race Track', 2021, 'RaceTrack.ipynb', 'Race virtual cars around a circular track defined on a grid of points.'),
 ('Split the States', 2021, 'SplitStates.ipynb', 'Split the US states into two near-halves by area.'),
 ('Tour de 538', 2020, 'TourDe538.ipynb', 'Solve a puzzle involving the best pace for a bicycle race.'),
 ('Weighing Twelve Balls', 2020, 'TwelveBalls.ipynb', 
@@ -99,6 +103,7 @@ notebooks = {
 'Computer Science Algorithms and Concepts': [
 ('BASIC Interpreter', 2017, 'BASIC.ipynb', 'How to write an interpreter for the BASIC programming language'),
 ('Convex Hull Problem', 2017, 'Convex%20Hull.ipynb', 'A classic Computer Science Algorithm'),
+('Docstring Fixpoint Theory', 2023, 'DocstringFixpoint.ipynb', 'An approach to writing code and docstrings that go together.'),
 ('How to Count Things', 2020, 'How%20To%20Count%20Things.ipynb', 'Combinatorial math: how to count how many things there are, when there are a lot of them'),
 ('Stable Matching Problem', 2020, 'StableMatching.ipynb', 'What is the best way to pair up two groups with each other, obeying preferences?'),
 ('Symbolic Algebra, Simplification, and Differentiation', 2017, 'Differentiation.ipynb', 'A computer algebra system that, including symbolic differentiation'),
@@ -125,6 +130,30 @@ python_files = [
 ('testaccum.py', 'Tests for my failed Python `accumulation display` proposal', 'http://norvig.com/pyacc.html'),
 ('yaptu.py',   'Yet Another Python Templating Utility'),
 ]    
+
+import re
+import urllib.request
+
+def read_url(url: str) -> str:
+    """Reads a file from the specified URL and returns its content as a string."""
+    with urllib.request.urlopen(url) as response:
+        return response.read().decode('utf-8')  # Decode assuming UTF-8 encoding
+
+def ipynbs(page: str) -> set:
+    """Return a set of filenames for all *.ipynb in page."""
+    page = page.replace('%20', ' ').replace('%2F','/')
+    return set(re.findall(r'[A-Za-z_ ]+[.]ipynb', page))
+
+def check():
+    """Check that the listing of *.ipynb files matches the README.md file"""
+    readme  = ipynbs(read_url("https://raw.githubusercontent.com/norvig/pytudes/main/README.md"))
+    listing = ipynbs(read_url("https://github.com/norvig/pytudes/tree/main/ipynb"))
+    unfinished = 'Palindrome.ipynb', 'SET.ipynb', 'Sudoku IPython Notebook.ipynb'
+    subbooks = 'BikeCode.ipynb', 'ElectoralVotesCode.ipynb',
+    def show(msg, nbs): print(msg+':', *nbs) if nbs else None 
+    show('Unfinished', unfinished)
+    show('Missing files', readme - listing)
+    show('Unlisted notebooks', listing - readme - subbooks)
 
 def cols(items) -> str: 
     """Make columns"""
@@ -220,3 +249,4 @@ that was very influential to me when I was first learning to program. I still ha
 
 output = 'README.md'
 print(f'Wrote {open(output, "w").write(body)} characters to {output}')
+check()
