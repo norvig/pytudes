@@ -2,7 +2,7 @@
 
 notebooks = {
  
-'Newest': [], # Gets updated automatically
+'New': [], # Gets updated automatically
  
 'Programming Examples': [
 ("AlphaCode Automated Programming", 2022, 'AlphaCode.ipynb', "Analysis of AlphaCode's automated solution to a coding problem"),
@@ -21,13 +21,13 @@ notebooks = {
  'How many electoral votes would Trump get if he wins the state where he has positive net approval?')],
  
 'Advent of Code': [
-('Advent of Code 2023', 2023, 'Advent-2023.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2022'),
-('Advent of Code 2022', 2022, 'Advent-2022.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2022'),
-('Advent of Code 2021', 2021, 'Advent-2021.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2021'),
-('Advent of Code 2020', 2020, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2020'),
-('Advent of Code 2018', 2018, 'Advent-2018.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2018'),
-('Advent of Code 2017', 2017, 'Advent-2017.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2017'),
-('Advent of Code 2016', 2016, 'Advent-2016.ipynb', 'Puzzle site with a coding puzzle each day for Advent 2016'),
+('Advent of Code 2023', 2023, 'Advent-2023.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2022'),
+('Advent of Code 2022', 2022, 'Advent-2022.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2022'),
+('Advent of Code 2021', 2021, 'Advent-2021.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2021'),
+('Advent of Code 2020', 2020, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2020'),
+('Advent of Code 2018', 2018, 'Advent-2018.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2018'),
+('Advent of Code 2017', 2017, 'Advent-2017.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2017'),
+('Advent of Code 2016', 2016, 'Advent-2016.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2016'),
 ('Advent of Code Utilities', 2022, 'AdventUtils.ipynb', 'Utility functions for Advent of Code puzzles')],
 
 'Probability and Uncertainty': [
@@ -50,7 +50,8 @@ notebooks = {
 ('Cryptarithmetic', 2014, 'Cryptarithmetic.ipynb', 'Substitute digits for letters and make NUM + BER = PLAY'),
 ("Euler's Sum of Powers Conjecture", 2018, "Euler's%20Conjecture.ipynb", 
  'Solving a 200-year-old puzzle by finding integers that satisfy a<sup>5</sup> + b<sup>5</sup> + c<sup>5</sup> + d<sup>5</sup> = e<sup>5</sup>'),
-('Four 4s, Five 5s, and Countdowns', 2020, 'Countdown.ipynb', 'Solving the equation 10 _ 9 _ 8 _ 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 2016. From an Alex Bellos puzzle'),
+('Four 4s, Five 5s, and Countdowns', 2020, 'Countdown.ipynb', 'Solving the equation 10 _ 9 _ 8 _ 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 2016. Originally from an Alex Bellos puzzle'),
+('How to Count Things', 2020, 'How%20To%20Count%20Things.ipynb', 'Combinatorial math: how to count how many things there are, when there are a lot of them'),
 ('KenKen (Sudoku-like Puzzle)', 2021, 'KenKen.ipynb', 'A Sudoku-like puzzle, but with arithmetic.'),
 ('Pairing Socks', 2019, 'Socks.ipynb', 'What is the probability that you will be able to pair up socks as you randomly pull them out of the dryer?'),
 ('Sicherman Dice', 2018, 'Sicherman%20Dice.ipynb', 'Find a pair of dice that is like a regular pair of dice, only different'),
@@ -104,7 +105,6 @@ notebooks = {
 ('BASIC Interpreter', 2017, 'BASIC.ipynb', 'How to write an interpreter for the BASIC programming language'),
 ('Convex Hull Problem', 2017, 'Convex%20Hull.ipynb', 'A classic Computer Science Algorithm'),
 ('Docstring Fixpoint Theory', 2023, 'DocstringFixpoint.ipynb', 'An approach to writing code and docstrings that go together.'),
-('How to Count Things', 2020, 'How%20To%20Count%20Things.ipynb', 'Combinatorial math: how to count how many things there are, when there are a lot of them'),
 ('Stable Matching Problem', 2020, 'StableMatching.ipynb', 'What is the best way to pair up two groups with each other, obeying preferences?'),
 ('Symbolic Algebra, Simplification, and Differentiation', 2017, 'Differentiation.ipynb', 'A computer algebra system that, including symbolic differentiation'),
 ('Snobol: Bad Grade, Good Experience', 2017, 'Snobol.ipynb', 'As a student, did you ever get a bad grade on a programming assignment?'),
@@ -135,6 +135,8 @@ python_files = [
 
 import re
 import urllib.request
+
+current_year = 2024
 
 def read_url(url: str) -> str:
     """Reads a file from the specified URL and returns its content as a string."""
@@ -170,13 +172,13 @@ def format_notebooks() -> str:
     find_newest(notebooks)
     return '\n'.join(format_category(name) for name in notebooks)
 
-def find_newest(notebooks, year=2022) -> None:
+def find_newest(notebooks, label='New', year=current_year-1) -> None:
     """Mutate `notebooks['Newest']` to have a collection of newest notebooks."""
     for category in notebooks:
         for line in notebooks[category]:
             if line[1] >= year:
-                notebooks['Newest'].append(line)
-    notebooks['Newest'].sort(key=lambda line: (-line[1], line[0]))
+                notebooks[label].append(line)
+    notebooks[label].sort(key=lambda line: (-line[1], line[0]))
     
 def format_category(category) -> str:
     """Make a table of multiple jupyter/ipython notebooks, under a header."""
@@ -194,7 +196,7 @@ def format_notebook(title, year, url, comment=''):
     nb = f'[N](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
     sm = f'[S](https://studiolab.sagemaker.aws/import/github/norvig/pytudes{urlb})'
     ti = f'<a href="{gh[4:-1]}" title="{comment}">{title}</a>'
-    if year == 2022: year = f'<u>{year}</u>'
+    if year == current_year: year = f'<u>{year}</u>'
     return f'| {co} {dn} {my} {nb} {sm} | {year} | {ti} |'
 
 def format_pythons() -> str:
