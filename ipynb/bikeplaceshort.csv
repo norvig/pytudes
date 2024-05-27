@@ -1,102 +1,105 @@
 name,miles,county,pct
-#,,,
-# San Mateo County,,SMC,
-#,,,
+#
+# San Mateo County = SMC
+#
 Atherton,56.3,SMC,99.8
-Bay Area Ridge Trail,395.6,SMC,21.4
-Belmont,98.1,SMC,54.2
-Brisbane,40.9,SMC,46.7
+Bay Area Ridge Trail,395.6,SMC,25.6
+Belmont,98.1,SMC,54.7
+Brisbane,40.9,SMC,50.2
 Broadmoor,8.8,SMC,38.2
-Burlingame Hills,6,SMC,71.4
-Burlingame,88.4,SMC,54.3
-Burleigh Murray Park,2.1,SMC,91.6
+Burleigh Murray Park,2.1,SMC,90.9
+Burlingame Hills,6,SMC,71.5
+Burlingame,88.4,SMC,56.2
+Butano State Park,15.2,SMC,30.1
 Coal Creek Preserve,3.9,SMC,66.7
-Colma,13.7,SMC,38.3
-Daly City,148.1,SMC,27.2
-East Palo Alto,48.3,SMC,99.6
-El Granada,49.2,SMC,38.4
-Emerald Lake Hills,24.6,SMC,99.8
-Foster City,150,SMC,80.7
-Half Moon Bay,68,SMC,32.2
+Colma,13.7,SMC,38.9
+Daly City,148.1,SMC,27.4
+East Palo Alto,48.3,SMC,99.7
+El Granada,49.2,SMC,43.6
+Emerald Lake Hills,24.6,SMC,99.9
+Foster City,150,SMC,90.4
+Half Moon Bay,68,SMC,33.6
 Half Moon Bay State Beach,4.4,SMC,51.5
 Hillsborough,85.3,SMC,52.3
-Kensington Square,0.6,SMC,99.9
-Ladera,8.1,SMC,99.9
+Kensington Square,0.6,SMC,100
+Ladera,8.1,SMC,100
 Long Ridge Preserve,11.0,SMC,51.2
 Los Trancos OSP,0.3,SMC,100
-Los Trancos Woods,5.3,SMC,99.9
-Menlo Oaks,3.5,SMC,99.9
-Menlo Park,139.5,SMC,99.5
-Millbrae,65,SMC,40.8
-Montara,27.8,SMC,32.7
-Moss Beach,19.7,SMC,44.3
-North Fair Oaks,26.7,SMC,99.8
-Pacifica,150.9,SMC,32.7
+Los Trancos Woods,5.3,SMC,100
+Menlo Oaks,3.5,SMC,100
+Menlo Park,139.5,SMC,99.7
+Millbrae,65,SMC,42.6
+Montara,27.8,SMC,59.3
+Moss Beach,19.7,SMC,43.6
+North Fair Oaks,26.7,SMC,100
+Pacifica,150.9,SMC,33.2
 Palomar Park,4,SMC,99.9
 Portola Valley,48.2,SMC,99.5
-Purisima Creek Preserve,16.5,SMC,38.7
+Purisima Creek Preserve,16.5,SMC,39.0
 Redwood City,240.5,SMC,99.3
-Russian Ridge Preserve,12.2,SMC,51.2
-San Bruno,114,SMC,29.5
-San Carlos,99,SMC,99.0
+Russian Ridge Preserve,12.2,SMC,59.5
+San Bruno,114,SMC,31.0
+San Carlos,99,SMC,99.2
 San Mateo,256,SMC,51.8
-San Mateo Highlands,18,SMC,77.9
-Sequoia Tract,11,SMC,99.7
-Sky Londa,11.8,SMC,99.4
-Skyline Ridge OSP,0.8,SMC,74.9
-South San Francisco,185.3,SMC,27.2
-West Menlo Park,11.2,SMC,99.8
-Windy Hill Preserve,4.1,SMC,99.1
-Woodside,75.2,SMC,99.5
-#,,,
-# Santa Clara County,,SCC,
-#,,,
+San Mateo Highlands,18,SMC,93.5
+Sequoia Tract,11,SMC,100
+Sky Londa,11.8,SMC,99.6
+Skyline Ridge OSP,0.8,SMC,76.4
+South San Francisco,185.3,SMC,29.6
+West Menlo Park,11.2,SMC,100
+Windy Hill Preserve,4.1,SMC,99.8
+Woodside,75.2,SMC,99.4
+#
+# Santa Clara County = SCC
+#
 Branham,44,SCC,32.7
-Campbell,119,SCC,28.8
+Campbell,119,SCC,29.3
 Communications Hill,27.8,SCC,39.5
-Cupertino,172,SCC,33.2
-Edenvale,30,SCC,47
+Cupertino,172,SCC,52.8
+Edenvale,30,SCC,47.7
 Foothills Preserve,1.1,SCC,86.8
 Gardner,23.4,SCC,47.2
-Gilroy,188.9,SCC,12.1
+Gilroy,188.9,SCC,26.4
 Los Altos,138.2,SCC,99.6
-Los Altos Hills,91.3,SCC,99.4
-Los Gatos,148,SCC,33.2
-Loyola,18.3,SCC,99.6
-Milpitas,224,SCC,37.3
-Monte Sereno,20.4,SCC,44.7
-Mountain View,208.1,SCC,99.2
+Los Altos Hills,91.3,SCC,99.2
+Los Gatos,148,SCC,33.6
+Loyola,18.3,SCC,99.9
+Milpitas,224,SCC,36.7
+Monte Sereno,20.4,SCC,52.4
+Mountain View,208.1,SCC,99.3
 Palo Alto,297.2,SCC,99.0
-Parkview,42.5,SCC,33.4
-San Francisco Bay Trail,260.8,SCC,62.7
-San Jose,2618.7,SCC,27.7
-Santa Clara,348,SCC,34
-San Martin,35.3,SCC,31.1
-Saratoga,180,SCC,29.7
-Seven Trees,40.9,SCC,33.6
-Spartan Keyes,64.3,SCC,35.7
-Sunnyvale,357,SCC,52.4
-Willow Glen,81.6,SCC,34.9
-Willow Glen South,63.3,SCC,30.5
-#,,,
-# Alameda County,,,
-#,,,
+Parkview,42.5,SCC,33.7
+San Francisco Bay Trail,260.8,SCC,74.1
+San Jose,2618.7,SCC,28
+San Martin,35.3,SCC,31.5
+Santa Clara,348,SCC,34.8
+Saratoga,180,SCC,50.4
+Seven Trees,40.9,SCC,33
+Spartan Keyes,64.3,SCC,36.8
+Sunnyvale,357,SCC,53.3
+Willow Glen,81.6,SCC,36
+Willow Glen South,63.3,SCC,30.9
+#
+# Alameda County = ALA
+#
 Alameda,206.7,ALA,12.2
 Albany,42.7,ALA,6.8
-Ashland,35.1,ALA,35.7
-Berkeley,260.3,ALA,7.4
-Cherryland,20.9,ALA,27.1
-Emeryville,28.1,ALA,8
-Fremont,780.2,ALA,32.2
-Hayward,444.5,ALA,30.0
+Ashland,35.1,ALA,36.1
+Berkeley,260.3,ALA,7.6
+Castro Valley,192.5,ALA,26.1
+Cherryland,20.9,ALA,27.8
+Emeryville,28.1,ALA,7.7
+Fairview,34.4,ALA,28.2
+Fremont,780.2,ALA,32.9
+Hayward,444.5,ALA,32.7
 Hayward Acres,3.5,ALA,43.3
-Newark,147,ALA,45.9
-San Leandro,230.6,ALA,27.5
+Newark,147,ALA,51
+San Leandro,230.6,ALA,27.7
 San Lorenzo,55.5,ALA,40.8
-Union City,208.8,ALA,30.7
-#,,,
-# SF County,,SFC,
-#,,,
+Union City,208.8,ALA,32.9
+#
+# SF County = SFC
+#
 Aquatic Park Fort Mason,6.4,SFC,15.4
 Ashbury Heights,3.7,SFC,13
 Balboa Terrace,3.4,SFC,18.2
@@ -124,9 +127,9 @@ Presidio Terrace,2.8,SFC,43.9
 Seacliff,4.1,SFC,29.3
 South Beach,4.8,SFC,37.4
 Sutro Heights,7.1,SFC,13.2
-#,,,
-# Far Away Places,,,
-#,,,
+#
+# Far Away Places
+#
 Barangaroo,1.7,NSW,47.3
 Bodega Bay,28.9,SON,17
 Cambridge,180.8,MAS,6.2
@@ -143,23 +146,23 @@ MIT,9.6,MAS,34.7
 Mokelumne Hill,14.7,CAL,26.8
 Mt Tamalpais State Park,31.7,MAR,38.7
 Muir Beach,4.6,MAR,37.1
-Rosie Riveter Park,5.5,CCC,29.3
+Rosie Riveter Park,5.5,CCC,73.2
 San Rafael,260,MAR,3.7
 Sausalito,32.7,MAR,12.9
 Stinson Beach,11.2,MAR,32.9
-#,,,
-# Counties and Bigger,,,
-#,,,
-San Mateo County,2814,---,61.56
-Santa Clara County,7569,---,32.8
-Alameda County,5818,---,15.38
-Marin County,2333,---,10.75
-San Francisco County,1217,---,7.21
-Napa County,1609,---,4.85
+#
+# Counties and Bigger
+#
+San Mateo County,2814,---,63.5
+Santa Clara County,7569,---,33.0
+Alameda County,5818,---,16.58
+Marin County,2333,---,10.94
+San Francisco County,1217,---,9.26
+Napa County,1609,---,8.9
 Sonoma County,4895,---,5.12
 Santa Cruz County,2718,---,7.12
-Contra Costa County,5945,---,2.05
-#,,,
-California,377037,---,1.7108
-USA,6406754,---,0.10677
-Earth,41974536,---,0.017159
+Contra Costa County,5945,---,3.8
+#
+California,377037,---,1.782
+USA,6406754,---,0.11343
+Earth,41974536,---,0.017055
