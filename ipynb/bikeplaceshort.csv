@@ -1,7 +1,7 @@
 name,miles,county,pct
-#
-# San Mateo County = SMC
-#
+#,,,
+#,,, San Mateo County = SMC
+#,,,
 Atherton,56.3,SMC,99.8
 Bay Area Ridge Trail,395.6,SMC,28.68
 Belmont,98.1,SMC,75.43
@@ -51,9 +51,9 @@ South San Francisco,185.3,SMC,30.98
 West Menlo Park,11.2,SMC,99.75
 Windy Hill Preserve,4.1,SMC,100
 Woodside,75.2,SMC,99.74
-#
-# Santa Clara County = SCC
-#
+#,,,
+#,,, Santa Clara County = SCC
+#,,,
 Branham,44,SCC,33.2
 Campbell,119,SCC,30.3
 Communications Hill,27.8,SCC,39.5
@@ -81,9 +81,9 @@ Spartan Keyes,64.3,SCC,36.8
 Sunnyvale,357,SCC,55.3
 Willow Glen,81.6,SCC,36
 Willow Glen South,63.3,SCC,30.9
-#
-# Alameda County = ALA
-#
+#,,,
+#,,, Alameda County = ALA
+#,,,
 Alameda,206.7,ALA,12.2
 Albany,42.7,ALA,6.8
 Ashland,35.1,ALA,36.1
@@ -99,9 +99,9 @@ Newark,147,ALA,51.6
 San Leandro,230.6,ALA,28.1
 San Lorenzo,55.5,ALA,40.95
 Union City,208.8,ALA,33.37
-#
-# SF County = SFC
-#
+#,,,
+#,,, SF County = SFC
+#,,,
 Aquatic Park Fort Mason,6.4,SFC,15.4
 Ashbury Heights,3.7,SFC,13
 Balboa Terrace,3.4,SFC,18.2
@@ -129,9 +129,9 @@ Presidio Terrace,2.8,SFC,43.9
 Seacliff,4.1,SFC,29.3
 South Beach,4.8,SFC,37.4
 Sutro Heights,7.1,SFC,13.2
-#
-# Far Away Places
-#
+#,,,
+#,,, Far Away Places
+#,,,
 Barangaroo,1.7,NSW,47.3
 Bodega Bay,28.9,SON,17
 Cambridge,180.8,MAS,6.2
@@ -152,9 +152,9 @@ Rosie Riveter Park,5.5,CCC,73.2
 San Rafael,260,MAR,3.7
 Sausalito,32.7,MAR,12.9
 Stinson Beach,11.2,MAR,32.9
-#
-# Counties and Bigger
-#
+#,,,
+#,,, Counties and Bigger
+#,,,
 San Mateo County,2814,---,66.64
 Santa Clara County,7569,---,35.6
 Alameda County,5818,---,17.71
@@ -164,7 +164,7 @@ Napa County,1609,---,8.9
 Sonoma County,4895,---,5.12
 Santa Cruz County,2718,---,7.12
 Contra Costa County,5945,---,3.8
-#
+#,,,
 California,377037,---,1.92
 USA,6406754,---,0.12
 Earth,41974536,---,0.018
