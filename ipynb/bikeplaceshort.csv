@@ -2,9 +2,9 @@ name,miles,county,pct
 #,,,
 #,,, San Mateo County = SMC
 #,,,
-Atherton,56.3,SMC,99.8
+Atherton,56.3,SMC,100
 Bay Area Ridge Trail,395.6,SMC,28.68
-Belmont,98.1,SMC,75.43
+Belmont,98.1,SMC,88.39
 Brisbane,40.9,SMC,50.4
 Broadmoor,8.8,SMC,38.26
 Burleigh Murray Park,2.1,SMC,95.08
@@ -28,7 +28,7 @@ Long Ridge Preserve,11.0,SMC,45.1
 Los Trancos OSP,0.3,SMC,100
 Los Trancos Woods,5.3,SMC,100
 Menlo Oaks,3.5,SMC,100
-Menlo Park,139.5,SMC,99.7
+Menlo Park,139.5,SMC,99.9
 Millbrae,65,SMC,51.3
 Montara,27.8,SMC,60.2
 Moss Beach,19.7,SMC,43.69
@@ -36,12 +36,12 @@ North Fair Oaks,26.7,SMC,100
 Pacifica,150.9,SMC,33.2
 Palomar Park,4,SMC,100
 Portola Redwoods SP,2.9,SMC,74.3
-Portola Valley,48.2,SMC,99.12
+Portola Valley,48.2,SMC,99.93
 Purisima Creek Preserve,16.5,SMC,39.0
 Redwood City,240.5,SMC,99.73
 Russian Ridge Preserve,12.2,SMC,59.5
 San Bruno,114,SMC,34.9
-San Carlos,99,SMC,99.43
+San Carlos,99,SMC,99.50
 San Mateo,256,SMC,54.6
 San Mateo Highlands,18,SMC,93.5
 Sequoia Tract,11,SMC,100
@@ -50,32 +50,33 @@ Skyline Ridge OSP,0.8,SMC,76.4
 South San Francisco,185.3,SMC,30.98
 West Menlo Park,11.2,SMC,99.75
 Windy Hill Preserve,4.1,SMC,100
-Woodside,75.2,SMC,99.74
+Woodside,75.2,SMC,99.83
 #,,,
 #,,, Santa Clara County = SCC
 #,,,
 Branham,44,SCC,33.2
 Campbell,119,SCC,30.3
 Communications Hill,27.8,SCC,39.5
-Cupertino,172,SCC,54.99
+Cupertino,172,SCC,54.42
 Edenvale,30,SCC,47.7
 Foothills OS Preserve,1.1,SCC,100
 Gardner,23.4,SCC,47.2
 Gilroy,188.9,SCC,26.4
-Los Altos,138.2,SCC,99.8
-Los Altos Hills,91.3,SCC,99.56
-Los Gatos,148,SCC,51.6
+Los Altos,138.2,SCC,99.89
+Los Altos Hills,91.3,SCC,99.78
+Los Gatos,148,SCC,52.04
 Loyola,18.3,SCC,99.94
 Milpitas,224,SCC,36.7
 Monte Sereno,20.4,SCC,52.4
-Mountain View,208.1,SCC,99.64
-Palo Alto,297.2,SCC,99.45
+Mountain View,208.1,SCC,99.81
+Palo Alto,297.2,SCC,99.51
 Parkview,42.5,SCC,33.7
 San Francisco Bay Trail,260.8,SCC,68.47
-San Jose,2618.7,SCC,28
-San Martin,35.3,SCC,31.5
+San Jose,2618.7,SCC,28.62
+San Martin,35.3,SCC,31.85
 Santa Clara,348,SCC,34.8
-Saratoga,180,SCC,51.4
+Saratoga,180,SCC,53.7
+Stanford,82.53,SCC,99.13
 Seven Trees,40.9,SCC,34
 Spartan Keyes,64.3,SCC,36.8
 Sunnyvale,357,SCC,55.3
