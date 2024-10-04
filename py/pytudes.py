@@ -6,12 +6,14 @@ notebooks = {
  
 'Programming Examples': [
 ("AlphaCode Automated Programming", 2022, 'AlphaCode.ipynb', "Analysis of AlphaCode's automated solution to a coding problem"),
+('The Babylonian Number System', 2022, 'Babylonian digits.ipynb', 'Translating between babylonian and traditional number systems.'),
 ("Beal's Conjecture Revisited", 2018, 'Beal.ipynb', "A search for counterexamples to Beal's Conjecture"),
 ('Bicycling Statistics', 2020, 'Bike-Stats.ipynb', 'Visualizing statistics about bike routes'),
 ("Can't Stop", 2018, 'Cant-Stop.ipynb', 'Optimal play in a dice board game'),
 ('Chaos with Triangles', 2019, 'Sierpinski.ipynb', 'A surprising appearance of the Sierpinski triangle in a random walk'),
 ("Conway's Game of Life", 2017, 'Life.ipynb', 'The cellular automata zero-player game'),
 ('Generating and Solving Mazes', 2020, 'Maze.ipynb', 'Make a maze by generating a random tree superimposed on a grid and solve it'),
+('The Languages of English, Math, and Programming', 2024, 'Triplets.ipynb', 'LLMs do better at producing a program to solve this puzzle than they do at solving it directly'),
 ("Mel's Konane Board", 2021, 'Konane.ipynb', 'Solving the game of Konane (Hawaiian checkers).'),
 ('Photo Focal Lengths', 2020, 'PhotoFocalLengths.ipynb', 'Generate charts of what focal lengths were used on a photo trip'),
 ('Pickleball Tournament', 2018, 'Pickleball.ipynb', 'Scheduling a doubles tournament fairly and efficiently'),
@@ -39,7 +41,7 @@ notebooks = {
 ('The Diamond Game: A Probability Puzzle', 2023, 'Diamonds.ipynb', "Finding an optimal strategy for buying bags with unknown numbers of diamonds."),
 ('The Devil and the Coin Flip Game', 2019, 'Coin%20Flip.ipynb', 'How to beat the Devil at his own game'),
 ('Dice Baseball', 2020, 'Dice%20Baseball.ipynb', 'Simulating baseball games'),
-('Economics Simulation', 2018, 'Economics.ipynb', 'A simulation of a simple economic game'),
+('Economics Simulation', 2018, 'Economics.ipynb', 'A simulation of a simple economic game'), 
 ("Overtime in American Football", 2024, 'Overtime.ipynb', "In American Football, which team has the advantage in overtime?"),
 ('Poker Hand Ranking', 2012, "poker.ipynb", 'How do we decide which poker hand wins? Several variants of poker are considered'),
 ('The Unfinished Game .... of Risk', 2020, "risk.ipynb", "Determining who is likely to win an interminably long game of Risk"),
@@ -53,6 +55,7 @@ notebooks = {
 ('Four 4s, Five 5s, and Countdowns', 2020, 'Countdown.ipynb', 'Solving the equation 10 _ 9 _ 8 _ 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 2016. Originally from an Alex Bellos puzzle'),
 ('How to Count Things', 2020, 'How%20To%20Count%20Things.ipynb', 'Combinatorial math: how to count how many things there are, when there are a lot of them'),
 ('KenKen (Sudoku-like Puzzle)', 2021, 'KenKen.ipynb', 'A Sudoku-like puzzle, but with arithmetic.'),
+('Number Bracelets Game', 2024, 'NumberBracelet.ipynb', 'A game involving numbered beads on a circular bracelet.'),
 ('Pairing Socks', 2019, 'Socks.ipynb', 'What is the probability that you will be able to pair up socks as you randomly pull them out of the dryer?'),
 ('Sicherman Dice', 2018, 'Sicherman%20Dice.ipynb', 'Find a pair of dice that is like a regular pair of dice, only different'),
 ("Sol Golomb's Rectangle Puzzle", 2014, 'Golomb-Puzzle.ipynb', 'A Puzzle involving placing rectangles of different sizes inside a square'),
@@ -63,6 +66,7 @@ notebooks = {
 ('Square Sum Puzzle', 2020, 'SquareSum.ipynb', 'Place the numbers from 1 to n in a chain (or a circle) such that adjacent pairs sum to a perfect square'),
 ("When is Cheryl's Birthday?", 2020, 'Cheryl.ipynb', "Solving the *Cheryl's Birthday* logic puzzle"),
 ('When Cheryl Met Eve: A Birthday Story', 2015, 'Cheryl-and-Eve.ipynb', "Inventing new puzzles in the Style of Cheryl's Birthday"),
+("LLMs, Theory of Mind, and Cheryl's Birthday", 2024, 'CherylMind.ipynb', "Do LLMs have enough theory of mind to solve the Cheryl's Birthday puzzle?"),
 ('xkcd 1313: Regex Golf', 2015, 'xkcd1313.ipynb', 'Find the smallest regular expression; inspired by Randall Munroe'),
 ('xkcd 1313: Regex Golf (Part 2: Infinite Problems)', 2015, 'xkcd1313-part2.ipynb', 'Regex Golf: better, faster, funner (with Stefan Pochmann)')],
 
@@ -173,7 +177,7 @@ def format_notebooks() -> str:
     return '\n'.join(format_category(name) for name in notebooks)
 
 def find_newest(notebooks, label='New', year=current_year-1) -> None:
-    """Mutate `notebooks['Newest']` to have a collection of newest notebooks."""
+    """Mutate `notebooks['New']` to have a collection of newest notebooks."""
     for category in notebooks:
         for line in notebooks[category]:
             if line[1] >= year:
@@ -254,4 +258,5 @@ that was very influential to me when I was first learning to program. I still ha
 
 output = 'README.md'
 print(f'Wrote {open(output, "w").write(body)} characters to {output}')
+print('Checking...')
 check()
