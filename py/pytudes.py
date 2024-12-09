@@ -23,7 +23,8 @@ notebooks = {
  'How many electoral votes would Trump get if he wins the state where he has positive net approval?')],
  
 'Advent of Code': [
-('Advent of Code 2023', 2023, 'Advent-2023.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2022'),
+('Advent of Code 2024', 2024, 'Advent-2024.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2024'),
+('Advent of Code 2023', 2023, 'Advent-2023.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2023'),
 ('Advent of Code 2022', 2022, 'Advent-2022.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2022'),
 ('Advent of Code 2021', 2021, 'Advent-2021.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2021'),
 ('Advent of Code 2020', 2020, 'Advent-2020.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2020'),
