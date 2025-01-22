@@ -127,7 +127,7 @@ class Panama:
         ##  positive for words on left, negative for right.
         ## .stack holds (action, side, arg) tuples
         update(self, left=[], right=[], best=0, seen={}, diff=0, stack=[],
-               used_reversibles=False, starttime=time.clock(), dict=dict)
+               used_reversibles=False, starttime=time.process_time(), dict=dict)
         for word in L.split(','):
             self.add('left', canonical(word))
         for rword in reversestr(R).split(','):
@@ -209,7 +209,7 @@ class Panama:
             self.best = len(self)
             self.bestphrase = str(self)
             print('%5d phrases (%5d words) in %3d seconds' % (
-                self.best, self.bestphrase.count(' ')+1, time.clock() - self.starttime))
+                self.best, self.bestphrase.count(' ')+1, time.process_time() - self.starttime))
             assert is_panama(self.bestphrase)
             f = open('pallog%d.txt' % (id(self) % 10000), 'w')
             f.write(self.bestphrase + '\n')
