@@ -79,7 +79,7 @@ def unit_tests():
 def spelltest(tests, verbose=False):
     "Run correction(wrong) on all (right, wrong) pairs; report results."
     import time
-    start = time.clock()
+    start = time.process_time()
     good, unknown = 0, 0
     n = len(tests)
     for right, wrong in tests:
@@ -90,7 +90,7 @@ def spelltest(tests, verbose=False):
             if verbose:
                 print('correction({}) => {} ({}); expected {} ({})'
                       .format(wrong, w, WORDS[w], right, WORDS[right]))
-    dt = time.clock() - start
+    dt = time.process_time() - start
     print('{:.0%} of {} correct ({:.0%} unknown) at {:.0f} words per second '
           .format(good / n, n, unknown / n, n / dt))
     
