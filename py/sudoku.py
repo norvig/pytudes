@@ -138,9 +138,9 @@ def solve_all(grids, name=''):
             sum(results), N, name, sum(times)/N, N/sum(times), max(times)))
             
 def time_solve(grid):
-    start = time.clock()
+    start = time.process_time()
     values = solve(grid)
-    t = time.clock()-start
+    t = time.process_time()-start
     return (t, solved(values))
 
 def solved(values):
