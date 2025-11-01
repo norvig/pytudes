@@ -1,0 +1,49 @@
+def show_menu():
+    print("\n===== TO-DO LIST MANAGER =====")
+    print("1. View Tasks")
+    print("2. Add Task")
+    print("3. Delete Task")
+    print("4. Exit")
+
+def view_tasks(tasks):
+    if not tasks:
+        print("\nNo tasks yet. Add one!")
+    else:
+        print("\nYour Tasks:")
+        for i, task in enumerate(tasks, 1):
+            print(f"{i}. {task}")
+
+def add_task(tasks):
+    task = input("Enter a new task: ")
+    tasks.append(task)
+    print(f"Task '{task}' added successfully!")
+
+def delete_task(tasks):
+    view_tasks(tasks)
+    if tasks:
+        try:
+            task_num = int(input("Enter the task number to delete: "))
+            removed = tasks.pop(task_num - 1)
+            print(f"Task '{removed}' deleted.")
+        except (ValueError, IndexError):
+            print("Invalid input. Try again.")
+
+def main():
+    tasks = []
+    while True:
+        show_menu()
+        choice = input("Choose an option (1-4): ")
+        if choice == '1':
+            view_tasks(tasks)
+        elif choice == '2':
+            add_task(tasks)
+        elif choice == '3':
+            delete_task(tasks)
+        elif choice == '4':
+            print("Goodbye! Have a productive day!")
+            break
+        else:
+            print("Invalid choice. Please enter a number from 1 to 4.")
+
+if __name__ == "__main__":
+    main()
