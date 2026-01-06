@@ -23,7 +23,7 @@ notebooks = {
  'How many electoral votes would Trump get if he wins the state where he has positive net approval?')],
  
 'Advent of Code': [
-('Advent of Code 2025', 2024, 'Advent-2025-AI.ipynb', 'Using large language coding models to solve AoC puzzles'),
+('Advent of Code 2025: AI LLM Edition', 2024, 'Advent-2025-AI.ipynb', 'Using large language coding models to solve AoC puzzles'),
 ('Advent of Code 2025', 2024, 'Advent-2025.ipynb', 'Puzzle site with a coding puzzle for 12 days of Christmas, December 2025'),
 ('Advent of Code 2024', 2024, 'Advent-2024.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2024'),
 ('Advent of Code 2023', 2023, 'Advent-2023.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2023'),
@@ -111,9 +111,10 @@ notebooks = {
 ('Convex Hull Problem', 2017, 'Convex%20Hull.ipynb', 'A classic Computer Science Algorithm'),
 ('Docstring Fixpoint Theory', 2023, 'DocstringFixpoint.ipynb', 'An approach to writing code and docstrings that go together.'),
 ('Stable Matching Problem', 2020, 'StableMatching.ipynb', 'What is the best way to pair up two groups with each other, obeying preferences?'),
-('Symbolic Algebra, Simplification, and Differentiation', 2017, 'Differentiation.ipynb', 'A computer algebra system that, including symbolic differentiation'),
+('Symbolic Algebra, Simplification, and Differentiation', 2017, 'Differentiation.ipynb', 'A computer algebra system, including symbolic differentiation'),
 ('Snobol: Bad Grade, Good Experience', 2017, 'Snobol.ipynb', 'As a student, did you ever get a bad grade on a programming assignment?'),
-('Traveling Salesperson Problem', 2018, 'TSP.ipynb', 'Another of the classics')]
+('Traveling Salesperson Problem', 2018, 'TSP.ipynb', 'Another of the classics'),
+('Truncatable Primes', 2026, 'TruncatablePrimes.ipynb', 'Prime numbers where you can remove digits and still get primes.')]
 }
 
 python_files = [
@@ -141,7 +142,7 @@ python_files = [
 import re
 import urllib.request
 
-current_year = 2024
+current_year = 2026
 
 def read_url(url: str) -> str:
     """Reads a file from the specified URL and returns its content as a string."""
