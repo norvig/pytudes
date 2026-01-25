@@ -116,12 +116,14 @@ public class Sudoku {
 			for (int i = 0; i < repeat; ++i) {
 				long startTime = printPuzzleStats ? System.nanoTime() : 0;
 				int[] solution = initialize(grid);            // All the real work is
-				if (runSearch) search(solution, gridpool, 0); // on these 2 lines.
+				if (runSearch) solution = search(solution, gridpool, 0); // on these 2 lines.
+                int threadId = Thread.currentThread().getName().contains("-") ?
+                        Integer.parseInt(Thread.currentThread().getName().split("-")[1]) : 0;
 				if (printPuzzleStats) {
-					printStats(1, startTime, "Puzzle " + (g + 1));
+                    printStats(1, startTime, "Puzzle " + ((g + 1) + (threadId * splitSize)));
 				}
 				if (i == 0 && (printGrid || (verifySolution && !isSolution(solution, puzzle)))) {
-					printGrids("Puzzle " + (g + 1), grid, solution);
+                    printGrids("Puzzle " + ((g + 1) + (threadId * splitSize)) , grid, solution);
 				}
 			}
 		}
@@ -134,12 +136,14 @@ public class Sudoku {
 			final long startTime  = System.nanoTime();
 			int nGrids = grids.size();			
 			final CountDownLatch latch = new CountDownLatch(nThreads);
-			int size = nGrids / nThreads;
+            splitSize = nGrids / nThreads;
 			for (int c = 0; c < nThreads; ++c) {
-				final List<int[]> sublist = grids.subList(c * size, 
-					                                      c == nThreads - 1 ? nGrids : (c + 1) * size);
+				final List<int[]> sublist = grids.subList(c * splitSize,
+					                                      c == nThreads - 1 ? nGrids : (c + 1) * splitSize);
+                final String name = "Thread-" + c;
 				new Thread() {
 					public void run() {
+                        setName(name);
 						solveList(sublist);
 						latch.countDown();
 						if (printThreadStats) {
@@ -198,6 +202,7 @@ public class Sudoku {
 	final int[][]   PEERS      = new int[N * N][20];
 	final int[]     NUM_DIGITS  = new int[ALL_DIGITS + 1];
 	final int[]     HIGHEST_DIGIT = new int[ALL_DIGITS + 1];
+    int splitSize = 0;
 
 	{
 		// Initialize ALL_UNITS to be an array of the 27 units: rows, columns, and blocks
@@ -274,7 +279,7 @@ public class Sudoku {
 		}
 		// Check that each unit is a permutation of digits
 		for (int[] u: ALL_UNITS) {
-			if (IntStream.of(u).sum() != ALL_DIGITS) return false;
+            if (Arrays.stream(u).map(sq -> grid[sq]).sum() != ALL_DIGITS)   return false;
 		}
 		return true;
 	}
