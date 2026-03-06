@@ -233,7 +233,6 @@ This project contains ***pytudes***—Python programs, usually short, for perfec
 
 To continue the musical analogy, some people think of programming like [Spotify](http://spotify.com): they want to know how to install the app, find a good playlist, and hit the "play" button; after that they don't want to think about it. There are plenty of other tutorials that will tell you how to do the equivalent of that for various programming tasks—this one won't help. But if you think of programming like playing the piano—a craft that can take [years](https://norvig.com/21-days.html) to perfect—then I hope this collection can help.
 
-
 # Index of Jupyter (IPython) Notebooks
 
 For each notebook you can hover on the title to see a description, or click the title to view on github, or click one of the letters in the left column to launch the notebook on 
@@ -250,15 +249,27 @@ For each notebook you can hover on the title to see a description, or click the 
 {format_pythons()}
 
 # Etudes for Programmers
+
 I got the idea for the *"etudes"* part of the name from
 this [1978 book](https://books.google.com/books/about/Etudes_for_programmers.html?id=u89WAAAAMAAJ)
 by [Charles Wetherell](http://demin.ws/blog/english/2012/08/25/interview-with-charles-wetherell)
-that was very influential to me when I was first learning to program. I still have my copy.
+that was very influential to me when I was first learning to program. I still have my copy, but
+it is now easier to find a [pdf](txt/Etudes.pdf) than a hard copy.
 
 ![](https://images-na.ssl-images-amazon.com/images/I/51ZnZH29dvL._SX394_BO1,204,203,200_.jpg)
-"""
 
-output = 'README.md'
-print(f'Wrote {open(output, "w").write(body)} characters to {output}')
-print('Checking...')
-check()
+# Reviews of pytudes
+
+Here's what some people are saying about `pytudes`:
+- "What I find interesting is how Peter builds bottom-up solutions using low-level utilities... Reading his code is educational." - [Jeremey Howard](https://en.wikipedia.org/wiki/Jeremy_Howard_(entrepreneur)), co-founder of fast.ai and chief scientist at Kaggle
+- "Everything I see from Peter Norvig is just always so incredibly well written and coded." — [Jonathan](https://news.ycombinator.com/user?id=jypepin), [Hacker News](https://news.ycombinator.com/item?id=27379366)
+- "Peter Norvig is my go to recommendation when someone is interested in becoming better at solving day to day problems ... I feel his skill of dividing a problem into small pieces and expressing them in code in a natural way is unparalleled." — [mikevin](https://news.ycombinator.com/user?id=mikevin), [Hacker News](https://news.ycombinator.com/item?id=27379366)
+- "I've never seen Peter Norvig choose anything but the most elegant and perfect data model for the problem at hand." — [spoonjim](https://news.ycombinator.com/user?id=spoonjim), [Hacker News](https://news.ycombinator.com/item?id=27379366)
+- "I just find Norvig's style of "functional Python" lovely in its own way (with noted disregard of Pep8 and other "best practices")" —[raverbashing](https://news.ycombinator.com/user?id=raverbashing), [Hacker News](https://news.ycombinator.com/item?id=25654955)
+- "You should check out Norvig's design of computer programs [course on Udacity](https://imp.i115008.net/c/2331964/788805/11298?u=https://www.udacity.com/course/design-of-computer-programs--cs212) where he uses these kinds of puzzle programs to teach programming design concepts. It is a hard but really rewarding course. — [nafizh](https://news.ycombinator.com/user?id=nafizh), [HN ACademy](https://yahnd.com/academy/r/udacity.com/course/design-of-computer-programs--cs212/)
+- "Often enough I would think of something [a possible improvement[, but if you worked it out in detail there was some less-obvious reason the code was the way it was... All the code is pretty short, and it's not really 'production code', but it's enough to be an education in craftsmanship at every level."
+- What code samples should programmers read? "anything else implemented by Norvig, he's one of the best programmers that I've had the pleasure of reading code from." - [jacquesm](https://news.ycombinator.com/user?id=jacquesm) on [Hacker News](https://news.ycombinator.com/item?id=14487724)"""
+
+with open('README.md', "w") as out:
+    print(f'Wrote {out.write(body)} characters to {out.name}')
+    #print('Checking...'); check()
