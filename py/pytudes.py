@@ -268,7 +268,10 @@ Here's what some people are saying about `pytudes`:
 - "I just find Norvig's style of "functional Python" lovely in its own way (with noted disregard of Pep8 and other "best practices")" —[raverbashing](https://news.ycombinator.com/user?id=raverbashing), [Hacker News](https://news.ycombinator.com/item?id=25654955)
 - "You should check out Norvig's design of computer programs [course on Udacity](https://imp.i115008.net/c/2331964/788805/11298?u=https://www.udacity.com/course/design-of-computer-programs--cs212) where he uses these kinds of puzzle programs to teach programming design concepts. It is a hard but really rewarding course. — [nafizh](https://news.ycombinator.com/user?id=nafizh), [HN ACademy](https://yahnd.com/academy/r/udacity.com/course/design-of-computer-programs--cs212/)
 - "Often enough I would think of something [a possible improvement[, but if you worked it out in detail there was some less-obvious reason the code was the way it was... All the code is pretty short, and it's not really 'production code', but it's enough to be an education in craftsmanship at every level."
-- What code samples should programmers read? "anything else implemented by Norvig, he's one of the best programmers that I've had the pleasure of reading code from." - [jacquesm](https://news.ycombinator.com/user?id=jacquesm) on [Hacker News](https://news.ycombinator.com/item?id=14487724)"""
+- [What code samples should programmers read?] "Anything else implemented by Norvig, he's one of the best programmers that I've had the pleasure of reading code from." - [jacquesm](https://news.ycombinator.com/user?id=jacquesm) on [Hacker News](https://news.ycombinator.com/item?id=14487724)
+- "Everything I see from Peter Norvig is just always so incredibly well written and coded. Every year looking at his solutions for advent of code [0] brings just so much learnings. Strongly recommend. - [jyepin](https://news.ycombinator.com/user?id=jypepin) [Hacker News](https://news.ycombinator.com/item?id=27379366)
+- "I feel his skill of dividing a problem into small pieces and expressing them in code in a natural way is unparalleled." - [mikevin](https://news.ycombinator.com/user?id=mikevin) [Hacker News](https://news.ycombinator.com/item?id=27379366)
+"""
 
 with open('README.md', "w") as out:
     print(f'Wrote {out.write(body)} characters to {out.name}')
