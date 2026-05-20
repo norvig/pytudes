@@ -155,7 +155,7 @@ def read_url(url: str) -> str:
 def ipynbs(page: str) -> set:
     """Return a set of filenames for all *.ipynb in page."""
     page = page.replace('%20', ' ').replace('%2F','/')
-    return set(re.findall(r'[A-Za-z_ ]+[.]ipynb', page))
+    return set(re.findall(r'[A-Za-z_ 0-9-]+[.]ipynb', page))
 
 def check():
     """Check that the listing of *.ipynb files matches the README.md file"""
