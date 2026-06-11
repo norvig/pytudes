@@ -186,7 +186,7 @@ def find_newest(notebooks, label='New', year=new_year) -> None:
     """Mutate `notebooks['New']` to have a collection of newest notebooks."""
     for category in notebooks:
         for line in notebooks[category]:
-            if line[1] >= year:
+            if int(line[1]) >= int(year):
                 notebooks[label].append(line)
     notebooks[label].sort(key=lambda line: (-line[1], line[0]))
     
