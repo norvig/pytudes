@@ -5,6 +5,9 @@ on:
     paths:
       - 'py/pytudes.py'
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   build-and-update:
     runs-on: ubuntu-latest
