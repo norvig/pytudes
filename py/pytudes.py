@@ -6,6 +6,7 @@ notebooks = {
  
 'Programming Examples': [
 ("AlphaCode Automated Programming", 2022, 'AlphaCode.ipynb', "Analysis of AlphaCode's automated solution to a coding problem"),
+("Approximating Pi with a Fraction", 2026, 'RationalPi.ipynb', "Using continued fractions to find fractions (like 22/7) that are close to pi."),
 ('The Babylonian Number System', 2022, 'Babylonian%20digits.ipynb', 'Translating between Babylonian and traditional number systems.'),
 ("Beal's Conjecture Revisited", 2018, 'Beal.ipynb', "A search for counterexamples to Beal's Conjecture"),
 ('Bicycling Statistics', 2020, 'Bike-Stats.ipynb', 'Visualizing statistics about bike routes'),
