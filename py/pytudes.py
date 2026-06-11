@@ -58,7 +58,7 @@ notebooks = {
 ('How to Count Things', 2020, 'How%20To%20Count%20Things.ipynb', 'Combinatorial math: how to count how many things there are, when there are a lot of them'),
 ('KenKen (Sudoku-like Puzzle)', 2021, 'KenKen.ipynb', 'A Sudoku-like puzzle, but with arithmetic.'),
 ('Number Bracelets Game', 2024, 'NumberBracelets.ipynb', 'A game involving numbered beads on a circular bracelet.'),
-('Project Euler #3: Largest prime factor', 'Euler3.ipynb', 2026, 'Find the largest prime factor of a number'),
+('Project Euler #3: Largest prime factor', 2026, 'Euler3.ipynb', 'Find the largest prime factor of a number'),
 ('Pairing Socks', 2019, 'Socks.ipynb', 'What is the probability that you will be able to pair up socks as you randomly pull them out of the dryer?'),
 ('Sicherman Dice', 2018, 'Sicherman%20Dice.ipynb', 'Find a pair of dice that is like a regular pair of dice, only different'),
 ("Sol Golomb's Rectangle Puzzle", 2014, 'Golomb-Puzzle.ipynb', 'A Puzzle involving placing rectangles of different sizes inside a square'),
@@ -146,7 +146,7 @@ import re
 import urllib.request
 
 current_year = 2026
-new_year     = current_year - 2 # What `find_newest` looks for
+new_year     = current_year - 1 # What `find_newest` looks for
 
 def read_url(url: str) -> str:
     """Reads a file from the specified URL and returns its content as a string."""
@@ -186,7 +186,7 @@ def find_newest(notebooks, label='New', year=new_year) -> None:
     """Mutate `notebooks['New']` to have a collection of newest notebooks."""
     for category in notebooks:
         for line in notebooks[category]:
-            if int(line[1]) >= int(year):
+            if line[1] >= year:
                 notebooks[label].append(line)
     notebooks[label].sort(key=lambda line: (-line[1], line[0]))
     
