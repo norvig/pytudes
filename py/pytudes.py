@@ -2,7 +2,7 @@
 
 notebooks = {
  
-'New': [], # Gets updated automatically
+'New': [],  # Gets updated automatically
  
 'Programming Examples': [
 ("AlphaCode Automated Programming", 2022, 'AlphaCode.ipynb', "Analysis of AlphaCode's automated solution to a coding problem"),
