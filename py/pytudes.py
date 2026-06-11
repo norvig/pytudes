@@ -193,20 +193,20 @@ def find_newest(notebooks, label='New', year=new_year) -> None:
 def format_category(category) -> str:
     """Make a table of multiple jupyter/ipython notebooks, under a header."""
     print(f'{len(notebooks[category]):2d} notebooks in {category}')
-    return table(('Run', 'Year', category),
+    return table(('Open', 'Year', category),
                  [format_notebook(*line) for line in notebooks[category]])
     
 def format_notebook(title, year, url, comment=''):
     """Make a markdown table entry for a jupyter/ipython notebook."""
     urlb = f'/blob/main/ipynb/{url}'
-    co = f'[C](https://colab.research.google.com/github/norvig/pytudes{urlb})'
+    co = f'[co](https://colab.research.google.com/github/norvig/pytudes{urlb})'
     gh = f'[G](ipynb/{url})'
     dn = f'[D](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmain%2Fipynb%2F{url})'
     my = f'[M](https://mybinder.org/v2/gh/norvig/pytudes/main?filepath=ipynb%2F{url})'
-    nb = f'[N](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
+    nb = f'[nb](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
     sm = f'[S](https://studiolab.sagemaker.aws/import/github/norvig/pytudes{urlb})'
     ti = f'<a href="{gh[4:-1]}" title="{comment}">{title}</a>'
-    return f'| {co} {dn} {my} {nb} {sm} | {year} | {ti} |'
+    return f'| {co} {nb} | {year} | {ti} |'
 
 def format_pythons() -> str:
     """Make a table of multiple python programs."""
@@ -238,12 +238,9 @@ To continue the musical analogy, some people think of programming like [Spotify]
 
 # Index of Jupyter (IPython) Notebooks
 
-For each notebook you can hover on the title to see a description, or click the title to view on github, or click one of the letters in the left column to launch the notebook on 
-[**C**olab](https://colab.research.google.com),
-[**D**eepnote](https://deepnote.com),
-[**M**ybinder](https://mybinder.org),
-[**S**agemaker](https://studiolab.sagemaker.aws/), or
-[**N**BViewer](https://nbviewer.jupyter.org/).
+For each notebook you can hover on the title to see a description, or click the title to view on github, or click one of the letters in the left column to open the notebook on 
+[**co**olab](https://colab.research.google.com) or
+[**nb**viewer](https://nbviewer.jupyter.org/).
 
 {format_notebooks()}
 
