@@ -112,6 +112,7 @@ notebooks = {
 'Computer Science Algorithms and Concepts': [
 ('BASIC Interpreter', 2017, 'BASIC.ipynb', 'How to write an interpreter for the BASIC programming language'),
 ('Convex Hull Problem', 2017, 'Convex%20Hull.ipynb', 'A classic Computer Science Algorithm'),
+('(How to Write a (Lisp) Interpreter (in Python))', 2026, 'lispy.ipynb', 'Tutorial on interpreters.'),
 ('Docstring Fixpoint Theory', 2023, 'DocstringFixpoint.ipynb', 'An approach to writing code and docstrings that go together.'),
 ('Stable Matching Problem', 2020, 'StableMatching.ipynb', 'What is the best way to pair up two groups with each other, obeying preferences?'),
 ('Symbolic Algebra, Simplification, and Differentiation', 2017, 'Differentiation.ipynb', 'A computer algebra system, including symbolic differentiation'),
