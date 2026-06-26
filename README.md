@@ -52,7 +52,7 @@ For each notebook you can hover on the title to see a description, or click the 
 | [co](https://colab.research.google.com/github/norvig/pytudes/blob/main/ipynb/Electoral%20Votes.ipynb) [nb](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/main/ipynb/Electoral%20Votes.ipynb) | 2020 | <a href="ipynb/Electoral%20Votes.ipynb" title="How many electoral votes would Trump get if he wins the state where he has positive net approval?">Tracking Polls: Electoral Votes</a> |
 
 
-|Open|Year|Advent of Code qnd Project Euler|
+|Open|Year|Advent of Code and Project Euler|
 |---|---|---|
 | [co](https://colab.research.google.com/github/norvig/pytudes/blob/main/ipynb/Advent-2025-AI.ipynb) [nb](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/main/ipynb/Advent-2025-AI.ipynb) | 2025 | <a href="ipynb/Advent-2025-AI.ipynb" title="Using large language coding models to solve AoC puzzles">Advent of Code 2025: AI LLM Edition</a> |
 | [co](https://colab.research.google.com/github/norvig/pytudes/blob/main/ipynb/Advent-2025.ipynb) [nb](https://nbviewer.jupyter.org/github/norvig/pytudes/blob/main/ipynb/Advent-2025.ipynb) | 2025 | <a href="ipynb/Advent-2025.ipynb" title="Puzzle site with a coding puzzle for 12 days of Christmas, December 2025">Advent of Code 2025</a> |
