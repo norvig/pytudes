@@ -18,12 +18,11 @@ notebooks = {
 ("Mel's Konane Board", 2021, 'Konane.ipynb', 'Solving the game of Konane (Hawaiian checkers).'),
 ('Photo Focal Lengths', 2020, 'PhotoFocalLengths.ipynb', 'Generate charts of what focal lengths were used on a photo trip'),
 ('Pickleball Tournament', 2018, 'Pickleball.ipynb', 'Scheduling a doubles tournament fairly and efficiently'),
-('Project Euler Utilities', 2017, 'Project%20Euler%20Utils.ipynb', 'My utility functions for the Project Euler problems, including `Primes` and `Factors`'),
 ("Selecting Names from a Menu", 2022, 'Menu.ipynb', 'Efficiently Selecting Names from a Menu, by typing characters and arrows'),
 ('Tracking Polls: Electoral Votes', 2020, 'Electoral%20Votes.ipynb', 
  'How many electoral votes would Trump get if he wins the state where he has positive net approval?')],
  
-'Advent of Code': [
+'Advent of Code qnd Project Euler': [
 ('Advent of Code 2025: AI LLM Edition', 2025, 'Advent-2025-AI.ipynb', 'Using large language coding models to solve AoC puzzles'),
 ('Advent of Code 2025', 2025, 'Advent-2025.ipynb', 'Puzzle site with a coding puzzle for 12 days of Christmas, December 2025'),
 ('Advent of Code 2024', 2024, 'Advent-2024.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2024'),
@@ -34,7 +33,10 @@ notebooks = {
 ('Advent of Code 2018', 2018, 'Advent-2018.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2018'),
 ('Advent of Code 2017', 2017, 'Advent-2017.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2017'),
 ('Advent of Code 2016', 2016, 'Advent-2016.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2016'),
-('Advent of Code Utilities', 2022, 'AdventUtils.ipynb', 'Utility functions for Advent of Code puzzles')],
+('Advent of Code Utilities', 2022, 'AdventUtils.ipynb', 'Utility functions for Advent of Code puzzles'),
+('Project Euler 1–100', 2026, 'Euler.ipynb', 'Solutions to the first 100 Project Euler math/programming problems'),
+('Project Euler #3: Largest prime factor', 2026, 'Euler3.ipynb', 'For beginner programmers: How to find the largest prime factor of a number'),
+],
 
 'Probability and Uncertainty': [
 ("Effectiveness of Language Models", 2019, 'Goldberg.ipynb', "A re-implementation in Python 3 of Yoav Goldberg's unreasonably effective character-level n-gram language model."),
@@ -58,7 +60,6 @@ notebooks = {
 ('How to Count Things', 2020, 'How%20To%20Count%20Things.ipynb', 'Combinatorial math: how to count how many things there are, when there are a lot of them'),
 ('KenKen (Sudoku-like Puzzle)', 2021, 'KenKen.ipynb', 'A Sudoku-like puzzle, but with arithmetic.'),
 ('Number Bracelets Game', 2024, 'NumberBracelets.ipynb', 'A game involving numbered beads on a circular bracelet.'),
-('Project Euler #3: Largest prime factor', 2026, 'Euler3.ipynb', 'Find the largest prime factor of a number'),
 ('Pairing Socks', 2019, 'Socks.ipynb', 'What is the probability that you will be able to pair up socks as you randomly pull them out of the dryer?'),
 ('Sicherman Dice', 2018, 'Sicherman%20Dice.ipynb', 'Find a pair of dice that is like a regular pair of dice, only different'),
 ("Sol Golomb's Rectangle Puzzle", 2014, 'Golomb-Puzzle.ipynb', 'A Puzzle involving placing rectangles of different sizes inside a square'),
