@@ -22,7 +22,7 @@ notebooks = {
 ('Tracking Polls: Electoral Votes', 2020, 'Electoral%20Votes.ipynb', 
  'How many electoral votes would Trump get if he wins the state where he has positive net approval?')],
  
-'Advent of Code qnd Project Euler': [
+'Advent of Code and Project Euler': [
 ('Advent of Code 2025: AI LLM Edition', 2025, 'Advent-2025-AI.ipynb', 'Using large language coding models to solve AoC puzzles'),
 ('Advent of Code 2025', 2025, 'Advent-2025.ipynb', 'Puzzle site with a coding puzzle for 12 days of Christmas, December 2025'),
 ('Advent of Code 2024', 2024, 'Advent-2024.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2024'),
