@@ -37,7 +37,7 @@ notebooks = {
 ('Project Euler #1–100', 2026, 'Euler.ipynb', 'Solutions to the first 100 Project Euler math/programming problems'),
 ('Project Euler by Fable LLM', 2026, 'Euler-Fable.ipynb', 'Solutions to Project Euler math/programming problems by Claude Fable LLM'),
 ('Project Euler by Opus LLM', 2026, 'Euler-Opus.ipynb', 'Solutions to Project Euler math/programming problems by Claude Opus LLM'),
-('Project Euler by Kimi LLM, 2026, 'Euler-Kimi.ipynb', 'Solutions to Project Euler math/programming problems  by Kimi LLM'),
+('Project Euler by Kimi LLM', 2026, 'Euler-Kimi.ipynb', 'Solutions to Project Euler math/programming problems by Kimi LLM'),
 ('Project Euler #3: Largest prime factor', 2026, 'Euler3.ipynb', 'For beginner programmers: How to find the largest prime factor of a number'),
 ],
 
