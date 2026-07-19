@@ -34,11 +34,11 @@ notebooks = {
 ('Advent of Code 2017', 2017, 'Advent-2017.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2017'),
 ('Advent of Code 2016', 2016, 'Advent-2016.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2016'),
 ('Advent of Code Utilities', 2022, 'AdventUtils.ipynb', 'Utility functions for Advent of Code puzzles'),
-('Project Euler #1–100', 2026, 'Euler.ipynb', 'Solutions to the first 100 Project Euler math/programming problems'),
-('Project Euler by Fable LLM', 2026, 'Euler-Fable.ipynb', 'Solutions to Project Euler math/programming problems by Claude Fable LLM'),
-('Project Euler by Opus LLM', 2026, 'Euler-Opus.ipynb', 'Solutions to Project Euler math/programming problems by Claude Opus LLM'),
-('Project Euler by Kimi LLM', 2026, 'Euler-Kimi.ipynb', 'Solutions to Project Euler math/programming problems by Kimi LLM'),
-('Project Euler #3: Largest prime factor', 2026, 'Euler3.ipynb', 'For beginner programmers: How to find the largest prime factor of a number'),
+('Project Euler #1–100 by a Human', 2026, 'Euler.ipynb', 'Solutions to the first 100 Project Euler math/programming problems'),
+('Project Euler #1–100 by Fable LLM', 2026, 'Euler-Fable.ipynb', 'Solutions to Project Euler math/programming problems by Claude Fable LLM'),
+('Project Euler #1–100 by Opus LLM', 2026, 'Euler-Opus.ipynb', 'Solutions to Project Euler math/programming problems by Claude Opus LLM'),
+('Project Euler #1–100 by Kimi LLM', 2026, 'Euler-Kimi.ipynb', 'Solutions to Project Euler math/programming problems by Kimi LLM'),
+('Largest prime factor', 2026, 'Euler3.ipynb', 'For beginner programmers: How to find the largest prime factor of a number. Project Euler #3.'),
 ],
 
 'Probability and Uncertainty': [
