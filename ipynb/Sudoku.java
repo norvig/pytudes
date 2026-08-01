@@ -36,7 +36,7 @@ public class Sudoku {
     //////////////////////////////// main; command line options //////////////////////////////
 
     static final String USAGE = String.join("\n",
-        "usage: java Sudoku -(no)[fghnprstuv] | -[RT]<number> | <filename> ...",
+        "usage: java Sudoku -(no)[ghnprstuv] | -[RT]<number> | <filename> ...",
         "Options and filenames are processed left-to-right. Use '-no' to turn an option off\n",
         "E.g.: -v turns verify flag on, -nov turns it off. -R and -T require a number. The options:\n",
         "  -g(rid)     Print each puzzle grid and solution grid (default off)",
@@ -99,7 +99,7 @@ public class Sudoku {
         List<int[]> grids = readPuzzlesFromFile(filename);
         long startFileTime = System.nanoTime();
         if (nThreads == 1) {
-            solveList(grids);
+            solveList(grids, 0);
         } else {
             solveListThreaded(grids, nThreads);
         }
@@ -109,7 +109,7 @@ public class Sudoku {
 
     /** Solve a list of puzzles in a single thread.
      ** repeat -R<number> times; print each puzzle's stats if -p; print grid if -g; verify if -v. **/
-    void solveList(List<int[]> grids) {
+    void solveList(List<int[]> grids, int splitSize) {
         int[] puzzle    = new int[N * N];
         int[][] gridpool = new int[N * N][N * N];
         for (int g = 0; g < grids.size(); ++g) {
@@ -119,11 +119,13 @@ public class Sudoku {
                 long startTime = printPuzzleStats ? System.nanoTime() : 0;
                 int[] solution = initialize(grid);
                 solution = search(solution, gridpool, 0);
+                int threadId = Thread.currentThread().getName().contains("-") ?
+                        Integer.parseInt(Thread.currentThread().getName().split("-")[1]) : 0;
                 if (printPuzzleStats) {
-                    printStats(1, startTime, "Puzzle " + (g + 1));
+                    printStats(1, startTime, "Puzzle " + ((g + 1) + (threadId * splitSize)));
                 }
                 if (i == 0 && (printGrid || (verifySolution && !verify(solution, puzzle)))) {
-                    printGrids("Puzzle " + (g + 1), grid, solution);
+                    printGrids("Puzzle " + ((g + 1) + (threadId * splitSize)), grid, solution);
                 }
             }
         }
@@ -141,7 +143,7 @@ public class Sudoku {
                 int end = (c == nThreads - 1) ? nGrids : (c + 1) * size;
                 final List<int[]> sublist = grids.subList(c * size, end);
                 new Thread(() -> {
-                    solveList(sublist);
+                    solveList(sublist, size);
                     latch.countDown();
                     if (printThreadStats) {
                         printStats(repeat * sublist.size(), startTime, "Thread");
