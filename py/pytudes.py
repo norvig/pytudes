@@ -3,9 +3,17 @@
 notebooks = {
  
 'New': [],  # Gets updated automatically
+
+ 'Large Language Models': [
+("AlphaCode Automated Programming", 2022, 'AlphaCode.ipynb', "Analysis of AlphaCode's automated solution to a coding problem"),
+('Advent of Code 2025: AI LLM Edition', 2025, 'Advent-2025-AI.ipynb', 'Using large language coding models to solve AoC puzzles'),
+('Project Euler #1–100 by a Human', 2026, 'Euler.ipynb', 'Solutions to the first 100 Project Euler math/programming problems'),
+('Project Euler #1–100 by Fable LLM', 2026, 'Euler-Fable.ipynb', 'Solutions to Project Euler math/programming problems by Claude Fable LLM'),
+('Project Euler #1–100 by Opus LLM', 2026, 'Euler-Opus.ipynb', 'Solutions to Project Euler math/programming problems by Claude Opus LLM'),
+('Project Euler #1–100 by Kimi LLM', 2026, 'Euler-Kimi.ipynb', 'Solutions to Project Euler math/programming problems by Kimi LLM'),
+ ],
  
 'Programming Examples': [
-("AlphaCode Automated Programming", 2022, 'AlphaCode.ipynb', "Analysis of AlphaCode's automated solution to a coding problem"),
 ("Approximating Pi with a Fraction", 2026, 'RationalPi.ipynb', "Using continued fractions to find fractions (like 22/7) that are close to pi."),
 ('The Babylonian Number System', 2022, 'Babylonian%20digits.ipynb', 'Translating between Babylonian and traditional number systems.'),
 ("Beal's Conjecture Revisited", 2018, 'Beal.ipynb', "A search for counterexamples to Beal's Conjecture"),
@@ -15,6 +23,7 @@ notebooks = {
 ("Conway's Game of Life", 2017, 'Life.ipynb', 'The cellular automata zero-player game'),
 ('Generating and Solving Mazes', 2020, 'Maze.ipynb', 'Make a maze by generating a random tree superimposed on a grid and solve it'),
 ('The Languages of English, Math, and Programming', 2024, 'Triplets.ipynb', 'LLMs do better at producing a program to solve this puzzle than they do at solving it directly'),
+('Largest prime factor', 2026, 'Euler3.ipynb', 'For beginner programmers: How to find the largest prime factor of a number. Project Euler #3.'),
 ("Mel's Konane Board", 2021, 'Konane.ipynb', 'Solving the game of Konane (Hawaiian checkers).'),
 ('Photo Focal Lengths', 2020, 'PhotoFocalLengths.ipynb', 'Generate charts of what focal lengths were used on a photo trip'),
 ('Pickleball Tournament', 2018, 'Pickleball.ipynb', 'Scheduling a doubles tournament fairly and efficiently'),
@@ -22,7 +31,7 @@ notebooks = {
 ('Tracking Polls: Electoral Votes', 2020, 'Electoral%20Votes.ipynb', 
  'How many electoral votes would Trump get if he wins the state where he has positive net approval?')],
  
-'Advent of Code and Project Euler': [
+'Advent of Code': [
 ('Advent of Code 2025: AI LLM Edition', 2025, 'Advent-2025-AI.ipynb', 'Using large language coding models to solve AoC puzzles'),
 ('Advent of Code 2025', 2025, 'Advent-2025.ipynb', 'Puzzle site with a coding puzzle for 12 days of Christmas, December 2025'),
 ('Advent of Code 2024', 2024, 'Advent-2024.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2024'),
@@ -34,11 +43,6 @@ notebooks = {
 ('Advent of Code 2017', 2017, 'Advent-2017.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2017'),
 ('Advent of Code 2016', 2016, 'Advent-2016.ipynb', 'Puzzle site with a coding puzzle each day of Advent, December 2016'),
 ('Advent of Code Utilities', 2022, 'AdventUtils.ipynb', 'Utility functions for Advent of Code puzzles'),
-('Project Euler #1–100 by a Human', 2026, 'Euler.ipynb', 'Solutions to the first 100 Project Euler math/programming problems'),
-('Project Euler #1–100 by Fable LLM', 2026, 'Euler-Fable.ipynb', 'Solutions to Project Euler math/programming problems by Claude Fable LLM'),
-('Project Euler #1–100 by Opus LLM', 2026, 'Euler-Opus.ipynb', 'Solutions to Project Euler math/programming problems by Claude Opus LLM'),
-('Project Euler #1–100 by Kimi LLM', 2026, 'Euler-Kimi.ipynb', 'Solutions to Project Euler math/programming problems by Kimi LLM'),
-('Largest prime factor', 2026, 'Euler3.ipynb', 'For beginner programmers: How to find the largest prime factor of a number. Project Euler #3.'),
 ],
 
 'Probability and Uncertainty': [
@@ -69,7 +73,7 @@ notebooks = {
 ("Stubborn number endings", 2024, 'Stubborn.ipynb', 'Any number ending in 5 has a square that also ends in 5. What other endings are like this?'), 
 ('Star Battle (Sudoku-like Puzzle)', 2021, 'StarBattle.ipynb', 'Fill-in-the-grid puzzle similar to Sudoku'),
 ('Sudoku', 2006, 'Sudoku.ipynb', 'Classic fill-in-the-grid puzzle'),
-('Sudoku: 200,000 puzzles/second in Java', 2021, 'SudokuJava.ipynb', 'A version of the Sudoku solver using parallel threads and other optimizations'),
+('Sudoku: 400,000 puzzles/second in Java', 2021, 'SudokuJava.ipynb', 'A version of the Sudoku solver using parallel threads and other optimizations'),
 ('Square Sum Puzzle', 2020, 'SquareSum.ipynb', 'Place the numbers from 1 to n in a chain (or a circle) such that adjacent pairs sum to a perfect square'),
 ("When is Cheryl's Birthday?", 2020, 'Cheryl.ipynb', "Solving the *Cheryl's Birthday* logic puzzle"),
 ('When Cheryl Met Eve: A Birthday Story', 2015, 'Cheryl-and-Eve.ipynb', "Inventing new puzzles in the Style of Cheryl's Birthday"),
