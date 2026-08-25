@@ -4,9 +4,12 @@ notebooks = {
  
 'New': [],  # Gets updated automatically
 
- 'Large Language Models': [
+'Large Language Models': [
 ("AlphaCode Automated Programming", 2022, 'AlphaCode.ipynb', "Analysis of AlphaCode's automated solution to a coding problem"),
 ('Advent of Code 2025: AI LLM Edition', 2025, 'Advent-2025-AI.ipynb', 'Using large language coding models to solve AoC puzzles'),
+("Effectiveness of Language Models", 2019, 'Goldberg.ipynb', "A re-implementation in Python 3 of Yoav Goldberg's unreasonably effective character-level n-gram language model."),
+('The Languages of English, Math, and Programming', 2024, 'Triplets.ipynb', 'LLMs do better at producing a program to solve this puzzle than they do at solving it directly'),
+("One Letter Off", 2023, 'OneLetterOff.ipynb', "Word game; use of a large language model to generate clues."),
 ('Project Euler #1–100 by a Human', 2026, 'Euler.ipynb', 'Solutions to the first 100 Project Euler math/programming problems'),
 ('Project Euler #1–100 by Fable LLM', 2026, 'Euler-Fable.ipynb', 'Solutions to Project Euler math/programming problems by Claude Fable LLM'),
 ('Project Euler #1–100 by Opus LLM', 2026, 'Euler-Opus.ipynb', 'Solutions to Project Euler math/programming problems by Claude Opus LLM'),
@@ -22,7 +25,6 @@ notebooks = {
 ('Chaos with Triangles', 2019, 'Sierpinski.ipynb', 'A surprising appearance of the Sierpinski triangle in a random walk'),
 ("Conway's Game of Life", 2017, 'Life.ipynb', 'The cellular automata zero-player game'),
 ('Generating and Solving Mazes', 2020, 'Maze.ipynb', 'Make a maze by generating a random tree superimposed on a grid and solve it'),
-('The Languages of English, Math, and Programming', 2024, 'Triplets.ipynb', 'LLMs do better at producing a program to solve this puzzle than they do at solving it directly'),
 ('Largest prime factor', 2026, 'Euler3.ipynb', 'For beginner programmers: How to find the largest prime factor of a number. Project Euler #3.'),
 ("Mel's Konane Board", 2021, 'Konane.ipynb', 'Solving the game of Konane (Hawaiian checkers).'),
 ('Photo Focal Lengths', 2020, 'PhotoFocalLengths.ipynb', 'Generate charts of what focal lengths were used on a photo trip'),
@@ -46,7 +48,6 @@ notebooks = {
 ],
 
 'Probability and Uncertainty': [
-("Effectiveness of Language Models", 2019, 'Goldberg.ipynb', "A re-implementation in Python 3 of Yoav Goldberg's unreasonably effective character-level n-gram language model."),
 ('A Concrete Introduction to Probability', 2018, 'Probability.ipynb', 'Code and examples of the basic principles of Probability Theory'),
 ('Probability, Paradox, and the Reasonable Person Principle', 2016, 'ProbabilityParadox.ipynb', 'Some classic paradoxes in Probability Theory, and how to think about disagreements'),
 ('Estimating Probabilities with Simulations', 2020, 'ProbabilitySimulation.ipynb', 'When the sample space is too complex, simulations can estimate probabilities'),
@@ -90,7 +91,6 @@ notebooks = {
 ('Ghost: A Word game', 2017, 'Ghost.ipynb', 'The word game Ghost (add letters, try to avoid making a word)'),
 ('How to Do Things with Words: NLP in Python', 2018, 'How%20to%20Do%20Things%20with%20Words.ipynb', 'Spelling Correction, Secret Codes, Word Segmentation, and more'),
 ("Let's Code About Bike Locks", 2015, 'Fred%20Buns.ipynb', 'A tale of a bicycle combination lock that uses letters instead of digits. Inspired by Bike Snob NYC'),
-("One Letter Off", 2023, 'OneLetterOff.ipynb', "Word game; use of a large language model to generate clues."),
 ('Scrabble: Refactoring a Crossword Game Program', 2017, 'Scrabble.ipynb', 'Refactoring the Scrabble / Word with Friends game from Udacity 212'),
 ('Spelling Bee', 2020, 'SpellingBee.ipynb', 'Find the highest-scoring board for the NY Times Spelling Bee puzzle'),
 ('Translating English into Propositional Logic', 2017, 'PropositionalLogic.ipynb', 'Automatically convert informal English sentences into formal Propositional Logic'),
