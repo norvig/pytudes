@@ -1,17 +1,14 @@
 import java.io.*;
 import java.util.*;
-import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 ////////////////////////////////   Solve Sudoku Puzzles   ////////////////////////////////
 ////////////////////////////////   @author Peter Norvig   ////////////////////////////////
-////////////////////////////////        2007, 2021        ////////////////////////////////
+////////////////////////////////     2007, 2021, 2026     ////////////////////////////////
 
-/** Solve Sudoku Puzzles
- ** @author Peter Norvig
- ** Mostly 2007, som2 2021, 2026
- **
+/** 
  ** There are two representations of puzzles that we will use:
  **  1. A gridstring is 81 chars, with characters '0' or '.' for blank and '1' to '9' for digits.
  **  2. A puzzle grid is an int[81] with a digit d (1-9) represented by the integer (1 << (d - 1));
@@ -25,9 +22,11 @@ import java.util.stream.IntStream;
  **   - If the guess is consistent, search deeper; if not, try a different guess for the square.
  **   - If all guesses fail, back up to the previous level.
  **   - In selecting an empty square, we pick one that has the minimum number of possible digits.
+ **     That makes us more likely to fail early if we guess wrong.
  **   - To be able to back up, we need to keep the grid from the previous recursive level.
- **     But we only need to keep one grid for each level, so to save garbage collection,
- **     we pre-allocate one grid per level (there are 81 levels) in a `gridpool`.
+ **     To save garbage collection, we pre-allocate one grid per level (81 levels) in a `gridpool`.
+ **   - We can work in parallel in multiple threads, each with its own grodpool.
+ **
  ** Do constraint propagation with `arcConsistent`, `dualConsistent`, and `nakedPairs`.
  **/
 
@@ -35,22 +34,21 @@ public class Sudoku {
 
     //////////////////////////////// main; command line options //////////////////////////////
 
-    static final String USAGE = String.join("\n",
-        "usage: java Sudoku -(no)[fghnprstuv] | -[RT]<number> | <filename> ...",
-        "Options and filenames are processed left-to-right. Use '-no' to turn an option off\n",
-        "E.g.: -v turns verify flag on, -nov turns it off. -R and -T require a number. The options:\n",
-        "  -g(rid)     Print each puzzle grid and solution grid (default off)",
-        "  -h(elp)     Print this usage message",
-        "  -n(aked)    Run the naked pairs strategy (default on)",
-        "  -p(uzzle)   Print summary stats for each puzzle (default off)",
-        "  -r(everse)  Solve the reverse of each puzzle as well as each puzzle itself (default off)",
-        "  -s(ummary)  Print per-file summary stats (default on)",
-        "  -t(hread)   Print summary stats for each thread (default off)",
-        "  -u(nitTest) Run a suite of unit tests (default off)",
-        "  -v(erify)   Verify each solution is valid (default on)",
-        "  -T<number>  Concurrently run <number> threads (default 25)",
-        "  -R<number>  Repeat the solving of each puzzle <number> times (default 1)",
-        "  <filename>  Solve all puzzles in filename, which has one puzzle per line");
+    static final String USAGE = """
+        usage: java Sudoku -(no)[fghnprstuv] | -[RT]<number> | <filename> ...\n
+        Options and filenames are processed left-to-right. Use '-no' to turn an option off
+        E.g.: -v turns verify flag on, -nov turns it off. -R and -T require a number. The options:\n
+          -g(rid)     Print each puzzle grid and solution grid (default off)
+          -h(elp)     Print this usage message
+          -n(aked)    Run the naked pairs strategy (default on)
+          -p(uzzle)   Print summary stats for each puzzle (default off)
+          -r(everse)  Solve the reverse of each puzzle as well as each puzzle itself (default off)
+          -s(ummary)  Print per-file summary stats (default on)
+          -t(hread)   Print summary stats for each thread (default off)
+          -v(erify)   Verify each solution is valid (default on)
+          -T<number>  Concurrently run <number> threads (default 28)
+          -R<number>  Repeat the solving of each puzzle <number> times (default 1)
+          <filename>  Solve all puzzles in filename, which has one puzzle per line""";
 
     boolean printGrid        = false; // -g
     boolean runNakedPairs    = true;  // -n
@@ -59,15 +57,29 @@ public class Sudoku {
     boolean printFileStats   = true;  // -s
     boolean printThreadStats = false; // -t
     boolean verifySolution   = true;  // -v
-    int     nThreads         = 25;    // -T
+    int     nThreads         = 28;    // -T
     int     repeat           = 1;     // -R
 
-    private final AtomicInteger backtracks = new AtomicInteger(0);
     private volatile boolean headerPrinted = false;
+    private static final int WORK_BLOCK_SIZE = 16;
+
+    /** Mutable state owned by exactly one solver thread. **/
+    static final class WorkerState {
+        final int[] root = new int[N * N];
+        final int[][] gridpool = new int[N * N][N * N];
+        long backtracks;
+        int puzzlesSolved;
+    }
 
     /** Parse command line args and solve puzzles in files. **/
     public static void main(String[] args) throws IOException {
         Sudoku s = new Sudoku();
+        
+        // Warm up the JIT code cache by solving a puzzle a few times
+        String puzzle = "........8..3...4...9..2..6.....79.......612...6.5.2.7...8...5...1.....2.4.5.....3";
+        s.solveListWithWorkers(Collections.nCopies(1000, s.parseGrid(puzzle)), 1);
+        
+        // Process the options and filenames
         for (String arg : args) {
             if (!arg.startsWith("-")) {
                 s.solveFile(arg);
@@ -81,7 +93,6 @@ public class Sudoku {
                     case 'r' -> s.reversePuzzle    = value;
                     case 's' -> s.printFileStats   = value;
                     case 't' -> s.printThreadStats = value;
-                    case 'u' -> s.runUnitTests();
                     case 'v' -> s.verifySolution   = value;
                     case 'T' -> s.nThreads = Integer.parseInt(arg.substring(2));
                     case 'R' -> s.repeat   = Integer.parseInt(arg.substring(2));
@@ -96,62 +107,58 @@ public class Sudoku {
 
     /** Solve all the puzzles in a file. Report timing statistics. **/
     void solveFile(String filename) throws IOException {
-        List<int[]> grids = readPuzzlesFromFile(filename);
+        var grids = readPuzzlesFromFile(filename);
         long startFileTime = System.nanoTime();
-        if (nThreads == 1) {
-            solveList(grids);
-        } else {
-            solveListThreaded(grids, nThreads);
+        long backtracks = solveListWithWorkers(grids, nThreads);
+        if (printFileStats) {
+            printStats(grids.size() * repeat, startFileTime, filename, backtracks);
         }
-        if (printFileStats) printStats(grids.size() * repeat, startFileTime, filename);
-    }
+    }    
 
 
-    /** Solve a list of puzzles in a single thread.
-     ** repeat -R<number> times; print each puzzle's stats if -p; print grid if -g; verify if -v. **/
-    void solveList(List<int[]> grids) {
-        int[] puzzle    = new int[N * N];
-        int[][] gridpool = new int[N * N][N * N];
-        for (int g = 0; g < grids.size(); ++g) {
-            int[] grid = grids.get(g);
-            System.arraycopy(grid, 0, puzzle, 0, grid.length);
-            for (int i = 0; i < repeat; ++i) {
-                long startTime = printPuzzleStats ? System.nanoTime() : 0;
-                int[] solution = initialize(grid);
-                solution = search(solution, gridpool, 0);
-                if (printPuzzleStats) {
-                    printStats(1, startTime, "Puzzle " + (g + 1));
-                }
-                if (i == 0 && (printGrid || (verifySolution && !verify(solution, puzzle)))) {
-                    printGrids("Puzzle " + (g + 1), grid, solution);
-                }
-            }
-        }
-    }
-
-
-    /** Break a list of puzzles into nThreads sublists and solve each sublist in a separate thread. **/
-    void solveListThreaded(List<int[]> grids, int nThreads) {
-        try {
-            final long startTime = System.nanoTime();
-            int nGrids = grids.size();
-            final CountDownLatch latch = new CountDownLatch(nThreads);
-            int size = nGrids / nThreads;
-            for (int c = 0; c < nThreads; ++c) {
-                int end = (c == nThreads - 1) ? nGrids : (c + 1) * size;
-                final List<int[]> sublist = grids.subList(c * size, end);
-                new Thread(() -> {
-                    solveList(sublist);
-                    latch.countDown();
-                    if (printThreadStats) {
-                        printStats(repeat * sublist.size(), startTime, "Thread");
+    /** Use nThreads workers to pull puzzle rids off the list and solve them. 
+        Keep track of the number of backtracks each worker does and return the sum. **/
+    long solveListWithWorkers(List<int[]> grids, int nThreads) {
+        int nGrids = grids.size();
+        var nextGrid = new AtomicInteger(0);
+        try (var pool = Executors.newFixedThreadPool(nThreads)) {
+            var tasks = IntStream.range(0, nThreads)
+                .<Callable<Long>>mapToObj(c -> () -> {
+                    var worker = new WorkerState();
+                    for (int start; (start = nextGrid.getAndAdd(WORK_BLOCK_SIZE)) < nGrids; ) {
+                        solveRange(grids, start, Math.min(start + WORK_BLOCK_SIZE, nGrids), worker);
                     }
-                }).start();
-            }
-            latch.await();
+                    return worker.backtracks;
+                }).toList();
+            return pool.invokeAll(tasks).stream().mapToLong(f -> {
+                try { return f.get(); } catch (Exception e) { throw new RuntimeException(e); }
+            }).sum();
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             System.err.println("Solver thread was interrupted.");
+            return 0;
+        }
+    }
+
+    
+    /** Solve grids in [start, end) using one worker in a thread. **/
+    void solveRange(List<int[]> grids, int start, int end, WorkerState worker) {
+        for (int g = start; g < end; ++g) {
+            var grid = grids.get(g);
+            for (int i = 0; i < repeat; ++i) {
+                long startTime = printPuzzleStats ? System.nanoTime() : 0;
+                long startingBacktracks = worker.backtracks;
+                initialize(grid, worker.root);
+                var solution = search(worker.root, worker, 0);
+                if (printPuzzleStats) {
+                    printStats(1, startTime, "Puzzle " + (g + 1),
+                        worker.backtracks - startingBacktracks);
+                }
+                if (i == 0 && (printGrid || (verifySolution && !verify(solution, grid)))) {
+                    printGrids("Puzzle " + (g + 1), grid, solution);
+                }
+            }
+            ++worker.puzzlesSolved;
         }
     }
 
@@ -159,8 +166,8 @@ public class Sudoku {
     //////////////////////////////// Utility functions ////////////////////////////////
 
     /** Return an array of all squares in the intersection of these rows and cols **/
-    int[] cross(int[] rows, int[] cols) {
-        int[] result = new int[rows.length * cols.length];
+    static int[] cross(int[] rows, int[] cols) {
+        var result = new int[rows.length * cols.length];
         int i = 0;
         for (int r : rows) {
             for (int c : cols) {
@@ -171,10 +178,10 @@ public class Sudoku {
     }
 
     /** Return true iff item is an element of array. **/
-    boolean member(int item, int[] array) { return member(item, array, array.length); }
+    static boolean member(int item, int[] array) { return member(item, array, array.length); }
 
     /** Return true iff item appears within array[0..end). **/
-    boolean member(int item, int[] array, int end) {
+    static boolean member(int item, int[] array, int end) {
         for (int i = 0; i < end; ++i) {
             if (array[i] == item) return true;
         }
@@ -184,20 +191,21 @@ public class Sudoku {
 
     //////////////////////////////// Constants ////////////////////////////////
 
-    final int     N          = 9;
-    final int[]   DIGITS     = {1<<0, 1<<1, 1<<2, 1<<3, 1<<4, 1<<5, 1<<6, 1<<7, 1<<8};
-    final int     ALL_DIGITS = Integer.parseInt("111111111", 2);
-    final int[]   ROWS       = IntStream.range(0, N).toArray();
-    final int[]   COLS       = ROWS;
-    final int[]   SQUARES    = IntStream.range(0, N * N).toArray();
-    final int[][] BLOCKS     = {{0,1,2},{3,4,5},{6,7,8}};
-    final int[][] ALL_UNITS  = new int[3 * N][];
-    final int[][][] UNITS    = new int[N * N][3][N];
-    final int[][] PEERS      = new int[N * N][20];
-    final int[]   NUM_DIGITS      = new int[ALL_DIGITS + 1];
-    final int[]   HIGHEST_DIGIT   = new int[ALL_DIGITS + 1];
+    static final int       N          = 9; // Number of distinct digits, also length of side of grid
+    static final int[]     DIGITS     = {1<<0, 1<<1, 1<<2, 1<<3, 1<<4, 1<<5, 1<<6, 1<<7, 1<<8};
+    static final int       ALL_DIGITS = 0b111111111;
+    static final int[]     ROWS       = IntStream.range(0, N).toArray();
+    static final int[]     COLS       = ROWS;
+    static final int[]     SQUARES    = IntStream.range(0, N * N).toArray();
+    static final int[][]   BLOCKS     = {{0,1,2},{3,4,5},{6,7,8}};
+    static final int[][]   ALL_UNITS  = new int[3 * N][];
+    static final int[][][] UNITS      = new int[N * N][3][N];
+    static final int[][]   PEERS      = new int[N * N][20];
+    static final int[]     NUM_DIGITS = new int[ALL_DIGITS + 1];
+    static final int[]     HIGHEST_DIGIT = new int[ALL_DIGITS + 1];
 
-    {
+
+    static { // Initialize UNITS, ALL_UNITS, PEERS, NUM_DIGITS, HIGHEST_DIGIT
         int i = 0;
         for (int r : ROWS)   { ALL_UNITS[i++] = cross(new int[]{r}, COLS); }
         for (int c : COLS)   { ALL_UNITS[i++] = cross(ROWS, new int[]{c}); }
@@ -234,17 +242,16 @@ public class Sudoku {
 
     /** Search for a solution to grid. If there is an unfilled square, select one
      ** and try--that is, search recursively--every possible digit for the square. **/
-    int[] search(int[] grid, int[][] gridpool, int level) {
+    int[] search(int[] grid, WorkerState worker, int level) {
         if (grid == null) return null;
         int s = select_square(grid);
         if (s == -1) return grid; // All squares filled — puzzle is solved.
-        for (int d : DIGITS) {
-            if ((d & grid[s]) > 0) {
-                System.arraycopy(grid, 0, gridpool[level], 0, grid.length);
-                int[] result = search(fill(gridpool[level], s, d), gridpool, level + 1);
-                if (result != null) return result;
-                backtracks.incrementAndGet(); // thread-safe 
-            }
+        for (int candidates = grid[s]; candidates != 0; candidates &= candidates - 1) {
+            int d = candidates & -candidates; // lowest set bit
+            System.arraycopy(grid, 0, worker.gridpool[level], 0, grid.length);
+            var result = search(fill(worker.gridpool[level], s, d), worker, level + 1);
+            if (result != null) return result;
+            ++worker.backtracks;
         }
         return null;
     }
@@ -285,7 +292,7 @@ public class Sudoku {
     }
 
 
-    /** Fill grid[s] = d. Return null if this creates a contradiction. **/
+    /** Fill grid[s] = d. Return grid, or return null if this creates a contradiction. **/
     int[] fill(int[] grid, int s, int d) {
         if (grid == null || (grid[s] & d) == 0) return null;
         grid[s] = d;
@@ -337,7 +344,7 @@ public class Sudoku {
 
 
     /** If two squares in a unit share exactly the same two possible values, eliminate
-     ** those values from every other square in that unit (naked pairs strategy). **/
+     ** those values from every other square in that unit. **/
     boolean naked_pairs(int[] grid, int s) {
         if (!runNakedPairs || NUM_DIGITS[grid[s]] != 2) return true;
         int val = grid[s];
@@ -364,10 +371,11 @@ public class Sudoku {
 
     //////////////////////////////// Input ////////////////////////////////
 
-    /** Read one puzzle per line from filename and return a list of puzzle grids. **/
+    /** Read one puzzle per line from filename and return a list of puzzle grids.
+     ** if -reverse option is true, also include the reversed puzzle. **/
     List<int[]> readPuzzlesFromFile(String filename) throws IOException {
-        try (BufferedReader in = new BufferedReader(new FileReader(filename))) {
-            List<int[]> grids = new ArrayList<>(1000);
+        try (var in = new BufferedReader(new FileReader(filename))) {
+            var grids = new ArrayList<int[]>(400);
             String gridstring;
             while ((gridstring = in.readLine()) != null) {
                 grids.add(parseGrid(gridstring));
@@ -382,7 +390,7 @@ public class Sudoku {
 
     /** Parse a gridstring into a puzzle grid. **/
     int[] parseGrid(String gridstring) {
-        int[] grid = new int[N * N];
+        var grid = new int[N * N];
         int s = 0;
         for (int i = 0; i < gridstring.length(); ++i) {
             char c = gridstring.charAt(i);
@@ -401,24 +409,22 @@ public class Sudoku {
 
 
     /** Initialize a fresh grid from puzzle, then fill known squares to trigger constraint propagation. **/
-    int[] initialize(int[] puzzle) {
-        int[] grid = new int[N * N];
+    void initialize(int[] puzzle, int[] grid) {
         Arrays.fill(grid, ALL_DIGITS);
         for (int s : SQUARES) {
             if (puzzle[s] != ALL_DIGITS) fill(grid, s, puzzle[s]);
         }
-        return grid;
     }
 
 
     //////////////////////////////// Output and Tests ////////////////////////////////
 
     /** Print stats: puzzles solved, average µs, KHz, threads, backtracks, and name. **/
-    void printStats(int nGrids, long startTime, String name) {
+    void printStats(int nGrids, long startTime, String name, long backtracks) {
         double usecs = (System.nanoTime() - startTime) / 1_000.0;
-        int bt = backtracks.getAndSet(0); // thread-safe
         String line = String.format("%7d %6.1f %7.3f %7d %10.1f %s",
-            nGrids, usecs / nGrids, 1_000 * nGrids / usecs, nThreads, bt * 1.0 / nGrids, name);
+            nGrids, usecs / nGrids, 1_000 * nGrids / usecs, nThreads,
+            backtracks * 1.0 / nGrids, name);
         synchronized (this) {
             if (!headerPrinted) {
                 System.out.println("Puzzles   μsec     KHz Threads Backtracks Name\n"
@@ -448,7 +454,7 @@ public class Sudoku {
 
     /** Return a String representing one row of the grid. **/
     String rowString(int[] grid, int r) {
-        StringBuilder row = new StringBuilder(30);
+        var row = new StringBuilder(30);
         for (int s = r * 9; s < (r + 1) * 9; ++s) {
             int nd = NUM_DIGITS[grid[s]];
             char cell = nd == 9 ? '.' : nd != 1 ? '?' : (char)('1' + Integer.numberOfTrailingZeros(grid[s]));
@@ -456,21 +462,5 @@ public class Sudoku {
             row.append(s % 9 == 2 || s % 9 == 5 ? " | " : " ");
         }
         return row.toString();
-    }
-
-
-    /** Unit Tests. **/
-    void runUnitTests() {
-        assert N == 9;
-        assert SQUARES.length == 81;
-        for (int s : SQUARES) {
-            assert UNITS[s].length == 3;
-            assert PEERS[s].length == 20;
-        }
-        assert Arrays.equals(PEERS[19],
-            new int[]{18,20,21,22,23,24,25,26,1,10,28,37,46,55,64,73,0,2,9,11});
-        assert Arrays.deepToString(UNITS[19]).equals(
-            "[[18, 19, 20, 21, 22, 23, 24, 25, 26], [1, 10, 19, 28, 37, 46, 55, 64, 73], [0, 1, 2, 9, 10, 11, 18, 19, 20]]");
-        System.out.println("Unit tests pass.");
     }
 }
