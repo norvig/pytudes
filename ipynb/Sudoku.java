@@ -1,6 +1,14 @@
-import java.io.*;
-import java.util.*;
-import java.util.concurrent.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
@@ -25,7 +33,7 @@ import java.util.stream.IntStream;
  **     That makes us more likely to fail early if we guess wrong.
  **   - To be able to back up, we need to keep the grid from the previous recursive level.
  **     To save garbage collection, we pre-allocate one grid per level (81 levels) in a `gridpool`.
- **   - We can work in parallel in multiple threads, each with its own grodpool.
+ **   - We can work in parallel in multiple threads, each with its own gridpool.
  **
  ** Do constraint propagation with `arcConsistent`, `dualConsistent`, and `nakedPairs`.
  **/
@@ -62,6 +70,7 @@ public class Sudoku {
 
     private volatile boolean headerPrinted = false;
     private static final int WORK_BLOCK_SIZE = 16;
+    private static final int BOX_SIZE = 3;
 
     /** Mutable state owned by exactly one solver thread. **/
     static final class WorkerState {
@@ -77,7 +86,7 @@ public class Sudoku {
         
         // Warm up the JIT code cache by solving a puzzle a few times
         String puzzle = "........8..3...4...9..2..6.....79.......612...6.5.2.7...8...5...1.....2.4.5.....3";
-        s.solveListWithWorkers(Collections.nCopies(1000, s.parseGrid(puzzle)), 1);
+        s.solveListWithWorkers(Collections.nCopies(9999, s.parseGrid(puzzle)), 1);
         
         // Process the options and filenames
         for (String arg : args) {
@@ -116,7 +125,7 @@ public class Sudoku {
     }    
 
 
-    /** Use nThreads workers to pull puzzle rids off the list and solve them. 
+    /** Use nThreads workers to pull puzzle grids off the list and solve them. 
         Keep track of the number of backtracks each worker does and return the sum. **/
     long solveListWithWorkers(List<int[]> grids, int nThreads) {
         int nGrids = grids.size();
@@ -130,9 +139,15 @@ public class Sudoku {
                     }
                     return worker.backtracks;
                 }).toList();
-            return pool.invokeAll(tasks).stream().mapToLong(f -> {
-                try { return f.get(); } catch (Exception e) { throw new RuntimeException(e); }
-            }).sum();
+            long totalBacktracks = 0;
+            for (var future : pool.invokeAll(tasks)) {
+                try {
+                    totalBacktracks += future.get();
+                } catch (ExecutionException e) {
+                    throw new RuntimeException("Solver worker failed", e.getCause());
+                }
+            }
+            return totalBacktracks;
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             System.err.println("Solver thread was interrupted.");
@@ -244,12 +259,12 @@ public class Sudoku {
      ** and try--that is, search recursively--every possible digit for the square. **/
     int[] search(int[] grid, WorkerState worker, int level) {
         if (grid == null) return null;
-        int s = select_square(grid);
-        if (s == -1) return grid; // All squares filled — puzzle is solved.
-        for (int candidates = grid[s]; candidates != 0; candidates &= candidates - 1) {
-            int d = candidates & -candidates; // lowest set bit
+        int square = selectSquare(grid);
+        if (square == -1) return grid; // All squares filled — puzzle is solved.
+        for (int candidates = grid[square]; candidates != 0; candidates &= candidates - 1) {
+            int digitMask = candidates & -candidates; // lowest set bit
             System.arraycopy(grid, 0, worker.gridpool[level], 0, grid.length);
-            var result = search(fill(worker.gridpool[level], s, d), worker, level + 1);
+            var result = search(fill(worker.gridpool[level], square, digitMask), worker, level + 1);
             if (result != null) return result;
             ++worker.backtracks;
         }
@@ -277,7 +292,7 @@ public class Sudoku {
 
     /** Choose the unfilled square with the fewest possible values.
      ** Return -1 if all squares are filled (puzzle complete). **/
-    int select_square(int[] grid) {
+    int selectSquare(int[] grid) {
         int square = -1;
         int min = N + 1;
         for (int s : SQUARES) {
@@ -293,11 +308,11 @@ public class Sudoku {
 
 
     /** Fill grid[s] = d. Return grid, or return null if this creates a contradiction. **/
-    int[] fill(int[] grid, int s, int d) {
-        if (grid == null || (grid[s] & d) == 0) return null;
-        grid[s] = d;
-        for (int p : PEERS[s]) {
-            if (!eliminate(grid, p, d)) return null;
+    int[] fill(int[] grid, int square, int digitMask) {
+        if (grid == null || (grid[square] & digitMask) == 0) return null;
+        grid[square] = digitMask;
+        for (int peer : PEERS[square]) {
+            if (!eliminate(grid, peer, digitMask)) return null;
         }
         return grid;
     }
@@ -306,10 +321,12 @@ public class Sudoku {
     /** Eliminate digit d as a possibility for grid[s].
      ** Run all three constraint-propagation routines.
      ** Return false if a contradiction is detected. **/
-    boolean eliminate(int[] grid, int s, int d) {
-        if ((grid[s] & d) == 0) return true; // Already eliminated
-        grid[s] -= d;
-        return arc_consistent(grid, s) && dual_consistent(grid, s, d) && naked_pairs(grid, s);
+    boolean eliminate(int[] grid, int square, int digitMask) {
+        if ((grid[square] & digitMask) == 0) return true; // Already eliminated
+        grid[square] &= ~digitMask;
+        return arcConsistent(grid, square)
+            && dualConsistent(grid, square, digitMask)
+            && nakedPairs(grid, square);
     }
 
 
@@ -317,25 +334,26 @@ public class Sudoku {
 
     /** Check arc consistency: either s has multiple possibilities, or its single
      ** remaining value can be filled without contradiction. **/
-    boolean arc_consistent(int[] grid, int s) {
-        int count = NUM_DIGITS[grid[s]];
-        return count >= 2 || (count == 1 && fill(grid, s, grid[s]) != null);
+    boolean arcConsistent(int[] grid, int square) {
+        int count = NUM_DIGITS[grid[square]];
+        return count >= 2 || (count == 1 && fill(grid, square, grid[square]) != null);
     }
 
 
     /** After eliminating d from grid[s], ensure d still has at least one valid
      ** position in each of s's units. If exactly one remains, fill it. **/
-    boolean dual_consistent(int[] grid, int s, int d) {
-        for (int[] u : UNITS[s]) {
-            int dPlaces = 0;
-            int dPlace  = -1;
-            for (int s2 : u) {
-                if ((grid[s2] & d) > 0) {
-                    if (++dPlaces > 1) break;
-                    dPlace = s2;
+    boolean dualConsistent(int[] grid, int square, int digitMask) {
+        for (int[] unit : UNITS[square]) {
+            int possiblePlaces = 0;
+            int onlyPlace = -1;
+            for (int otherSquare : unit) {
+                if ((grid[otherSquare] & digitMask) != 0) {
+                    if (++possiblePlaces > 1) break;
+                    onlyPlace = otherSquare;
                 }
             }
-            if (dPlaces == 0 || (dPlaces == 1 && fill(grid, dPlace, d) == null)) {
+            if (possiblePlaces == 0
+                    || (possiblePlaces == 1 && fill(grid, onlyPlace, digitMask) == null)) {
                 return false;
             }
         }
@@ -345,18 +363,19 @@ public class Sudoku {
 
     /** If two squares in a unit share exactly the same two possible values, eliminate
      ** those values from every other square in that unit. **/
-    boolean naked_pairs(int[] grid, int s) {
-        if (!runNakedPairs || NUM_DIGITS[grid[s]] != 2) return true;
-        int val = grid[s];
-        for (int s2 : PEERS[s]) {
-            if (grid[s2] == val) {
-                for (int[] u : UNITS[s]) {
-                    if (member(s2, u)) {
-                        int d  = HIGHEST_DIGIT[val];
-                        int d2 = val - d;
-                        for (int s3 : u) {
-                            if (s3 != s && s3 != s2) {
-                                if (!eliminate(grid, s3, d) || !eliminate(grid, s3, d2)) {
+    boolean nakedPairs(int[] grid, int square) {
+        if (!runNakedPairs || NUM_DIGITS[grid[square]] != 2) return true;
+        int pairMask = grid[square];
+        for (int peer : PEERS[square]) {
+            if (grid[peer] == pairMask) {
+                for (int[] unit : UNITS[square]) {
+                    if (member(peer, unit)) {
+                        int firstDigitMask = HIGHEST_DIGIT[pairMask];
+                        int secondDigitMask = pairMask & ~firstDigitMask;
+                        for (int otherSquare : unit) {
+                            if (otherSquare != square && otherSquare != peer) {
+                                if (!eliminate(grid, otherSquare, firstDigitMask)
+                                        || !eliminate(grid, otherSquare, secondDigitMask)) {
                                     return false;
                                 }
                             }
@@ -374,7 +393,7 @@ public class Sudoku {
     /** Read one puzzle per line from filename and return a list of puzzle grids.
      ** if -reverse option is true, also include the reversed puzzle. **/
     List<int[]> readPuzzlesFromFile(String filename) throws IOException {
-        try (var in = new BufferedReader(new FileReader(filename))) {
+        try (BufferedReader in = Files.newBufferedReader(Path.of(filename))) {
             var grids = new ArrayList<int[]>(400);
             String gridstring;
             while ((gridstring = in.readLine()) != null) {
@@ -455,11 +474,11 @@ public class Sudoku {
     /** Return a String representing one row of the grid. **/
     String rowString(int[] grid, int r) {
         var row = new StringBuilder(30);
-        for (int s = r * 9; s < (r + 1) * 9; ++s) {
-            int nd = NUM_DIGITS[grid[s]];
-            char cell = nd == 9 ? '.' : nd != 1 ? '?' : (char)('1' + Integer.numberOfTrailingZeros(grid[s]));
+        for (int s = r * N; s < (r + 1) * N; ++s) {
+            int candidateCount = NUM_DIGITS[grid[s]];
+            char cell = candidateCount == N ? '.' : candidateCount != 1 ? '?' : (char)('1' + Integer.numberOfTrailingZeros(grid[s]));
             row.append(cell);
-            row.append(s % 9 == 2 || s % 9 == 5 ? " | " : " ");
+            row.append(s % N == BOX_SIZE - 1 || s % N == 2 * BOX_SIZE - 1 ? " | " : " ");
         }
         return row.toString();
     }
