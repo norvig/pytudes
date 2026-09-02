@@ -75,7 +75,7 @@ notebooks = {
 ("Stubborn number endings", 2024, 'Stubborn.ipynb', 'Any number ending in 5 has a square that also ends in 5. What other endings are like this?'), 
 ('Square Sum Chain Puzzle', 2020, 'SquareSum.ipynb', 'Place the numbers from 1 to n in a chain (or a circle) such that adjacent pairs sum to a perfect square'),
 ("When is Cheryl's Birthday?", 2020, 'Cheryl.ipynb', "Solving the *Cheryl's Birthday* logic puzzle"),
-('When Cheryl Met Eve: A Birthday Story', 2015, 'Cheryl-and-Eve.ipynb', "Inventing new puzzles in the Style of Cheryl's Birthday"),
+('When Cheryl Met Eve: A Birthday Story', 2015, 'Cheryl-and-Eve.ipynb', "Inventing  puzzles in the Style of Cheryl's Birthday"),
 ('xkcd 1313: Regex Golf', 2015, 'xkcd1313.ipynb', 'Find the smallest regular expression; inspired by Randall Munroe'),
 ('xkcd 1313: Regex Golf (Part 2: Infinite Problems)', 2015, 'xkcd1313-part2.ipynb', 'Regex Golf: better, faster, funner (with Stefan Pochmann)')],
 
@@ -194,12 +194,12 @@ def format_notebooks() -> str:
     find_newest(notebooks)
     return '\n'.join(format_category(name) for name in notebooks)
 
-def find_newest(notebooks, label='New', year=new_year) -> None:
+def find_newest(notebooks, New='New', year=new_year) -> None:
     """Mutate `notebooks['New']` to have a collection of newest notebooks."""
     for category in notebooks:
         for line in notebooks[category]:
-            if line[1] >= year:
-                notebooks[label].append(line)
+            if line[1] >= year and line not in notebooks[New]:
+                notebooks[New].append(line)
     notebooks[label].sort(key=lambda line: (-line[1], line[0]))
     
 def format_category(category) -> str:
