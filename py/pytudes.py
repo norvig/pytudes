@@ -195,12 +195,12 @@ def format_notebooks() -> str:
     return '\n'.join(format_category(name) for name in notebooks)
 
 def find_newest(notebooks, New='New', year=new_year) -> None:
-    """Mutate `notebooks['New']` to have a collection of newest notebooks."""
+    """Mutate `notebooks[New]` to have a collection of newest notebooks, from `new_year` or later."""
     for category in notebooks:
         for line in notebooks[category]:
             if line[1] >= year and line not in notebooks[New]:
                 notebooks[New].append(line)
-    notebooks[label].sort(key=lambda line: (-line[1], line[0]))
+    notebooks[New].sort(key=lambda line: (-line[1], line[0]))
     
 def format_category(category) -> str:
     """Make a table of multiple jupyter/ipython notebooks, under a header."""
