@@ -5,24 +5,19 @@ on:
     paths:
       - 'py/pytudes.py'
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
-
 jobs:
   build-and-update:
     runs-on: ubuntu-latest
-    # Added permissions to allow the bot to write to the repo
+
     permissions:
       contents: write
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+        uses: actions/setup-python@v7
 
       - name: Run pytudes.py
         run: python py/pytudes.py
@@ -32,6 +27,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md
-          # The || exit 0 prevents the workflow from failing if there are no changes
           git commit -m "docs: auto-update README.md via pytudes.py" || exit 0
           git push
