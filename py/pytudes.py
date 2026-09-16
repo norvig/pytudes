@@ -7,8 +7,9 @@ notebooks = {
 'Large Language Models': [
 ("AlphaCode Automated Programming", 2022, 'AlphaCode.ipynb', "Analysis of AlphaCode's automated solution to a coding problem"),
 ('Advent of Code 2025: AI LLM Edition', 2025, 'Advent-2025-AI.ipynb', 'Using large language coding models to solve AoC puzzles'),
-("Effectiveness of Language Models", 2019, 'Goldberg.ipynb', "A re-implementation in Python 3 of Yoav Goldberg's unreasonably effective character-level n-gram language model."),
+('Effectiveness of Language Models', 2019, 'Goldberg.ipynb', "A re-implementation in Python 3 of Yoav Goldberg's unreasonably effective character-level n-gram language model."),
 ('How to Do Things with Words: NLP in Python', 2018, 'How%20to%20Do%20Things%20with%20Words.ipynb', 'Spelling Correction, Secret Codes, Word Segmentation, and more'),
+('Integer Palindromes', 2026, 'palsum.ipynb', 'Finding all palindromic integers with no zero digit (human vs LLM solutions)'),
 ('The Languages of English, Math, and Programming', 2024, 'Triplets.ipynb', 'LLMs do better at producing a program to solve this puzzle than they do at solving it directly'),
 ("LLMs, Theory of Mind, and Cheryl's Birthday", 2024, 'CherylMind.ipynb', "Do LLMs have enough theory of mind to solve the Cheryl's Birthday puzzle?"),
 ("One Letter Off", 2023, 'OneLetterOff.ipynb', "Word game; use of large language model word embeddings to generate clues."),
