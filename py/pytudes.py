@@ -101,7 +101,8 @@ notebooks = {
 ('Wordle, Evil Wordle, Antiwordle, and Jotto', 2020, 'Jotto.ipynb', 'The word guessing games Wordle, Evil Wordle, Antiwordle, and Jotto'),
 ('Winning Wordle', 2022, 'Wordle.ipynb', 'A simple human-usable strategy to always win at Wordle. And an analysis of 2-guess wins'),
 ("World's Longest Palindrome", 2017, 'pal3.ipynb', 'Searching for a long Panama-style palindrome, this time letter-by-letter'),
-("World's Shortest Portmantout Word", 2020, 'Portmantout.ipynb',  'Find a word that squishes together a bunch of words'),
+("A Short Portmantout Word", 2020, 'Portmantout.ipynb',  'Find a word that squishes together a bunch of words'),
+("Provably Shortest Portmantout Word", 2026, 'Portmantout-optimal.ipynb', 'Claude found a provably shortest portmantout'),
 ('xkcd 1970: Name Dominoes', 2018, 'xkcd-Name-Dominoes.ipynb', 'Lay out dominoes legally; the dominoes have people names, not numbers')],
 
 'The Riddler (from 538)': [
