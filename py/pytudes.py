@@ -160,7 +160,7 @@ import re
 import urllib.request
 
 current_year = 2026
-new_year     = current_year - 1 # What `find_newest` looks for
+newest_year     = current_year  # What `find_newest` looks for
 
 def read_url(url: str) -> str:
     """Reads a file from the specified URL and returns its content as a string."""
@@ -196,8 +196,8 @@ def format_notebooks() -> str:
     find_newest(notebooks)
     return '\n'.join(format_category(name) for name in notebooks)
 
-def find_newest(notebooks, New='New', year=new_year) -> None:
-    """Mutate `notebooks[New]` to have a collection of newest notebooks, from `new_year` or later."""
+def find_newest(notebooks, New='New', year=newest_year) -> None:
+    """Mutate `notebooks[New]` to have a collection of newest notebooks, from `newest_year` or later."""
     for category in notebooks:
         for line in notebooks[category]:
             if line[1] >= year and line not in notebooks[New]:
