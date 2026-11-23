@@ -160,7 +160,7 @@ import re
 import urllib.request
 
 current_year = 2026
-newest_year     = current_year  # What `find_newest` looks for
+newest_year  = current_year  # What `find_newest` looks for
 
 def read_url(url: str) -> str:
     """Reads a file from the specified URL and returns its content as a string."""
@@ -207,20 +207,20 @@ def find_newest(notebooks, New='New', year=newest_year) -> None:
 def format_category(category) -> str:
     """Make a table of multiple jupyter/ipython notebooks, under a header."""
     print(f'{len(notebooks[category]):2d} notebooks in {category}')
-    return table(('Run', 'Year', category),
+    return table(('Year', 'Run', category),
                  [format_notebook(*line) for line in notebooks[category]])
     
 def format_notebook(title, year, url, comment=''):
     """Make a markdown table entry for a jupyter/ipython notebook."""
     urlb = f'/blob/main/ipynb/{url}'
-    co = f'[co](https://colab.research.google.com/github/norvig/pytudes{urlb})'
-    gh = f'[G](ipynb/{url})'
+    run = f'[`run`](https://colab.research.google.com/github/norvig/pytudes{urlb})'
+    gh  = f'[G](ipynb/{url})'
     #dn = f'[D](https://beta.deepnote.org/launch?template=python_3.6&url=https%3A%2F%2Fgithub.com%2Fnorvig%2Fpytudes%2Fblob%2Fmain%2Fipynb%2F{url})'
     #my = f'[M](https://mybinder.org/v2/gh/norvig/pytudes/main?filepath=ipynb%2F{url})'
     #nb = f'[nb](https://nbviewer.jupyter.org/github/norvig/pytudes{urlb})'
     #sm = f'[S](https://studiolab.sagemaker.aws/import/github/norvig/pytudes{urlb})'
-    ti = f'<a href="{gh[4:-1]}" title="{comment}">{title}</a>'
-    return f'| {co} | {year} | {ti} |'
+    ti  = f'<a href="{gh[4:-1]}" title="{comment}">{title}</a>'
+    return f'| {year} | {run} | {ti} |'
 
 def format_pythons() -> str:
     """Make a table of multiple python programs."""
