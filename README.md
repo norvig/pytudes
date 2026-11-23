@@ -15,7 +15,7 @@ To continue the musical analogy, some people think of programming like [Spotify]
 
 # Index of Jupyter (IPython) Notebooks
 
-For each notebook you can hover on the title to see a description, click the title to view on github, or click `run` to run the notebook in 
+For each notebook you can hover over the title to see a description, click the title to view on github, or click `run` to run the notebook in 
 [**colab**](https://colab.research.google.com).
 
 
