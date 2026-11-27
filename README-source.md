@@ -133,6 +133,9 @@ Hover over a title to see the full name, year, and a description.
 - **Board games:**
   [Can't Stop](Cant-Stop.ipynb){Can't Stop (2018): Optimal play in a dice board game}
   [Mel's Konane board](Konane.ipynb){Mel's Konane Board (2021): Solving the game of Konane (Hawaiian checkers).}
+  [Scrabble](Scrabble.ipynb){Scrabble: Refactoring a Crossword Game Program (2017): Refactoring the Scrabble / Word with Friends game from Udacity 212}
+  [Maximum Scoring Scrabble Board](MaxScrabble.ipynb){Finding a board that scores 4,046 points)
+
 
 ### 🔤 Word Puzzles
 
@@ -149,7 +152,6 @@ Hover over a title to see the full name, year, and a description.
 - **Word games:**
   [Boggle / inverse Boggle](Boggle.ipynb){Boggle / Inverse Boggle (2020): Find all the words on a Boggle board; then find a board with a lot of words}
   [Ghost](Ghost.ipynb){Ghost: A Word game (2017): The word game Ghost (add letters, try to avoid making a word)}
-  [Scrabble](Scrabble.ipynb){Scrabble: Refactoring a Crossword Game Program (2017): Refactoring the Scrabble / Word with Friends game from Udacity 212}
   [NYT Spelling Bee](SpellingBee.ipynb){New York Times Spelling Bee (2020): Find the highest-scoring board}
   [Gesture typing](Gesture Typing.ipynb){Gesture Typing (2017): What word has the longest path on a gesture-typing smartphone keyboard?}
 - **Wordplay:**
