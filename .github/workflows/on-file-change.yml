@@ -1,9 +1,11 @@
-name: Update README from Pytudes
+name: Update README from README-source
 
 on:
   push:
     paths:
-      - 'py/pytudes.py'
+      - 'README-source.md'
+      - 'py/make_readme.py'
+  workflow_dispatch:      # also allows running it by hand from the Actions tab
 
 jobs:
   build-and-update:
@@ -19,13 +21,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v7
 
-      - name: Run pytudes.py
-        run: python py/pytudes.py
+      - name: Run make_readme.py
+        run: python py/make_readme.py
 
       - name: Commit and push if README changed
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md
-          git commit -m "docs: auto-update README.md via pytudes.py" || exit 0
+          git commit -m "docs: auto-update README.md from README-source.md" || exit 0
           git push
