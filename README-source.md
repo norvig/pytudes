@@ -11,7 +11,7 @@
 "An ***étude*** (a French word meaning *study*) is an instrumental musical composition, usually short, of considerable difficulty, 
 and designed to provide practice material for perfecting a particular musical skill." — [*Wikipedia*](https://en.wikipedia.org/wiki/%C3%89tude)
 
-This project contains ***pytudes***—Python programs, usually short, for perfecting particular programming skills.
+This project contains ***pytudes***—Python programs, usually short, providing practice pieces for perfecting particular programming prowess.
 
 # Who is this for?
 
@@ -26,8 +26,6 @@ Hover over a title to see the full name, year, and a description.
 ### 🆕 New in 2026
 
 - [Approximating Pi with a Fraction](RationalPi.ipynb){Approximating Pi with a Fraction (2026): Using continued fractions to find fractions (like 22/7) that are close to pi.}
-  [Did you solve it? R y clvr ngh t rd ths sntnc?](clvr.ipynb){Did you solve it? R y clvr ngh t rd ths sntnc? (2026): Guess famous phrases from letter shapes. Beginner level.}
-  [(How to Write a (Lisp) Interpreter (in Python))](lispy.ipynb){(How to Write a (Lisp) Interpreter (in Python)) (2026): Tutorial on interpreters.}
   [Integer Palindromes](palsum.ipynb){Integer Palindromes (2026): Finding all palindromic integers with no zero digit (human vs LLM solutions)}
   [Largest prime factor](Euler3.ipynb){Largest prime factor (2026): For beginner programmers: How to find the largest prime factor of a number. Project Euler #3.}
   [Provably Shortest Portmantout Word](Portmantout-optimal.ipynb){Provably Shortest Portmantout Word (2026): AI found a provably shortest portmantout}
@@ -54,7 +52,7 @@ Hover over a title to see the full name, year, and a description.
   [Advent of Code 2025 by LLMs](ipynb/Advent-2025-AI.ipynb "Advent of Code 2025: AI LLM Edition: Using large language coding models to solve AoC puzzles") &nbsp;·&nbsp;
   [LLMs and Cheryl's Birthday](ipynb/CherylMind.ipynb "LLMs, Theory of Mind, and Cheryl's Birthday (2024): Do LLMs have enough theory of mind to solve the Cheryl's Birthday puzzle?") &nbsp;·&nbsp;
   [Integer palindromes (human vs. LLM)](ipynb/palsum.ipynb "Integer Palindromes (2026): Finding all palindromic integers with no zero digit (human vs LLM solutions)") &nbsp;·&nbsp;
-  [Provably shortest portmantout (found by Claude)](ipynb/Portmantout-optimal.ipynb "Provably Shortest Portmantout Word (2026): Claude found a provably shortest portmantout")
+  [Provably shortest portmantout (found by AI)](ipynb/Portmantout-optimal.ipynb "Provably Shortest Portmantout Word (2026): AI found a provably shortest portmantout")
 
 ### 🎲 Probability and Uncertainty
 
@@ -114,6 +112,7 @@ Hover over a title to see the full name, year, and a description.
   [Square sum chains](SquareSum.ipynb){Square Sum Chain Puzzle (2020): Place the numbers from 1 to n in a chain (or a circle) such that adjacent pairs sum to a perfect square}
   [Number bracelets](NumberBracelets.ipynb){Number Bracelets Game (2024): A game involving numbered beads on a circular bracelet.}
   [Sicherman dice](Sicherman Dice.ipynb){Sicherman Dice (2018): Find a pair of dice that is like a regular pair of dice, only different}
+  [Sol Golomb's rectangle puzzle](Golomb-Puzzle.ipynb){Sol Golomb's Rectangle Puzzle (2014): A Puzzle involving placing rectangles of different sizes inside a square}
 - **Number theory:**
   [Approximating pi with a fraction](RationalPi.ipynb){Approximating Pi with a Fraction (2026): Using continued fractions to find fractions (like 22/7) that are close to pi.}
   [Truncatable primes](TruncatablePrimes.ipynb){Truncatable Primes (2026): Prime numbers where you can remove digits and still get primes.}
@@ -129,9 +128,8 @@ Hover over a title to see the full name, year, and a description.
   [in Python](Sudoku.ipynb){Sudoku (2006): Classic fill-in-the-grid puzzle solved in Python}
   [in Java: 400,000 puzzles/second](SudokuJava.ipynb){Sudoku: 400,000 puzzles/second in Java (2021): A Java version of the Sudoku solver using parallel threads and other optimizations}
 - **Sudoku-like puzzles:**
-  [KenKen](KenKen.ipynb){KenKen (Sudoku-like Puzzle) (2021): A Sudoku-like puzzle, but with arithmetic.}
+  [KenKen](KenKen.ipynb){KenKen (Sudoku-like Puzzle) (2021): A Sudoku-like puzzle, but with basic arithmetic.}
   [Star Battle](StarBattle.ipynb){Star Battle (Sudoku-like Puzzle) (2021): Fill-in-the-grid puzzle similar to Sudoku}
-  [Sol Golomb's rectangle puzzle](Golomb-Puzzle.ipynb){Sol Golomb's Rectangle Puzzle (2014): A Puzzle involving placing rectangles of different sizes inside a square}
 - **Board games:**
   [Can't Stop](Cant-Stop.ipynb){Can't Stop (2018): Optimal play in a dice board game}
   [Mel's Konane board](Konane.ipynb){Mel's Konane Board (2021): Solving the game of Konane (Hawaiian checkers).}
@@ -146,12 +144,13 @@ Hover over a title to see the full name, year, and a description.
   [Integer palindromes](palsum.ipynb){Integer Palindromes (2026): Finding all palindromic integers with no zero digit (human vs LLM solutions)}
 - **Portmantout:**
   [Portmantout words](Portmantout.ipynb){A Short Portmantout Word (2020): Find a word that squishes together a bunch of words}
-  [Provably shortest](Portmantout-optimal.ipynb){Provably Shortest Portmantout Word (2026): Claude found a provably shortest portmantout}
+  [AI Provably shortest](Portmantout-optimal.ipynb){Provably Shortest Portmantout Word (2026): Google Gemini Neon AI found a provably shortest portmantout}
+  [Claude's Provably shortest](Portmantout-optimal.ipynb){Another version (2026): Claude AI found a provably shortest portmantout}
 - **Word games:**
   [Boggle / inverse Boggle](Boggle.ipynb){Boggle / Inverse Boggle (2020): Find all the words on a Boggle board; then find a board with a lot of words}
   [Ghost](Ghost.ipynb){Ghost: A Word game (2017): The word game Ghost (add letters, try to avoid making a word)}
   [Scrabble](Scrabble.ipynb){Scrabble: Refactoring a Crossword Game Program (2017): Refactoring the Scrabble / Word with Friends game from Udacity 212}
-  [Spelling Bee](SpellingBee.ipynb){Spelling Bee (2020): Find the highest-scoring board for the NY Times Spelling Bee puzzle}
+  [NYT Spelling Bee](SpellingBee.ipynb){New York Times Spelling Bee (2020): Find the highest-scoring board}
   [Gesture typing](Gesture Typing.ipynb){Gesture Typing (2017): What word has the longest path on a gesture-typing smartphone keyboard?}
 - **Wordplay:**
   [Chemical element spelling](ElementSpelling.ipynb){Chemical Element Spelling (2020): Spelling words using the chemical element symbols, like CoIn}
@@ -192,7 +191,7 @@ Hover over a title to see the full name, year, and a description.
   [Traveling salesperson](TSP.ipynb){Traveling Salesperson Problem (2018): Another of the classics}
   [Convex hull](Convex Hull.ipynb){Convex Hull Problem (2017): A classic Computer Science Algorithm}
   [Stable matching](StableMatching.ipynb){Stable Matching Problem (2020): What is the best way to pair up two groups with each other, obeying preferences?}
-  [Generating and solving mazes](Maze.ipynb){Generating and Solving Mazes (2020): Make a maze by generating a random tree superimposed on a grid and solve it}
+  [Making mazes](Maze.ipynb){Generating and Solving Mazes (2020): Make a maze by generating a random tree superimposed on a grid and solve it}
 - **Software craft:**
   [Docstring fixpoint theory](DocstringFixpoint.ipynb){Docstring Fixpoint Theory (2023): An approach to writing code and docstrings that go together.}
   [Translating English into propositional logic](PropositionalLogic.ipynb){Translating English into Propositional Logic (2017): Automatically convert informal English sentences into formal Propositional Logic}
